@@ -501,8 +501,18 @@ footer a:hover{color:var(--navy)}
 .topline .in{max-width:var(--maxw,1200px);margin:0 auto;padding:9px 22px;
   display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
 .topline a{color:#fff;text-decoration:none;display:inline-flex;align-items:center;gap:8px}
-.topline .hot{font-weight:800;font-size:15px;letter-spacing:.01em}
-.topline .hot:hover{color:#E4B451}
+
+/* hotline: chữ ĐỎ, nhấp nháy dạng nhịp thở chậm (1,6 giây một nhịp).
+   Cố ý KHÔNG chớp tắt nhanh: chớp trên 3 lần/giây gây khó chịu và vi phạm
+   chuẩn tiếp cận WCAG. Người bật chế độ giảm chuyển động sẽ thấy chữ đứng yên. */
+.topline .hot{font-weight:800;font-size:15.6px;letter-spacing:.01em;color:#FF6B6B;
+  text-shadow:0 0 14px rgba(255,107,107,.55);
+  animation:hotNhay 1.6s ease-in-out infinite}
+.topline .hot svg{color:#FF6B6B}
+.topline .hot:hover{color:#FF9090;animation-play-state:paused}
+@keyframes hotNhay{0%,100%{opacity:1;text-shadow:0 0 14px rgba(255,107,107,.55)}
+                   50%{opacity:.5;text-shadow:0 0 4px rgba(255,107,107,.2)}}
+@media (prefers-reduced-motion:reduce){.topline .hot{animation:none;opacity:1}}
 .topline .r{display:flex;gap:18px;flex-wrap:wrap;align-items:center}
 .topline .r a:hover{color:#E4B451}
 @media (max-width:720px){.topline .in{justify-content:center;padding:8px 16px}.topline .r{display:none}}
