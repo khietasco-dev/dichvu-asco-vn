@@ -1,0 +1,1653 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://dichvu.asco.vn/kiem-toan-quyet-toan-nha-o-xa-hoi/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Hãng Kiểm toán và Định giá ASCO">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:url" content="https://dichvu.asco.vn/kiem-toan-quyet-toan-nha-o-xa-hoi/">
+<meta property="og:title" content="Kiểm toán quyết toán dự án nhà ở xã hội — ASCO">
+<meta property="og:description" content="Kiểm toán chi phí đầu tư xây dựng dự án nhà ở xã hội theo Nghị định 192/2025/NĐ-CP, thời hạn 180 ngày. Có bộ đếm mốc hạn và công cụ tính giá bán, lợi nhuận định mức.">
+<meta property="og:image" content="https://dichvu.asco.vn/og-noxh.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Kiểm toán quyết toán dự án nhà ở xã hội — ASCO">
+<meta name="twitter:description" content="Kiểm toán chi phí đầu tư xây dựng dự án nhà ở xã hội theo Nghị định 192/2025/NĐ-CP, thời hạn 180 ngày. Có bộ đếm mốc hạn và công cụ tính giá bán, lợi nhuận định mức.">
+<meta name="twitter:image" content="https://dichvu.asco.vn/og-noxh.png">
+
+<title>Kiểm toán quyết toán dự án nhà ở xã hội</title>
+<meta name="description" content="ASCO — Kiểm toán báo cáo quyết toán và chi phí đầu tư xây dựng dự án nhà ở xã hội, cơ sở xác định giá bán được duyệt và lợi nhuận định mức của chủ đầu tư. Hơn 8.000 dự án, hơn 50 kỹ sư xây dựng.">
+<meta name="theme-color" content="#1F478D">
+
+<style>
+/* ============================================================
+   HỆ THIẾT KẾ — TRANG NOXH
+   Rút kinh nghiệm trang xã/phường:
+   · mọi hàm JS đặt tiền tố nx… để không trùng tên
+   · .rv chỉ ẩn khi có JS (.js) → chặn JS vẫn đọc được nội dung
+   · nhãn nav ngắn ngay từ đầu → không tràn ở 1280px
+   ============================================================ */
+:root{
+  --navy:#1F478D;            /* màu logo ASCO */
+  --navy-700:#173868;
+  --navy-900:#0C2044;
+  --navy-300:#5C81C3;
+  --tint:#EDF1F9;
+  --tint-2:#DAE3F4;
+
+  --gold:#B8862A;            /* CTA — cùng hệ với hai trang ASCO trước */
+  --gold-hi:#E4B451;
+
+  --jade:#0F6B54;            /* dấu hiệu phần GIÁ BÁN & LỢI NHUẬN ĐỊNH MỨC */
+  --jade-tint:#E4F2EE;
+
+  --danger:#A82420;
+  --warn:#8A6014;
+  --ok:#0F6B54;
+
+  --bg:#FFFFFF;
+  --bg-alt:#F5F7FA;          /* trung tính hơi lạnh — hợp khách doanh nghiệp */
+  --surface:#FFFFFF;
+  --ink:#111726;
+  --ink-2:#374055;
+  --muted:#616A7E;
+  --line:#DFE3EA;
+  --line-soft:#EDF0F5;
+
+  --shadow-sm:0 1px 2px rgba(12,32,68,.06);
+  --shadow:0 2px 4px rgba(12,32,68,.05), 0 14px 34px -20px rgba(12,32,68,.34);
+  --shadow-lg:0 4px 8px rgba(12,32,68,.06), 0 30px 60px -30px rgba(12,32,68,.45);
+
+  --maxw:1180px; --r:13px; --r-lg:19px;
+  --f:"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Roboto,Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --navy:#7EA5E6; --navy-700:#9EBDF0; --navy-900:#C9D9F6; --navy-300:#4C6DA6;
+    --tint:#151F38; --tint-2:#1C2947;
+    --gold:#E0B458; --gold-hi:#F2CE83;
+    --jade:#4FC0A2; --jade-tint:#0F2C25;
+    --danger:#F0857E; --warn:#E0B458; --ok:#4FC0A2;
+    --bg:#090F1A; --bg-alt:#0D1522; --surface:#111A29;
+    --ink:#ECEFF5; --ink-2:#C1C8D6; --muted:#929AAC;
+    --line:#232C3D; --line-soft:#19212F;
+    --shadow-sm:0 1px 2px rgba(0,0,0,.35);
+    --shadow:0 2px 4px rgba(0,0,0,.3), 0 16px 36px -22px rgba(0,0,0,.8);
+    --shadow-lg:0 4px 10px rgba(0,0,0,.35), 0 34px 64px -32px rgba(0,0,0,.9);
+  }
+}
+:root[data-theme="dark"]{
+  --navy:#7EA5E6; --navy-700:#9EBDF0; --navy-900:#C9D9F6; --navy-300:#4C6DA6;
+  --tint:#151F38; --tint-2:#1C2947;
+  --gold:#E0B458; --gold-hi:#F2CE83;
+  --jade:#4FC0A2; --jade-tint:#0F2C25;
+  --danger:#F0857E; --warn:#E0B458; --ok:#4FC0A2;
+  --bg:#090F1A; --bg-alt:#0D1522; --surface:#111A29;
+  --ink:#ECEFF5; --ink-2:#C1C8D6; --muted:#929AAC;
+  --line:#232C3D; --line-soft:#19212F;
+  --shadow-sm:0 1px 2px rgba(0,0,0,.35);
+  --shadow:0 2px 4px rgba(0,0,0,.3), 0 16px 36px -22px rgba(0,0,0,.8);
+  --shadow-lg:0 4px 10px rgba(0,0,0,.35), 0 34px 64px -32px rgba(0,0,0,.9);
+}
+
+/* ---------------- NỀN ---------------- */
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f);
+  font-size:17px;line-height:1.66;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,h4{margin:0;font-weight:800;line-height:1.14;letter-spacing:-.018em;text-wrap:balance}
+h2{font-size:clamp(26px,3.4vw,37px)}
+h3{font-size:clamp(18px,2vw,21px);letter-spacing:-.01em}
+p{margin:0} ul,ol{margin:0;padding-left:1.15em}
+a{color:var(--navy);text-underline-offset:3px}
+img{max-width:100%;height:auto;display:block}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+section{padding:clamp(54px,7vw,94px) 0}
+.narrow{max-width:840px}
+.alt{background:var(--bg-alt)}
+.center{text-align:center}
+.tnum{font-variant-numeric:tabular-nums}
+.lede{font-size:clamp(17px,1.7vw,19.5px);color:var(--ink-2);line-height:1.62}
+.small{font-size:14px;color:var(--muted);line-height:1.6}
+.sec-head{max-width:800px;margin-bottom:38px}
+.sec-head.center{margin-left:auto;margin-right:auto}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--navy);margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--gold);flex:0 0 auto;border-radius:2px}
+.center .eyebrow{justify-content:center}
+.wp{font-variant-numeric:tabular-nums;font-size:11.5px;font-weight:800;letter-spacing:.1em;
+  color:var(--jade);background:var(--jade-tint);border:1px solid color-mix(in srgb,var(--jade) 28%,transparent);
+  padding:2px 8px;border-radius:5px;white-space:nowrap}
+
+/* ---------------- NÚT ---------------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55em;font:inherit;font-weight:700;
+  font-size:16px;padding:14px 26px;border-radius:999px;border:1.5px solid transparent;cursor:pointer;
+  text-decoration:none;text-align:center;transition:transform .16s ease,box-shadow .16s ease,background .16s ease,border-color .16s ease}
+.btn:focus-visible{outline:2.5px solid var(--gold);outline-offset:3px}
+.btn-gold{background:linear-gradient(180deg,var(--gold-hi),var(--gold));color:#1F1707;box-shadow:0 10px 24px -12px rgba(184,134,42,.75)}
+.btn-gold:hover{transform:translateY(-2px)}
+.btn-navy{background:var(--navy);color:#fff;box-shadow:var(--shadow)}
+.btn-navy:hover{transform:translateY(-2px);background:var(--navy-700)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn-navy{color:#090F1A}}
+:root[data-theme="dark"] .btn-navy{color:#090F1A}
+.btn-outline{background:transparent;border-color:var(--line);color:var(--ink)}
+.btn-outline:hover{border-color:var(--navy);color:var(--navy)}
+.btn-onnavy{background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.38);color:#fff}
+.btn-onnavy:hover{background:rgba(255,255,255,.18);transform:translateY(-2px)}
+.btn-sm{font-size:14.5px;padding:10px 18px}
+.btn-block{width:100%}
+
+/* ---------------- NAV ---------------- */
+nav{position:sticky;top:0;z-index:60;background:color-mix(in srgb,var(--bg) 90%,transparent);
+  backdrop-filter:saturate(1.5) blur(12px);border-bottom:1px solid var(--line)}
+.nav-in{max-width:var(--maxw);margin:0 auto;padding:11px 22px;display:flex;align-items:center;gap:18px}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;flex:0 0 auto}
+.brand img{height:30px;width:auto}
+:root[data-theme="dark"] .brand img{filter:brightness(1.9) saturate(.55)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .brand img{filter:brightness(1.9) saturate(.55)}}
+.brand-tag{font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);
+  border-left:1px solid var(--line);padding-left:11px;line-height:1.25;max-width:150px}
+.nav-links{display:flex;gap:17px;font-size:14px;margin-left:auto;min-width:0}
+.nav-links a{color:var(--ink-2);text-decoration:none;white-space:nowrap;font-weight:600}
+.nav-links a:hover{color:var(--navy)}
+.nav-act{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+.theme-btn{width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:var(--surface);
+  color:var(--ink-2);cursor:pointer;display:grid;place-items:center;flex:0 0 auto}
+.theme-btn:hover{border-color:var(--navy);color:var(--navy)}
+@media (max-width:1180px){.nav-links{display:none}}
+@media (max-width:560px){.brand-tag{display:none}}
+
+/* ---------------- HERO ---------------- */
+.hero{position:relative;color:#fff;overflow:hidden;
+  background:
+    radial-gradient(880px 500px at 88% -12%, rgba(228,180,81,.2), transparent 62%),
+    radial-gradient(760px 620px at 2% 108%, rgba(15,107,84,.42), transparent 62%),
+    linear-gradient(158deg,#1F478D 0%,#173868 46%,#0C2044 100%)}
+/* hoạ tiết: đường chân trời khối nhà — chủ đề nhà ở */
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:190px;opacity:.13;pointer-events:none;
+  background-repeat:repeat-x;background-position:bottom center;background-size:auto 190px;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='420' height='190'><g fill='none' stroke='white' stroke-width='2'><rect x='8' y='70' width='56' height='120'/><rect x='20' y='86' width='14' height='14'/><rect x='42' y='86' width='14' height='14'/><rect x='20' y='112' width='14' height='14'/><rect x='42' y='112' width='14' height='14'/><rect x='20' y='138' width='14' height='14'/><rect x='42' y='138' width='14' height='14'/><rect x='80' y='34' width='70' height='156'/><rect x='94' y='52' width='16' height='16'/><rect x='120' y='52' width='16' height='16'/><rect x='94' y='82' width='16' height='16'/><rect x='120' y='82' width='16' height='16'/><rect x='94' y='112' width='16' height='16'/><rect x='120' y='112' width='16' height='16'/><rect x='94' y='142' width='16' height='16'/><rect x='120' y='142' width='16' height='16'/><rect x='166' y='96' width='48' height='94'/><rect x='178' y='112' width='12' height='12'/><rect x='196' y='112' width='12' height='12'/><rect x='178' y='136' width='12' height='12'/><rect x='196' y='136' width='12' height='12'/><rect x='230' y='54' width='64' height='136'/><rect x='244' y='72' width='15' height='15'/><rect x='268' y='72' width='15' height='15'/><rect x='244' y='100' width='15' height='15'/><rect x='268' y='100' width='15' height='15'/><rect x='244' y='128' width='15' height='15'/><rect x='268' y='128' width='15' height='15'/><rect x='310' y='80' width='54' height='110'/><rect x='322' y='98' width='13' height='13'/><rect x='343' y='98' width='13' height='13'/><rect x='322' y='124' width='13' height='13'/><rect x='343' y='124' width='13' height='13'/><rect x='380' y='44' width='34' height='146'/></g></svg>")}
+.hero .wrap{position:relative;z-index:2;padding-top:clamp(50px,6.5vw,80px);padding-bottom:clamp(46px,6vw,74px)}
+.hero-grid{display:grid;grid-template-columns:1.14fr .86fr;gap:clamp(28px,4vw,54px);align-items:center}
+@media (max-width:960px){.hero-grid{grid-template-columns:1fr;gap:32px}}
+.pill{display:inline-flex;align-items:center;gap:9px;flex-wrap:wrap;background:rgba(255,255,255,.11);
+  border:1px solid rgba(255,255,255,.26);padding:7px 15px;border-radius:999px;font-size:13px;font-weight:700}
+.pill .dot{width:8px;height:8px;border-radius:50%;background:var(--gold-hi);box-shadow:0 0 0 4px rgba(228,180,81,.22)}
+.hero h1{font-size:clamp(30px,4.7vw,53px);margin:20px 0 0;color:#fff}
+.hero h1 .accent{display:block;font-size:clamp(18px,2.2vw,26px);font-weight:700;color:var(--gold-hi);margin-top:12px}
+.hero p.lede{color:rgba(255,255,255,.87);margin-top:20px;max-width:62ch}
+.hero-cta{display:flex;flex-wrap:wrap;gap:13px;margin-top:30px}
+.hero-note{margin-top:16px;font-size:13.5px;color:rgba(255,255,255,.68)}
+.hero-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.2);border-radius:var(--r-lg);
+  padding:26px;backdrop-filter:blur(6px);box-shadow:0 30px 60px -34px rgba(0,0,0,.7)}
+.hero-card h3{color:#fff;font-size:16.5px;display:flex;align-items:center;gap:9px}
+
+/* xếp chồng cơ cấu giá bán — hình ảnh cốt lõi của trang */
+.stack{margin-top:18px;display:grid;gap:8px}
+.stk{border-radius:10px;padding:12px 15px;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.07)}
+.stk .t{font-size:13.6px;font-weight:700;color:#fff;display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.stk .d{font-size:12.4px;color:rgba(255,255,255,.62);margin-top:2px;line-height:1.4}
+.stk.profit{background:rgba(79,192,162,.16);border-color:rgba(79,192,162,.45)}
+.stk.profit .t{color:#8FE3CB}
+.stk.total{background:rgba(228,180,81,.17);border-color:rgba(228,180,81,.5)}
+.stk.total .t{color:var(--gold-hi);font-size:15px}
+.stk-op{text-align:center;font-size:15px;font-weight:800;color:rgba(255,255,255,.5);line-height:1}
+.hc-foot{margin-top:18px;padding-top:15px;border-top:1px solid rgba(255,255,255,.16);font-size:13px;color:rgba(255,255,255,.66)}
+
+.trust{border-top:1px solid rgba(255,255,255,.16);position:relative;z-index:2}
+.trust-in{max-width:var(--maxw);margin:0 auto;padding:20px 22px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+@media (max-width:860px){.trust-in{grid-template-columns:repeat(2,1fr)}}
+.trust-i{display:flex;gap:11px;align-items:flex-start}
+.trust-i svg{flex:0 0 auto;margin-top:2px;color:var(--gold-hi)}
+.trust-i b{display:block;font-size:14.5px;color:#fff;line-height:1.3}
+.trust-i span{font-size:12.7px;color:rgba(255,255,255,.6);line-height:1.42}
+
+/* ---------------- THẺ / LƯỚI ---------------- */
+.grid{display:grid;gap:20px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+@media (max-width:960px){.g3,.g4{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:680px){.g2,.g3,.g4{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:24px;
+  box-shadow:var(--shadow-sm);transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--navy-300)}
+.card h3{margin-bottom:10px}
+.card p{color:var(--ink-2);font-size:15.4px}
+.ico{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;margin-bottom:16px;
+  background:var(--tint);color:var(--navy);border:1px solid var(--tint-2)}
+.ico.jade{background:var(--jade-tint);color:var(--jade);border-color:color-mix(in srgb,var(--jade) 28%,transparent)}
+.badge{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:800;letter-spacing:.06em;
+  text-transform:uppercase;padding:4px 10px;border-radius:999px}
+.badge.nocaps{text-transform:none;letter-spacing:.01em;font-weight:700}
+.b-req{background:color-mix(in srgb,var(--danger) 13%,transparent);color:var(--danger);border:1px solid color-mix(in srgb,var(--danger) 32%,transparent)}
+.b-warn{background:color-mix(in srgb,var(--gold) 16%,transparent);color:var(--warn);border:1px solid color-mix(in srgb,var(--gold) 38%,transparent)}
+.b-ok{background:color-mix(in srgb,var(--ok) 13%,transparent);color:var(--ok);border:1px solid color-mix(in srgb,var(--ok) 32%,transparent)}
+.b-navy{background:var(--tint);color:var(--navy);border:1px solid var(--tint-2)}
+.b-jade{background:var(--jade-tint);color:var(--jade);border:1px solid color-mix(in srgb,var(--jade) 30%,transparent)}
+.cite{display:inline-block;margin-top:14px;font-size:12.6px;color:var(--muted);
+  border-left:2.5px solid var(--gold);padding-left:10px;line-height:1.45}
+
+/* nội dung kiểm toán có mã hồ sơ */
+.aud{display:flex;gap:15px;align-items:flex-start;padding:19px;border-radius:12px;background:var(--surface);
+  border:1px solid var(--line);transition:border-color .18s ease,transform .18s ease}
+.aud:hover{border-color:var(--navy-300);transform:translateY(-2px)}
+.aud .n{flex:0 0 auto;width:31px;height:31px;border-radius:9px;display:grid;place-items:center;
+  background:var(--navy);color:#fff;font-weight:800;font-size:14px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .aud .n{color:#090F1A}}
+:root[data-theme="dark"] .aud .n{color:#090F1A}
+.aud .top{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:4px}
+.aud b{font-size:15.4px}
+.aud span.d{font-size:13.9px;color:var(--muted);line-height:1.5;display:block}
+
+/* callout */
+.callout{border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:var(--r);
+  padding:24px 26px;background:var(--surface)}
+.callout.danger{border-left-color:var(--danger)}
+.callout.jade{border-left-color:var(--jade)}
+.callout h3{margin:12px 0 10px}
+.callout p{font-size:15.6px;color:var(--ink-2)}
+.callout p + p{margin-top:12px}
+
+/* thống kê */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:var(--r-lg);
+  overflow:hidden;background:var(--surface);box-shadow:var(--shadow-sm)}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}}
+.stat{padding:26px 22px;text-align:center;border-right:1px solid var(--line-soft)}
+.stat:last-child{border-right:0}
+@media (max-width:760px){.stat:nth-child(2n){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid var(--line-soft)}}
+.stat .v{font-size:clamp(26px,3.4vw,36px);font-weight:800;color:var(--navy);letter-spacing:-.02em;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat .l{font-size:13.6px;color:var(--muted);margin-top:7px;line-height:1.45}
+
+/* dòng thời gian */
+.tl{display:grid;gap:0}
+.tl-i{display:grid;grid-template-columns:92px 1fr;gap:24px;position:relative;padding-bottom:32px}
+.tl-i:last-child{padding-bottom:0}
+.tl-i::before{content:"";position:absolute;left:45px;top:50px;bottom:-4px;width:2px;background:var(--line)}
+.tl-i:last-child::before{display:none}
+@media (max-width:680px){.tl-i{grid-template-columns:1fr;gap:12px}.tl-i::before{display:none}}
+.tl-mark{width:92px;height:92px;border-radius:50%;display:grid;place-items:center;text-align:center;
+  background:var(--tint);border:2px solid var(--navy);color:var(--navy);line-height:1.15}
+@media (max-width:680px){.tl-mark{width:auto;height:auto;border-radius:999px;padding:8px 18px;justify-self:start;display:inline-flex;gap:8px;align-items:center}}
+.tl-mark .gd{font-size:10.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;opacity:.8}
+.tl-mark .gn{font-size:26px;font-weight:800;letter-spacing:-.02em}
+@media (max-width:680px){.tl-mark .gn{font-size:17px}}
+.tl-c{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:22px;box-shadow:var(--shadow-sm)}
+.tl-c h3{margin-bottom:8px}
+.tl-c .dur{font-size:12.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--gold);margin-bottom:9px}
+.tl-wp{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px;padding-top:14px;border-top:1px solid var(--line-soft)}
+
+/* bảng */
+.tbl-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r);background:var(--surface);box-shadow:var(--shadow-sm)}
+table{width:100%;border-collapse:collapse;min-width:640px}
+th,td{padding:14px 17px;text-align:left;border-bottom:1px solid var(--line-soft);font-size:15px;vertical-align:top}
+thead th{background:var(--tint);font-size:13.2px;letter-spacing:.03em;color:var(--navy);font-weight:800;border-bottom:1px solid var(--line)}
+tbody tr:last-child td{border-bottom:0}
+td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+.col-asco{background:color-mix(in srgb,var(--navy) 5%,transparent)}
+thead th.col-asco{background:var(--navy);color:#fff}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) thead th.col-asco{color:#090F1A}}
+:root[data-theme="dark"] thead th.col-asco{color:#090F1A}
+td.yes{color:var(--ok);font-weight:700}
+td.no{color:var(--muted)}
+
+/* danh mục hồ sơ */
+.cl-wrap{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow);overflow:hidden}
+.cl-head{padding:20px 24px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.cl-head h3{flex:1 1 240px}
+.cl-prog{flex:0 0 auto;display:flex;align-items:center;gap:12px;min-width:190px}
+.cl-bar{flex:1;height:8px;border-radius:99px;background:var(--tint-2);overflow:hidden}
+.cl-bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--navy),var(--jade));transition:width .3s ease}
+.cl-pctv{font-size:14px;font-weight:800;color:var(--navy);min-width:42px;text-align:right;font-variant-numeric:tabular-nums}
+.cl-body{display:grid;grid-template-columns:repeat(2,1fr)}
+@media (max-width:820px){.cl-body{grid-template-columns:1fr}}
+.cl-g{padding:22px 24px;border-right:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)}
+@media (max-width:820px){.cl-g{border-right:0}}
+.cl-g h4{font-size:13px;letter-spacing:.09em;text-transform:uppercase;color:var(--navy);margin:0 0 12px}
+.cl-g.jade h4{color:var(--jade)}
+.cl-g ul{list-style:none;padding:0;display:grid;gap:9px}
+.cl-g li label{display:flex;gap:11px;align-items:flex-start;font-size:14.6px;cursor:pointer;line-height:1.5;color:var(--ink-2)}
+.cl-g li input{margin-top:4px;width:17px;height:17px;accent-color:var(--navy);flex:0 0 auto}
+.cl-g li input:checked + span{text-decoration:line-through;color:var(--muted)}
+.cl-foot{padding:18px 24px;display:flex;gap:12px;flex-wrap:wrap;align-items:center;background:var(--bg-alt)}
+
+
+/* ================= CÔNG CỤ (dùng chung cho 2 bộ tính) ================= */
+.tool{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow-lg);overflow:hidden}
+.tool-head{padding:22px 26px;color:#fff;display:flex;align-items:center;gap:13px;flex-wrap:wrap}
+.tool-head.navy{background:linear-gradient(140deg,var(--navy),var(--navy-700))}
+.tool-head.jade{background:linear-gradient(140deg,#0F6B54,#0A4E3E)}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]) .tool-head.navy{background:linear-gradient(140deg,#17243E,#111B2E)}
+  :root:not([data-theme="light"]) .tool-head.jade{background:linear-gradient(140deg,#10382E,#0C2822)}
+}
+:root[data-theme="dark"] .tool-head.navy{background:linear-gradient(140deg,#17243E,#111B2E)}
+:root[data-theme="dark"] .tool-head.jade{background:linear-gradient(140deg,#10382E,#0C2822)}
+.tool-head h3{color:#fff;font-size:19px}
+.tool-head .sub{font-size:13.6px;color:rgba(255,255,255,.78);width:100%;margin-top:2px}
+.tool-body{display:grid;grid-template-columns:.92fr 1.08fr}
+@media (max-width:900px){.tool-body{grid-template-columns:1fr}}
+.tool-in{padding:26px;border-right:1px solid var(--line)}
+@media (max-width:900px){.tool-in{border-right:0;border-bottom:1px solid var(--line)}}
+.tool-out{padding:26px;background:var(--bg-alt)}
+.fld{margin-bottom:22px}
+.fld:last-child{margin-bottom:0}
+.fld label{display:block;font-weight:700;font-size:14.6px;margin-bottom:7px}
+.fld .hint{display:block;font-size:12.8px;color:var(--muted);font-weight:400;margin-top:5px;line-height:1.45}
+.fld-row{display:flex;align-items:center;gap:10px}
+.fld-row .unit{font-size:14.5px;color:var(--muted);font-weight:700;white-space:nowrap}
+.fld input[type=range]{width:100%;margin-top:9px}
+.fld.jade input[type=range]{accent-color:var(--jade)}
+.fld.navy input[type=range]{accent-color:var(--navy)}
+.tool-foot{padding:16px 26px;border-top:1px solid var(--line);background:var(--surface);font-size:12.6px;color:var(--muted);line-height:1.55}
+
+/* thẻ kết quả */
+.res-card{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:20px;margin-bottom:14px}
+.res-card.hero-num{border-width:1.5px}
+.res-card.hero-num.ok{border-color:var(--ok);box-shadow:0 0 0 3px color-mix(in srgb,var(--ok) 12%,transparent)}
+.res-card.hero-num.warn{border-color:var(--gold);box-shadow:0 0 0 3px color-mix(in srgb,var(--gold) 14%,transparent)}
+.res-card.hero-num.bad{border-color:var(--danger);box-shadow:0 0 0 3px color-mix(in srgb,var(--danger) 12%,transparent)}
+.res-card .lbl{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.res-card .big{font-size:clamp(26px,3.8vw,36px);font-weight:800;letter-spacing:-.02em;line-height:1.1;font-variant-numeric:tabular-nums;color:var(--navy)}
+.res-card.hero-num.ok .big{color:var(--ok)}
+.res-card.hero-num.warn .big{color:var(--warn)}
+.res-card.hero-num.bad .big{color:var(--danger)}
+.res-card .sub2{font-size:13.6px;color:var(--muted);margin-top:7px;line-height:1.5}
+.res-brk{margin-top:14px;padding-top:13px;border-top:1px dashed var(--line)}
+.res-brk .r{display:flex;justify-content:space-between;gap:14px;font-size:14.2px;padding:5px 0}
+.res-brk .r b{font-variant-numeric:tabular-nums;white-space:nowrap}
+.res-brk .r.tot{border-top:1px solid var(--line);margin-top:6px;padding-top:9px;font-size:15px}
+.note-box{margin-top:16px;padding:14px 16px;border-radius:12px;font-size:13.8px;line-height:1.55;
+  background:var(--jade-tint);border:1px solid color-mix(in srgb,var(--jade) 28%,transparent);color:var(--ink-2)}
+.note-box b{color:var(--jade)}
+.warn-box{margin-top:12px;padding:13px 16px;border-radius:12px;font-size:13.6px;line-height:1.5;
+  background:color-mix(in srgb,var(--danger) 10%,transparent);border:1px solid color-mix(in srgb,var(--danger) 32%,transparent);color:var(--ink-2)}
+.warn-box b{color:var(--danger)}
+
+/* mốc thời gian ngang của bộ đếm 180 ngày */
+.mile{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:16px;background:var(--surface)}
+@media (max-width:620px){.mile{grid-template-columns:1fr}}
+.mile-i{padding:14px 16px;border-right:1px solid var(--line-soft)}
+.mile-i:last-child{border-right:0}
+@media (max-width:620px){.mile-i{border-right:0;border-bottom:1px solid var(--line-soft)}.mile-i:last-child{border-bottom:0}}
+.mile-i .k{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.mile-i .v{font-size:16.5px;font-weight:800;color:var(--navy);margin-top:4px;font-variant-numeric:tabular-nums}
+.mile-i .d{font-size:12.6px;color:var(--muted);margin-top:3px;line-height:1.45}
+
+/* hỏi đáp */
+details.faq{background:var(--surface);border:1px solid var(--line);border-radius:12px;margin-bottom:12px;overflow:hidden;transition:border-color .18s ease}
+details.faq[open]{border-color:var(--navy-300);box-shadow:var(--shadow-sm)}
+details.faq summary{padding:18px 22px;cursor:pointer;font-weight:700;font-size:16.2px;list-style:none;
+  display:flex;gap:14px;align-items:flex-start;color:var(--ink)}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary::after{content:"+";margin-left:auto;font-size:24px;font-weight:400;color:var(--navy);line-height:1;flex:0 0 auto}
+details.faq[open] summary::after{content:"−"}
+details.faq summary:hover{color:var(--navy)}
+details.faq .ans{padding:0 22px 20px 22px;color:var(--ink-2);font-size:15.4px;line-height:1.68}
+details.faq .ans p + p{margin-top:11px}
+
+/* mạng lưới */
+.net{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.net span{font-size:14px;font-weight:600;padding:8px 15px;border-radius:999px;background:var(--surface);
+  border:1px solid var(--line);color:var(--ink-2);display:inline-flex;gap:8px;align-items:center}
+.net span::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold)}
+.net span.hq::before{background:var(--navy);box-shadow:0 0 0 3px color-mix(in srgb,var(--navy) 22%,transparent)}
+
+/* liên hệ */
+.cta{color:#fff;background:radial-gradient(760px 460px at 10% -10%, rgba(15,107,84,.32), transparent 60%),
+  linear-gradient(150deg,#1F478D,#0C2044)}
+.cta-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,54px);align-items:start}
+@media (max-width:900px){.cta-grid{grid-template-columns:1fr}}
+.cta h2{color:#fff}
+.cta .lede{color:rgba(255,255,255,.85)}
+.cta-contacts{display:grid;gap:12px;margin-top:26px}
+.cc{display:flex;gap:14px;align-items:center;padding:15px 18px;border-radius:13px;background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.2);text-decoration:none;color:#fff;transition:background .16s ease,transform .16s ease}
+.cc:hover{background:rgba(255,255,255,.15);transform:translateX(3px)}
+.cc svg{flex:0 0 auto;color:var(--gold-hi)}
+.cc b{display:block;font-size:16.5px;line-height:1.25}
+.cc span{font-size:13px;color:rgba(255,255,255,.65)}
+.form-card{background:var(--surface);border-radius:var(--r-lg);padding:26px;box-shadow:var(--shadow-lg);color:var(--ink)}
+.form-card h3{margin-bottom:6px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+@media (max-width:520px){.form-grid{grid-template-columns:1fr}}
+.form-grid .full{grid-column:1/-1}
+.form-card label{font-size:13.4px;font-weight:700;display:block;margin-bottom:6px}
+.form-card .req{color:var(--danger)}
+.inp,select.inp,textarea.inp{width:100%;padding:12px 14px;border-radius:11px;border:1.5px solid var(--line);
+  background:var(--bg);color:var(--ink);font:inherit;font-size:16px}
+.inp:focus{outline:none;border-color:var(--navy);box-shadow:0 0 0 3px color-mix(in srgb,var(--navy) 18%,transparent)}
+textarea.inp{min-height:86px;resize:vertical}
+.form-msg{margin-top:14px;padding:14px 16px;border-radius:11px;font-size:14.3px;line-height:1.55;display:none}
+.form-msg.show{display:block}
+.form-msg.ok{background:color-mix(in srgb,var(--ok) 11%,transparent);border:1px solid color-mix(in srgb,var(--ok) 32%,transparent)}
+.form-msg.err{background:color-mix(in srgb,var(--danger) 10%,transparent);border:1px solid color-mix(in srgb,var(--danger) 30%,transparent)}
+.copybox{margin-top:12px;font-size:13px;font-family:ui-monospace,Consolas,monospace;white-space:pre-wrap;
+  background:var(--bg-alt);border:1px solid var(--line);border-radius:10px;padding:13px;max-height:190px;overflow:auto;color:var(--ink-2)}
+
+/* chân trang */
+footer{background:var(--bg-alt);border-top:1px solid var(--line);padding:48px 0 110px}
+.f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:34px}
+@media (max-width:820px){.f-grid{grid-template-columns:1fr;gap:26px}}
+footer img.flogo{height:34px;margin-bottom:14px}
+:root[data-theme="dark"] footer img.flogo{filter:brightness(1.9) saturate(.55)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) footer img.flogo{filter:brightness(1.9) saturate(.55)}}
+footer h4{font-size:12.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--navy);margin:0 0 12px}
+footer ul{list-style:none;padding:0;display:grid;gap:8px;font-size:14.5px;color:var(--ink-2)}
+footer a{color:var(--ink-2);text-decoration:none}
+footer a:hover{color:var(--navy)}
+.disc{margin-top:34px;padding-top:22px;border-top:1px solid var(--line);font-size:12.6px;color:var(--muted);line-height:1.6}
+
+/* thanh dính di động */
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:70;display:none;gap:9px;padding:10px 12px;
+  background:color-mix(in srgb,var(--bg) 94%,transparent);backdrop-filter:blur(12px);
+  border-top:1px solid var(--line);box-shadow:0 -6px 24px -14px rgba(12,32,68,.5)}
+.mbar .btn{flex:1;padding:13px 8px;font-size:14.5px}
+@media (max-width:820px){.mbar{display:flex}body{padding-bottom:74px}}
+
+/* chuyển động — chỉ ẩn khi CÓ JavaScript */
+.js .rv{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.js .rv{opacity:1;transform:none}}
+@media print{
+  nav,.mbar,.theme-btn,.hero-cta,.form-card{display:none!important}
+  body{font-size:11.5pt;padding-bottom:0}
+  .hero,.cta{background:#1F478D!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  section{padding:18px 0;break-inside:avoid}
+  .card,.tl-c,.aud,details.faq{break-inside:avoid}
+  details.faq .ans{display:block!important}
+}
+</style>
+<script>document.documentElement.className+=' js';</script>
+
+<!-- Google Analytics 4 — thay G-XXXXXXXXXX bằng mã đo lường thật rồi lưu lại -->
+<script>(function(){var ID='G-XXXXXXXXXX';if(ID.indexOf('XXXX')>=0)return;
+var s=document.createElement('script');s.async=1;s.src='https://www.googletagmanager.com/gtag/js?id='+ID;
+document.head.appendChild(s);window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments)}window.gtag=gtag;gtag('js',new Date());gtag('config',ID);})();</script>
+</head>
+<body>
+
+
+<!-- =============== NAV =============== -->
+<nav>
+  <div class="nav-in">
+    <a class="brand" href="#top" aria-label="ASCO — đầu trang">
+      <img src="data:image/png;base64,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" alt="Hãng Kiểm toán và Định giá ASCO">
+      <span class="brand-tag">Kiểm toán dự án · Thẩm định giá</span>
+    </a>
+    <div class="nav-links">
+      <a href="#khung">Khung pháp lý</a>
+      <a href="#dem-180">Mốc 180 ngày</a>
+      <a href="#gia-ban">Tính giá bán</a>
+      <a href="#noi-dung">Nội dung</a>
+      <a href="#quy-trinh">Quy trình</a>
+      <a href="#nang-luc">Năng lực</a>
+      <a href="#ho-so">Hồ sơ</a>
+      <a href="#hoi-dap">Hỏi đáp</a>
+    </div>
+    <div class="nav-act">
+      <button class="theme-btn" id="themeBtn" type="button" aria-label="Đổi giao diện sáng/tối" title="Đổi giao diện sáng/tối">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+      </button>
+      <a class="btn btn-navy btn-sm" href="#lien-he">Nhận tư vấn</a>
+    </div>
+  </div>
+</nav>
+
+<!-- =============== HERO =============== -->
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="pill"><span class="dot"></span>Nghị quyết 201/2025/QH15 · Nghị định 192/2025/NĐ-CP · Điều 13</span>
+        <h1>
+          Kiểm toán quyết toán<br>dự án nhà ở xã hội
+          <span class="accent">180 ngày sau nghiệm thu — và con số kiểm toán quyết định lợi nhuận thật của bạn</span>
+        </h1>
+        <p class="lede">
+          Chủ đầu tư nhà ở xã hội bán theo <b>giá tạm tính</b>. Trong <b>180 ngày kể từ ngày nghiệm thu hoàn thành đưa vào sử dụng</b>,
+          doanh nghiệp bắt buộc phải <b>kiểm toán và quyết toán chi phí đầu tư xây dựng</b> để chốt giá bán chính thức.
+          Giá quyết toán thấp hơn giá đã bán thì phải <b>hoàn trả chênh lệch cho toàn bộ người mua</b>; cao hơn thì <b>không được thu thêm</b>.
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn-gold" href="#dem-180">Dự án của tôi còn bao nhiêu ngày? →</a>
+          <a class="btn btn-onnavy" href="#gia-ban">Ước tính giá bán &amp; lợi nhuận</a>
+        </div>
+        <p class="hero-note">Trao đổi sơ bộ miễn phí · Không ràng buộc · Pháp luật cho phép chọn kiểm toán độc lập làm căn cứ quyết toán</p>
+      </div>
+
+      <aside class="hero-card">
+        <h3>
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-6"/></svg>
+          Giá bán nhà ở xã hội được tạo thành thế nào
+        </h3>
+        <div class="stack">
+          <div class="stk">
+            <div class="t"><span>Chi phí đầu tư xây dựng phần nhà ở xã hội</span></div>
+            <div class="d">Bồi thường, giải phóng mặt bằng · xây dựng · thiết bị · quản lý dự án · tư vấn · lãi vay hợp lý · chi phí khác theo quy định</div>
+          </div>
+          <div class="stk-op">+</div>
+          <div class="stk profit">
+            <div class="t"><span>Lợi nhuận định mức</span><span>tối đa 10%</span></div>
+            <div class="d">Tính trên tổng chi phí đầu tư xây dựng phần nhà ở xã hội. Ưu đãi của Nhà nước không được tính vào giá thành.</div>
+          </div>
+          <div class="stk-op">=</div>
+          <div class="stk total">
+            <div class="t"><span>Giá bán được duyệt</span></div>
+            <div class="d">Chia cho diện tích sàn nhà ở xã hội được bán, ra giá bán trên mỗi mét vuông.</div>
+          </div>
+        </div>
+        <p class="hc-foot">Toàn bộ vế chi phí ở trên chỉ được chốt bằng <b>kết quả kiểm toán và quyết toán</b>. Sai một khoản chi phí là sai cả giá bán lẫn lợi nhuận.</p>
+      </aside>
+    </div>
+  </div>
+
+  <div class="trust">
+    <div class="trust-in">
+      <div class="trust-i">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-6"/></svg>
+        <div><b>8.000+ dự án</b><span>Đã kiểm toán quyết toán trong 19 năm, đủ mọi quy mô</span></div>
+      </div>
+      <div class="trust-i">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 20h20M4 20V9l8-6 8 6v11"/><path d="M9 20v-6h6v6"/></svg>
+        <div><b>50+ kỹ sư</b><span>Xây dựng · Giao thông · Thuỷ lợi — kiểm tra khối lượng, đơn giá</span></div>
+      </div>
+      <div class="trust-i">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1L12 2Z"/></svg>
+        <div><b>Top 5 cả nước</b><span>Một trong 5 công ty kiểm toán dự án lớn nhất Việt Nam</span></div>
+      </div>
+      <div class="trust-i">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5.5L12 2 4 5.5V12c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg>
+        <div><b>Độc lập &amp; thẩm định giá</b><span>Kiểm toán viên, kỹ sư và thẩm định viên về giá trong cùng một hãng</span></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- =============== 1. HAI ĐƯỜNG RAY PHÁP LÝ =============== -->
+<section id="khung">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="eyebrow">Điều cần quyết định trước tiên</div>
+      <h2>Hai cơ chế xác định giá bán — chủ đầu tư được quyền chọn, và hệ quả rất khác nhau</h2>
+      <p class="lede" style="margin-top:14px">
+        Từ khi Quốc hội ban hành Nghị quyết 201/2025/QH15 về thí điểm cơ chế, chính sách đặc thù phát triển nhà ở xã hội,
+        doanh nghiệp có <b>hai con đường</b> để xác định giá bán. Chọn đường nào quyết định việc doanh nghiệp bị thẩm định
+        <i>trước khi bán</i> hay <i>sau khi bán</i> — và kéo theo hai loại rủi ro hoàn toàn khác nhau.
+      </p>
+    </div>
+
+    <div class="tbl-scroll rv">
+      <table>
+        <thead>
+          <tr>
+            <th style="width:24%">Tiêu chí</th>
+            <th style="width:38%">Cơ chế truyền thống<br><span class="small" style="font-weight:400">Luật Nhà ở 2023 · Nghị định 100/2024/NĐ-CP</span></th>
+            <th class="col-asco" style="width:38%">Cơ chế thí điểm đặc thù<br><span class="small" style="font-weight:400">Nghị quyết 201/2025/QH15 · Nghị định 192/2025/NĐ-CP</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>Ai xác định giá bán ban đầu</b></td>
+            <td>Chủ đầu tư lập phương án giá, trình cơ quan chuyên môn thẩm định trước khi bán</td>
+            <td class="col-asco"><b>Chủ đầu tư tự xác định giá tạm tính</b>, tự lập hoặc thuê tư vấn đủ năng lực thẩm tra</td>
+          </tr>
+          <tr>
+            <td><b>Thời điểm nhà nước vào cuộc</b></td>
+            <td>Thẩm định <b>trước</b> khi đủ điều kiện bán</td>
+            <td class="col-asco">Gửi Sở Xây dựng <b>30 ngày trước</b> khi nhận hồ sơ mua để công khai; soát xét giá chính thức <b>sau</b> khi có kiểm toán</td>
+          </tr>
+          <tr>
+            <td><b>Kiểm toán, quyết toán chi phí đầu tư</b></td>
+            <td>Là căn cứ để xác định, soát xét giá bán theo quy định</td>
+            <td class="col-asco"><b>Bắt buộc trong 180 ngày</b> kể từ ngày nghiệm thu hoàn thành công trình đưa vào sử dụng — bằng Kiểm toán Nhà nước <b>hoặc kiểm toán độc lập</b></td>
+          </tr>
+          <tr>
+            <td><b>Tốc độ đưa sản phẩm ra thị trường</b></td>
+            <td class="no">Phụ thuộc thời gian thẩm định của cơ quan nhà nước</td>
+            <td class="col-asco yes">Chủ động, bán được sớm hơn</td>
+          </tr>
+          <tr>
+            <td><b>Rủi ro dồn về đâu</b></td>
+            <td class="no">Chậm bán, chậm quay vòng vốn</td>
+            <td class="col-asco"><b>Dồn vào chất lượng hồ sơ quyết toán</b> — nếu giá quyết toán lệch giá tạm tính, doanh nghiệp gánh hậu quả</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout danger rv" style="margin-top:22px">
+      <span class="badge b-req">Cơ chế bất đối xứng — đọc kỹ</span>
+      <h3>Quyết toán cao hơn thì không được thu thêm; thấp hơn thì phải trả lại</h3>
+      <p>
+        Đây là điểm khiến chất lượng kiểm toán trở thành vấn đề tài chính, không còn là thủ tục:
+      </p>
+      <div class="grid g2" style="margin-top:14px;gap:14px">
+        <div class="card" style="border-left:4px solid var(--danger)">
+          <b style="font-size:15.6px;color:var(--danger)">Giá quyết toán THẤP HƠN giá đã bán</b>
+          <p style="margin-top:8px">Chủ đầu tư <b>phải hoàn trả phần chênh lệch</b> cho người mua — không phải một người, mà toàn bộ khách hàng đã ký hợp đồng của dự án.</p>
+        </div>
+        <div class="card" style="border-left:4px solid var(--warn)">
+          <b style="font-size:15.6px;color:var(--warn)">Giá quyết toán CAO HƠN giá đã bán</b>
+          <p style="margin-top:8px">Chủ đầu tư <b>không được thu thêm</b> của người mua. Phần vượt doanh nghiệp tự gánh, ăn thẳng vào lợi nhuận định mức.</p>
+        </div>
+      </div>
+      <p style="margin-top:14px">
+        Nói cách khác: <b>sai lệch về phía nào doanh nghiệp cũng chịu thiệt.</b> Cách duy nhất để không mất tiền là
+        con số quyết toán phải đúng ngay từ đầu — và đúng theo cách cơ quan quản lý chấp nhận được.
+      </p>
+      <span class="cite">Nghị định 192/2025/NĐ-CP, Điều 13 — quy định chi tiết thi hành Nghị quyết 201/2025/QH15</span>
+    </div>
+  </div>
+</section>
+
+<!-- =============== 2. MỐC 180 NGÀY + RỦI RO HOÀN TRẢ =============== -->
+<section id="dem-180" class="alt">
+  <div class="wrap">
+    <div class="sec-head center rv">
+      <div class="eyebrow">Công cụ miễn phí — dùng ngay trên trang</div>
+      <h2>Dự án của bạn còn bao nhiêu ngày, và rủi ro là bao nhiêu tiền?</h2>
+      <p class="lede" style="margin-top:14px">
+        Nhập ba thông tin. Công cụ tính ra mốc hạn 180 ngày theo ngày cụ thể, mốc Sở Xây dựng có ý kiến,
+        và <b>quy đổi rủi ro chênh lệch giá bán thành số tiền phải hoàn trả</b> cho toàn bộ khách hàng đã mua.
+      </p>
+    </div>
+
+    <div class="tool rv">
+      <div class="tool-head navy">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+        <h3>Bộ đếm 180 ngày &amp; ước tính rủi ro hoàn trả</h3>
+        <div class="sub">Dữ liệu chỉ xử lý trên máy của bạn, không gửi đi đâu.</div>
+      </div>
+
+      <div class="tool-body">
+        <div class="tool-in">
+          <div class="fld navy">
+            <label for="nxDate">1 · Ngày nghiệm thu hoàn thành công trình đưa vào sử dụng</label>
+            <input class="inp" id="nxDate" type="date">
+            <span class="hint">Nếu chưa nghiệm thu, hãy nhập ngày dự kiến để lập kế hoạch trước.</span>
+          </div>
+
+          <div class="fld navy">
+            <label for="nxArea">2 · Diện tích sàn nhà ở xã hội đã bán</label>
+            <div class="fld-row">
+              <input class="inp" id="nxArea" type="number" min="0" step="100" value="45000" inputmode="numeric">
+              <span class="unit">m²</span>
+            </div>
+            <input type="range" id="nxAreaR" min="1000" max="200000" step="1000" value="45000" aria-label="Kéo để chọn diện tích sàn">
+          </div>
+
+          <div class="fld navy">
+            <label for="nxPrice">3 · Giá bán tạm tính đã ký hợp đồng</label>
+            <div class="fld-row">
+              <input class="inp" id="nxPrice" type="number" min="0" step="0.1" value="20" inputmode="decimal">
+              <span class="unit">triệu đồng/m²</span>
+            </div>
+            <span class="hint">Giá chưa gồm thuế giá trị gia tăng và kinh phí bảo trì phần sở hữu chung.</span>
+          </div>
+        </div>
+
+        <div class="tool-out">
+          <div class="res-card hero-num" id="nxDlCard">
+            <div class="lbl">Hạn kiểm toán, quyết toán — 180 ngày</div>
+            <div class="big" id="nxDlBig">—</div>
+            <div class="sub2" id="nxDlSub">Nhập ngày nghiệm thu để xem mốc hạn.</div>
+          </div>
+
+          <div class="mile" id="nxMile"></div>
+
+          <div class="res-card" style="margin-top:16px">
+            <div class="lbl">Nếu giá quyết toán thấp hơn giá đã ký — số tiền phải hoàn trả</div>
+            <div class="res-brk" id="nxRisk" style="margin-top:4px;padding-top:0;border-top:0"></div>
+            <div class="sub2" id="nxRiskSub"></div>
+          </div>
+
+          <div class="warn-box" id="nxWarn" style="display:none"></div>
+
+          <div style="margin-top:18px;display:flex;gap:11px;flex-wrap:wrap">
+            <a class="btn btn-navy btn-sm" href="#lien-he">Gửi kết quả này để ASCO rà soát</a>
+            <button class="btn btn-outline btn-sm" type="button" id="nxCopy1">Sao chép kết quả</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="tool-foot">
+        <b>Căn cứ.</b> Mốc 180 ngày kể từ ngày nghiệm thu hoàn thành công trình đưa vào sử dụng để kiểm toán, quyết toán chi phí
+        đầu tư xây dựng và mốc 30 ngày để Sở Xây dựng có ý kiến về giá bán, giá thuê mua — theo Điều 13 Nghị định 192/2025/NĐ-CP
+        quy định chi tiết thi hành Nghị quyết 201/2025/QH15. Con số rủi ro chỉ là <b>ước tính minh hoạ</b> theo các mức chênh lệch giả định,
+        không phải dự báo kết quả kiểm toán của dự án cụ thể.
+      </div>
+    </div>
+
+    <div class="grid g3 rv" style="margin-top:26px">
+      <article class="card" style="border-left:4px solid var(--danger)">
+        <div class="ico" style="background:color-mix(in srgb,var(--danger) 10%,transparent);color:var(--danger);border-color:color-mix(in srgb,var(--danger) 28%,transparent)">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg>
+        </div>
+        <h3>Rủi ro 1 — Chi phí bị loại khỏi giá thành</h3>
+        <p>Mỗi khoản chi phí không đủ hồ sơ, sai định mức hoặc không thuộc diện được tính vào giá bán đều bị loại. Với biên lợi nhuận định mức tối đa 10%, chỉ cần vài hạng mục bị loại là phần lợi nhuận thực nhận co lại đáng kể.</p>
+      </article>
+      <article class="card" style="border-left:4px solid var(--danger)">
+        <div class="ico" style="background:color-mix(in srgb,var(--danger) 10%,transparent);color:var(--danger);border-color:color-mix(in srgb,var(--danger) 28%,transparent)">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <h3>Rủi ro 2 — Hoàn trả chênh lệch hàng loạt</h3>
+        <p>Giá quyết toán thấp hơn giá đã ký thì phải hoàn trả phần chênh lệch cho <b>toàn bộ</b> khách hàng của dự án. Không phải một hợp đồng, mà hàng trăm đến hàng nghìn hợp đồng cùng lúc — kèm khối lượng thủ tục và rủi ro truyền thông.</p>
+      </article>
+      <article class="card" style="border-left:4px solid var(--warn)">
+        <div class="ico" style="background:color-mix(in srgb,var(--gold) 14%,transparent);color:var(--warn);border-color:color-mix(in srgb,var(--gold) 34%,transparent)">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </div>
+        <h3>Rủi ro 3 — Tính thiếu thì mất luôn</h3>
+        <p>Nếu giá quyết toán cao hơn giá đã ký, chủ đầu tư <b>không được thu thêm</b>. Phần chênh lệch doanh nghiệp tự gánh. Đây là lý do việc tính đúng, tính đủ ngay từ hồ sơ tạm tính quan trọng không kém khâu quyết toán.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- =============== 3. GIÁ BÁN & LỢI NHUẬN ĐỊNH MỨC =============== -->
+<section id="gia-ban">
+  <div class="wrap">
+    <div class="sec-head center rv">
+      <div class="eyebrow">Công cụ thứ hai</div>
+      <h2>Cơ cấu giá bán và phần lợi nhuận doanh nghiệp thực sự được giữ</h2>
+      <p class="lede" style="margin-top:14px">
+        Giá bán nhà ở xã hội được tạo thành từ chi phí đầu tư xây dựng phần nhà ở xã hội cộng lợi nhuận định mức tối đa 10%,
+        chia cho diện tích sàn được bán. Thử thay đổi số liệu để thấy <b>một khoản chi phí bị loại ảnh hưởng tới lợi nhuận thế nào</b>.
+      </p>
+    </div>
+
+    <div class="tool rv">
+      <div class="tool-head jade">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/></svg>
+        <h3>Công cụ ước tính giá bán &amp; lợi nhuận định mức</h3>
+        <div class="sub">Kết quả tham khảo để dự trù phương án giá — không thay thế hồ sơ quyết toán được kiểm toán.</div>
+      </div>
+
+      <div class="tool-body">
+        <div class="tool-in">
+          <div class="fld jade">
+            <label for="gbCost">1 · Tổng chi phí đầu tư xây dựng phần nhà ở xã hội</label>
+            <div class="fld-row">
+              <input class="inp" id="gbCost" type="number" min="0" step="10" value="900" inputmode="decimal">
+              <span class="unit">tỷ đồng</span>
+            </div>
+            <input type="range" id="gbCostR" min="50" max="5000" step="10" value="900" aria-label="Kéo để chọn tổng chi phí đầu tư">
+            <span class="hint">Gồm bồi thường giải phóng mặt bằng, xây dựng, thiết bị, quản lý dự án, tư vấn, lãi vay hợp lý và chi phí khác theo quy định. Ưu đãi của Nhà nước không được tính vào giá thành.</span>
+          </div>
+
+          <div class="fld jade">
+            <label for="gbArea">2 · Diện tích sàn nhà ở xã hội được bán</label>
+            <div class="fld-row">
+              <input class="inp" id="gbArea" type="number" min="1" step="100" value="45000" inputmode="numeric">
+              <span class="unit">m²</span>
+            </div>
+            <input type="range" id="gbAreaR" min="1000" max="200000" step="1000" value="45000" aria-label="Kéo để chọn diện tích sàn">
+          </div>
+
+          <div class="fld jade">
+            <label for="gbProfit">3 · Tỷ lệ lợi nhuận định mức áp dụng</label>
+            <div class="fld-row">
+              <input class="inp" id="gbProfit" type="number" min="0" max="10" step="0.5" value="10" inputmode="decimal">
+              <span class="unit">%</span>
+            </div>
+            <input type="range" id="gbProfitR" min="0" max="10" step="0.5" value="10" aria-label="Kéo để chọn tỷ lệ lợi nhuận định mức">
+            <span class="hint">Mức trần theo quy định hiện hành là 10% tổng chi phí đầu tư xây dựng phần nhà ở xã hội.</span>
+          </div>
+
+          <div class="fld jade">
+            <label for="gbLoss">4 · Giả định chi phí bị loại sau kiểm toán</label>
+            <div class="fld-row">
+              <input class="inp" id="gbLoss" type="number" min="0" max="20" step="0.5" value="0" inputmode="decimal">
+              <span class="unit">% chi phí</span>
+            </div>
+            <input type="range" id="gbLossR" min="0" max="20" step="0.5" value="0" aria-label="Kéo để giả định tỷ lệ chi phí bị loại">
+            <span class="hint">Kéo thanh này để thấy chi phí bị loại ăn vào lợi nhuận định mức nhanh đến mức nào.</span>
+          </div>
+        </div>
+
+        <div class="tool-out">
+          <div class="res-card hero-num ok" id="gbCard">
+            <div class="lbl">Giá bán bình quân theo phương án</div>
+            <div class="big" id="gbBig">—</div>
+            <div class="sub2" id="gbSub"></div>
+            <div class="res-brk" id="gbBrk"></div>
+          </div>
+
+          <div class="res-card">
+            <div class="lbl">Lợi nhuận định mức thực nhận</div>
+            <div class="big" id="gbProfitBig" style="font-size:clamp(22px,3vw,28px)">—</div>
+            <div class="sub2" id="gbProfitSub"></div>
+          </div>
+
+          <div class="warn-box" id="gbWarn" style="display:none"></div>
+          <div class="note-box" id="gbNote"></div>
+
+          <div style="margin-top:18px;display:flex;gap:11px;flex-wrap:wrap">
+            <a class="btn btn-navy btn-sm" href="#lien-he">Nhờ ASCO rà soát phương án giá</a>
+            <button class="btn btn-outline btn-sm" type="button" id="nxCopy2">Sao chép kết quả</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="tool-foot">
+        <b>Giới hạn của công cụ.</b> Đây là mô hình đơn giản hoá để hình dung quan hệ giữa chi phí, lợi nhuận định mức và giá bán.
+        Giá bán chính thức phụ thuộc cơ cấu chi phí thực tế được chấp nhận khi quyết toán, chính sách giá của từng địa phương
+        và ý kiến của Sở Xây dựng. Giá hiển thị chưa bao gồm thuế giá trị gia tăng và kinh phí bảo trì phần sở hữu chung.
+        ASCO không tư vấn nâng giá — chỉ giúp <b>tính đúng và tính đủ</b> theo quy định pháp luật.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============== 4. HÀNH TRÌNH PHÁP LÝ =============== -->
+<section id="hanh-trinh" class="alt">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="eyebrow">Toàn cảnh</div>
+      <h2>Sáu bước từ nghiệm thu đến giá bán chính thức — ASCO đứng ở đâu</h2>
+      <p class="lede" style="margin-top:14px">
+        Phần lớn vướng mắc của chủ đầu tư không nằm ở bước cuối, mà ở chỗ hồ sơ chi phí không được chuẩn bị
+        từ trước khi nghiệm thu. Dưới đây là toàn bộ chặng đường và điểm ASCO tham gia.
+      </p>
+    </div>
+
+    <div class="tl">
+      <div class="tl-i rv">
+        <div class="tl-mark"><div><div class="gd">Bước</div><div class="gn">1</div></div></div>
+        <div class="tl-c">
+          <div class="dur">Trước và trong khi bán</div>
+          <h3>Xác định giá bán tạm tính</h3>
+          <p style="font-size:15.2px;color:var(--ink-2)">Chủ đầu tư tự xác định giá bán, giá thuê mua tạm tính — tự lập hoặc thuê tổ chức tư vấn đủ năng lực quản lý chi phí đầu tư xây dựng thẩm tra. Hồ sơ gửi Sở Xây dựng <b>30 ngày trước</b> khi tiếp nhận hồ sơ mua để công khai.</p>
+          <p class="small" style="margin-top:10px"><b>ASCO tham gia:</b> rà soát cơ cấu chi phí dự kiến, cảnh báo sớm các khoản có rủi ro bị loại khi quyết toán — để giá tạm tính không lệch xa giá quyết toán về sau.</p>
+        </div>
+      </div>
+
+      <div class="tl-i rv">
+        <div class="tl-mark"><div><div class="gd">Bước</div><div class="gn">2</div></div></div>
+        <div class="tl-c">
+          <div class="dur">Mốc bắt đầu tính hạn</div>
+          <h3>Nghiệm thu hoàn thành công trình đưa vào sử dụng</h3>
+          <p style="font-size:15.2px;color:var(--ink-2)">Đây là mốc khởi điểm của thời hạn <b>180 ngày</b>. Từ thời điểm này, đồng hồ pháp lý bắt đầu chạy, kể cả khi hồ sơ chi phí chưa được tập hợp xong.</p>
+          <p class="small" style="margin-top:10px"><b>ASCO tham gia:</b> chốt danh mục hồ sơ và phân công thu thập ngay tại thời điểm nghiệm thu, không đợi đến khi gần hết hạn.</p>
+        </div>
+      </div>
+
+      <div class="tl-i rv">
+        <div class="tl-mark"><div><div class="gd">Bước</div><div class="gn">3</div></div></div>
+        <div class="tl-c">
+          <div class="dur">Trong 180 ngày</div>
+          <h3>Kiểm toán và quyết toán chi phí đầu tư xây dựng</h3>
+          <p style="font-size:15.2px;color:var(--ink-2)">Chủ đầu tư thực hiện kiểm toán — bằng Kiểm toán Nhà nước <b>hoặc kiểm toán độc lập</b> — và quyết toán chi phí đầu tư xây dựng theo pháp luật về nhà ở, xây dựng và pháp luật có liên quan.</p>
+          <p class="small" style="margin-top:10px"><b>ASCO tham gia:</b> đây là phần việc chính — kiểm toán viên và kỹ sư làm song song trên chứng từ và trên khối lượng, đơn giá.</p>
+        </div>
+      </div>
+
+      <div class="tl-i rv">
+        <div class="tl-mark"><div><div class="gd">Bước</div><div class="gn">4</div></div></div>
+        <div class="tl-c">
+          <div class="dur">Ngay sau khi có kết quả</div>
+          <h3>Gửi hồ sơ kiểm toán, quyết toán cho Sở Xây dựng</h3>
+          <p style="font-size:15.2px;color:var(--ink-2)">Một bộ hồ sơ kiểm toán, quyết toán được gửi tới Sở Xây dựng nơi có dự án để cơ quan này soát xét giá bán, giá thuê mua chính thức.</p>
+          <p class="small" style="margin-top:10px"><b>ASCO tham gia:</b> chuẩn bị bộ hồ sơ theo đúng cấu trúc cơ quan quản lý cần, kèm thuyết minh cơ sở của từng khoản chi phí.</p>
+        </div>
+      </div>
+
+      <div class="tl-i rv">
+        <div class="tl-mark"><div><div class="gd">Bước</div><div class="gn">5</div></div></div>
+        <div class="tl-c">
+          <div class="dur">30 ngày tiếp theo</div>
+          <h3>Sở Xây dựng có ý kiến bằng văn bản</h3>
+          <p style="font-size:15.2px;color:var(--ink-2)">Căn cứ hồ sơ kiểm toán, quyết toán, Sở Xây dựng có ý kiến về giá bán, giá thuê mua nhà ở xã hội của dự án.</p>
+          <p class="small" style="margin-top:10px"><b>ASCO tham gia:</b> đồng hành giải trình khi cơ quan quản lý yêu cầu làm rõ, không tính thêm phí — đây là lúc chủ đầu tư cần người bảo vệ số liệu nhất.</p>
+        </div>
+      </div>
+
+      <div class="tl-i rv">
+        <div class="tl-mark"><div><div class="gd">Bước</div><div class="gn">6</div></div></div>
+        <div class="tl-c">
+          <div class="dur">Xử lý hậu quyết toán</div>
+          <h3>Chốt giá chính thức và xử lý chênh lệch</h3>
+          <p style="font-size:15.2px;color:var(--ink-2)">Nếu giá chính thức <b>thấp hơn</b> giá đã ký, chủ đầu tư hoàn trả phần chênh lệch cho người mua. Nếu <b>cao hơn</b>, chủ đầu tư không được thu thêm.</p>
+          <p class="small" style="margin-top:10px"><b>ASCO tham gia:</b> hỗ trợ lập bảng tính chênh lệch theo từng hợp đồng và hồ sơ giải thích gửi khách hàng, giảm rủi ro khiếu nại.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============== 5. HAI GÓI DỊCH VỤ =============== -->
+<section id="dich-vu">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="eyebrow">Phạm vi dịch vụ</div>
+      <h2>Chủ đầu tư không mua “một cuộc kiểm toán” — mà mua <em>giá bán được chấp thuận</em></h2>
+      <p class="lede" style="margin-top:14px">
+        Vì vậy ASCO tách rõ hai gói việc. Nhiều doanh nghiệp chỉ làm gói A rồi tự xoay xở với hồ sơ giá bán,
+        và mắc kẹt đúng ở khâu cuối cùng.
+      </p>
+    </div>
+
+    <div class="grid g2">
+      <article class="card rv">
+        <span class="badge b-navy">Gói A</span>
+        <h3 style="margin-top:12px">Kiểm toán báo cáo quyết toán chi phí đầu tư xây dựng</h3>
+        <p>Kiểm toán độc lập theo Chuẩn mực kiểm toán Việt Nam số 1000, làm căn cứ pháp lý để xác định giá bán, giá thuê mua chính thức.</p>
+        <ul style="margin-top:14px;font-size:14.8px;color:var(--ink-2);display:grid;gap:6px">
+          <li>Kiểm tra hồ sơ pháp lý và trình tự đầu tư của dự án</li>
+          <li>Kiểm tra nguồn vốn và chi phí đầu tư thực hiện</li>
+          <li>Kiểm tra khối lượng, định mức, đơn giá phần xây lắp và thiết bị</li>
+          <li>Xác định chi phí được tính và không được tính vào giá thành</li>
+          <li>Phát hành báo cáo kiểm toán và thư quản lý</li>
+        </ul>
+      </article>
+
+      <article class="card rv" style="border-left:4px solid var(--jade)">
+        <span class="badge b-jade">Gói B — phần ít đơn vị làm</span>
+        <h3 style="margin-top:12px">Hỗ trợ hồ sơ xác định giá bán, giá thuê mua</h3>
+        <p>Chuyển kết quả kiểm toán thành bộ hồ sơ mà Sở Xây dựng cần, và đồng hành đến khi có ý kiến bằng văn bản.</p>
+        <ul style="margin-top:14px;font-size:14.8px;color:var(--ink-2);display:grid;gap:6px">
+          <li>Rà soát phương án giá tạm tính trước khi mở bán</li>
+          <li>Lập bảng cơ cấu giá bán và thuyết minh từng khoản chi phí</li>
+          <li>Kiểm tra tỷ lệ lợi nhuận định mức trong giới hạn cho phép</li>
+          <li>Chuẩn bị bộ hồ sơ gửi Sở Xây dựng theo đúng cấu trúc</li>
+          <li>Giải trình cùng chủ đầu tư khi cơ quan quản lý yêu cầu làm rõ</li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="callout jade rv" style="margin-top:22px">
+      <span class="badge b-jade">Tuyên bố về tính độc lập</span>
+      <h3>ASCO không tư vấn nâng giá — ASCO giúp tính đúng và tính đủ</h3>
+      <p>
+        Nhà ở xã hội là lĩnh vực nhạy cảm, phục vụ người thu nhập thấp và chịu giám sát chặt của dư luận lẫn cơ quan quản lý.
+        ASCO xác định rõ vai trò của mình: đưa ra ý kiến kiểm toán độc lập về chi phí đầu tư trên cơ sở bằng chứng và quy định pháp luật —
+        <b>không nhận “vẽ” chi phí để đẩy giá bán</b>, và cũng không cắt bỏ những khoản chi phí hợp pháp mà doanh nghiệp có quyền tính.
+      </p>
+      <p>
+        Chúng tôi cũng không cam kết “bảo đảm được cơ quan quản lý chấp thuận”. Điều ASCO cam kết là:
+        hồ sơ đủ căn cứ, thuyết minh rõ ràng, và có người đứng cạnh doanh nghiệp để bảo vệ số liệu khi được yêu cầu giải trình.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- =============== 6. NỘI DUNG KIỂM TOÁN + KỸ SƯ =============== -->
+<section id="noi-dung" class="alt">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="eyebrow">Phạm vi công việc</div>
+      <h2>Bảy nội dung kiểm toán, và lý do phần kỹ thuật quyết định con số cuối cùng</h2>
+      <p class="lede" style="margin-top:14px">
+        Kiểm toán quyết toán có chuẩn mực riêng và hồ sơ làm việc riêng. Dưới đây là bảy nội dung bắt buộc — kèm mã hồ sơ
+        làm việc thực tế trong hệ thống của ASCO, để Quý doanh nghiệp biết chính xác kiểm toán viên sẽ làm gì.
+      </p>
+    </div>
+
+    <div class="grid g2" style="gap:14px;margin-bottom:26px">
+      <div class="aud rv"><span class="n">1</span><div><div class="top"><b>Kiểm tra hồ sơ pháp lý</b><span class="wp">3000</span></div>
+        <span class="d">Trình tự đầu tư xây dựng, thẩm quyền phê duyệt, trình tự lựa chọn nhà thầu, việc ký kết hợp đồng so với quyết định trúng thầu.</span></div></div>
+      <div class="aud rv"><span class="n">2</span><div><div class="top"><b>Kiểm tra nguồn vốn đầu tư</b><span class="wp">4000</span></div>
+        <span class="d">Cơ cấu vốn thực hiện so với tổng mức đầu tư được duyệt; vốn chủ sở hữu, vốn vay và chi phí lãi vay được tính vào giá thành.</span></div></div>
+      <div class="aud rv"><span class="n">3</span><div><div class="top"><b>Kiểm tra chi phí đầu tư</b><span class="wp">5000</span></div>
+        <span class="d">Phần việc nặng nhất và quyết định giá bán: khối lượng quyết toán, đối chiếu thiết kế — dự toán — hợp đồng — nghiệm thu — bản vẽ hoàn công; kiểm tra định mức, đơn giá.</span></div></div>
+      <div class="aud rv"><span class="n">4</span><div><div class="top"><b>Chi phí không tính vào giá trị tài sản</b><span class="wp">6000</span></div>
+        <span class="d">Xác định các khoản không được tính vào giá thành nhà ở xã hội — trực tiếp ảnh hưởng tới giá bán và lợi nhuận định mức.</span></div></div>
+      <div class="aud rv"><span class="n">5</span><div><div class="top"><b>Giá trị tài sản hình thành qua đầu tư</b><span class="wp">7000</span></div>
+        <span class="d">Xác định giá trị tài sản bàn giao, phân bổ chi phí giữa phần nhà ở xã hội và phần kinh doanh thương mại (nếu có).</span></div></div>
+      <div class="aud rv"><span class="n">6</span><div><div class="top"><b>Công nợ, vật tư, thiết bị tồn đọng</b><span class="wp">8000</span></div>
+        <span class="d">Công nợ phải thu, phải trả với nhà thầu và vật tư, thiết bị còn tồn đọng tại thời điểm khoá sổ quyết toán.</span></div></div>
+      <div class="aud rv" style="grid-column:1/-1"><span class="n">7</span><div><div class="top"><b>Việc chấp hành kết luận của thanh tra, kiểm tra, Kiểm toán Nhà nước</b><span class="wp">9000</span></div>
+        <span class="d">Với nhà ở xã hội, đây là nội dung ngày càng quan trọng: nhiều địa phương đang tăng cường kiểm tra chuyên đề đối với các dự án nhà ở xã hội trên địa bàn.</span></div></div>
+    </div>
+
+    <div class="callout jade rv">
+      <span class="badge b-jade">Khác biệt quyết định</span>
+      <h3>Tranh cãi về giá bán nằm ở <em>khối lượng và đơn giá</em>, không nằm ở bút toán</h3>
+      <p>
+        Khi cơ quan quản lý soát xét giá bán nhà ở xã hội, câu hỏi không phải “hạch toán có đúng tài khoản không”,
+        mà là “khối lượng này có đúng bản vẽ hoàn công không”, “đơn giá này lấy theo định mức nào”, “khoản chi phí này có được tính vào giá thành không”.
+        Đó là công việc của kỹ sư, không phải của kế toán.
+      </p>
+      <p>
+        ASCO có <b>hơn 50 kỹ sư Xây dựng, Giao thông, Thuỷ lợi</b> — một trong những đội ngũ kỹ thuật viên lớn nhất trong các công ty
+        kiểm toán tại Việt Nam — làm việc song song với kiểm toán viên hành nghề, cùng đội ngũ thẩm định viên về giá và kỹ sư định giá xây dựng.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- =============== 7. NĂNG LỰC & CAM KẾT =============== -->
+<section id="nang-luc">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="eyebrow">Năng lực ASCO</div>
+      <h2>Kiểm toán dự án là lĩnh vực lõi, không phải dịch vụ làm thêm</h2>
+      <p class="lede" style="margin-top:14px">
+        ASCO thành lập ngày 25/9/2007 với chiến lược tập trung vào kiểm toán báo cáo quyết toán dự án hoàn thành.
+        Năm 2021, ASCO là một trong hai công ty kiểm toán có doanh thu lớn nhất Việt Nam về lĩnh vực này theo báo cáo của Bộ Tài chính.
+      </p>
+    </div>
+
+    <div class="stats rv" style="margin-bottom:26px">
+      <div class="stat"><div class="v">8.000+</div><div class="l">Dự án đã kiểm toán quyết toán</div></div>
+      <div class="stat"><div class="v">Top 5</div><div class="l">Một trong 5 công ty kiểm toán dự án lớn nhất Việt Nam</div></div>
+      <div class="stat"><div class="v">50+</div><div class="l">Kỹ sư Xây dựng · Giao thông · Thuỷ lợi</div></div>
+      <div class="stat"><div class="v">19</div><div class="l">Năm hoạt động — thành lập 25/9/2007</div></div>
+    </div>
+
+    <div class="grid g3 rv" style="margin-bottom:26px">
+      <article class="card">
+        <div class="ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5.5L12 2 4 5.5V12c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></div>
+        <h3>Đủ điều kiện hành nghề</h3>
+        <p>ASCO thuộc danh sách được Bộ Tài chính chấp thuận kiểm toán đơn vị có lợi ích công chúng, cả lĩnh vực chứng khoán và lĩnh vực khác, với <b>21 kiểm toán viên hành nghề được Ủy ban Chứng khoán Nhà nước chấp thuận</b>.</p>
+      </article>
+      <article class="card">
+        <div class="ico jade"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div>
+        <h3>Kiểm toán và thẩm định giá trong một hãng</h3>
+        <p>Với nhà ở xã hội, chi phí đầu tư và giá trị tài sản thường phải soi từ cả hai góc. ASCO có kiểm toán viên, kỹ sư và thẩm định viên về giá trong cùng một tổ chức — không phải thuê ngoài, không phải chờ phối hợp.</p>
+      </article>
+      <article class="card">
+        <div class="ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a4 4 0 0 0-4 4v1a4 4 0 0 0 0 8v1a4 4 0 0 0 8 0v-1a4 4 0 0 0 0-8V6a4 4 0 0 0-4-4Z"/><path d="M12 8v8"/></svg></div>
+        <h3>Phần mềm kiểm toán dự án bằng AI</h3>
+        <p>Dự án nhà ở xã hội có khối lượng hồ sơ rất lớn và thời hạn cứng 180 ngày. ASCO ứng dụng trí tuệ nhân tạo vào quy trình kiểm toán dự án để tăng độ phủ kiểm tra và rút ngắn thời gian xử lý hồ sơ.</p>
+      </article>
+    </div>
+
+    <div class="card rv" style="background:var(--tint);border-color:var(--tint-2)">
+      <h3 style="margin-bottom:14px">Bốn cam kết ASCO đưa vào hợp đồng</h3>
+      <div class="grid g4" style="gap:18px">
+        <div><b style="font-size:15px;display:block;margin-bottom:4px">Bám mốc 180 ngày</b><span class="small">Lộ trình dựng ngược từ hạn pháp lý, chốt ngày phát hành báo cáo ngay trong hợp đồng.</span></div>
+        <div><b style="font-size:15px;display:block;margin-bottom:4px">Đồng hành giải trình</b><span class="small">Cùng chủ đầu tư giải trình với Sở Xây dựng và đoàn kiểm tra sau khi phát hành, không tính thêm phí.</span></div>
+        <div><b style="font-size:15px;display:block;margin-bottom:4px">Một lần yêu cầu hồ sơ</b><span class="small">Gửi trước danh mục hồ sơ đầy đủ, không hỏi rải rác làm gián đoạn bộ máy dự án.</span></div>
+        <div><b style="font-size:15px;display:block;margin-bottom:4px">Bảo mật thông tin dự án</b><span class="small">Cam kết bảo mật theo chuẩn mực đạo đức nghề nghiệp và thoả thuận bảo mật riêng với doanh nghiệp.</span></div>
+      </div>
+      <div class="net">
+        <span class="hq">Hà Nội — Trụ sở chính</span>
+        <span>TP. Hồ Chí Minh</span><span>Hải Phòng</span><span>Ninh Bình</span><span>Đồng Nai</span><span>Cần Thơ</span>
+        <span>Nghệ An</span><span>Huế</span><span>Đà Nẵng</span><span>Quảng Trị</span><span>Quảng Ngãi</span>
+      </div>
+      <p class="small" style="margin-top:12px">Dự án nhà ở xã hội trải khắp 34 tỉnh, thành. Nhóm kiểm toán được bố trí từ cơ sở gần dự án nhất — giảm chi phí đi lại và nắm được thực tiễn xử lý hồ sơ của Sở Xây dựng địa phương.</p>
+    </div>
+  </div>
+</section>
+
+<!-- =============== 8. DANH MỤC HỒ SƠ =============== -->
+<section id="ho-so" class="alt">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="eyebrow">Chuẩn bị trước — kịp mốc 180 ngày</div>
+      <h2>Danh mục hồ sơ cho kiểm toán quyết toán dự án nhà ở xã hội</h2>
+      <p class="lede" style="margin-top:14px">
+        Nguyên nhân phổ biến nhất khiến chủ đầu tư trễ hạn không phải vì kiểm toán chậm, mà vì hồ sơ chi phí
+        được đi gom sau khi đã nghiệm thu. Tích vào từng mục để biết doanh nghiệp đang sẵn sàng tới đâu.
+      </p>
+    </div>
+
+    <div class="cl-wrap rv">
+      <div class="cl-head">
+        <h3>Mức độ sẵn sàng hồ sơ quyết toán</h3>
+        <div class="cl-prog">
+          <div class="cl-bar"><i id="nxClBar"></i></div>
+          <div class="cl-pctv" id="nxClPct">0%</div>
+        </div>
+      </div>
+      <div class="cl-body" id="nxClBody">
+        <div class="cl-g">
+          <h4>A · Pháp lý dự án</h4>
+          <ul>
+            <li><label><input type="checkbox"><span>Chấp thuận chủ trương đầu tư, chấp thuận nhà đầu tư</span></label></li>
+            <li><label><input type="checkbox"><span>Quyết định giao đất, cho thuê đất; hồ sơ miễn tiền sử dụng đất</span></label></li>
+            <li><label><input type="checkbox"><span>Quy hoạch chi tiết được duyệt; giấy phép xây dựng</span></label></li>
+            <li><label><input type="checkbox"><span>Quyết định phê duyệt dự án và các quyết định điều chỉnh</span></label></li>
+            <li><label><input type="checkbox"><span>Văn bản xác định tỷ lệ diện tích nhà ở xã hội và phần kinh doanh thương mại</span></label></li>
+          </ul>
+        </div>
+
+        <div class="cl-g jade">
+          <h4>B · Chi phí xây dựng</h4>
+          <ul>
+            <li><label><input type="checkbox"><span>Thiết kế và dự toán được duyệt; hồ sơ thẩm tra thiết kế — dự toán</span></label></li>
+            <li><label><input type="checkbox"><span>Hồ sơ lựa chọn nhà thầu và hợp đồng thi công, phụ lục hợp đồng</span></label></li>
+            <li><label><input type="checkbox"><span><b>Bản vẽ hoàn công</b> có xác nhận đầy đủ của các bên</span></label></li>
+            <li><label><input type="checkbox"><span>Biên bản nghiệm thu khối lượng, khối lượng phát sinh</span></label></li>
+            <li><label><input type="checkbox"><span>Hồ sơ quyết toán khối lượng A–B của từng nhà thầu</span></label></li>
+            <li><label><input type="checkbox"><span>Biên bản nghiệm thu hoàn thành công trình đưa vào sử dụng</span></label></li>
+          </ul>
+        </div>
+
+        <div class="cl-g jade">
+          <h4>C · Thiết bị và hạ tầng</h4>
+          <ul>
+            <li><label><input type="checkbox"><span>Dự toán, hợp đồng, nghiệm thu phần thiết bị</span></label></li>
+            <li><label><input type="checkbox"><span>Hồ sơ hạ tầng kỹ thuật, phòng cháy chữa cháy, cấp thoát nước, điện</span></label></li>
+            <li><label><input type="checkbox"><span>Hồ sơ phần diện tích sinh hoạt cộng đồng, hạng mục phụ trợ</span></label></li>
+            <li><label><input type="checkbox"><span>Hoá đơn, chứng từ thanh toán thiết bị</span></label></li>
+          </ul>
+        </div>
+
+        <div class="cl-g">
+          <h4>D · Bồi thường, giải phóng mặt bằng</h4>
+          <ul>
+            <li><label><input type="checkbox"><span>Phương án bồi thường, hỗ trợ, tái định cư được phê duyệt</span></label></li>
+            <li><label><input type="checkbox"><span>Chứng từ chi trả bồi thường theo phương án</span></label></li>
+            <li><label><input type="checkbox"><span>Hồ sơ chi phí do chủ đầu tư tự ứng (nếu có)</span></label></li>
+          </ul>
+        </div>
+
+        <div class="cl-g">
+          <h4>E · Chi phí tư vấn, quản lý và lãi vay</h4>
+          <ul>
+            <li><label><input type="checkbox"><span>Hợp đồng, nghiệm thu, thanh lý các gói tư vấn</span></label></li>
+            <li><label><input type="checkbox"><span>Chứng từ chi phí quản lý dự án</span></label></li>
+            <li><label><input type="checkbox"><span>Hợp đồng tín dụng, chứng từ trả lãi vay trong thời gian xây dựng</span></label></li>
+            <li><label><input type="checkbox"><span>Bảng phân bổ chi phí chung giữa phần nhà ở xã hội và phần thương mại</span></label></li>
+          </ul>
+        </div>
+
+        <div class="cl-g jade">
+          <h4>F · Giá bán và hợp đồng với khách hàng</h4>
+          <ul>
+            <li><label><input type="checkbox"><span>Phương án giá bán, giá thuê mua tạm tính đã gửi Sở Xây dựng</span></label></li>
+            <li><label><input type="checkbox"><span>Văn bản của Sở Xây dựng về công khai giá tạm tính</span></label></li>
+            <li><label><input type="checkbox"><span>Danh sách hợp đồng mua bán đã ký, diện tích và giá từng căn</span></label></li>
+            <li><label><input type="checkbox"><span>Kết luận thanh tra, kiểm tra liên quan đến dự án (nếu có)</span></label></li>
+          </ul>
+        </div>
+      </div>
+      <div class="cl-foot">
+        <button class="btn btn-outline btn-sm" type="button" id="nxClPrint">In danh mục</button>
+        <button class="btn btn-outline btn-sm" type="button" id="nxClReset">Bỏ chọn tất cả</button>
+        <a class="btn btn-navy btn-sm" href="#lien-he">Nhờ ASCO rà soát mức độ sẵn sàng</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============== 9. HỎI ĐÁP =============== -->
+<section id="hoi-dap">
+  <div class="wrap narrow">
+    <div class="sec-head center rv">
+      <div class="eyebrow">Hỏi &amp; đáp</div>
+      <h2>Những câu chủ đầu tư nhà ở xã hội hay hỏi nhất</h2>
+    </div>
+
+    <details class="faq rv"><summary>Bắt buộc phải kiểm toán, hay chỉ cần tự quyết toán nội bộ?</summary>
+      <div class="ans"><p>Nếu dự án áp dụng cơ chế theo Nghị quyết 201/2025/QH15 và Nghị định 192/2025/NĐ-CP, thì trong <b>180 ngày kể từ ngày nghiệm thu hoàn thành công trình đưa vào sử dụng</b>, chủ đầu tư phải kiểm toán và quyết toán chi phí đầu tư xây dựng, rồi gửi hồ sơ cho Sở Xây dựng để soát xét giá bán, giá thuê mua chính thức.</p><p>Pháp luật cho phép thực hiện bằng Kiểm toán Nhà nước <b>hoặc kiểm toán độc lập</b> — nghĩa là doanh nghiệp được chủ động chọn đơn vị kiểm toán độc lập đủ điều kiện.</p></div>
+    </details>
+
+    <details class="faq rv"><summary>Kiểm toán ra giá thấp hơn giá đã ký với hàng trăm khách hàng thì xử lý thế nào?</summary>
+      <div class="ans"><p>Chủ đầu tư phải hoàn trả phần chênh lệch cho người mua. Đây là nghĩa vụ với toàn bộ khách hàng đã ký hợp đồng của dự án, nên khối lượng công việc và rủi ro khiếu nại rất lớn nếu không chuẩn bị trước.</p><p>Cách xử lý thực tế: lập bảng tính chênh lệch theo từng hợp đồng, chuẩn bị văn bản giải thích rõ căn cứ, và triển khai hoàn trả theo đợt có kế hoạch. ASCO hỗ trợ chủ đầu tư phần bảng tính và hồ sơ giải thích này.</p><p>Quan trọng hơn cả là <b>phòng từ đầu</b>: rà soát cơ cấu chi phí ngay khi lập giá tạm tính để giá tạm tính không lệch xa giá quyết toán.</p></div>
+    </details>
+
+    <details class="faq rv"><summary>Nếu giá quyết toán cao hơn giá đã bán thì có được thu thêm không?</summary>
+      <div class="ans"><p>Không. Chủ đầu tư không được thu thêm phần chênh lệch từ người mua; phần vượt doanh nghiệp tự gánh, ăn trực tiếp vào lợi nhuận định mức.</p><p>Đây chính là lý do việc tính đúng, tính đủ ngay từ phương án giá tạm tính quan trọng không kém khâu quyết toán cuối cùng — sai lệch về phía nào doanh nghiệp cũng chịu thiệt.</p></div>
+    </details>
+
+    <details class="faq rv"><summary>Lợi nhuận định mức 10% tính trên cái gì?</summary>
+      <div class="ans"><p>Theo quy định hiện hành, chủ đầu tư dự án nhà ở xã hội được hưởng lợi nhuận định mức tối đa <b>10% tổng chi phí đầu tư xây dựng phần diện tích nhà ở xã hội</b> — không tính trên toàn bộ dự án nếu dự án có cả phần kinh doanh thương mại.</p><p>Các ưu đãi của Nhà nước như miễn tiền sử dụng đất không được tính vào giá thành để xác định lợi nhuận. Vì vậy việc <b>phân bổ chi phí chung giữa phần nhà ở xã hội và phần thương mại</b> là một trong những nội dung kiểm toán nhạy cảm nhất, ảnh hưởng trực tiếp tới cả giá bán lẫn lợi nhuận.</p></div>
+    </details>
+
+    <details class="faq rv"><summary>Chi phí lãi vay và chi phí bồi thường do doanh nghiệp tự ứng có được tính vào giá bán không?</summary>
+      <div class="ans"><p>Nguyên tắc chung là các khoản chi phí hợp lý, hợp lệ phục vụ trực tiếp việc đầu tư xây dựng phần nhà ở xã hội, có đủ hồ sơ chứng minh và phù hợp quy định pháp luật thì được tính vào giá thành. Với chi phí bồi thường, hỗ trợ, tái định cư do chủ đầu tư tự ứng theo phương án đã được phê duyệt, Bộ Xây dựng đã có văn bản hướng dẫn cho các trường hợp cụ thể.</p><p>Tuy nhiên mỗi dự án có tình huống riêng. ASCO rà soát từng khoản trên hồ sơ thực tế và nêu rõ khoản nào đủ căn cứ, khoản nào có rủi ro bị loại — trước khi doanh nghiệp chốt phương án giá.</p></div>
+    </details>
+
+    <details class="faq rv"><summary>Doanh nghiệp đang chọn cơ chế nào — làm sao biết?</summary>
+      <div class="ans"><p>Căn cứ vào hồ sơ pháp lý của dự án và cách doanh nghiệp đã xử lý bước xác định giá: nếu đã tự xác định giá tạm tính và gửi Sở Xây dựng để công khai trước khi mở bán, thì đang đi theo cơ chế thí điểm của Nghị quyết 201/2025/QH15. Nếu lập phương án giá trình cơ quan chuyên môn thẩm định trước khi bán, thì đang theo cơ chế của Luật Nhà ở 2023 và Nghị định 100/2024/NĐ-CP.</p><p>ASCO rà soát miễn phí hồ sơ để xác định dự án đang thuộc cơ chế nào và nghĩa vụ kèm theo.</p></div>
+    </details>
+
+    <details class="faq rv"><summary>Dự án nhà ở xã hội bằng vốn đầu tư công thì khác gì?</summary>
+      <div class="ans"><p>Khác về khung quyết toán. Dự án sử dụng vốn đầu tư công do Ban Quản lý dự án nhà nước làm chủ đầu tư phải quyết toán vốn đầu tư theo <b>Nghị định 193/2026/NĐ-CP</b> quy định về quyết toán vốn đầu tư dự án — quy trình lập, thẩm tra, phê duyệt quyết toán theo pháp luật đầu tư công.</p><p>ASCO phục vụ cả hai nhóm: kiểm toán quyết toán theo khung đầu tư công, và kiểm toán chi phí đầu tư làm căn cứ xác định giá bán cho dự án do doanh nghiệp tự đầu tư.</p></div>
+    </details>
+
+    <details class="faq rv"><summary>Một đơn vị vừa lập hồ sơ quyết toán vừa kiểm toán có được không?</summary>
+      <div class="ans"><p>Không. Chuẩn mực kiểm toán Việt Nam số 1000 quy định rõ: kiểm toán viên và doanh nghiệp kiểm toán đã cung cấp dịch vụ tư vấn lập, hoàn thiện một phần hoặc toàn bộ hồ sơ quyết toán thì <b>không được cung cấp dịch vụ kiểm toán</b> báo cáo quyết toán đó, và ngược lại.</p><p>Hậu quả rơi vào chủ đầu tư: báo cáo kiểm toán có thể bị coi là không bảo đảm tính độc lập và hồ sơ bị trả lại. Khi lựa chọn nhà thầu, doanh nghiệp nên tách bạch rõ hai gói việc này.</p></div>
+    </details>
+
+    <details class="faq rv"><summary>Chi phí kiểm toán khoảng bao nhiêu?</summary>
+      <div class="ans"><p>Phí phụ thuộc quy mô chi phí đầu tư, số lượng gói thầu và hạng mục, mức độ đầy đủ của hồ sơ, việc dự án có phần kinh doanh thương mại phải phân bổ chi phí hay không, và khoảng cách tới cơ sở gần nhất của ASCO.</p><p>Đặt cạnh rủi ro: chỉ một sai lệch nhỏ trên đơn giá mỗi mét vuông, nhân với vài chục nghìn mét vuông sàn, đã lớn hơn nhiều lần chi phí kiểm toán cho cả dự án. ASCO gửi báo giá kèm lộ trình bám mốc 180 ngày trong vòng 24 giờ làm việc sau khi nhận thông tin sơ bộ.</p></div>
+    </details>
+
+    <details class="faq rv"><summary>Bước tiếp theo nếu doanh nghiệp muốn làm việc với ASCO là gì?</summary>
+      <div class="ans"><p>Bốn bước: (1) gửi thông tin dự án và ngày nghiệm thu — có thể dùng luôn kết quả từ bộ đếm 180 ngày ở trên; (2) ASCO rà soát miễn phí hiện trạng hồ sơ, xác định cơ chế áp dụng và các khoản chi phí có rủi ro; (3) nhận báo giá, lộ trình và hồ sơ năng lực; (4) ký hợp đồng và triển khai.</p><p>Bước 1 và 2 hoàn toàn miễn phí, không ràng buộc.</p></div>
+    </details>
+  </div>
+</section>
+
+<!-- =============== 10. LIÊN HỆ =============== -->
+<section id="lien-he" class="cta">
+  <div class="wrap">
+    <div class="cta-grid">
+      <div class="rv">
+        <div class="eyebrow" style="color:var(--gold-hi)">Bước tiếp theo</div>
+        <h2>Gửi thông tin dự án, nhận lộ trình bám mốc 180 ngày trong 24 giờ làm việc</h2>
+        <p class="lede" style="margin-top:16px">
+          ASCO trao đổi sơ bộ miễn phí: xác định dự án đang áp dụng cơ chế nào, còn bao nhiêu ngày tới hạn kiểm toán,
+          những khoản chi phí nào có rủi ro bị loại khi quyết toán, và dựng lộ trình để hồ sơ giá bán được xử lý đúng hạn.
+        </p>
+
+        <div class="cta-contacts">
+          <a class="cc" href="tel:0825092007">
+            <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.4 2.1L8 9.8a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+            <div><b>0825 092 007</b><span>Hotline / Zalo — tư vấn kiểm toán dự án nhà ở xã hội</span></div>
+          </a>
+          <a class="cc" href="https://zalo.me/0825092007" target="_blank" rel="noopener noreferrer">
+            <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9.6 9.6 0 0 1-2.8-.4L4 21l1.4-4.1A8.2 8.2 0 0 1 3 11.5 8.4 8.4 0 0 1 12 3a8.4 8.4 0 0 1 9 8.5Z"/></svg>
+            <div><b>Nhắn Zalo 0825 092 007</b><span>Gửi nhanh thông tin dự án, trao đổi trong ngày</span></div>
+          </a>
+          <a class="cc" href="mailto:asco@asco.vn">
+            <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="m3 6 9 6.5L21 6"/></svg>
+            <div><b>asco@asco.vn</b><span>Gửi hồ sơ dự án và nhận hồ sơ năng lực qua email</span></div>
+          </a>
+          <a class="cc" href="tel:02437930960">
+            <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 8h4M7 12h10M7 16h7"/></svg>
+            <div><b>024 3793 0960</b><span>Tổng đài văn phòng — Hà Nội</span></div>
+          </a>
+        </div>
+      </div>
+
+      <div class="form-card rv">
+        <h3>Đăng ký nhận lộ trình &amp; báo giá</h3>
+        <p class="small">Chỉ mất một phút. Thông tin được bảo mật và chỉ dùng để phục vụ việc báo giá.</p>
+        <form id="nxForm" novalidate>
+          <div class="form-grid">
+            <div class="full">
+              <label for="n_dv">Tên doanh nghiệp / chủ đầu tư <span class="req">*</span></label>
+              <input class="inp" id="n_dv" required placeholder="Tên công ty">
+            </div>
+            <div>
+              <label for="n_ten">Người liên hệ <span class="req">*</span></label>
+              <input class="inp" id="n_ten" required placeholder="Họ và tên">
+            </div>
+            <div>
+              <label for="n_cv">Chức danh</label>
+              <select class="inp" id="n_cv">
+                <option>Tổng giám đốc / Giám đốc</option>
+                <option>Giám đốc Tài chính</option>
+                <option selected>Kế toán trưởng</option>
+                <option>Trưởng Ban Quản lý dự án</option>
+                <option>Khác</option>
+              </select>
+            </div>
+            <div>
+              <label for="n_sdt">Điện thoại / Zalo <span class="req">*</span></label>
+              <input class="inp" id="n_sdt" type="tel" inputmode="tel" required placeholder="09xx xxx xxx">
+            </div>
+            <div>
+              <label for="n_da">Tên và địa phương dự án <span class="req">*</span></label>
+              <input class="inp" id="n_da" required placeholder="Ví dụ: NOXH ... , tỉnh ...">
+            </div>
+            <div class="full">
+              <label for="n_gd">Dự án đang ở giai đoạn nào</label>
+              <select class="inp" id="n_gd">
+                <option>Đang thi công, chưa nghiệm thu</option>
+                <option selected>Đã nghiệm thu, trong thời hạn 180 ngày</option>
+                <option>Đã quá 180 ngày, chưa kiểm toán</option>
+                <option>Đã kiểm toán, đang làm hồ sơ giá bán</option>
+                <option>Chưa xác định</option>
+              </select>
+            </div>
+            <div class="full">
+              <label for="n_nd">Nội dung cần trao đổi</label>
+              <textarea class="inp" id="n_nd" placeholder="Ví dụ: Dự án 1.200 căn, đã nghiệm thu tháng 5/2026, cần kiểm toán quyết toán và hỗ trợ hồ sơ giá bán gửi Sở Xây dựng."></textarea>
+            </div>
+          </div>
+          <div style="margin-top:18px;display:flex;gap:11px;flex-wrap:wrap">
+            <button class="btn btn-navy" type="submit">Gửi yêu cầu</button>
+            <button class="btn btn-outline" type="button" id="nxCopyForm">Sao chép nội dung</button>
+          </div>
+          <div class="form-msg" id="nxMsg" role="status" aria-live="polite"></div>
+          <div class="copybox" id="nxBox" style="display:none"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============== FOOTER =============== -->
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <img class="flogo" src="data:image/png;base64,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" alt="Hãng Kiểm toán và Định giá ASCO">
+        <p class="small" style="max-width:44ch">
+          <b>Công ty TNHH Hãng Kiểm toán và Định giá ASCO</b><br>
+          Đào tạo · Tư vấn · Kiểm toán · Thẩm định giá · Công nghệ<br><br>
+          <i>Phụng sự xã hội bằng sự minh bạch và Quản lý đúng.</i>
+        </p>
+      </div>
+      <div>
+        <h4>Liên hệ</h4>
+        <ul>
+          <li>Số 2, ngõ 308 phố Lê Trọng Tấn, phường Phương Liệt, thành phố Hà Nội</li>
+          <li><a href="tel:0825092007">0825 092 007</a> · <a href="tel:02437930960">024 3793 0960</a></li>
+          <li><a href="mailto:asco@asco.vn">asco@asco.vn</a></li>
+          <li><a href="https://asco.vn" target="_blank" rel="noopener noreferrer">asco.vn</a></li>
+          <li><a href="https://www.facebook.com/ascofirm" target="_blank" rel="noopener noreferrer">facebook.com/ascofirm</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Nội dung trang</h4>
+        <ul>
+          <li><a href="#khung">Hai cơ chế xác định giá bán</a></li>
+          <li><a href="#dem-180">Bộ đếm 180 ngày &amp; rủi ro</a></li>
+          <li><a href="#gia-ban">Giá bán &amp; lợi nhuận định mức</a></li>
+          <li><a href="#hanh-trinh">Hành trình 6 bước</a></li>
+          <li><a href="#dich-vu">Hai gói dịch vụ</a></li>
+          <li><a href="#ho-so">Danh mục hồ sơ</a></li>
+          <li><a href="#hoi-dap">Hỏi &amp; đáp</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="disc">
+      <b>Căn cứ pháp lý tham chiếu trên trang:</b> Luật Nhà ở số 27/2023/QH15; Nghị quyết 201/2025/QH15 về thí điểm một số cơ chế,
+      chính sách đặc thù phát triển nhà ở xã hội; Nghị định 192/2025/NĐ-CP quy định chi tiết thi hành Nghị quyết 201/2025/QH15
+      (Điều 13 về xác định giá bán, giá thuê mua và nghĩa vụ kiểm toán, quyết toán trong 180 ngày); Nghị định 100/2024/NĐ-CP
+      và các nghị định sửa đổi, bổ sung; Nghị định 193/2026/NĐ-CP quy định về quyết toán vốn đầu tư dự án;
+      Chuẩn mực kiểm toán Việt Nam số 1000 ban hành theo Thông tư 67/2015/TT-BTC; hệ thống chuẩn mực kiểm toán Việt Nam
+      ban hành theo Thông tư 214/2012/TT-BTC.<br><br>
+      Nội dung trang mang tính giới thiệu dịch vụ và tham khảo chuyên môn, không thay thế cho ý kiến tư vấn pháp lý chính thức
+      hoặc văn bản hướng dẫn của cơ quan quản lý nhà nước có thẩm quyền. Quy định về nhà ở xã hội đang trong quá trình sửa đổi,
+      bổ sung thường xuyên; phạm vi, điều kiện và kết quả của từng cuộc kiểm toán được xác định theo hợp đồng dịch vụ và
+      quy định pháp luật hiện hành tại thời điểm thực hiện. ASCO không cung cấp dịch vụ nhằm làm tăng giá bán nhà ở xã hội.
+    </p>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a class="btn btn-outline" href="tel:0825092007">Gọi ngay</a>
+  <a class="btn btn-outline" href="https://zalo.me/0825092007" target="_blank" rel="noopener noreferrer">Zalo</a>
+  <a class="btn btn-gold" href="#lien-he">Nhận lộ trình</a>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  /* Tất cả hàm dùng riêng cho trang này đều mang tiền tố nx… — rút kinh nghiệm lỗi trùng tên ở trang trước */
+
+  /* ---------- GIAO DIỆN SÁNG / TỐI ---------- */
+  var nxRoot=document.documentElement, nxTb=document.getElementById('themeBtn');
+  try{ var s=localStorage.getItem('asco-noxh-theme'); if(s) nxRoot.setAttribute('data-theme',s); }catch(e){}
+  nxTb.addEventListener('click',function(){
+    var cur=nxRoot.getAttribute('data-theme');
+    var sysDark=window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var next=cur ? (cur==='dark'?'light':'dark') : (sysDark?'light':'dark');
+    nxRoot.setAttribute('data-theme',next);
+    try{ localStorage.setItem('asco-noxh-theme',next); }catch(e){}
+  });
+
+  /* ---------- HIỆU ỨNG XUẤT HIỆN ---------- */
+  var nxEls=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var nxIo=new IntersectionObserver(function(en){
+      en.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); nxIo.unobserve(e.target); } });
+    },{rootMargin:'0px 0px -8% 0px',threshold:.06});
+    nxEls.forEach(function(el,i){ el.style.transitionDelay=(Math.min(i,4)*45)+'ms'; nxIo.observe(el); });
+  } else { nxEls.forEach(function(el){ el.classList.add('in'); }); }
+
+  /* ---------- TIỆN ÍCH ĐỊNH DẠNG ---------- */
+  function nxTien(ty){                       /* nhận tỷ đồng */
+    if(ty>=1000) return (ty/1000).toLocaleString('vi-VN',{maximumFractionDigits:2})+' nghìn tỷ đồng';
+    if(ty>=1)    return ty.toLocaleString('vi-VN',{maximumFractionDigits:2})+' tỷ đồng';
+    return (ty*1000).toLocaleString('vi-VN',{maximumFractionDigits:0})+' triệu đồng';
+  }
+  function nxSo(n,d){ return n.toLocaleString('vi-VN',{maximumFractionDigits:(d===undefined?0:d)}); }
+  function nxNgay(d){ var p=function(n){return (n<10?'0':'')+n;}; return p(d.getDate())+'/'+p(d.getMonth()+1)+'/'+d.getFullYear(); }
+  function nxThemNgay(d,n){ var x=new Date(d.getTime()); x.setDate(x.getDate()+n); return x; }
+  function nxCachNgay(a,b){ return Math.round((b-a)/86400000); }
+
+  /* ---------- CÔNG CỤ 1: 180 NGÀY & RỦI RO ---------- */
+  var e1=document.getElementById('nxDate'), e2=document.getElementById('nxArea'),
+      e2r=document.getElementById('nxAreaR'), e3=document.getElementById('nxPrice');
+  var nxTom1='';
+
+  function nxTinh1(){
+    var area=parseFloat(e2.value); if(isNaN(area)||area<0) area=0;
+    var price=parseFloat(e3.value); if(isNaN(price)||price<0) price=0;
+    var tongGT = area*price/1000;            /* m² × triệu/m² → tỷ đồng */
+
+    /* rủi ro hoàn trả theo các mức chênh lệch giả định */
+    var muc=[1,3,5], html='';
+    muc.forEach(function(p){
+      html+='<div class="r"><span>Nếu giá quyết toán thấp hơn <b>'+p+'%</b></span><b>'+nxTien(tongGT*p/100)+'</b></div>';
+    });
+    document.getElementById('nxRisk').innerHTML=html;
+    document.getElementById('nxRiskSub').innerHTML=
+      'Tổng giá trị hợp đồng đã ký ước tính <b>'+nxTien(tongGT)+'</b> ('+nxSo(area)+' m² × '+nxSo(price,2)+' triệu đồng/m²). '+
+      'Số tiền trên là phần phải hoàn trả cho toàn bộ khách hàng nếu giá quyết toán thấp hơn giá đã ký ở mức tương ứng.';
+
+    var card=document.getElementById('nxDlCard'), big=document.getElementById('nxDlBig'),
+        sub=document.getElementById('nxDlSub'), mile=document.getElementById('nxMile'),
+        warn=document.getElementById('nxWarn');
+
+    if(!e1.value){
+      card.className='res-card hero-num';
+      big.textContent='—'; sub.textContent='Nhập ngày nghiệm thu để xem mốc hạn.';
+      mile.innerHTML=''; warn.style.display='none';
+      nxTom1='Diện tích '+nxSo(area)+' m², giá đã ký '+nxSo(price,2)+' triệu đồng/m², tổng giá trị '+nxTien(tongGT)+'.';
+      return;
+    }
+
+    var d0=new Date(e1.value+'T00:00:00');
+    if(isNaN(d0.getTime())) return;
+    var hom=new Date(); hom.setHours(0,0,0,0);
+    var h180=nxThemNgay(d0,180), h210=nxThemNgay(h180,30);
+    var conLai=nxCachNgay(hom,h180);
+
+    if(conLai<0){
+      card.className='res-card hero-num bad';
+      big.textContent='Đã quá hạn '+Math.abs(conLai)+' ngày';
+      sub.innerHTML='Hạn kiểm toán, quyết toán là <b>'+nxNgay(h180)+'</b>. Dự án cần được xử lý ngay để có căn cứ chốt giá bán chính thức.';
+      warn.style.display='block';
+      warn.innerHTML='<b>Đã quá thời hạn 180 ngày.</b> Chưa có hồ sơ kiểm toán, quyết toán thì chưa có căn cứ để Sở Xây dựng có ý kiến về giá bán chính thức — kéo theo rủi ro chậm hoàn tất thủ tục cho người mua. ASCO có thể vào việc ngay và ưu tiên xử lý các dự án đã quá hạn.';
+    } else if(conLai<=45){
+      card.className='res-card hero-num warn';
+      big.textContent='Còn '+conLai+' ngày';
+      sub.innerHTML='Hạn kiểm toán, quyết toán là <b>'+nxNgay(h180)+'</b>. Thời gian còn lại đã sát — nên khởi động ngay việc tập hợp hồ sơ.';
+      warn.style.display='block';
+      warn.innerHTML='<b>Thời gian còn lại dưới 45 ngày.</b> Với dự án nhà ở xã hội có khối lượng hồ sơ lớn, đây là mức cần bắt đầu ngay, không nên chờ thêm.';
+    } else {
+      card.className='res-card hero-num ok';
+      big.textContent='Còn '+conLai+' ngày';
+      sub.innerHTML='Hạn kiểm toán, quyết toán là <b>'+nxNgay(h180)+'</b>. Đây là giai đoạn thuận lợi nhất để rà soát cơ cấu chi phí trước khi chốt số.';
+      warn.style.display='none';
+    }
+
+    mile.innerHTML=
+      '<div class="mile-i"><div class="k">Ngày nghiệm thu</div><div class="v">'+nxNgay(d0)+'</div><div class="d">Mốc bắt đầu tính thời hạn</div></div>'+
+      '<div class="mile-i"><div class="k">Hạn 180 ngày</div><div class="v">'+nxNgay(h180)+'</div><div class="d">Hoàn tất kiểm toán, quyết toán và gửi hồ sơ Sở Xây dựng</div></div>'+
+      '<div class="mile-i"><div class="k">Thêm 30 ngày</div><div class="v">'+nxNgay(h210)+'</div><div class="d">Mốc Sở Xây dựng có ý kiến về giá bán, giá thuê mua</div></div>';
+
+    nxTom1='Ngày nghiệm thu: '+nxNgay(d0)+'; hạn 180 ngày: '+nxNgay(h180)+
+           ' ('+(conLai<0?('đã quá '+Math.abs(conLai)+' ngày'):('còn '+conLai+' ngày'))+')'+
+           '; mốc Sở Xây dựng có ý kiến: '+nxNgay(h210)+
+           '.\nDiện tích '+nxSo(area)+' m², giá đã ký '+nxSo(price,2)+' triệu đồng/m², tổng giá trị '+nxTien(tongGT)+
+           '.\nRủi ro hoàn trả nếu lệch 1% / 3% / 5%: '+nxTien(tongGT*0.01)+' / '+nxTien(tongGT*0.03)+' / '+nxTien(tongGT*0.05)+'.';
+  }
+
+  e1.addEventListener('change',nxTinh1);
+  e2.addEventListener('input',function(){ var v=parseFloat(e2.value); if(!isNaN(v)) e2r.value=Math.min(200000,Math.max(1000,v)); nxTinh1(); });
+  e2r.addEventListener('input',function(){ e2.value=e2r.value; nxTinh1(); });
+  e3.addEventListener('input',nxTinh1);
+  nxTinh1();
+
+  /* ---------- CÔNG CỤ 2: GIÁ BÁN & LỢI NHUẬN ---------- */
+  var g1=document.getElementById('gbCost'), g1r=document.getElementById('gbCostR'),
+      g2=document.getElementById('gbArea'), g2r=document.getElementById('gbAreaR'),
+      g3=document.getElementById('gbProfit'), g3r=document.getElementById('gbProfitR'),
+      g4=document.getElementById('gbLoss'),  g4r=document.getElementById('gbLossR');
+  var nxTom2='';
+
+  function nxTinh2(){
+    var cost=parseFloat(g1.value); if(isNaN(cost)||cost<0) cost=0;      /* tỷ đồng */
+    var area=parseFloat(g2.value); if(isNaN(area)||area<=0) area=1;     /* m² */
+    var pr=parseFloat(g3.value);   if(isNaN(pr)||pr<0) pr=0; if(pr>10) pr=10;
+    var loss=parseFloat(g4.value); if(isNaN(loss)||loss<0) loss=0;
+
+    var costOk = cost*(1-loss/100);          /* chi phí được chấp nhận */
+    var loiNhuan = costOk*pr/100;
+    var tong = costOk + loiNhuan;
+    var giaM2 = tong*1000/area;              /* tỷ→triệu rồi chia m² = triệu đồng/m² */
+    var loiNhuanGoc = cost*pr/100;
+    var matDi = loiNhuanGoc - loiNhuan + (cost - costOk);
+
+    document.getElementById('gbBig').textContent = nxSo(giaM2,2)+' triệu đồng/m²';
+    document.getElementById('gbSub').innerHTML =
+      'Tương đương <b>'+nxTien(tong)+'</b> cho <b>'+nxSo(area)+' m²</b> sàn nhà ở xã hội. Chưa gồm thuế giá trị gia tăng và kinh phí bảo trì.';
+    document.getElementById('gbBrk').innerHTML =
+      '<div class="r"><span>Chi phí đầu tư được chấp nhận</span><b>'+nxTien(costOk)+'</b></div>'+
+      '<div class="r"><span>Lợi nhuận định mức '+nxSo(pr,1)+'%</span><b>'+nxTien(loiNhuan)+'</b></div>'+
+      '<div class="r tot"><span><b>Tổng giá trị được phép thu</b></span><b>'+nxTien(tong)+'</b></div>';
+
+    document.getElementById('gbProfitBig').textContent = nxTien(loiNhuan);
+    document.getElementById('gbProfitSub').innerHTML =
+      loss>0
+        ? 'Nếu không bị loại chi phí, lợi nhuận định mức là <b>'+nxTien(loiNhuanGoc)+'</b>. Giả định loại <b>'+nxSo(loss,1)+'%</b> chi phí khiến doanh nghiệp mất tổng cộng <b>'+nxTien(matDi)+'</b> (gồm chi phí bị loại và phần lợi nhuận tính trên đó).'
+        : 'Tính trên toàn bộ chi phí đầu tư xây dựng phần nhà ở xã hội được chấp nhận khi quyết toán.';
+
+    var w=document.getElementById('gbWarn');
+    if(loss>0){
+      w.style.display='block';
+      w.innerHTML='<b>Chi phí bị loại ăn vào lợi nhuận theo cấp số.</b> Mỗi đồng chi phí bị loại làm mất một đồng chi phí <i>và</i> phần lợi nhuận định mức tính trên đồng đó — đây là lý do hồ sơ chi phí phải chuẩn ngay từ đầu, không phải sửa khi đã bị hỏi.';
+    } else { w.style.display='none'; }
+
+    document.getElementById('gbNote').innerHTML=
+      '<b>Vì sao biên lợi nhuận này mỏng.</b> Trần lợi nhuận định mức là 10% tổng chi phí đầu tư xây dựng phần nhà ở xã hội, '+
+      'trải trên toàn bộ vòng đời dự án thường kéo dài nhiều năm. Đó là lý do mỗi khoản chi phí bị loại đều đáng kể, '+
+      'và là lý do khâu kiểm toán nên được chuẩn bị từ trước khi nghiệm thu.';
+
+    nxTom2='Chi phí đầu tư '+nxTien(cost)+(loss>0?(' (giả định loại '+nxSo(loss,1)+'% → còn '+nxTien(costOk)+')'):'')+
+           '; diện tích '+nxSo(area)+' m²; lợi nhuận định mức '+nxSo(pr,1)+'% = '+nxTien(loiNhuan)+
+           '.\nGiá bán bình quân ước tính: '+nxSo(giaM2,2)+' triệu đồng/m² (chưa gồm VAT và kinh phí bảo trì).';
+  }
+
+  function nxNoi(a,b,min,max){
+    a.addEventListener('input',function(){ var v=parseFloat(a.value); if(!isNaN(v)) b.value=Math.min(max,Math.max(min,v)); nxTinh2(); });
+    b.addEventListener('input',function(){ a.value=b.value; nxTinh2(); });
+  }
+  nxNoi(g1,g1r,50,5000); nxNoi(g2,g2r,1000,200000); nxNoi(g3,g3r,0,10); nxNoi(g4,g4r,0,20);
+  nxTinh2();
+
+  /* ---------- DANH MỤC HỒ SƠ ---------- */
+  var nxBody=document.getElementById('nxClBody');
+  var nxBoxes=nxBody.querySelectorAll('input[type=checkbox]');
+  var nxBar=document.getElementById('nxClBar'), nxPctEl=document.getElementById('nxClPct');
+  function nxClUpdate(){
+    var done=0; nxBoxes.forEach(function(b){ if(b.checked) done++; });
+    var p=nxBoxes.length?Math.round(done*100/nxBoxes.length):0;
+    nxBar.style.width=p+'%'; nxPctEl.textContent=p+'%';
+  }
+  nxBoxes.forEach(function(b){ b.addEventListener('change',nxClUpdate); });
+  document.getElementById('nxClReset').addEventListener('click',function(){ nxBoxes.forEach(function(b){b.checked=false;}); nxClUpdate(); });
+  document.getElementById('nxClPrint').addEventListener('click',function(){ window.print(); });
+  nxClUpdate();
+
+  /* ---------- SAO CHÉP KẾT QUẢ ---------- */
+  function nxChep(txt,btn){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(txt).then(function(){
+        var old=btn.textContent; btn.textContent='Đã sao chép ✓';
+        setTimeout(function(){ btn.textContent=old; },2200);
+      }).catch(function(){});
+    }
+  }
+  document.getElementById('nxCopy1').addEventListener('click',function(){
+    nxChep('RÀ SOÁT MỐC 180 NGÀY — DỰ ÁN NHÀ Ở XÃ HỘI\n(tra trên trang của ASCO — kết quả tham khảo)\n'+
+           '-----------------------------------------------\n'+nxTom1, this);
+  });
+  document.getElementById('nxCopy2').addEventListener('click',function(){
+    nxChep('ƯỚC TÍNH GIÁ BÁN & LỢI NHUẬN ĐỊNH MỨC — NHÀ Ở XÃ HỘI\n(tra trên trang của ASCO — kết quả tham khảo)\n'+
+           '-----------------------------------------------\n'+nxTom2, this);
+  });
+
+  /* ---------- BIỂU MẪU ---------- */
+  var nxForm=document.getElementById('nxForm'), nxMsg=document.getElementById('nxMsg'), nxBoxEl=document.getElementById('nxBox');
+  function nxG(id){ var el=document.getElementById(id); return el?(el.value||'').trim():''; }
+  function nxNoiDung(){
+    return ['YÊU CẦU TƯ VẤN — KIỂM TOÁN QUYẾT TOÁN DỰ ÁN NHÀ Ở XÃ HỘI',
+      '--------------------------------------------------------',
+      'Doanh nghiệp     : '+nxG('n_dv'),
+      'Người liên hệ    : '+nxG('n_ten')+' — '+nxG('n_cv'),
+      'Điện thoại / Zalo: '+nxG('n_sdt'),
+      'Dự án            : '+nxG('n_da'),
+      'Giai đoạn        : '+nxG('n_gd'),
+      '','KẾT QUẢ TRA TRÊN TRANG',nxTom1,'',nxTom2,
+      '','Nội dung trao đổi:', nxG('n_nd')||'(chưa ghi)'].join('\n');
+  }
+  function nxHien(kind,html){ nxMsg.className='form-msg show '+kind; nxMsg.innerHTML=html; }
+
+  nxForm.addEventListener('submit',function(ev){
+    ev.preventDefault();
+    var can=['n_dv','n_ten','n_sdt','n_da'], bad=null;
+    can.forEach(function(id){ var el=document.getElementById(id); if(!el.value.trim() && !bad) bad=el; });
+    if(bad){ nxHien('err','Vui lòng điền đầy đủ các trường có dấu <b>*</b>.'); bad.focus(); return; }
+    var t=nxNoiDung();
+    nxBoxEl.textContent=t; nxBoxEl.style.display='block';
+    var mail='mailto:asco@asco.vn?subject='+encodeURIComponent('Tư vấn kiểm toán quyết toán dự án NOXH — '+nxG('n_dv'))+
+             '&body='+encodeURIComponent(t);
+    nxHien('ok','<b>Đã tổng hợp xong yêu cầu.</b><br>Chọn một cách gửi: <a href="'+mail+'">gửi qua email</a> · '+
+      '<a href="tel:0825092007">gọi 0825 092 007</a> — hoặc bấm <b>Sao chép nội dung</b> rồi gửi qua Zalo. '+
+      'ASCO phản hồi trong vòng 24 giờ làm việc.');
+  });
+  document.getElementById('nxCopyForm').addEventListener('click',function(){
+    var t=nxNoiDung(); nxBoxEl.textContent=t; nxBoxEl.style.display='block';
+    nxChep(t,this); nxHien('ok','<b>Đã sao chép nội dung.</b> Có thể dán trực tiếp vào Zalo hoặc email gửi ASCO.');
+  });
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"ProfessionalService",
+      "name":"Hãng Kiểm toán và Định giá ASCO",
+      "description":"Kiểm toán báo cáo quyết toán và chi phí đầu tư xây dựng dự án nhà ở xã hội, làm căn cứ xác định giá bán, giá thuê mua chính thức và lợi nhuận định mức của chủ đầu tư.",
+      "url":"https://asco.vn",
+      "telephone":"+84825092007",
+      "email":"asco@asco.vn",
+      "foundingDate":"2007-09-25",
+      "address":{"@type":"PostalAddress","streetAddress":"Số 2, ngõ 308 phố Lê Trọng Tấn, phường Phương Liệt","addressLocality":"Hà Nội","addressCountry":"VN"},
+      "areaServed":"VN",
+      "serviceType":["Kiểm toán báo cáo quyết toán dự án hoàn thành","Kiểm toán chi phí đầu tư xây dựng nhà ở xã hội","Thẩm định giá","Tư vấn","Đào tạo"]
+    },
+    {
+      "@type":"FAQPage",
+      "mainEntity":[
+        {"@type":"Question","name":"Dự án nhà ở xã hội có bắt buộc kiểm toán chi phí đầu tư xây dựng không?","acceptedAnswer":{"@type":"Answer","text":"Nếu dự án áp dụng cơ chế theo Nghị quyết 201/2025/QH15 và Nghị định 192/2025/NĐ-CP, trong 180 ngày kể từ ngày nghiệm thu hoàn thành công trình đưa vào sử dụng, chủ đầu tư phải kiểm toán và quyết toán chi phí đầu tư xây dựng, gửi hồ sơ cho Sở Xây dựng để soát xét giá bán, giá thuê mua chính thức. Pháp luật cho phép thực hiện bằng Kiểm toán Nhà nước hoặc kiểm toán độc lập."}},
+        {"@type":"Question","name":"Giá quyết toán thấp hơn giá đã bán nhà ở xã hội thì xử lý thế nào?","acceptedAnswer":{"@type":"Answer","text":"Chủ đầu tư phải hoàn trả phần chênh lệch cho người mua đối với toàn bộ khách hàng đã ký hợp đồng của dự án. Ngược lại, nếu giá quyết toán cao hơn giá đã bán thì chủ đầu tư không được thu thêm phần chênh lệch."}},
+        {"@type":"Question","name":"Lợi nhuận định mức của chủ đầu tư nhà ở xã hội là bao nhiêu?","acceptedAnswer":{"@type":"Answer","text":"Theo quy định hiện hành, chủ đầu tư dự án nhà ở xã hội được hưởng lợi nhuận định mức tối đa 10% tổng chi phí đầu tư xây dựng phần diện tích nhà ở xã hội. Ưu đãi của Nhà nước không được tính vào giá thành để xác định lợi nhuận."}},
+        {"@type":"Question","name":"Sau khi kiểm toán, cơ quan nào có ý kiến về giá bán nhà ở xã hội?","acceptedAnswer":{"@type":"Answer","text":"Chủ đầu tư gửi hồ sơ kiểm toán, quyết toán cho Sở Xây dựng nơi có dự án. Sở Xây dựng có 30 ngày kể từ khi nhận hồ sơ để có ý kiến bằng văn bản về giá bán, giá thuê mua nhà ở xã hội."}},
+        {"@type":"Question","name":"Dự án nhà ở xã hội dùng vốn đầu tư công quyết toán theo văn bản nào?","acceptedAnswer":{"@type":"Answer","text":"Dự án sử dụng vốn đầu tư công quyết toán vốn đầu tư theo Nghị định 193/2026/NĐ-CP quy định về quyết toán vốn đầu tư dự án, theo quy trình lập, thẩm tra, phê duyệt quyết toán của pháp luật đầu tư công."}}
+      ]
+    }
+  ]
+}
+</script>
+
+
+<!-- Gui bieu mau ve hop thu — thay XXXXXXXX bang ma Formspree that roi luu lai -->
+<script>(function(){
+  var EP='https://formspree.io/f/XXXXXXXX';
+  if(EP.indexOf('XXXXXXXX')>=0) return;              /* chua cau hinh thi bo qua, form van chay theo cach cu */
+  var f=document.querySelector('form'); if(!f) return;
+  f.addEventListener('submit',function(){
+    var d={_subject:'[dichvu.asco.vn] '+document.title, trang:location.href};
+    f.querySelectorAll('input,select,textarea').forEach(function(el){
+      if(!el.id) return;
+      if(el.type==='checkbox'){ d[el.id]=el.checked?'co':'khong'; return; }
+      d[el.id]=el.value;
+    });
+    var box=document.getElementById('copyBox')||document.getElementById('nxBox');
+    if(box && box.textContent) d.tom_tat=box.textContent;
+    fetch(EP,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},
+      body:JSON.stringify(d)}).catch(function(){});
+  });
+})();</script>
+</body>
+</html>
