@@ -3,21 +3,6 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="canonical" href="https://dichvu.asco.vn/kiem-toan-quyet-toan-nha-o-xa-hoi/">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Hãng Kiểm toán và Định giá ASCO">
-<meta property="og:locale" content="vi_VN">
-<meta property="og:url" content="https://dichvu.asco.vn/kiem-toan-quyet-toan-nha-o-xa-hoi/">
-<meta property="og:title" content="Kiểm toán quyết toán dự án nhà ở xã hội — ASCO">
-<meta property="og:description" content="Kiểm toán chi phí đầu tư xây dựng dự án nhà ở xã hội theo Nghị định 192/2025/NĐ-CP, thời hạn 180 ngày. Có bộ đếm mốc hạn và công cụ tính giá bán, lợi nhuận định mức.">
-<meta property="og:image" content="https://dichvu.asco.vn/og-noxh.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Kiểm toán quyết toán dự án nhà ở xã hội — ASCO">
-<meta name="twitter:description" content="Kiểm toán chi phí đầu tư xây dựng dự án nhà ở xã hội theo Nghị định 192/2025/NĐ-CP, thời hạn 180 ngày. Có bộ đếm mốc hạn và công cụ tính giá bán, lợi nhuận định mức.">
-<meta name="twitter:image" content="https://dichvu.asco.vn/og-noxh.png">
-
 <title>Kiểm toán quyết toán dự án nhà ở xã hội</title>
 <meta name="description" content="ASCO — Kiểm toán báo cáo quyết toán và chi phí đầu tư xây dựng dự án nhà ở xã hội, cơ sở xác định giá bán được duyệt và lợi nhuận định mức của chủ đầu tư. Hơn 8.000 dự án, hơn 50 kỹ sư xây dựng.">
 <meta name="theme-color" content="#1F478D">
@@ -31,7 +16,7 @@
    · nhãn nav ngắn ngay từ đầu → không tràn ở 1280px
    ============================================================ */
 :root{
-  --navy:#1F478D;            /* màu logo ASCO */
+  --navy:#184088;            /* màu logo ASCO */
   --navy-700:#173868;
   --navy-900:#0C2044;
   --navy-300:#5C81C3;
@@ -66,28 +51,28 @@
 }
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]){
-    --navy:#7EA5E6; --navy-700:#9EBDF0; --navy-900:#C9D9F6; --navy-300:#4C6DA6;
+    --navy:#8FB2EE; --navy-700:#A8C4F4; --navy-900:#CCDDF9; --navy-300:#4A6EB0;
     --tint:#151F38; --tint-2:#1C2947;
     --gold:#E0B458; --gold-hi:#F2CE83;
     --jade:#4FC0A2; --jade-tint:#0F2C25;
     --danger:#F0857E; --warn:#E0B458; --ok:#4FC0A2;
-    --bg:#090F1A; --bg-alt:#0D1522; --surface:#111A29;
-    --ink:#ECEFF5; --ink-2:#C1C8D6; --muted:#929AAC;
-    --line:#232C3D; --line-soft:#19212F;
+    --bg:#0D2044; --bg-alt:#0A1B3B; --surface:#13294F;
+    --ink:#EEF3FB; --ink-2:#C2D0E6; --muted:#8DA0C0;
+    --line:#22406E; --line-soft:#1A3260;
     --shadow-sm:0 1px 2px rgba(0,0,0,.35);
     --shadow:0 2px 4px rgba(0,0,0,.3), 0 16px 36px -22px rgba(0,0,0,.8);
     --shadow-lg:0 4px 10px rgba(0,0,0,.35), 0 34px 64px -32px rgba(0,0,0,.9);
   }
 }
 :root[data-theme="dark"]{
-  --navy:#7EA5E6; --navy-700:#9EBDF0; --navy-900:#C9D9F6; --navy-300:#4C6DA6;
+  --navy:#8FB2EE; --navy-700:#A8C4F4; --navy-900:#CCDDF9; --navy-300:#4A6EB0;
   --tint:#151F38; --tint-2:#1C2947;
   --gold:#E0B458; --gold-hi:#F2CE83;
   --jade:#4FC0A2; --jade-tint:#0F2C25;
   --danger:#F0857E; --warn:#E0B458; --ok:#4FC0A2;
-  --bg:#090F1A; --bg-alt:#0D1522; --surface:#111A29;
-  --ink:#ECEFF5; --ink-2:#C1C8D6; --muted:#929AAC;
-  --line:#232C3D; --line-soft:#19212F;
+  --bg:#0D2044; --bg-alt:#0A1B3B; --surface:#13294F;
+  --ink:#EEF3FB; --ink-2:#C2D0E6; --muted:#8DA0C0;
+  --line:#22406E; --line-soft:#1A3260;
   --shadow-sm:0 1px 2px rgba(0,0,0,.35);
   --shadow:0 2px 4px rgba(0,0,0,.3), 0 16px 36px -22px rgba(0,0,0,.8);
   --shadow-lg:0 4px 10px rgba(0,0,0,.35), 0 34px 64px -32px rgba(0,0,0,.9);
@@ -131,8 +116,8 @@ section{padding:clamp(54px,7vw,94px) 0}
 .btn-gold:hover{transform:translateY(-2px)}
 .btn-navy{background:var(--navy);color:#fff;box-shadow:var(--shadow)}
 .btn-navy:hover{transform:translateY(-2px);background:var(--navy-700)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn-navy{color:#090F1A}}
-:root[data-theme="dark"] .btn-navy{color:#090F1A}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn-navy{color:#0D2044}}
+:root[data-theme="dark"] .btn-navy{color:#0D2044}
 .btn-outline{background:transparent;border-color:var(--line);color:var(--ink)}
 .btn-outline:hover{border-color:var(--navy);color:var(--navy)}
 .btn-onnavy{background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.38);color:#fff}
@@ -237,8 +222,8 @@ nav{position:sticky;top:0;z-index:60;background:color-mix(in srgb,var(--bg) 90%,
 .aud:hover{border-color:var(--navy-300);transform:translateY(-2px)}
 .aud .n{flex:0 0 auto;width:31px;height:31px;border-radius:9px;display:grid;place-items:center;
   background:var(--navy);color:#fff;font-weight:800;font-size:14px}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .aud .n{color:#090F1A}}
-:root[data-theme="dark"] .aud .n{color:#090F1A}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .aud .n{color:#0D2044}}
+:root[data-theme="dark"] .aud .n{color:#0D2044}
 .aud .top{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:4px}
 .aud b{font-size:15.4px}
 .aud span.d{font-size:13.9px;color:var(--muted);line-height:1.5;display:block}
@@ -289,8 +274,8 @@ tbody tr:last-child td{border-bottom:0}
 td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
 .col-asco{background:color-mix(in srgb,var(--navy) 5%,transparent)}
 thead th.col-asco{background:var(--navy);color:#fff}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) thead th.col-asco{color:#090F1A}}
-:root[data-theme="dark"] thead th.col-asco{color:#090F1A}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) thead th.col-asco{color:#0D2044}}
+:root[data-theme="dark"] thead th.col-asco{color:#0D2044}
 td.yes{color:var(--ok);font-weight:700}
 td.no{color:var(--muted)}
 
@@ -462,12 +447,6 @@ footer a:hover{color:var(--navy)}
 }
 </style>
 <script>document.documentElement.className+=' js';</script>
-
-<!-- Google Analytics 4 — thay G-XXXXXXXXXX bằng mã đo lường thật rồi lưu lại -->
-<script>(function(){var ID='G-XXXXXXXXXX';if(ID.indexOf('XXXX')>=0)return;
-var s=document.createElement('script');s.async=1;s.src='https://www.googletagmanager.com/gtag/js?id='+ID;
-document.head.appendChild(s);window.dataLayer=window.dataLayer||[];
-function gtag(){dataLayer.push(arguments)}window.gtag=gtag;gtag('js',new Date());gtag('config',ID);})();</script>
 </head>
 <body>
 
@@ -1630,24 +1609,5 @@ function gtag(){dataLayer.push(arguments)}window.gtag=gtag;gtag('js',new Date())
 }
 </script>
 
-
-<!-- Gui bieu mau ve hop thu — thay XXXXXXXX bang ma Formspree that roi luu lai -->
-<script>(function(){
-  var EP='https://formspree.io/f/XXXXXXXX';
-  if(EP.indexOf('XXXXXXXX')>=0) return;              /* chua cau hinh thi bo qua, form van chay theo cach cu */
-  var f=document.querySelector('form'); if(!f) return;
-  f.addEventListener('submit',function(){
-    var d={_subject:'[dichvu.asco.vn] '+document.title, trang:location.href};
-    f.querySelectorAll('input,select,textarea').forEach(function(el){
-      if(!el.id) return;
-      if(el.type==='checkbox'){ d[el.id]=el.checked?'co':'khong'; return; }
-      d[el.id]=el.value;
-    });
-    var box=document.getElementById('copyBox')||document.getElementById('nxBox');
-    if(box && box.textContent) d.tom_tat=box.textContent;
-    fetch(EP,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},
-      body:JSON.stringify(d)}).catch(function(){});
-  });
-})();</script>
 </body>
 </html>

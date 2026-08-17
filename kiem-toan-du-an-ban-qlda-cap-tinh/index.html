@@ -6,7 +6,7 @@
 <style>
 /* ================= TOKENS — light mặc định ================= */
 :root{
-  --navy:#1F478D;          /* màu logo ASCO */
+  --navy:#184088;          /* màu logo ASCO */
   --navy-700:#17376A;
   --navy-900:#0D2245;
   --navy-300:#5B80C2;
@@ -24,12 +24,12 @@
   --ok:#1B6E4C;
 
   --bg:#FFFFFF;
-  --bg-alt:#F7F7F4;        /* trung tính hơi ấm — chất bê tông */
+  --bg-alt:#F4F7FC;        /* trung tính hơi ấm — chất bê tông */
   --surface:#FFFFFF;
-  --ink:#14181F;
+  --ink:#0E1729;
   --ink-2:#3A4150;
   --muted:#646B7A;
-  --line:#E1E0DA;
+  --line:#E0E6F0;
   --line-soft:#EFEEE9;
 
   --shadow-sm:0 1px 2px rgba(13,34,69,.06);
@@ -43,28 +43,28 @@
 }
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]){
-    --navy:#7EA5E6; --navy-700:#9EBDF0; --navy-900:#C9D9F6; --navy-300:#4C6DA6;
+    --navy:#8FB2EE; --navy-700:#A8C4F4; --navy-900:#CCDDF9; --navy-300:#4A6EB0;
     --tint:#151F38; --tint-2:#1C2947;
     --gold:#E0B458; --gold-hi:#F2CE83;
     --steel:#5FB3C4; --steel-tint:#15303A;
     --danger:#F0857E; --warn:#E0B458; --ok:#5FCB9C;
-    --bg:#0A1017; --bg-alt:#0E151E; --surface:#121A25;
-    --ink:#ECEEF2; --ink-2:#C2C8D4; --muted:#949BAA;
-    --line:#252D3A; --line-soft:#1B222D;
+    --bg:#0D2044; --bg-alt:#0A1B3B; --surface:#13294F;
+    --ink:#EEF3FB; --ink-2:#C2D0E6; --muted:#8DA0C0;
+    --line:#22406E; --line-soft:#1A3260;
     --shadow-sm:0 1px 2px rgba(0,0,0,.35);
     --shadow:0 2px 4px rgba(0,0,0,.3), 0 16px 36px -22px rgba(0,0,0,.8);
     --shadow-lg:0 4px 10px rgba(0,0,0,.35), 0 34px 64px -32px rgba(0,0,0,.9);
   }
 }
 :root[data-theme="dark"]{
-  --navy:#7EA5E6; --navy-700:#9EBDF0; --navy-900:#C9D9F6; --navy-300:#4C6DA6;
+  --navy:#8FB2EE; --navy-700:#A8C4F4; --navy-900:#CCDDF9; --navy-300:#4A6EB0;
   --tint:#151F38; --tint-2:#1C2947;
   --gold:#E0B458; --gold-hi:#F2CE83;
   --steel:#5FB3C4; --steel-tint:#15303A;
   --danger:#F0857E; --warn:#E0B458; --ok:#5FCB9C;
-  --bg:#0A1017; --bg-alt:#0E151E; --surface:#121A25;
-  --ink:#ECEEF2; --ink-2:#C2C8D4; --muted:#949BAA;
-  --line:#252D3A; --line-soft:#1B222D;
+  --bg:#0D2044; --bg-alt:#0A1B3B; --surface:#13294F;
+  --ink:#EEF3FB; --ink-2:#C2D0E6; --muted:#8DA0C0;
+  --line:#22406E; --line-soft:#1A3260;
   --shadow-sm:0 1px 2px rgba(0,0,0,.35);
   --shadow:0 2px 4px rgba(0,0,0,.3), 0 16px 36px -22px rgba(0,0,0,.8);
   --shadow-lg:0 4px 10px rgba(0,0,0,.35), 0 34px 64px -32px rgba(0,0,0,.9);
@@ -116,8 +116,8 @@ section{padding:clamp(54px,7vw,94px) 0}
 .btn-gold:hover{transform:translateY(-2px)}
 .btn-navy{background:var(--navy);color:#fff;box-shadow:var(--shadow)}
 .btn-navy:hover{transform:translateY(-2px);background:var(--navy-700)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn-navy{color:#0A1017}}
-:root[data-theme="dark"] .btn-navy{color:#0A1017}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn-navy{color:#0D2044}}
+:root[data-theme="dark"] .btn-navy{color:#0D2044}
 .btn-outline{background:transparent;border-color:var(--line);color:var(--ink)}
 .btn-outline:hover{border-color:var(--navy);color:var(--navy)}
 .btn-onnavy{background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.38);color:#fff}
@@ -221,8 +221,8 @@ nav{position:sticky;top:0;z-index:60;background:color-mix(in srgb,var(--bg) 90%,
 .aud:hover{border-color:var(--navy-300);transform:translateY(-2px)}
 .aud .n{flex:0 0 auto;width:31px;height:31px;border-radius:9px;display:grid;place-items:center;
   background:var(--navy);color:#fff;font-weight:800;font-size:14px}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .aud .n{color:#0A1017}}
-:root[data-theme="dark"] .aud .n{color:#0A1017}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .aud .n{color:#0D2044}}
+:root[data-theme="dark"] .aud .n{color:#0D2044}
 .aud .top{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:4px}
 .aud b{font-size:15.4px}
 .aud span.d{font-size:13.9px;color:var(--muted);line-height:1.5;display:block}
@@ -289,8 +289,8 @@ tbody tr:last-child td{border-bottom:0}
 td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
 .col-asco{background:color-mix(in srgb,var(--navy) 5%,transparent)}
 thead th.col-asco{background:var(--navy);color:#fff}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) thead th.col-asco{color:#0A1017}}
-:root[data-theme="dark"] thead th.col-asco{color:#0A1017}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) thead th.col-asco{color:#0D2044}}
+:root[data-theme="dark"] thead th.col-asco{color:#0D2044}
 td.yes{color:var(--ok);font-weight:700}
 td.no{color:var(--muted)}
 
@@ -492,7 +492,7 @@ footer a:hover{color:var(--navy)}
 
 
 <title>Kiểm toán quyết toán dự án hoàn thành cho Ban Quản lý dự án cấp tỉnh — ASCO</title>
-<meta name="description" content="ASCO kiểm toán báo cáo quyết toán dự án hoàn thành cho Ban Quản lý dự án tại 21 tỉnh, thành phố. Kiểm toán viên và kỹ sư làm song song. Căn cứ Nghị định 193/2026/NĐ-CP, Thông tư 73/2026/TT-BTC, chuẩn mực VSA 1000.">
+<meta name="description" content="ASCO kiểm toán báo cáo quyết toán dự án hoàn thành cho Ban Quản lý dự án tại 27 tỉnh, thành phố. Kiểm toán viên và kỹ sư làm song song. Căn cứ Nghị định 193/2026/NĐ-CP, Thông tư 73/2026/TT-BTC, chuẩn mực VSA 1000.">
 <meta name="theme-color" content="#184088">
 
 <!-- =============== NAV =============== -->
@@ -534,12 +534,12 @@ footer a:hover{color:var(--navy)}
         <p class="lede">
           Ban Quản lý dự án thuộc tỉnh, thành phố trực thuộc trung ương không thiếu người, cũng không thiếu chuyên môn. Thứ khó là <b>quy mô</b>:
           một dự án nhóm A có hàng chục gói thầu, kéo dài nhiều năm, qua nhiều lần điều chỉnh thiết kế và
-          điều chỉnh giá. ASCO đã kiểm toán quyết toán cho Ban QLDA tại <b>21 tỉnh, thành phố</b> —
+          điều chỉnh giá. ASCO đã kiểm toán quyết toán cho Ban QLDA tại <b>27 tỉnh, thành phố</b> —
           và mang theo <b>hơn 50 kỹ sư</b> chứ không chỉ kiểm toán viên.
         </p>
         <div class="hero-cta">
           <a class="btn btn-gold" href="#tinh-phi">Tự tính chi phí kiểm toán →</a>
-          <a class="btn btn-onnavy" href="#dia-ban">Xem 21 tỉnh, thành đã hợp tác</a>
+          <a class="btn btn-onnavy" href="#dia-ban">Xem 27 tỉnh, thành đã hợp tác</a>
         </div>
         <p class="hero-note">Trao đổi sơ bộ miễn phí · Không ràng buộc · Nhận hồ sơ năng lực đầy đủ để đưa vào hồ sơ trình duyệt</p>
       </div>
@@ -566,7 +566,7 @@ footer a:hover{color:var(--navy)}
 <section id="so-lieu" style="padding-top:clamp(34px,4vw,52px);padding-bottom:0">
   <div class="wrap">
     <div class="stats">
-      <div class="stat"><div class="v">21</div><div class="l">Tỉnh, thành phố có Ban QLDA đã hợp tác</div></div>
+      <div class="stat"><div class="v">27</div><div class="l">Tỉnh, thành phố có Ban QLDA đã hợp tác</div></div>
       <div class="stat"><div class="v">8.000+</div><div class="l">Dự án đã kiểm toán quyết toán</div></div>
       <div class="stat"><div class="v">50+</div><div class="l">Kỹ sư Xây dựng · Giao thông · Thuỷ lợi</div></div>
       <div class="stat"><div class="v">15</div><div class="l">Điểm hiện diện trên toàn quốc</div></div>
@@ -579,7 +579,7 @@ footer a:hover{color:var(--navy)}
   <div class="wrap">
     <div class="sec-head">
       <div class="eyebrow">Bằng chứng năng lực</div>
-      <h2>Ban Quản lý dự án tại 21 tỉnh, thành phố đã làm việc với ASCO</h2>
+      <h2>Ban Quản lý dự án tại 27 tỉnh, thành phố đã làm việc với ASCO</h2>
       <p class="lede">
         Đây là phân khúc khách hàng trọng yếu của ASCO. Kinh nghiệm ở đây không chỉ là số dự án, mà là
         <b>hiểu thực tiễn xử lý hồ sơ của cơ quan thẩm tra từng địa phương</b> — thứ quyết định hồ sơ được
@@ -590,28 +590,29 @@ footer a:hover{color:var(--navy)}
     <div class="grid g3">
       <div class="card">
         <span class="badge b-navy">Miền Bắc</span>
-        <h3 style="margin-top:12px">Chín tỉnh, thành</h3>
+        <h3 style="margin-top:12px">Mười hai tỉnh, thành</h3>
         <div class="net" style="margin-top:14px">
           <span>Hà Nội</span><span>Quảng Ninh</span><span>Bắc Ninh</span><span>Hưng Yên</span>
-          <span>Ninh Bình</span><span>Phú Thọ</span><span>Thái Nguyên</span><span>Lào Cai</span><span>Lai Châu</span>
+          <span>Ninh Bình</span><span>Phú Thọ</span><span>Thái Nguyên</span><span>Lào Cai</span>
+          <span>Lai Châu</span><span>Lạng Sơn</span><span>Sơn La</span><span>Cao Bằng</span>
         </div>
       </div>
 
       <div class="card">
         <span class="badge b-navy">Miền Trung &amp; Tây Nguyên</span>
-        <h3 style="margin-top:12px">Sáu tỉnh, thành</h3>
+        <h3 style="margin-top:12px">Bảy tỉnh, thành</h3>
         <div class="net" style="margin-top:14px">
-          <span>Nghệ An</span><span>Hà Tĩnh</span><span>Quảng Trị</span>
-          <span>Thành phố Huế</span><span>Quảng Ngãi</span><span>Lâm Đồng</span>
+          <span>Nghệ An</span><span>Hà Tĩnh</span><span>Quảng Trị</span><span>Thành phố Huế</span>
+          <span>Thành phố Đà Nẵng</span><span>Quảng Ngãi</span><span>Lâm Đồng</span>
         </div>
       </div>
 
       <div class="card">
         <span class="badge b-navy">Miền Nam</span>
-        <h3 style="margin-top:12px">Sáu tỉnh, thành</h3>
+        <h3 style="margin-top:12px">Tám tỉnh, thành</h3>
         <div class="net" style="margin-top:14px">
-          <span>TP. Hồ Chí Minh</span><span>Đồng Nai</span><span>Tây Ninh</span>
-          <span>Long An</span><span>Vĩnh Long</span><span>TP. Cần Thơ</span>
+          <span>TP. Hồ Chí Minh</span><span>Đồng Nai</span><span>Tây Ninh</span><span>Long An</span>
+          <span>Vĩnh Long</span><span>Đồng Tháp</span><span>An Giang</span><span>TP. Cần Thơ</span>
         </div>
       </div>
     </div>
@@ -776,7 +777,7 @@ footer a:hover{color:var(--navy)}
   <div class="wrap">
     <div class="sec-head center rv">
       <div class="eyebrow">Công cụ miễn phí — tự tính trước khi liên hệ</div>
-      <h2>Dự án của Quý Ban tốn bao nhiêu tiền kiểm toán?</h2>
+      <h2>Tính phí kiểm toán của Quý Ban như thế nào?</h2>
       <p class="lede" style="margin-top:14px">
         Chi phí kiểm toán quyết toán <b>không do hãng kiểm toán tự đặt</b> — đây là định mức Nhà nước quy định tại
         Điều 20 Nghị định 193/2026/NĐ-CP. Nhập giá trị dự án để biết ngay khoảng chi phí, trước khi liên hệ bất kỳ đơn vị nào.
