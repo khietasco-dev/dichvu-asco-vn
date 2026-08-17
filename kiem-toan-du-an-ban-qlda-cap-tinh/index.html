@@ -487,8 +487,56 @@ footer a:hover{color:var(--navy)}
 }
 </style>
 <script>document.documentElement.className+=' js';</script>
+
+<style>
+/* ---------- thanh hotline goc tren ben trai ---------- */
+.topline{background:#12305F;color:rgba(255,255,255,.82);font-size:13.4px}
+.topline .in{max-width:1200px;margin:0 auto;padding:9px 22px;
+  display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.topline a{color:#fff;text-decoration:none;display:inline-flex;align-items:center;gap:8px}
+.topline .r{display:flex;gap:18px;flex-wrap:wrap;align-items:center}
+.topline .r a:hover{color:#E4B451}
+
+/* Hotline: chu DO, nhap nhay dang nhip tho 1,6 giay/nhip.
+   Co y KHONG chop tat nhanh — chop qua 3 lan/giay gay kho chiu mat
+   va vi pham chuan tiep can WCAG. Ai bat che do giam chuyen dong thi chu dung yen. */
+.topline .hot{font-weight:800;font-size:15.6px;letter-spacing:.01em;color:#FF6B6B;
+  text-shadow:0 0 14px rgba(255,107,107,.55);
+  animation:hotNhay 1.6s ease-in-out infinite}
+.topline .hot svg{color:#FF6B6B}
+.topline .hot:hover{color:#FF9090;animation-play-state:paused}
+@keyframes hotNhay{0%,100%{opacity:1;text-shadow:0 0 14px rgba(255,107,107,.55)}
+                   50%{opacity:.5;text-shadow:0 0 4px rgba(255,107,107,.2)}}
+@media (prefers-reduced-motion:reduce){.topline .hot{animation:none;opacity:1}}
+@media (max-width:720px){.topline .in{justify-content:center;padding:8px 16px}.topline .r{display:none}}
+@media print{.topline .hot{animation:none!important;opacity:1!important}}
+</style>
+
+<style>
+/* ---------- chong tran thanh menu (them boi buoc cuoi) ---------- */
+.nav-links{gap:14px!important}
+.nav-links a{font-size:14.2px!important;white-space:nowrap}
+.nav-in{gap:14px!important}
+@media (max-width:1280px){.nav-links a{font-size:13.4px!important}.nav-links{gap:11px!important}}
+@media (max-width:1140px){.nav-links{display:none!important}}
+</style>
 </head>
 <body>
+
+<!-- =============== THANH HOTLINE =============== -->
+<div class="topline">
+  <div class="in">
+    <a class="hot" href="tel:0825092007" title="Hotline ASCO — cũng là ngày thành lập công ty: 25/09/2007">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.4 2.1L8 9.8a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+      Hotline ASCO: 08 2509 2007
+    </a>
+    <div class="r">
+      <a href="mailto:asco@asco.vn">asco@asco.vn</a>
+      <a href="#lien-he">Nhận báo giá</a>
+    </div>
+  </div>
+</div>
+
 
 
 <title>Kiểm toán quyết toán dự án hoàn thành cho Ban Quản lý dự án cấp tỉnh — ASCO</title>
