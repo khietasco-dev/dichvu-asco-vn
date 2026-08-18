@@ -717,7 +717,25 @@ footer a:hover{color:var(--navy)}
         hai thông tin này quyết định hồ sơ có được chuyển tiếp hay không.
       </p>
       <div style="margin-top:26px">
-        <a class="mail-lon" href="mailto:asco@asco.vn?subject=Ứng%20tuyển%20Trưởng%20phòng%20Thẩm%20định%20giá"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="m3 6 9 6.5L21 6"/></svg> Gửi hồ sơ qua email</a>
+        <a class="mail-lon" href="mailto:asco@asco.vn?subject=%E1%BB%A8ng%20tuy%E1%BB%83n%20Tr%C6%B0%E1%BB%9Fng%20ph%C3%B2ng%20Th%E1%BA%A9m%20%C4%91%E1%BB%8Bnh%20gi%C3%A1&body=K%C3%ADnh%20g%E1%BB%ADi%20H%C3%A3ng%20Ki%E1%BB%83m%20to%C3%A1n%20v%C3%A0%20%C4%90%E1%BB%8Bnh%20gi%C3%A1%20ASCO%2C%0A%0AT%C3%B4i%20xin%20%E1%BB%A9ng%20tuy%E1%BB%83n%20v%E1%BB%8B%20tr%C3%AD%20Tr%C6%B0%E1%BB%9Fng%20ph%C3%B2ng%20Th%E1%BA%A9m%20%C4%91%E1%BB%8Bnh%20gi%C3%A1.%0A%0AAnh/ch%E1%BB%8B%20vui%20l%C3%B2ng%20%C4%91i%E1%BB%81n%20th%C3%B4ng%20tin%20v%C3%A0o%20sau%20d%E1%BA%A5u%20hai%20ch%E1%BA%A5m%20%E1%BB%9F%20t%E1%BB%ABng%20d%C3%B2ng%20d%C6%B0%E1%BB%9Bi%20%C4%91%C3%A2y%20v%C3%A0%20GI%E1%BB%AE%20NGUY%C3%8AN%20c%C3%A1c%20d%C3%B2ng%20b%E1%BA%AFt%20%C4%91%E1%BA%A7u%20b%E1%BA%B1ng%20d%E1%BA%A5u%20%23.%20C%C3%A1ch%20n%C3%A0y%20gi%C3%BAp%20ASCO%20x%E1%BB%AD%20l%C3%BD%20h%E1%BB%93%20s%C6%A1%20nhanh%20v%C3%A0%20kh%C3%B4ng%20b%E1%BB%8F%20s%C3%B3t%20th%C3%B4ng%20tin%20c%E1%BB%A7a%20anh/ch%E1%BB%8B.%0A%0A-----%20TH%C3%94NG%20TIN%20%E1%BB%A8NG%20VI%C3%8AN%20-----%0A%23%20HO%20VA%20TEN%3A%20%0A%23%20NAM%20SINH%3A%20%0A%23%20DIEN%20THOAI%3A%20%0A%23%20EMAIL%3A%20%0A%23%20SO%20THE%20THAM%20DINH%20VIEN%3A%20%0A%23%20NAM%20DUOC%20CAP%20THE%3A%20%0A%23%20SO%20NAM%20KINH%20NGHIEM%3A%20%0A%23%20NOI%20LAM%20VIEC%20GAN%20NHAT%3A%20%0A%23%20CHUC%20DANH%20GAN%20NHAT%3A%20%0A%23%20LOAI%20TAI%20SAN%20DA%20THAM%20DINH%3A%20%0A%23%20NOI%20MONG%20MUON%20LAM%20VIEC%3A%20%0A%23%20CO%20THE%20BAT%20DAU%20TU%20NGAY%3A%20%0A-----%20H%E1%BA%BET%20-----%0A%0AT%C3%B4i%20g%E1%BB%ADi%20k%C3%A8m%20CV%20trong%20th%C6%B0%20n%C3%A0y.%0A%0ATr%C3%A2n%20tr%E1%BB%8Dng%20c%E1%BA%A3m%20%C6%A1n.%0A"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="m3 6 9 6.5L21 6"/></svg> Gửi hồ sơ qua email</a>
+      </div>
+      <p class="small" style="margin-top:16px;opacity:.85">
+        Bấm nút sẽ mở ứng dụng thư của anh/chị với địa chỉ, tiêu đề và
+        <b>mẫu thông tin đã điền sẵn</b> — anh/chị chỉ cần điền vào chỗ trống và đính kèm CV.
+      </p>
+      <div style="margin-top:14px">
+        <button class="btn btn-outline btn-sm" type="button" id="chepMau">
+          Không mở được ứng dụng thư? Sao chép mẫu
+        </button>
+        <span id="daChep" style="display:none;margin-left:10px;font-size:13.6px;color:var(--gold-hi)">
+          Đã sao chép — dán vào thư gửi tới asco@asco.vn
+        </span>
+      </div>
+      <div id="hopMau" style="display:none;margin-top:14px;text-align:left">
+        <textarea id="mauThu" readonly style="width:100%;min-height:210px;padding:14px;
+          border-radius:12px;border:1px solid rgba(255,255,255,.25);
+          background:rgba(0,0,0,.18);color:#fff;font:inherit;font-size:13.4px;
+          line-height:1.6"></textarea>
       </div>
     </div>
 
@@ -798,8 +816,36 @@ footer a:hover{color:var(--navy)}
 <div class="mbar">
   <a class="btn btn-outline" href="tel:0961539861">Gọi PTGĐ</a>
   <a class="btn btn-outline" href="tel:0825092007">Hotline</a>
-  <a class="btn btn-gold" href="mailto:asco@asco.vn?subject=Ứng%20tuyển%20Trưởng%20phòng%20Thẩm%20định%20giá">Gửi CV</a>
+  <a class="btn btn-gold" href="mailto:asco@asco.vn?subject=%E1%BB%A8ng%20tuy%E1%BB%83n%20Tr%C6%B0%E1%BB%9Fng%20ph%C3%B2ng%20Th%E1%BA%A9m%20%C4%91%E1%BB%8Bnh%20gi%C3%A1&body=K%C3%ADnh%20g%E1%BB%ADi%20H%C3%A3ng%20Ki%E1%BB%83m%20to%C3%A1n%20v%C3%A0%20%C4%90%E1%BB%8Bnh%20gi%C3%A1%20ASCO%2C%0A%0AT%C3%B4i%20xin%20%E1%BB%A9ng%20tuy%E1%BB%83n%20v%E1%BB%8B%20tr%C3%AD%20Tr%C6%B0%E1%BB%9Fng%20ph%C3%B2ng%20Th%E1%BA%A9m%20%C4%91%E1%BB%8Bnh%20gi%C3%A1.%0A%0AAnh/ch%E1%BB%8B%20vui%20l%C3%B2ng%20%C4%91i%E1%BB%81n%20th%C3%B4ng%20tin%20v%C3%A0o%20sau%20d%E1%BA%A5u%20hai%20ch%E1%BA%A5m%20%E1%BB%9F%20t%E1%BB%ABng%20d%C3%B2ng%20d%C6%B0%E1%BB%9Bi%20%C4%91%C3%A2y%20v%C3%A0%20GI%E1%BB%AE%20NGUY%C3%8AN%20c%C3%A1c%20d%C3%B2ng%20b%E1%BA%AFt%20%C4%91%E1%BA%A7u%20b%E1%BA%B1ng%20d%E1%BA%A5u%20%23.%20C%C3%A1ch%20n%C3%A0y%20gi%C3%BAp%20ASCO%20x%E1%BB%AD%20l%C3%BD%20h%E1%BB%93%20s%C6%A1%20nhanh%20v%C3%A0%20kh%C3%B4ng%20b%E1%BB%8F%20s%C3%B3t%20th%C3%B4ng%20tin%20c%E1%BB%A7a%20anh/ch%E1%BB%8B.%0A%0A-----%20TH%C3%94NG%20TIN%20%E1%BB%A8NG%20VI%C3%8AN%20-----%0A%23%20HO%20VA%20TEN%3A%20%0A%23%20NAM%20SINH%3A%20%0A%23%20DIEN%20THOAI%3A%20%0A%23%20EMAIL%3A%20%0A%23%20SO%20THE%20THAM%20DINH%20VIEN%3A%20%0A%23%20NAM%20DUOC%20CAP%20THE%3A%20%0A%23%20SO%20NAM%20KINH%20NGHIEM%3A%20%0A%23%20NOI%20LAM%20VIEC%20GAN%20NHAT%3A%20%0A%23%20CHUC%20DANH%20GAN%20NHAT%3A%20%0A%23%20LOAI%20TAI%20SAN%20DA%20THAM%20DINH%3A%20%0A%23%20NOI%20MONG%20MUON%20LAM%20VIEC%3A%20%0A%23%20CO%20THE%20BAT%20DAU%20TU%20NGAY%3A%20%0A-----%20H%E1%BA%BET%20-----%0A%0AT%C3%B4i%20g%E1%BB%ADi%20k%C3%A8m%20CV%20trong%20th%C6%B0%20n%C3%A0y.%0A%0ATr%C3%A2n%20tr%E1%BB%8Dng%20c%E1%BA%A3m%20%C6%A1n.%0A">Gửi CV</a>
 </div>
+
+<script>var MAU_THU = "Kính gửi Hãng Kiểm toán và Định giá ASCO,\n\nTôi xin ứng tuyển vị trí Trưởng phòng Thẩm định giá.\n\nAnh/chị vui lòng điền thông tin vào sau dấu hai chấm ở từng dòng dưới đây và GIỮ NGUYÊN các dòng bắt đầu bằng dấu #. Cách này giúp ASCO xử lý hồ sơ nhanh và không bỏ sót thông tin của anh/chị.\n\n----- THÔNG TIN ỨNG VIÊN -----\n# HO VA TEN: \n# NAM SINH: \n# DIEN THOAI: \n# EMAIL: \n# SO THE THAM DINH VIEN: \n# NAM DUOC CAP THE: \n# SO NAM KINH NGHIEM: \n# NOI LAM VIEC GAN NHAT: \n# CHUC DANH GAN NHAT: \n# LOAI TAI SAN DA THAM DINH: \n# NOI MONG MUON LAM VIEC: \n# CO THE BAT DAU TU NGAY: \n----- HẾT -----\n\nTôi gửi kèm CV trong thư này.\n\nTrân trọng cảm ơn.\n";</script>
+
+<script>
+/* Nút dự phòng: một số máy không đặt ứng dụng thư mặc định, bấm mailto không
+   mở được gì cả. Khi đó ứng viên vẫn lấy được mẫu để tự dán vào webmail. */
+(function(){
+  var nut = document.getElementById('chepMau');
+  var hop = document.getElementById('hopMau');
+  var o   = document.getElementById('mauThu');
+  var bao = document.getElementById('daChep');
+  if (!nut || !o) return;
+  o.value = MAU_THU;
+  nut.addEventListener('click', function(){
+    hop.style.display = 'block';
+    o.select();
+    var xong = function(){
+      bao.style.display = 'inline';
+      setTimeout(function(){ bao.style.display = 'none'; }, 4000);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(MAU_THU).then(xong, function(){ /* vẫn hiện ô để tự bôi đen */ });
+    } else {
+      try { document.execCommand('copy'); xong(); } catch(e){}
+    }
+  });
+})();
+</script>
 
 <script>
 /* Hiệu ứng hiện dần khi cuộn tới */
