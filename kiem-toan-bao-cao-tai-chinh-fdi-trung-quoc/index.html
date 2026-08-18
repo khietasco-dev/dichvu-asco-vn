@@ -1,0 +1,1015 @@
+<!doctype html>
+<html lang="vi" data-lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-vi="Kiểm toán báo cáo tài chính cho doanh nghiệp FDI Trung Quốc — ASCO" data-zh="中资外商投资企业财务报表审计 — ASCO 会计师事务所" data-en="Financial statement audit for Chinese-invested enterprises — ASCO">Kiểm toán báo cáo tài chính cho doanh nghiệp FDI Trung Quốc — ASCO</title>
+<meta name="description" content="ASCO kiểm toán báo cáo tài chính cho doanh nghiệp có vốn đầu tư Trung Quốc tại Việt Nam. Hiểu chuẩn mực kế toán Việt Nam và yêu cầu hợp nhất của công ty mẹ. Báo cáo ba thứ tiếng, đúng hạn nộp cơ quan quản lý Việt Nam và đúng lịch công bố của công ty mẹ.">
+<meta name="theme-color" content="#184088">
+
+<style>
+/* ================= TOKENS — light mặc định ================= */
+:root{
+  --navy:#184088;          /* màu logo ASCO */
+  --navy-700:#17376A;
+  --navy-900:#0D2245;
+  --navy-300:#5B80C2;
+  --tint:#ECF1F9;
+  --tint-2:#D9E3F4;
+
+  --gold:#B8862A;          /* nhấn CTA — cùng hệ với trang QTDND */
+  --gold-hi:#E4B451;
+
+  --steel:#256E80;         /* dấu hiệu phần KỸ THUẬT (kỹ sư, khối lượng, đơn giá) */
+  --steel-tint:#E4F0F2;
+
+  --danger:#A82420;
+  --warn:#8C6316;
+  --ok:#1B6E4C;
+
+  --bg:#FFFFFF;
+  --bg-alt:#F4F7FC;        /* trung tính hơi ấm — chất bê tông */
+  --surface:#FFFFFF;
+  --ink:#0E1729;
+  --ink-2:#3A4150;
+  --muted:#646B7A;
+  --line:#E0E6F0;
+  --line-soft:#EFEEE9;
+
+  --shadow-sm:0 1px 2px rgba(13,34,69,.06);
+  --shadow:0 2px 4px rgba(13,34,69,.05), 0 14px 34px -20px rgba(13,34,69,.34);
+  --shadow-lg:0 4px 8px rgba(13,34,69,.06), 0 30px 60px -30px rgba(13,34,69,.45);
+
+  --maxw:1180px;
+  --r:13px;
+  --r-lg:19px;
+  --f:"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Roboto,Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --navy:#8FB2EE; --navy-700:#A8C4F4; --navy-900:#CCDDF9; --navy-300:#4A6EB0;
+    --tint:#151F38; --tint-2:#1C2947;
+    --gold:#E0B458; --gold-hi:#F2CE83;
+    --steel:#5FB3C4; --steel-tint:#15303A;
+    --danger:#F0857E; --warn:#E0B458; --ok:#5FCB9C;
+    --bg:#0D2044; --bg-alt:#0A1B3B; --surface:#13294F;
+    --ink:#EEF3FB; --ink-2:#C2D0E6; --muted:#8DA0C0;
+    --line:#22406E; --line-soft:#1A3260;
+    --shadow-sm:0 1px 2px rgba(0,0,0,.35);
+    --shadow:0 2px 4px rgba(0,0,0,.3), 0 16px 36px -22px rgba(0,0,0,.8);
+    --shadow-lg:0 4px 10px rgba(0,0,0,.35), 0 34px 64px -32px rgba(0,0,0,.9);
+  }
+}
+:root[data-theme="dark"]{
+  --navy:#8FB2EE; --navy-700:#A8C4F4; --navy-900:#CCDDF9; --navy-300:#4A6EB0;
+  --tint:#151F38; --tint-2:#1C2947;
+  --gold:#E0B458; --gold-hi:#F2CE83;
+  --steel:#5FB3C4; --steel-tint:#15303A;
+  --danger:#F0857E; --warn:#E0B458; --ok:#5FCB9C;
+  --bg:#0D2044; --bg-alt:#0A1B3B; --surface:#13294F;
+  --ink:#EEF3FB; --ink-2:#C2D0E6; --muted:#8DA0C0;
+  --line:#22406E; --line-soft:#1A3260;
+  --shadow-sm:0 1px 2px rgba(0,0,0,.35);
+  --shadow:0 2px 4px rgba(0,0,0,.3), 0 16px 36px -22px rgba(0,0,0,.8);
+  --shadow-lg:0 4px 10px rgba(0,0,0,.35), 0 34px 64px -32px rgba(0,0,0,.9);
+}
+
+/* ================= BASE ================= */
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f);
+  font-size:17px;line-height:1.66;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,h4{margin:0;font-weight:800;line-height:1.14;letter-spacing:-.018em;text-wrap:balance}
+h2{font-size:clamp(26px,3.4vw,37px)}
+h3{font-size:clamp(18px,2vw,21px);letter-spacing:-.01em}
+p{margin:0}
+ul,ol{margin:0;padding-left:1.15em}
+a{color:var(--navy);text-underline-offset:3px}
+img{max-width:100%;height:auto;display:block}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+section{padding:clamp(54px,7vw,94px) 0}
+.narrow{max-width:820px}
+.alt{background:var(--bg-alt)}
+.center{text-align:center}
+.tnum{font-variant-numeric:tabular-nums}
+.lede{font-size:clamp(17px,1.7vw,19.5px);color:var(--ink-2);line-height:1.62}
+.small{font-size:14px;color:var(--muted);line-height:1.6}
+.sec-head{max-width:780px;margin-bottom:38px}
+.sec-head.center{margin-left:auto;margin-right:auto}
+
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--navy);margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--gold);flex:0 0 auto;border-radius:2px}
+.center .eyebrow{justify-content:center}
+
+/* mã giấy tờ làm việc — dấu hiệu phương pháp luận thật của ASCO */
+.wp{
+  font-variant-numeric:tabular-nums;font-size:11.5px;font-weight:800;letter-spacing:.1em;
+  color:var(--steel);background:var(--steel-tint);border:1px solid color-mix(in srgb,var(--steel) 26%,transparent);
+  padding:2px 8px;border-radius:5px;white-space:nowrap;
+}
+
+/* ================= BUTTONS ================= */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55em;
+  font:inherit;font-weight:700;font-size:16px;padding:14px 26px;border-radius:999px;
+  border:1.5px solid transparent;cursor:pointer;text-decoration:none;text-align:center;
+  transition:transform .16s ease, box-shadow .16s ease, background .16s ease, border-color .16s ease}
+.btn:focus-visible{outline:2.5px solid var(--gold);outline-offset:3px}
+.btn-gold{background:linear-gradient(180deg,var(--gold-hi),var(--gold));color:#1F1707;
+  box-shadow:0 10px 24px -12px rgba(184,134,42,.75)}
+.btn-gold:hover{transform:translateY(-2px)}
+.btn-navy{background:var(--navy);color:#fff;box-shadow:var(--shadow)}
+.btn-navy:hover{transform:translateY(-2px);background:var(--navy-700)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn-navy{color:#0D2044}}
+:root[data-theme="dark"] .btn-navy{color:#0D2044}
+.btn-outline{background:transparent;border-color:var(--line);color:var(--ink)}
+.btn-outline:hover{border-color:var(--navy);color:var(--navy)}
+.btn-onnavy{background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.38);color:#fff}
+.btn-onnavy:hover{background:rgba(255,255,255,.18);transform:translateY(-2px)}
+.btn-sm{font-size:14.5px;padding:10px 18px}
+.btn-block{width:100%}
+
+/* ================= NAV ================= */
+nav{position:sticky;top:0;z-index:60;background:color-mix(in srgb,var(--bg) 90%,transparent);
+  backdrop-filter:saturate(1.5) blur(12px);border-bottom:1px solid var(--line)}
+.nav-in{max-width:var(--maxw);margin:0 auto;padding:11px 22px;display:flex;align-items:center;gap:18px}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;flex:0 0 auto}
+.brand img{height:30px;width:auto}
+:root[data-theme="dark"] .brand img{filter:brightness(1.9) saturate(.55)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .brand img{filter:brightness(1.9) saturate(.55)}}
+.brand-tag{font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);
+  border-left:1px solid var(--line);padding-left:11px;line-height:1.25;max-width:150px}
+.nav-links{display:flex;gap:17px;font-size:14px;margin-left:auto;min-width:0}
+.nav-links a{color:var(--ink-2);text-decoration:none;white-space:nowrap;font-weight:600}
+.nav-links a:hover{color:var(--navy)}
+.nav-act{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+.theme-btn{width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:var(--surface);
+  color:var(--ink-2);cursor:pointer;display:grid;place-items:center;flex:0 0 auto}
+.theme-btn:hover{border-color:var(--navy);color:var(--navy)}
+@media (max-width:1180px){.nav-links{display:none}}
+@media (max-width:560px){.brand-tag{display:none}}
+
+/* ================= HERO — nền bản vẽ ================= */
+.hero{position:relative;color:#fff;overflow:hidden;
+  background:
+    radial-gradient(880px 500px at 86% -10%, rgba(228,180,81,.2), transparent 62%),
+    radial-gradient(760px 620px at 4% 106%, rgba(37,110,128,.36), transparent 62%),
+    linear-gradient(157deg,#1F478D 0%,#17376A 46%,#0D2245 100%);
+}
+.hero::after{content:"";position:absolute;inset:0;opacity:.2;pointer-events:none;
+  background-image:
+    linear-gradient(rgba(255,255,255,.42) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.42) 1px,transparent 1px),
+    linear-gradient(rgba(255,255,255,.16) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.16) 1px,transparent 1px);
+  background-size:88px 88px,88px 88px,22px 22px,22px 22px;
+  mask-image:radial-gradient(circle at 72% 24%, #000, transparent 74%)}
+.hero .wrap{position:relative;z-index:2;padding-top:clamp(50px,6.5vw,80px);padding-bottom:clamp(46px,6vw,74px)}
+.hero-grid{display:grid;grid-template-columns:1.14fr .86fr;gap:clamp(28px,4vw,54px);align-items:center}
+@media (max-width:960px){.hero-grid{grid-template-columns:1fr;gap:32px}}
+.pill{display:inline-flex;align-items:center;gap:9px;flex-wrap:wrap;
+  background:rgba(255,255,255,.11);border:1px solid rgba(255,255,255,.26);
+  padding:7px 15px;border-radius:999px;font-size:13px;font-weight:700}
+.pill .dot{width:8px;height:8px;border-radius:50%;background:var(--gold-hi);box-shadow:0 0 0 4px rgba(228,180,81,.22)}
+.hero h1{font-size:clamp(30px,4.7vw,53px);margin:20px 0 0;color:#fff}
+.hero h1 .accent{display:block;font-size:clamp(18px,2.2vw,26px);font-weight:700;color:var(--gold-hi);margin-top:12px;letter-spacing:.005em}
+.hero p.lede{color:rgba(255,255,255,.87);margin-top:20px;max-width:62ch}
+.hero-cta{display:flex;flex-wrap:wrap;gap:13px;margin-top:30px}
+.hero-note{margin-top:16px;font-size:13.5px;color:rgba(255,255,255,.68)}
+.hero-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.2);
+  border-radius:var(--r-lg);padding:26px;backdrop-filter:blur(6px);box-shadow:0 30px 60px -34px rgba(0,0,0,.7)}
+.hero-card h3{color:#fff;font-size:16.5px;display:flex;align-items:center;gap:9px}
+.hc-list{list-style:none;padding:0;margin:18px 0 0;display:grid;gap:13px}
+.hc-list li{display:flex;gap:12px;align-items:flex-start;font-size:14.8px;color:rgba(255,255,255,.9);line-height:1.5}
+.hc-num{flex:0 0 auto;width:27px;height:27px;border-radius:8px;display:grid;place-items:center;
+  background:rgba(228,180,81,.2);border:1px solid rgba(228,180,81,.45);color:var(--gold-hi);font-weight:800;font-size:13px}
+.hc-foot{margin-top:20px;padding-top:16px;border-top:1px solid rgba(255,255,255,.16);font-size:13px;color:rgba(255,255,255,.66)}
+
+.trust{border-top:1px solid rgba(255,255,255,.16);position:relative;z-index:2}
+.trust-in{max-width:var(--maxw);margin:0 auto;padding:20px 22px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+@media (max-width:860px){.trust-in{grid-template-columns:repeat(2,1fr)}}
+.trust-i{display:flex;gap:11px;align-items:flex-start}
+.trust-i svg{flex:0 0 auto;margin-top:2px;color:var(--gold-hi)}
+.trust-i b{display:block;font-size:14.5px;color:#fff;line-height:1.3}
+.trust-i span{font-size:12.7px;color:rgba(255,255,255,.6);line-height:1.42}
+
+/* ================= CARDS ================= */
+.grid{display:grid;gap:20px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+@media (max-width:960px){.g3,.g4{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:680px){.g2,.g3,.g4{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:24px;
+  box-shadow:var(--shadow-sm);transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--navy-300)}
+.card h3{margin-bottom:10px}
+.card p{color:var(--ink-2);font-size:15.4px}
+.ico{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;margin-bottom:16px;
+  background:var(--tint);color:var(--navy);border:1px solid var(--tint-2)}
+.ico.tech{background:var(--steel-tint);color:var(--steel);border-color:color-mix(in srgb,var(--steel) 26%,transparent)}
+.badge{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:800;letter-spacing:.06em;
+  text-transform:uppercase;padding:4px 10px;border-radius:999px}
+.b-req{background:color-mix(in srgb,var(--danger) 13%,transparent);color:var(--danger);border:1px solid color-mix(in srgb,var(--danger) 32%,transparent)}
+.b-warn{background:color-mix(in srgb,var(--gold) 16%,transparent);color:var(--warn);border:1px solid color-mix(in srgb,var(--gold) 38%,transparent)}
+.b-ok{background:color-mix(in srgb,var(--ok) 13%,transparent);color:var(--ok);border:1px solid color-mix(in srgb,var(--ok) 32%,transparent)}
+.b-navy{background:var(--tint);color:var(--navy);border:1px solid var(--tint-2)}
+.b-tech{background:var(--steel-tint);color:var(--steel);border:1px solid color-mix(in srgb,var(--steel) 30%,transparent)}
+.badge.nocaps{text-transform:none;letter-spacing:.01em;font-weight:700}
+.cite{display:inline-block;margin-top:14px;font-size:12.6px;color:var(--muted);
+  border-left:2.5px solid var(--gold);padding-left:10px;line-height:1.45}
+
+/* ================= NỘI DUNG KIỂM TOÁN (7 khoản, có mã hồ sơ) ================= */
+.aud{display:flex;gap:15px;align-items:flex-start;padding:19px;border-radius:12px;
+  background:var(--surface);border:1px solid var(--line);transition:border-color .18s ease,transform .18s ease}
+.aud:hover{border-color:var(--navy-300);transform:translateY(-2px)}
+.aud .n{flex:0 0 auto;width:31px;height:31px;border-radius:9px;display:grid;place-items:center;
+  background:var(--navy);color:#fff;font-weight:800;font-size:14px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .aud .n{color:#0D2044}}
+:root[data-theme="dark"] .aud .n{color:#0D2044}
+.aud .top{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:4px}
+.aud b{font-size:15.4px}
+.aud span.d{font-size:13.9px;color:var(--muted);line-height:1.5;display:block}
+
+/* ================= HAI NỬA: TÀI CHÍNH | KỸ THUẬT ================= */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);
+  border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow)}
+@media (max-width:760px){.duo{grid-template-columns:1fr}}
+.duo-h{padding:22px 26px;font-weight:800;font-size:16.5px;display:flex;align-items:center;gap:11px;color:#fff}
+.duo-a .duo-h{background:var(--navy)}
+.duo-b .duo-h{background:var(--steel)}
+.duo-a{border-right:1px solid var(--line)}
+@media (max-width:760px){.duo-a{border-right:0;border-bottom:1px solid var(--line)}}
+.duo-c{padding:24px 26px;background:var(--surface)}
+.duo-c ul{list-style:none;padding:0;display:grid;gap:11px}
+.duo-c li{display:flex;gap:11px;align-items:flex-start;font-size:15px;color:var(--ink-2);line-height:1.5}
+.duo-c li::before{content:"";flex:0 0 auto;width:7px;height:7px;border-radius:50%;margin-top:8px}
+.duo-a .duo-c li::before{background:var(--navy)}
+.duo-b .duo-c li::before{background:var(--steel)}
+.duo-c .foot{margin-top:18px;padding-top:15px;border-top:1px solid var(--line-soft);font-size:13.6px;color:var(--muted);line-height:1.5}
+
+/* ================= CẢNH BÁO / CALLOUT ================= */
+.callout{border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:var(--r);
+  padding:24px 26px;background:var(--surface)}
+.callout.danger{border-left-color:var(--danger)}
+.callout h3{margin:12px 0 10px}
+.callout p{font-size:15.6px;color:var(--ink-2)}
+.callout p + p{margin-top:12px}
+
+/* ================= STATS ================= */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);
+  border-radius:var(--r-lg);overflow:hidden;background:var(--surface);box-shadow:var(--shadow-sm)}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}}
+.stat{padding:26px 22px;text-align:center;border-right:1px solid var(--line-soft)}
+.stat:last-child{border-right:0}
+@media (max-width:760px){.stat:nth-child(2n){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid var(--line-soft)}}
+.stat .v{font-size:clamp(26px,3.4vw,36px);font-weight:800;color:var(--navy);letter-spacing:-.02em;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat .l{font-size:13.6px;color:var(--muted);margin-top:7px;line-height:1.45}
+
+/* ================= TIMELINE 3 GIAI ĐOẠN ================= */
+.tl{display:grid;gap:0}
+.tl-i{display:grid;grid-template-columns:92px 1fr;gap:24px;position:relative;padding-bottom:32px}
+.tl-i:last-child{padding-bottom:0}
+.tl-i::before{content:"";position:absolute;left:45px;top:50px;bottom:-4px;width:2px;background:var(--line)}
+.tl-i:last-child::before{display:none}
+@media (max-width:680px){.tl-i{grid-template-columns:1fr;gap:12px}.tl-i::before{display:none}}
+.tl-mark{width:92px;height:92px;border-radius:50%;display:grid;place-items:center;text-align:center;
+  background:var(--tint);border:2px solid var(--navy);color:var(--navy);line-height:1.15}
+@media (max-width:680px){.tl-mark{width:auto;height:auto;border-radius:999px;padding:8px 18px;justify-self:start;display:inline-flex;gap:8px;align-items:center}}
+.tl-mark .gd{font-size:10.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;opacity:.8}
+.tl-mark .gn{font-size:26px;font-weight:800;letter-spacing:-.02em}
+@media (max-width:680px){.tl-mark .gn{font-size:17px}}
+.tl-c{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:22px;box-shadow:var(--shadow-sm)}
+.tl-c h3{margin-bottom:8px}
+.tl-c .dur{font-size:12.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--gold);margin-bottom:9px}
+.tl-wp{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px;padding-top:14px;border-top:1px solid var(--line-soft)}
+
+/* ================= BẢNG ================= */
+.tbl-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r);background:var(--surface);box-shadow:var(--shadow-sm)}
+table{width:100%;border-collapse:collapse;min-width:640px}
+th,td{padding:14px 17px;text-align:left;border-bottom:1px solid var(--line-soft);font-size:15px;vertical-align:top}
+thead th{background:var(--tint);font-size:13.2px;letter-spacing:.03em;color:var(--navy);font-weight:800;border-bottom:1px solid var(--line)}
+tbody tr:last-child td{border-bottom:0}
+td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+.col-asco{background:color-mix(in srgb,var(--navy) 5%,transparent)}
+thead th.col-asco{background:var(--navy);color:#fff}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) thead th.col-asco{color:#0D2044}}
+:root[data-theme="dark"] thead th.col-asco{color:#0D2044}
+td.yes{color:var(--ok);font-weight:700}
+td.no{color:var(--muted)}
+
+/* ================= CHECKLIST ================= */
+.cl-wrap{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow);overflow:hidden}
+.cl-head{padding:20px 24px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.cl-head h3{flex:1 1 240px}
+.cl-prog{flex:0 0 auto;display:flex;align-items:center;gap:12px;min-width:190px}
+.cl-bar{flex:1;height:8px;border-radius:99px;background:var(--tint-2);overflow:hidden}
+.cl-bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--navy),var(--gold));transition:width .3s ease}
+.cl-pct{font-size:14px;font-weight:800;color:var(--navy);min-width:42px;text-align:right;font-variant-numeric:tabular-nums}
+.cl-body{display:grid;grid-template-columns:repeat(2,1fr)}
+@media (max-width:820px){.cl-body{grid-template-columns:1fr}}
+.cl-g{padding:22px 24px;border-right:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)}
+@media (max-width:820px){.cl-g{border-right:0}}
+.cl-g h4{font-size:13px;letter-spacing:.09em;text-transform:uppercase;color:var(--navy);margin:0 0 12px;display:flex;align-items:center;gap:8px}
+.cl-g.tech h4{color:var(--steel)}
+.cl-g ul{list-style:none;padding:0;display:grid;gap:9px}
+.cl-g li label{display:flex;gap:11px;align-items:flex-start;font-size:14.6px;cursor:pointer;line-height:1.5;color:var(--ink-2)}
+.cl-g li input{margin-top:4px;width:17px;height:17px;accent-color:var(--navy);flex:0 0 auto}
+.cl-g li input:checked + span{text-decoration:line-through;color:var(--muted)}
+.cl-foot{padding:18px 24px;display:flex;gap:12px;flex-wrap:wrap;align-items:center;background:var(--bg-alt)}
+
+/* ================= CÔNG CỤ RÀ SOÁT ================= */
+.tool{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow-lg);overflow:hidden}
+.tool-head{padding:22px 26px;background:linear-gradient(140deg,var(--navy),var(--navy-700));color:#fff;
+  display:flex;align-items:center;gap:13px;flex-wrap:wrap}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .tool-head{background:linear-gradient(140deg,#182742,#131E33)}}
+:root[data-theme="dark"] .tool-head{background:linear-gradient(140deg,#182742,#131E33)}
+.tool-head h3{color:#fff;font-size:19px}
+.tool-head .sub{font-size:13.6px;color:rgba(255,255,255,.75);width:100%;margin-top:2px}
+.tool-in{padding:22px 26px;border-bottom:1px solid var(--line)}
+.rows-head,.row{display:grid;grid-template-columns:2fr 1.1fr 1.3fr 1.5fr 38px;gap:10px;align-items:center}
+.rows-head{font-size:11.5px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);
+  padding-bottom:9px;border-bottom:1px solid var(--line);margin-bottom:12px}
+@media (max-width:820px){
+  .rows-head{display:none}
+  .row{grid-template-columns:1fr;gap:8px;padding:14px;border:1px solid var(--line);border-radius:11px;margin-bottom:12px;background:var(--bg-alt)}
+  .row .lbl{display:block}
+}
+.row{margin-bottom:10px}
+.row .lbl{display:none;font-size:11.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
+.row .inp{padding:10px 12px;font-size:15px;border-radius:9px}
+.row-del{width:34px;height:34px;border-radius:9px;border:1px solid var(--line);background:var(--surface);
+  color:var(--muted);cursor:pointer;display:grid;place-items:center;font-size:18px;line-height:1;flex:0 0 auto}
+.row-del:hover{border-color:var(--danger);color:var(--danger)}
+@media (max-width:820px){.row-del{width:100%;height:38px}}
+.rows-act{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+
+.tool-out{padding:24px 26px;background:var(--bg-alt)}
+.res-title{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+.sum{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:20px}
+@media (max-width:680px){.sum{grid-template-columns:repeat(2,1fr)}}
+.sum-i{background:var(--surface);border:1px solid var(--line);border-radius:11px;padding:14px 16px;text-align:center}
+.sum-i .v{font-size:23px;font-weight:800;color:var(--navy);line-height:1.15;font-variant-numeric:tabular-nums}
+.sum-i .l{font-size:12.4px;color:var(--muted);margin-top:4px;line-height:1.4}
+.sum-i.alert .v{color:var(--danger)}
+.sum-i.warn2 .v{color:var(--warn)}
+
+.res-row{background:var(--surface);border:1px solid var(--line);border-left-width:4px;border-radius:11px;
+  padding:15px 17px;margin-bottom:11px}
+.res-row.ok{border-left-color:var(--ok)}
+.res-row.w{border-left-color:var(--gold)}
+.res-row.d{border-left-color:var(--danger)}
+.res-row .rt{font-weight:700;font-size:15.4px;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.res-row .rd{font-size:13.7px;color:var(--muted);margin-top:6px;line-height:1.55}
+.res-row .rd b{color:var(--ink-2)}
+.res-empty{padding:22px;text-align:center;color:var(--muted);font-size:14.6px;
+  border:1px dashed var(--line);border-radius:11px;background:var(--surface)}
+.tool-foot{padding:16px 26px;border-top:1px solid var(--line);background:var(--surface);font-size:12.6px;color:var(--muted);line-height:1.55}
+
+
+/* ================= CÔNG CỤ TÍNH PHÍ ================= */
+.fee-tool{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow-lg);overflow:hidden}
+.fee-head{padding:22px 26px;background:linear-gradient(140deg,var(--steel),#1B5A69);color:#fff;display:flex;align-items:center;gap:13px;flex-wrap:wrap}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .fee-head{background:linear-gradient(140deg,#153845,#102A34)}}
+:root[data-theme="dark"] .fee-head{background:linear-gradient(140deg,#153845,#102A34)}
+.fee-head h3{color:#fff;font-size:19px}
+.fee-head .sub{font-size:13.6px;color:rgba(255,255,255,.78);width:100%;margin-top:2px}
+.fee-body{display:grid;grid-template-columns:.92fr 1.08fr}
+@media (max-width:900px){.fee-body{grid-template-columns:1fr}}
+.fee-in{padding:26px;border-right:1px solid var(--line)}
+@media (max-width:900px){.fee-in{border-right:0;border-bottom:1px solid var(--line)}}
+.fee-out{padding:26px;background:var(--bg-alt)}
+.f-field{margin-bottom:22px}
+.f-field:last-child{margin-bottom:0}
+.f-field label{display:block;font-weight:700;font-size:14.6px;margin-bottom:7px}
+.f-field .hint{display:block;font-size:12.8px;color:var(--muted);font-weight:400;margin-top:5px;line-height:1.45}
+.f-row{display:flex;align-items:center;gap:10px}
+.f-row .unit{font-size:14.5px;color:var(--muted);font-weight:700;white-space:nowrap}
+.f-field input[type=range]{width:100%;accent-color:var(--steel);margin-top:9px}
+.f-chk{display:flex;gap:11px;align-items:flex-start;font-size:14.6px;line-height:1.5;cursor:pointer}
+.f-chk input{margin-top:4px;width:18px;height:18px;accent-color:var(--steel);flex:0 0 auto}
+
+.fee-card{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:20px;margin-bottom:14px}
+.fee-card.main{border-color:var(--steel);border-width:1.5px;box-shadow:0 0 0 3px color-mix(in srgb,var(--steel) 12%,transparent)}
+.fee-card .lbl{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.fee-card .big{font-size:clamp(25px,3.6vw,33px);font-weight:800;color:var(--steel);letter-spacing:-.02em;line-height:1.12;font-variant-numeric:tabular-nums}
+.fee-card.alt2 .big{color:var(--navy);font-size:clamp(20px,2.6vw,25px)}
+.fee-card .sub2{font-size:13.6px;color:var(--muted);margin-top:7px;line-height:1.5}
+.fee-break{margin-top:14px;padding-top:13px;border-top:1px dashed var(--line)}
+.fee-break .r{display:flex;justify-content:space-between;gap:14px;font-size:14.2px;padding:5px 0}
+.fee-break .r b{font-variant-numeric:tabular-nums;white-space:nowrap}
+.fee-note{margin-top:16px;padding:14px 16px;border-radius:12px;font-size:13.8px;line-height:1.55;
+  background:var(--steel-tint);border:1px solid color-mix(in srgb,var(--steel) 28%,transparent);color:var(--ink-2)}
+.fee-note b{color:var(--steel)}
+.fee-warn{margin-top:12px;padding:13px 16px;border-radius:12px;font-size:13.6px;line-height:1.5;
+  background:color-mix(in srgb,var(--gold) 13%,transparent);border:1px solid color-mix(in srgb,var(--gold) 36%,transparent);color:var(--ink-2)}
+.fee-foot{padding:16px 26px;border-top:1px solid var(--line);background:var(--surface);font-size:12.6px;color:var(--muted);line-height:1.55}
+
+/* ================= FAQ ================= */
+details.faq{background:var(--surface);border:1px solid var(--line);border-radius:12px;margin-bottom:12px;overflow:hidden;transition:border-color .18s ease}
+details.faq[open]{border-color:var(--navy-300);box-shadow:var(--shadow-sm)}
+details.faq summary{padding:18px 22px;cursor:pointer;font-weight:700;font-size:16.2px;list-style:none;
+  display:flex;gap:14px;align-items:flex-start;color:var(--ink)}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary::after{content:"+";margin-left:auto;font-size:24px;font-weight:400;color:var(--navy);line-height:1;flex:0 0 auto}
+details.faq[open] summary::after{content:"−"}
+details.faq summary:hover{color:var(--navy)}
+details.faq .ans{padding:0 22px 20px 22px;color:var(--ink-2);font-size:15.4px;line-height:1.68}
+details.faq .ans p + p{margin-top:11px}
+
+/* ================= MẠNG LƯỚI ================= */
+.net{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.net span{font-size:14px;font-weight:600;padding:8px 15px;border-radius:999px;background:var(--surface);
+  border:1px solid var(--line);color:var(--ink-2);display:inline-flex;gap:8px;align-items:center}
+.net span::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold)}
+.net span.hq::before{background:var(--navy);box-shadow:0 0 0 3px color-mix(in srgb,var(--navy) 22%,transparent)}
+
+/* ================= CTA CUỐI ================= */
+.cta{color:#fff;background:radial-gradient(760px 460px at 12% -10%, rgba(184,134,42,.24), transparent 60%),
+  linear-gradient(150deg,#1F478D,#0D2245)}
+.cta-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,54px);align-items:start}
+@media (max-width:900px){.cta-grid{grid-template-columns:1fr}}
+.cta h2{color:#fff}
+.cta .lede{color:rgba(255,255,255,.85)}
+.cta-contacts{display:grid;gap:12px;margin-top:26px}
+.cc{display:flex;gap:14px;align-items:center;padding:15px 18px;border-radius:13px;
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);text-decoration:none;color:#fff;
+  transition:background .16s ease,transform .16s ease}
+.cc:hover{background:rgba(255,255,255,.15);transform:translateX(3px)}
+.cc svg{flex:0 0 auto;color:var(--gold-hi)}
+.cc b{display:block;font-size:16.5px;line-height:1.25}
+.cc span{font-size:13px;color:rgba(255,255,255,.65)}
+.form-card{background:var(--surface);border-radius:var(--r-lg);padding:26px;box-shadow:var(--shadow-lg);color:var(--ink)}
+.form-card h3{margin-bottom:6px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+@media (max-width:520px){.form-grid{grid-template-columns:1fr}}
+.form-grid .full{grid-column:1/-1}
+.form-card label{font-size:13.4px;font-weight:700;display:block;margin-bottom:6px}
+.form-card .req{color:var(--danger)}
+.inp,select.inp,textarea.inp{width:100%;padding:12px 14px;border-radius:11px;border:1.5px solid var(--line);
+  background:var(--bg);color:var(--ink);font:inherit;font-size:16px}
+.inp:focus{outline:none;border-color:var(--navy);box-shadow:0 0 0 3px color-mix(in srgb,var(--navy) 18%,transparent)}
+textarea.inp{min-height:86px;resize:vertical}
+.form-msg{margin-top:14px;padding:14px 16px;border-radius:11px;font-size:14.3px;line-height:1.55;display:none}
+.form-msg.show{display:block}
+.form-msg.ok{background:color-mix(in srgb,var(--ok) 11%,transparent);border:1px solid color-mix(in srgb,var(--ok) 32%,transparent)}
+.form-msg.err{background:color-mix(in srgb,var(--danger) 10%,transparent);border:1px solid color-mix(in srgb,var(--danger) 30%,transparent)}
+.copybox{margin-top:12px;font-size:13px;font-family:ui-monospace,Consolas,monospace;white-space:pre-wrap;
+  background:var(--bg-alt);border:1px solid var(--line);border-radius:10px;padding:13px;max-height:190px;overflow:auto;color:var(--ink-2)}
+
+/* ================= FOOTER ================= */
+footer{background:var(--bg-alt);border-top:1px solid var(--line);padding:48px 0 110px}
+.f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:34px}
+@media (max-width:820px){.f-grid{grid-template-columns:1fr;gap:26px}}
+footer img.flogo{height:34px;margin-bottom:14px}
+:root[data-theme="dark"] footer img.flogo{filter:brightness(1.9) saturate(.55)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) footer img.flogo{filter:brightness(1.9) saturate(.55)}}
+footer h4{font-size:12.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--navy);margin:0 0 12px}
+footer ul{list-style:none;padding:0;display:grid;gap:8px;font-size:14.5px;color:var(--ink-2)}
+footer a{color:var(--ink-2);text-decoration:none}
+footer a:hover{color:var(--navy)}
+.disc{margin-top:34px;padding-top:22px;border-top:1px solid var(--line);font-size:12.6px;color:var(--muted);line-height:1.6}
+
+/* ================= THANH DÍNH DI ĐỘNG ================= */
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:70;display:none;gap:9px;padding:10px 12px;
+  background:color-mix(in srgb,var(--bg) 94%,transparent);backdrop-filter:blur(12px);
+  border-top:1px solid var(--line);box-shadow:0 -6px 24px -14px rgba(13,34,69,.5)}
+.mbar .btn{flex:1;padding:13px 8px;font-size:14.5px}
+@media (max-width:820px){.mbar{display:flex}body{padding-bottom:74px}}
+
+/* ================= CHUYỂN ĐỘNG / IN ================= */
+.js .rv{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.js .rv{opacity:1;transform:none}}
+@media print{
+  nav,.mbar,.theme-btn,.hero-cta,.form-card{display:none!important}
+  body{font-size:11.5pt;padding-bottom:0}
+  .hero,.cta{background:#1F478D!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  section{padding:18px 0;break-inside:avoid}
+  .card,.tl-c,.aud,details.faq,.duo{break-inside:avoid}
+  details.faq .ans{display:block!important}
+}
+</style>
+<script>document.documentElement.className+=' js';</script>
+
+<style>
+/* ---------- thanh hotline goc tren ben trai ---------- */
+.topline{background:#12305F;color:rgba(255,255,255,.82);font-size:13.4px}
+.topline .in{max-width:1200px;margin:0 auto;padding:9px 22px;
+  display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.topline a{color:#fff;text-decoration:none;display:inline-flex;align-items:center;gap:8px}
+.topline .r{display:flex;gap:18px;flex-wrap:wrap;align-items:center}
+.topline .r a:hover{color:#E4B451}
+
+/* Hotline: chu DO, nhap nhay dang nhip tho 1,6 giay/nhip.
+   Co y KHONG chop tat nhanh — chop qua 3 lan/giay gay kho chiu mat
+   va vi pham chuan tiep can WCAG. Ai bat che do giam chuyen dong thi chu dung yen. */
+.topline .hot{font-weight:800;font-size:15.6px;letter-spacing:.01em;color:#FF6B6B;
+  text-shadow:0 0 14px rgba(255,107,107,.55);
+  animation:hotNhay 1.6s ease-in-out infinite}
+.topline .hot svg{color:#FF6B6B}
+.topline .hot:hover{color:#FF9090;animation-play-state:paused}
+@keyframes hotNhay{0%,100%{opacity:1;text-shadow:0 0 14px rgba(255,107,107,.55)}
+                   50%{opacity:.5;text-shadow:0 0 4px rgba(255,107,107,.2)}}
+@media (prefers-reduced-motion:reduce){.topline .hot{animation:none;opacity:1}}
+@media (max-width:720px){.topline .in{justify-content:center;padding:8px 16px}.topline .r{display:none}}
+@media print{.topline .hot{animation:none!important;opacity:1!important}}
+
+/* ============ LỚP ĐA NGỮ — VIỆT · TRUNG · ANH ============
+   Cùng cơ chế đã dùng cho trang Hàn Quốc, mở rộng cho số ngôn ngữ bất kỳ:
+   đổi thuộc tính data-lang trên thẻ gốc, CSS ẩn các thứ tiếng còn lại.
+   Không dùng JavaScript chèn chữ — cả ba thứ tiếng nằm sẵn trong HTML nên
+   máy tìm kiếm đọc được hết và bản in PDF ra đúng. */
+:root[data-lang="vi"] .t-zh,
+:root[data-lang="vi"] .t-en{display:none}
+:root[data-lang="zh"] .t-vi,
+:root[data-lang="zh"] .t-en{display:none}
+:root[data-lang="en"] .t-vi,
+:root[data-lang="en"] .t-zh{display:none}
+/* Trước khi JS chạy: mặc định tiếng Việt, tránh nháy nhiều thứ tiếng cùng lúc */
+html:not([data-lang]) .t-zh,
+html:not([data-lang]) .t-en{display:none}
+
+/* ---- Chữ Trung: Microsoft YaHei có sẵn trên Windows, PingFang SC trên Mac.
+        Không tải font ngoài để trang vẫn tự chứa hoàn toàn. ---- */
+:root[data-lang="zh"] body,
+.t-zh{font-family:"Microsoft YaHei","PingFang SC","Hiragino Sans GB",
+  "Noto Sans SC","Segoe UI",system-ui,sans-serif}
+/* Tiếng Trung ngắt dòng được ở gần như mọi ký tự nên KHÔNG đặt keep-all
+   như tiếng Hàn; đặt keep-all sẽ làm dòng dài tràn ra ngoài khung. */
+:root[data-lang="zh"] p,
+:root[data-lang="zh"] li{line-height:1.85}
+:root[data-lang="zh"] h1,
+:root[data-lang="zh"] h2{letter-spacing:0}
+:root[data-lang="zh"] .eyebrow{letter-spacing:.08em}
+
+/* Tiếng Anh dùng lại hệ chữ Latinh sẵn có, chỉ nới nhẹ khoảng cách chữ ở tiêu đề */
+:root[data-lang="en"] h1{letter-spacing:-.015em}
+
+/* ============ NÚT CHUYỂN NGÔN NGỮ (góc trên bên phải) ============ */
+.nut-ngon-ngu{display:inline-flex;align-items:center;gap:2px;padding:3px;
+  background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.22);
+  border-radius:999px}
+.nav-act .nut-ngon-ngu{background:color-mix(in srgb,var(--navy) 9%,transparent);
+  border-color:var(--line)}
+.nut-ngon-ngu button{appearance:none;border:0;background:transparent;cursor:pointer;
+  font:inherit;font-size:12.8px;font-weight:750;letter-spacing:.02em;
+  padding:6px 11px;border-radius:999px;color:var(--muted);white-space:nowrap;
+  transition:background .16s ease,color .16s ease}
+.nut-ngon-ngu button:hover{color:var(--ink)}
+.nut-ngon-ngu button[aria-pressed="true"]{background:var(--navy);color:#fff}
+.nut-ngon-ngu button:focus-visible{outline:2.5px solid var(--gold);outline-offset:2px}
+.topline .nut-ngon-ngu button[aria-pressed="true"]{background:#fff;color:#12305F}
+.topline .nut-ngon-ngu button{color:rgba(255,255,255,.72)}
+.topline .nut-ngon-ngu button:hover{color:#fff}
+
+/* Ba nút tên đầy đủ chiếm nhiều chỗ. Màn hình hẹp thì đổi sang nhãn ngắn —
+   giữ nhãn viết bằng chính ngôn ngữ đó, không rơi về mã hai chữ khó hiểu. */
+.nut-ngon-ngu .ngan{display:none}
+@media (max-width:900px){
+  .nut-ngon-ngu .dai{display:none}
+  .nut-ngon-ngu .ngan{display:inline}
+  .nut-ngon-ngu button{padding:6px 10px}
+}
+@media print{.nut-ngon-ngu{display:none!important}}
+</style>
+
+<script>
+/* ============ CHUYỂN NGÔN NGỮ VIỆT · TRUNG · ANH ============
+   Chạy SỚM, ngay trong <head>, trước khi trang vẽ ra. Để tới cuối trang thì
+   khách Trung Quốc sẽ thấy nháy một nhịp tiếng Việt rồi mới đổi — trông cẩu thả. */
+(function () {
+  var KHOA = 'asco_fdi_cn_ngon_ngu';
+  var HOP_LE = ['vi', 'zh', 'en'];
+  var goc = document.documentElement;
+
+  function chon() {
+    try {
+      var luu = localStorage.getItem(KHOA);
+      if (HOP_LE.indexOf(luu) >= 0) return luu;      // khách đã tự chọn -> tôn trọng
+    } catch (e) {}
+    // Chưa chọn lần nào: đoán theo ngôn ngữ trình duyệt.
+    var ds = (navigator.languages && navigator.languages.length)
+      ? navigator.languages : [navigator.language || ''];
+    for (var i = 0; i < ds.length; i++) {
+      var m = String(ds[i]).toLowerCase();
+      if (/^zh\b/.test(m)) return 'zh';
+      if (/^vi\b/.test(m)) return 'vi';
+      if (/^en\b/.test(m)) return 'en';
+    }
+    return 'vi';
+  }
+
+  /* Mã dùng cho thuộc tính lang= phải là mã chuẩn để trình đọc màn hình
+     và công cụ dịch hiểu đúng: zh-Hans = tiếng Trung giản thể. */
+  var MA_CHUAN = { vi: 'vi', zh: 'zh-Hans', en: 'en' };
+
+  function dat(ma, ghi_nho) {
+    if (HOP_LE.indexOf(ma) < 0) ma = 'vi';
+    goc.setAttribute('data-lang', ma);
+    goc.setAttribute('lang', MA_CHUAN[ma]);
+    if (ghi_nho) { try { localStorage.setItem(KHOA, ma); } catch (e) {} }
+
+    var nut = document.querySelectorAll('.nut-ngon-ngu button[data-ma]');
+    for (var i = 0; i < nut.length; i++) {
+      nut[i].setAttribute('aria-pressed',
+        nut[i].getAttribute('data-ma') === ma ? 'true' : 'false');
+    }
+    var td = document.querySelector('title[data-vi]');
+    if (td) {
+      document.title = td.getAttribute('data-' + ma) || td.getAttribute('data-vi')
+        || document.title;
+    }
+    /* Chữ gợi ý trong ô nhập cũng phải đổi theo — quên phần này là
+       chuyển sang tiếng Trung mà ô nhập vẫn còn chữ Việt. */
+    var o = document.querySelectorAll('[data-ph-vi]');
+    for (var j = 0; j < o.length; j++) {
+      var g = o[j].getAttribute('data-ph-' + ma) || o[j].getAttribute('data-ph-vi');
+      if (g !== null) o[j].setAttribute('placeholder', g);
+    }
+  }
+
+  dat(chon(), false);
+  window.__datNgonNgu = dat;
+
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest && e.target.closest('.nut-ngon-ngu button[data-ma]');
+    if (b) dat(b.getAttribute('data-ma'), true);
+  });
+  document.addEventListener('DOMContentLoaded', function () {
+    dat(goc.getAttribute('data-lang') || 'vi', false);
+  });
+})();
+</script>
+
+
+
+<link rel="canonical" href="https://dichvu.asco.vn/kiem-toan-bao-cao-tai-chinh-fdi-trung-quoc/">
+<link rel="alternate" hreflang="vi" href="https://dichvu.asco.vn/kiem-toan-bao-cao-tai-chinh-fdi-trung-quoc/">
+<link rel="alternate" hreflang="zh-Hans" href="https://dichvu.asco.vn/kiem-toan-bao-cao-tai-chinh-fdi-trung-quoc/">
+<link rel="alternate" hreflang="en" href="https://dichvu.asco.vn/kiem-toan-bao-cao-tai-chinh-fdi-trung-quoc/">
+<link rel="alternate" hreflang="x-default" href="https://dichvu.asco.vn/kiem-toan-bao-cao-tai-chinh-fdi-trung-quoc/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Hãng Kiểm toán và Định giá ASCO">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:url" content="https://dichvu.asco.vn/kiem-toan-bao-cao-tai-chinh-fdi-trung-quoc/">
+<meta property="og:title" content="Kiểm toán báo cáo tài chính doanh nghiệp FDI Trung Quốc — ASCO">
+<meta property="og:description" content="ASCO kiểm toán báo cáo tài chính cho doanh nghiệp có vốn đầu tư Trung Quốc tại Việt Nam. Báo cáo ba thứ tiếng Việt – Trung – Anh. Xử lý giao dịch liên kết theo Nghị định 255/2026/NĐ-CP và hồ sơ chứng minh xuất xứ hàng hoá.">
+<meta property="og:image" content="https://dichvu.asco.vn/og-ktda.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="中资外商投资企业财务报表审计 — ASCO 会计师事务所">
+<meta name="twitter:description" content="越 / 中 / 英 三语审计报告。关联交易与货物原产地资料。">
+<meta name="twitter:image" content="https://dichvu.asco.vn/og-ktda.png">
+</head>
+<body>
+<!-- =============== THANH HOTLINE + CHUYỂN NGÔN NGỮ =============== -->
+<div class="topline">
+  <div class="in">
+    <a class="hot" href="tel:0825092007" title="Hotline ASCO — cũng là ngày thành lập công ty: 25/09/2007">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.4 2.1L8 9.8a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg> <span><span class="t-vi">Hotline ASCO</span><span class="t-zh">ASCO 热线</span><span class="t-en">ASCO hotline</span>: 08 2509 2007</span>
+    </a>
+    <div class="r">
+      <a href="mailto:asco@asco.vn">asco@asco.vn</a>
+      <div class="nut-ngon-ngu" role="group" aria-label="Ngôn ngữ / 语言 / Language"><button type="button" data-ma="vi" aria-pressed="true" lang="vi"><span class="dai">Tiếng Việt</span><span class="ngan">VI</span></button><button type="button" data-ma="zh" aria-pressed="false" lang="zh-Hans"><span class="dai">中文</span><span class="ngan">中</span></button><button type="button" data-ma="en" aria-pressed="false" lang="en"><span class="dai">English</span><span class="ngan">EN</span></button></div>
+    </div>
+  </div>
+</div>
+
+
+<nav>
+  <div class="nav-in">
+    <a class="brand" href="#top" aria-label="ASCO">
+      <img src="data:image/png;base64,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" alt="Hãng Kiểm toán và Định giá ASCO">
+      <span class="brand-tag"><span class="t-vi">Kiểm toán · Thẩm định giá</span><span class="t-zh">审计 · 评估</span><span class="t-en">Audit · Valuation</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="#nghia-vu"><span class="t-vi">Nghĩa vụ</span><span class="t-zh">审计义务</span><span class="t-en">Requirement</span></a>
+      <a href="#kho-khan"><span class="t-vi">Khó khăn</span><span class="t-zh">常见难点</span><span class="t-en">Challenges</span></a>
+      <a href="#cach-lam"><span class="t-vi">Cách làm</span><span class="t-zh">服务流程</span><span class="t-en">Process</span></a>
+      <a href="#nang-luc"><span class="t-vi">Năng lực</span><span class="t-zh">ASCO 实力</span><span class="t-en">About ASCO</span></a>
+      <a href="#ho-so"><span class="t-vi">Hồ sơ</span><span class="t-zh">所需资料</span><span class="t-en">Documents</span></a>
+      <a href="#hoi-dap"><span class="t-vi">Hỏi đáp</span><span class="t-zh">常见问题</span><span class="t-en">FAQ</span></a>
+      <a href="#lien-he"><span class="t-vi">Liên hệ</span><span class="t-zh">联系我们</span><span class="t-en">Contact</span></a>
+    </div>
+    <div class="nav-act">
+      <div class="nut-ngon-ngu" role="group" aria-label="Ngôn ngữ / 语言 / Language"><button type="button" data-ma="vi" aria-pressed="true" lang="vi"><span class="dai">Tiếng Việt</span><span class="ngan">VI</span></button><button type="button" data-ma="zh" aria-pressed="false" lang="zh-Hans"><span class="dai">中文</span><span class="ngan">中</span></button><button type="button" data-ma="en" aria-pressed="false" lang="en"><span class="dai">English</span><span class="ngan">EN</span></button></div>
+      <button class="theme-btn" id="themeBtn" type="button" aria-label="Đổi giao diện sáng/tối"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg></button>
+      <a class="btn btn-navy btn-sm" href="#lien-he"><span class="t-vi">Nhận tư vấn</span><span class="t-zh">免费咨询</span><span class="t-en">Get advice</span></a>
+    </div>
+  </div>
+</nav>
+
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="pill"><span class="dot"></span><span class="t-vi">Luật Kiểm toán độc lập · Chuẩn mực kiểm toán Việt Nam · Báo cáo Việt – Trung – Anh</span><span class="t-zh">越南独立审计法 · 越南审计准则 · 越 / 中 / 英 三语报告</span><span class="t-en">Vietnam Independent Audit Law · Vietnamese Auditing Standards · Trilingual reporting</span></span>
+        <h1><span class="t-vi">Kiểm toán báo cáo tài chính<br>doanh nghiệp FDI Trung Quốc</span><span class="t-zh">中资外商投资企业<br>财务报表审计</span><span class="t-en">Financial statement audit<br>for Chinese-invested enterprises</span><span class="accent"><span class="t-vi">Cho công ty 100% vốn Trung Quốc, công ty liên doanh và văn phòng đại diện tại Việt Nam</span><span class="t-zh">面向在越南的中资独资企业、合资企业及代表处</span><span class="t-en">For wholly Chinese-owned companies, joint ventures and representative offices in Vietnam</span></span></h1>
+        <p class="lede"><span class="t-vi">Doanh nghiệp có vốn đầu tư nước ngoài <b>bắt buộc</b> phải kiểm toán báo cáo tài chính năm. Nhưng với một nhà máy vốn Trung Quốc tại Việt Nam, sổ sách còn phải trả lời được hai câu hỏi khác: <b>giá mua bán với công ty mẹ có hợp lý không</b>, và <b>hàng làm ra có đủ hàm lượng Việt Nam để hưởng xuất xứ Việt Nam không</b>. Cả hai đều bắt đầu từ số liệu kế toán.</span><span class="t-zh">外商投资企业的年度财务报表<b>必须</b>经过审计。但对于在越南的中资工厂而言，账簿还必须回答另外两个问题：<b>与母公司之间的购销价格是否合理</b>，以及<b>产品是否具备足够的越南本地成分以取得越南原产地资格</b>。这两个问题的答案都始于会计数据。</span><span class="t-en">Foreign-invested enterprises <b>must</b> have their annual financial statements audited. But for a Chinese-invested plant in Vietnam, the books must also answer two further questions: <b>are prices with the parent company at arm’s length</b>, and <b>does the product carry enough Vietnamese content to qualify as Vietnamese origin</b>. Both answers start in the accounting records.</span></p>
+        <div class="hero-cta">
+          <a class="btn btn-gold" href="#lien-he"><span class="t-vi">Nhận báo giá kiểm toán</span><span class="t-zh">获取审计报价</span><span class="t-en">Request an audit quote</span> →</a>
+          <a class="btn btn-onnavy" href="#cach-lam"><span class="t-vi">Xem cách ASCO làm việc</span><span class="t-zh">查看服务流程</span><span class="t-en">See how we work</span></a>
+        </div>
+        <p class="hero-note"><span class="t-vi">Trao đổi sơ bộ miễn phí · Không ràng buộc · Ký thoả thuận bảo mật trước khi nhận hồ sơ</span><span class="t-zh">免费初步沟通 · 无任何约束 · 接收资料前先签署保密协议</span><span class="t-en">Free initial consultation · No obligation · NDA signed before we receive any documents</span></p>
+      </div>
+      <aside class="hero-card">
+        <h3><span class="t-vi">Quý công ty nhận được</span><span class="t-zh">贵公司将获得</span><span class="t-en">What you receive</span></h3>
+        <ul class="hc-list">
+          <li><span class="hc-num">1</span><span><b><span class="t-vi">Báo cáo kiểm toán ba thứ tiếng Việt – Trung – Anh</span><span class="t-zh">越 / 中 / 英 三语审计报告</span><span class="t-en">Audit report in Vietnamese, Chinese and English</span></b><br><span class="t-vi">Bản chính thức có dấu, dùng được cho cơ quan quản lý Việt Nam, công ty mẹ và ngân hàng nước ngoài.</span><span class="t-zh">正式盖章版本，可同时用于越南监管机构、母公司及境外银行。</span><span class="t-en">Officially stamped, usable for Vietnamese regulators, the parent company and overseas banks.</span></span></li>
+          <li><span class="hc-num">2</span><span><b><span class="t-vi">Thư quản lý nêu tồn tại và kiến nghị</span><span class="t-zh">管理建议书（问题与改进建议）</span><span class="t-en">Management letter with findings and recommendations</span></b><br><span class="t-vi">Chỉ rõ rủi ro trong hệ thống kiểm soát nội bộ và cách xử lý, không nói chung chung.</span><span class="t-zh">明确指出内部控制风险及具体改进方法，不作泛泛之谈。</span><span class="t-en">Specific internal control risks and how to fix them — not generic observations.</span></span></li>
+          <li><span class="hc-num">3</span><span><b><span class="t-vi">Bảng đối chiếu chênh lệch với sổ của công ty mẹ</span><span class="t-zh">与母公司账面差异调节表</span><span class="t-en">Reconciliation against the parent company ledger</span></b><br><span class="t-vi">Giải thích từng khoản lệch giữa số theo chuẩn mực Việt Nam và số công ty mẹ dùng để hợp nhất.</span><span class="t-zh">逐项说明越南会计准则数据与母公司合并口径数据之间的差异。</span><span class="t-en">Line-by-line explanation of differences between Vietnamese GAAP figures and consolidation figures.</span></span></li>
+          <li><span class="hc-num">4</span><span><b><span class="t-vi">Cảnh báo sớm về giao dịch liên kết</span><span class="t-zh">关联交易风险预警</span><span class="t-en">Early warning on related-party transactions</span></b><br><span class="t-vi">Nêu các giao dịch với công ty mẹ có nguy cơ bị cơ quan thuế loại chi phí, để xử lý trước.</span><span class="t-zh">提前指出可能被税务机关调整或不予扣除的母公司往来交易。</span><span class="t-en">Flags transactions with the parent that tax authorities are likely to challenge.</span></span></li>
+        </ul>
+        <p class="hc-foot"><span class="t-vi">ASCO đồng hành giải trình với cơ quan thuế và cơ quan quản lý sau khi phát hành báo cáo, không tính thêm phí.</span><span class="t-zh">报告出具后，ASCO 免费协助贵公司应对税务机关和监管部门的问询。</span><span class="t-en">After issuing the report, ASCO supports you in responding to tax and regulatory queries at no extra charge.</span></p>
+      </aside>
+    </div>
+  </div>
+  <div class="trust">
+    <div class="trust-in">
+      <div class="trust-i"><div><b><span class="t-vi">19 năm</span><span class="t-zh">19 年</span><span class="t-en">19 years</span></b><span><span class="t-vi">Hành nghề kiểm toán độc lập từ ngày 25/09/2007</span><span class="t-zh">自 2007 年 9 月 25 日起从事独立审计业务</span><span class="t-en">Practising independent audit since 25 September 2007</span></span></div></div>
+      <div class="trust-i"><div><b><span class="t-vi">21 kiểm toán viên</span><span class="t-zh">21 名注册会计师</span><span class="t-en">21 licensed auditors</span></b><span><span class="t-vi">Được Uỷ ban Chứng khoán Nhà nước chấp thuận</span><span class="t-zh">经越南国家证券委员会核准</span><span class="t-en">Approved by the State Securities Commission of Vietnam</span></span></div></div>
+      <div class="trust-i"><div><b><span class="t-vi">15 điểm hiện diện</span><span class="t-zh">全国 15 个据点</span><span class="t-en">15 locations</span></b><span><span class="t-vi">Trụ sở chính, 7 chi nhánh và 7 văn phòng đại diện trên toàn quốc</span><span class="t-zh">总部 1 处、分公司 7 家、代表处 7 处，覆盖全国</span><span class="t-en">Head office, 7 branches and 7 representative offices nationwide</span></span></div></div>
+      <div class="trust-i"><div><b><span class="t-vi">Báo cáo ba thứ tiếng</span><span class="t-zh">三语报告</span><span class="t-en">Trilingual reports</span></b><span><span class="t-vi">Bản tiếng Việt, tiếng Trung và tiếng Anh phát hành cùng lúc</span><span class="t-zh">越南语、中文、英文版本同时出具</span><span class="t-en">Vietnamese, Chinese and English versions issued together</span></span></div></div>
+    </div>
+  </div>
+</header>
+
+
+<section id="tu-cach" style="padding-top:clamp(30px,3.4vw,44px);padding-bottom:0">
+  <div class="wrap">
+    <div class="callout rv"><span class="badge b-navy"><span class="t-vi">Tư cách hành nghề</span><span class="t-zh">执业资质</span><span class="t-en">Licence to practise</span></span>
+      <h3><span class="t-vi">Báo cáo kiểm toán chỉ có giá trị khi do đơn vị đủ điều kiện hành nghề phát hành</span><span class="t-zh">只有具备执业资质的机构出具的审计报告才具有法律效力</span><span class="t-en">An audit report only carries weight when issued by a firm licensed to practise</span></h3>
+      <p><span class="t-vi">ASCO là doanh nghiệp kiểm toán hoạt động từ ngày <b>25/09/2007</b>, có <b>21 kiểm toán viên được Uỷ ban Chứng khoán Nhà nước chấp thuận</b> — tức đủ điều kiện kiểm toán cả đơn vị có lợi ích công chúng. Trước khi ký hợp đồng với bất kỳ đơn vị nào, Quý công ty nên yêu cầu xem giấy chứng nhận đủ điều kiện kinh doanh dịch vụ kiểm toán và danh sách kiểm toán viên đăng ký hành nghề. ASCO cung cấp đầy đủ ngay khi được hỏi.</span><span class="t-zh">ASCO 自 <b>2007 年 9 月 25 日</b>起开展审计业务，拥有 <b>21 名经越南国家证券委员会核准的注册会计师</b>，具备审计公众利益实体的资格。在与任何机构签约之前，建议贵公司要求查看其审计服务经营资格证书及注册执业会计师名单。ASCO 在被问及时即完整提供。</span><span class="t-en">ASCO has practised audit since <b>25 September 2007</b> and has <b>21 auditors approved by the State Securities Commission</b>, qualifying it to audit public interest entities. Before signing with any firm, ask to see the certificate of eligibility to provide audit services and the register of practising auditors. ASCO provides both on request.</span></p>
+    </div>
+  </div>
+</section>
+
+
+<section id="boi-canh" style="padding-top:clamp(34px,4vw,52px)">
+  <div class="wrap">
+    <div class="sec-head rv"><div class="eyebrow"><span class="t-vi">Bối cảnh thị trường</span><span class="t-zh">市场概况</span><span class="t-en">Market context</span></div><h2><span class="t-vi">Trung Quốc dẫn đầu về <em>số lượng</em> dự án đầu tư mới tại Việt Nam</span><span class="t-zh">中国在越南新增投资<em>项目数量</em>上位居首位</span><span class="t-en">China leads Vietnam in the <em>number</em> of new investment projects</span></h2><p class="lede" style="margin-top:14px"><span class="t-vi">Đây là điểm khác biệt đáng chú ý so với các nguồn vốn khác: doanh nghiệp Trung Quốc <b>nhiều về số lượng</b> nhưng quy mô vốn bình quân mỗi dự án nhỏ hơn — nghĩa là phần lớn là doanh nghiệp vừa, đúng nhóm mà bộ máy kế toán còn mỏng và cần đơn vị kiểm toán hiểu việc.</span><span class="t-zh">这与其他来源的外资有明显不同：中资企业<b>项目数量多</b>，但单个项目平均投资规模较小 — 这意味着大部分是中型企业，正是财务人员配置较薄弱、需要真正懂业务的审计机构的一类企业。</span><span class="t-en">This is a notable difference from other investor countries: Chinese companies are <b>many in number</b> but smaller in average capital per project — meaning most are mid-sized businesses, exactly the group whose finance function is thin and who need an auditor who understands the work.</span></p></div>
+    <div class="stats rv">
+      <div class="stat"><div class="v"><span class="t-vi">~30%</span><span class="t-zh">约 30%</span><span class="t-en">~30%</span></div><div class="l"><span class="t-vi">Tỷ trọng dự án cấp mới của Trung Quốc trong tổng số dự án cả nước (2025)</span><span class="t-zh">2025 年中国新批项目占越南全国新批项目总数的比重</span><span class="t-en">Share of all newly licensed projects in Vietnam attributable to China (2025)</span></div></div>
+      <div class="stat"><div class="v"><span class="t-vi">3,64 tỷ USD</span><span class="t-zh">36.4 亿美元</span><span class="t-en">USD 3.64 bn</span></div><div class="l"><span class="t-vi">Vốn đăng ký cấp mới của Trung Quốc năm 2025 — đứng thứ hai cả nước</span><span class="t-zh">2025 年中国新增注册资本 — 全国第二</span><span class="t-en">Newly registered capital from China in 2025 — second highest</span></div></div>
+      <div class="stat"><div class="v"><span class="t-vi">4.418 dự án</span><span class="t-zh">4,418 个项目</span><span class="t-en">4,418 projects</span></div><div class="l"><span class="t-vi">Dự án Trung Quốc đại lục còn hiệu lực, vốn luỹ kế hơn 27,6 tỷ USD (3/2024)</span><span class="t-zh">中国大陆有效项目数，累计注册资本逾 276 亿美元（2024 年 3 月）</span><span class="t-en">Active mainland Chinese projects, over USD 27.6 bn cumulative (March 2024)</span></div></div>
+      <div class="stat"><div class="v"><span class="t-vi">61,3 tỷ USD</span><span class="t-zh">613 亿美元</span><span class="t-en">USD 61.3 bn</span></div><div class="l"><span class="t-vi">Nếu gộp Trung Quốc đại lục và Hồng Kông — đứng thứ tư cả nước (cuối 2023)</span><span class="t-zh">若将中国大陆与香港合并计算 — 全国第四（2023 年底）</span><span class="t-en">Mainland China and Hong Kong combined — fourth largest (end 2023)</span></div></div>
+    </div>
+    <p class="small rv" style="margin-top:14px"><span class="t-vi">Số liệu công bố theo từng năm nêu trong ngoặc. <b>Thứ hạng của Trung Quốc thay đổi tuỳ cách đếm</b>: tính riêng đại lục là một thứ hạng, gộp Hồng Kông là thứ hạng khác, gộp thêm Đài Loan lại khác nữa — chưa có nguồn thống kê chính thức nào gộp đủ cả ba khối. ASCO nêu cả hai cách tính thay vì chọn con số có lợi nhất.</span><span class="t-zh">括号内为数据公布年份。<b>中国的排名因统计口径而异</b>：单独计算中国大陆是一个排名，合并香港是另一个排名，再加上台湾又不同 — 目前尚无官方统计将三者合并公布。ASCO 同时列出两种口径，而不是只选对自己有利的数字。</span><span class="t-en">Years of publication are shown in brackets. <b>China’s ranking changes with the counting method</b>: mainland alone gives one ranking, adding Hong Kong another, adding Taiwan another again — and no official source combines all three. ASCO shows both bases rather than picking the most flattering figure.</span></p>
+    <div class="sec-head rv" style="margin-top:46px"><h2><span class="t-vi">ASCO có mặt tại các tỉnh tập trung nhiều nhà máy vốn Trung Quốc</span><span class="t-zh">ASCO 在中资工厂密集的省份均设有据点</span><span class="t-en">ASCO is present in the provinces where Chinese-invested plants cluster</span></h2></div>
+    <div class="grid g2">
+      <article class="card rv"><span class="badge b-navy"><span class="t-vi">Bắc Ninh</span><span class="t-zh">北宁省</span><span class="t-en">Bac Ninh</span></span><p style="margin-top:12px"><span class="t-vi">Trung tâm điện tử và công nghệ cao phía Bắc, dẫn đầu miền Bắc về thu hút vốn Trung Quốc.</span><span class="t-zh">北部电子及高新技术中心，是北部吸引中资最多的省份。</span><span class="t-en">The northern electronics and high-tech hub, leading the north in attracting Chinese capital.</span></p></article>
+      <article class="card rv"><span class="badge b-navy"><span class="t-vi">Hải Phòng</span><span class="t-zh">海防市</span><span class="t-en">Hai Phong</span></span><p style="margin-top:12px"><span class="t-vi">Cảng biển, logistics và khu công nghiệp lớn. <b>ASCO có Chi nhánh Hải Phòng</b> — nhóm kiểm toán xuống nhà máy trong ngày.</span><span class="t-zh">港口、物流及大型工业园区。<b>ASCO 设有海防分公司</b> — 审计团队可当天抵达工厂。</span><span class="t-en">Seaport, logistics and major industrial parks. <b>ASCO has a Hai Phong branch</b> — the team can reach your plant the same day.</span></p></article>
+      <article class="card rv"><span class="badge b-navy"><span class="t-vi">Thái Nguyên</span><span class="t-zh">太原省</span><span class="t-en">Thai Nguyen</span></span><p style="margin-top:12px"><span class="t-vi">Mắt xích trong chuỗi điện tử phía Bắc, nhiều nhà cung cấp cấp một và cấp hai.</span><span class="t-zh">北部电子产业链的重要环节，聚集大量一级和二级供应商。</span><span class="t-en">A link in the northern electronics chain, home to many tier-one and tier-two suppliers.</span></p></article>
+      <article class="card rv"><span class="badge b-navy"><span class="t-vi">Nghệ An</span><span class="t-zh">乂安省</span><span class="t-en">Nghe An</span></span><p style="margin-top:12px"><span class="t-vi">Điểm nóng dệt may, sợi và da giày của nhà đầu tư Trung Quốc. <b>ASCO có Văn phòng Nghệ An</b>.</span><span class="t-zh">中资投资者在纺织、纱线和制鞋领域的热点地区。<b>ASCO 设有乂安代表处</b>。</span><span class="t-en">A hotspot for Chinese investment in textiles, yarn and footwear. <b>ASCO has a Nghe An office</b>.</span></p></article>
+    </div>
+    <p class="small rv" style="margin-top:14px"><span class="t-vi">Từ 01/7/2025 cả nước sắp xếp còn 34 đơn vị hành chính cấp tỉnh: Bắc Giang nhập vào Bắc Ninh, Bắc Kạn nhập vào Thái Nguyên, Hải Dương nhập vào Hải Phòng. Địa giới các tỉnh trên vì thế rộng hơn trước. Nghệ An giữ nguyên.</span><span class="t-zh">自 2025 年 7 月 1 日起，全国省级行政单位调整为 34 个：北江省并入北宁省，北𣴓省并入太原省，海阳省并入海防市。因此上述省份的辖区较此前扩大。乂安省保持不变。</span><span class="t-en">From 1 July 2025 Vietnam was reorganised into 34 provincial units: Bac Giang merged into Bac Ninh, Bac Kan into Thai Nguyen, Hai Duong into Hai Phong. These provinces are therefore larger than before. Nghe An was unchanged.</span></p>
+  </div>
+</section>
+
+
+<section id="nghia-vu" class="alt">
+  <div class="wrap">
+    <div class="sec-head rv"><div class="eyebrow"><span class="t-vi">Căn cứ pháp luật</span><span class="t-zh">法律依据</span><span class="t-en">Legal basis</span></div><h2><span class="t-vi">Doanh nghiệp có vốn đầu tư nước ngoài <em>bắt buộc</em> phải kiểm toán báo cáo tài chính năm</span><span class="t-zh">外商投资企业的年度财务报表<em>必须</em>经过审计</span><span class="t-en">Foreign-invested enterprises <em>must</em> have their annual financial statements audited</span></h2><p class="lede" style="margin-top:14px"><span class="t-vi">Đây không phải lựa chọn. Căn cứ là <b>Điều 37 Luật Kiểm toán độc lập số 67/2011/QH12</b> và <b>Nghị định 17/2012/NĐ-CP</b>: báo cáo tài chính năm của doanh nghiệp có vốn đầu tư nước ngoài phải được doanh nghiệp kiểm toán kiểm toán.</span><span class="t-zh">这不是可选项。依据是<b>《独立审计法》第 67/2011/QH12 号第 37 条</b>及<b>第 17/2012/ND-CP 号政府法令</b>：外商投资企业的年度财务报表必须由审计公司进行审计。</span><span class="t-en">This is not optional. Under <b>Article 37 of the Independent Audit Law No. 67/2011/QH12</b> and <b>Decree No. 17/2012/ND-CP</b>, the annual financial statements of a foreign-invested enterprise must be audited by a licensed audit firm.</span></p></div>
+    <div class="tbl-scroll rv"><table><thead><tr><th style="width:26%"><span class="t-vi">Nội dung</span><span class="t-zh">项目</span><span class="t-en">Item</span></th><th><span class="t-vi">Quy định</span><span class="t-zh">规定</span><span class="t-en">Rule</span></th></tr></thead><tbody>
+      <tr><td class="no"><b><span class="t-vi">Đối tượng bắt buộc</span><span class="t-zh">适用对象</span><span class="t-en">Who is covered</span></b></td><td class="no"><span class="t-vi">Doanh nghiệp có vốn đầu tư nước ngoài — gồm công ty 100% vốn Trung Quốc và công ty liên doanh</span><span class="t-zh">外商投资企业 — 包括中资独资企业和合资企业</span><span class="t-en">Foreign-invested enterprises — including wholly Chinese-owned companies and joint ventures</span></td></tr>
+      <tr><td class="no"><b><span class="t-vi">Thời hạn nộp</span><span class="t-zh">申报期限</span><span class="t-en">Filing deadline</span></b></td><td class="no"><span class="t-vi"><b>90 ngày</b> kể từ ngày kết thúc kỳ kế toán năm — với năm tài chính theo năm dương lịch là <b>31/3</b></span><span class="t-zh">会计年度结束之日起 <b>90 天</b> — 以公历年度为会计年度的，即 <b>3 月 31 日</b></span><span class="t-en"><b>90 days</b> after the financial year end — <b>31 March</b> for a calendar financial year</span></td></tr>
+      <tr><td class="no"><b><span class="t-vi">Nếu không kiểm toán</span><span class="t-zh">未经审计的后果</span><span class="t-en">If you do not audit</span></b></td><td class="no"><span class="t-vi">Bị xử phạt vi phạm hành chính. Khung phạt tối đa trong lĩnh vực kiểm toán độc lập đã được nâng đáng kể theo <b>Luật số 56/2024/QH15</b></span><span class="t-zh">将受到行政处罚。根据<b>第 56/2024/QH15 号法律</b>，独立审计领域的最高罚款额度已大幅提高</span><span class="t-en">Administrative penalties apply. The maximum fine in the independent audit field was raised substantially by <b>Law No. 56/2024/QH15</b></span></td></tr>
+      <tr><td class="no"><b><span class="t-vi">Giao dịch liên kết</span><span class="t-zh">关联交易</span><span class="t-en">Related-party transactions</span></b></td><td class="no"><span class="t-vi">Hồ sơ xác định giá giao dịch liên kết nay theo <b>Nghị định 255/2026/NĐ-CP</b>, hiệu lực từ 01/7/2026 — <b>thay thế Nghị định 132/2020/NĐ-CP</b></span><span class="t-zh">转让定价文档现适用 <b>第 255/2026/ND-CP 号法令</b>，自 2026 年 7 月 1 日起施行 — <b>取代原第 132/2020/ND-CP 号法令</b></span><span class="t-en">Transfer pricing documentation now follows <b>Decree No. 255/2026/ND-CP</b>, effective 1 July 2026 — <b>replacing Decree No. 132/2020/ND-CP</b></span></td></tr>
+    </tbody></table></div>
+    <div class="callout danger rv" style="margin-top:24px"><span class="badge b-req"><span class="t-vi">Điểm nhiều nơi còn dẫn sai</span><span class="t-zh">许多企业仍在引用已失效的规定</span><span class="t-en">A reference many companies still get wrong</span></span><p><span class="t-vi">Nếu hợp đồng, hồ sơ hoặc thuyết minh của Quý công ty vẫn dẫn <b>Nghị định 132/2020/NĐ-CP</b> cho hồ sơ giao dịch liên kết thì đó là căn cứ <b>đã hết hiệu lực</b> từ 01/7/2026. Văn bản đang áp dụng là <b>Nghị định 255/2026/NĐ-CP</b>, trong đó có mốc <b>30 ngày làm việc</b> để cung cấp hồ sơ khi cơ quan thuế yêu cầu.</span><span class="t-zh">如果贵公司的合同、资料或财务报表附注仍将<b>第 132/2020/ND-CP 号法令</b>作为关联交易文档的依据，该依据自 2026 年 7 月 1 日起<b>已失效</b>。现行规定为<b>第 255/2026/ND-CP 号法令</b>，其中明确税务机关要求提供资料时的期限为 <b>30 个工作日</b>。</span><span class="t-en">If your contracts or notes still cite <b>Decree No. 132/2020/ND-CP</b> for transfer pricing documentation, that basis <b>expired</b> on 1 July 2026. The rule in force is <b>Decree No. 255/2026/ND-CP</b>, which sets a <b>30 working day</b> deadline to produce documentation when the tax authority asks.</span></p></div>
+  </div>
+</section>
+
+
+<section id="kho-khan">
+  <div class="wrap">
+    <div class="sec-head rv"><div class="eyebrow"><span class="t-vi">Vấn đề thực tế</span><span class="t-zh">实际问题</span><span class="t-en">Real issues</span></div><h2><span class="t-vi">Năm điểm mà sổ sách của một nhà máy vốn Trung Quốc hay bị hỏi nhất</span><span class="t-zh">中资工厂账簿最常被追问的五个问题</span><span class="t-en">Five things a Chinese-invested plant’s books get questioned on most</span></h2><p class="lede" style="margin-top:14px"><span class="t-vi">Đây không phải danh sách chung cho mọi doanh nghiệp FDI. Đây là những điểm lặp đi lặp lại ở doanh nghiệp vốn Trung Quốc, và là chỗ ASCO tập trung xử lý.</span><span class="t-zh">这不是适用于所有外商投资企业的通用清单，而是中资企业反复出现的问题，也是 ASCO 重点处理的领域。</span><span class="t-en">This is not a generic list for all foreign-invested companies. These are the issues that recur in Chinese-invested businesses, and where ASCO focuses.</span></p></div>
+    <div class="grid g2">
+      <article class="card rv"><span class="badge b-warn">01</span><h3 style="margin-top:12px"><span class="t-vi">Xuất xứ hàng hoá — rủi ro mới và lớn nhất</span><span class="t-zh">货物原产地 — 最新且最大的风险</span><span class="t-en">Origin of goods — the newest and largest risk</span></h3><p style="margin-top:10px"><span class="t-vi">Từ 2025, hàng bị xác định là <b>trung chuyển qua nước thứ ba</b> chịu mức thuế cao hơn hẳn hàng có xuất xứ Việt Nam khi vào thị trường Mỹ. Cách phía nhập khẩu phát hiện rất đơn giản: so sản lượng xuất khẩu với <b>năng lực sản xuất thực tế</b> của nhà máy. Muốn chứng minh được hàm lượng giá trị gia tăng tại Việt Nam thì <b>sổ sách phải bóc tách được</b> chi phí nguyên liệu nhập khẩu so với chi phí gia công trong nước — việc này bắt đầu từ cách hạch toán, không phải từ lúc đi xin giấy chứng nhận xuất xứ.</span><span class="t-zh">自 2025 年起，被认定为<b>经第三国转运</b>的货物，在进入美国市场时适用的税率明显高于越南原产货物。进口方的甄别方式很直接：将出口数量与工厂的<b>实际产能</b>进行比对。要证明越南本地增值含量，<b>账簿必须能够拆分</b>进口原材料成本与境内加工成本 — 这取决于日常如何做账，而不是等到申请原产地证书时才处理。</span><span class="t-en">From 2025, goods found to be <b>transshipped through a third country</b> face a markedly higher tariff than goods of Vietnamese origin entering the US market. The detection method is simple: compare export volume against the plant’s <b>actual production capacity</b>. To prove Vietnamese value added, <b>the books must separate</b> imported material cost from local processing cost — which depends on how you post entries all year, not on the day you apply for a certificate of origin.</span></p></article>
+      <article class="card rv"><span class="badge b-warn">02</span><h3 style="margin-top:12px"><span class="t-vi">Giao dịch với công ty mẹ chiếm tỷ trọng rất cao</span><span class="t-zh">与母公司的关联交易占比极高</span><span class="t-en">Parent-company transactions dominate the accounts</span></h3><p style="margin-top:10px"><span class="t-vi">Mô hình phổ biến của nhà máy vốn Trung Quốc là mua nguyên liệu từ công ty mẹ hoặc công ty cùng tập đoàn, gia công, rồi bán ngược lại. Tỷ trọng giao dịch liên kết trên tổng doanh thu thường rất cao, nên <b>khó được miễn lập hồ sơ xác định giá</b> theo ngưỡng nhỏ. Từ 01/7/2026 hồ sơ theo <b>Nghị định 255/2026/NĐ-CP</b>, và cơ quan thuế chỉ cho <b>30 ngày làm việc</b> để nộp khi yêu cầu — không kịp chuẩn bị từ đầu là không kịp.</span><span class="t-zh">中资工厂的常见模式是从母公司或集团内公司采购原材料，加工后再销售回去。关联交易占营业收入的比重通常很高，因此<b>很难适用小额免于准备转让定价文档的条件</b>。自 2026 年 7 月 1 日起适用<b>第 255/2026/ND-CP 号法令</b>，税务机关要求提供资料时仅给 <b>30 个工作日</b> — 未提前准备就来不及。</span><span class="t-en">The common model is buying materials from the parent or a group company, processing, then selling back. Related-party transactions are usually a very high share of revenue, so the <b>small-value exemption from transfer pricing documentation rarely applies</b>. From 1 July 2026 the rules are in <b>Decree No. 255/2026/ND-CP</b>, and the tax authority allows only <b>30 working days</b> to produce the file on request — too late to start then.</span></p></article>
+      <article class="card rv"><span class="badge b-warn">03</span><h3 style="margin-top:12px"><span class="t-vi">Một bộ sổ, hai hệ chuẩn mực</span><span class="t-zh">一套账簿，两套会计准则</span><span class="t-en">One set of books, two accounting frameworks</span></h3><p style="margin-top:10px"><span class="t-vi">Sổ tại Việt Nam lập theo chuẩn mực kế toán Việt Nam. Công ty mẹ hợp nhất theo chuẩn mực kế toán doanh nghiệp Trung Quốc. Hai bên khác nhau ở nhiều khoản mục. Nếu không có bảng đối chiếu rõ ràng, mỗi kỳ hợp nhất là một lần công ty mẹ hỏi lại và kế toán tại Việt Nam giải thích từ đầu.</span><span class="t-zh">越南账簿按越南会计准则编制，母公司按中国企业会计准则合并。两者在多个科目上存在差异。若没有清晰的差异调节表，每次合并时母公司都会重新提问，越南财务人员又要从头解释一遍。</span><span class="t-en">The Vietnamese books follow Vietnamese Accounting Standards; the parent consolidates under Chinese Accounting Standards. The two differ on many items. Without a clear reconciliation, every consolidation means the parent asks again and the Vietnam team explains from scratch.</span></p></article>
+      <article class="card rv"><span class="badge b-warn">04</span><h3 style="margin-top:12px"><span class="t-vi">Rào cản ngôn ngữ ba lớp</span><span class="t-zh">三重语言障碍</span><span class="t-en">A three-layer language barrier</span></h3><p style="margin-top:10px"><span class="t-vi">Kế toán người Việt làm việc bằng tiếng Việt theo chuẩn mực Việt Nam; giám đốc người Trung Quốc tại nhà máy thường không thạo tiếng Việt; bộ phận tài chính công ty mẹ làm việc bằng tiếng Trung theo chuẩn mực Trung Quốc. Một thuật ngữ kế toán dịch sai một chữ là cả ba bên hiểu khác nhau về cùng một con số.</span><span class="t-zh">越南会计人员用越南语、按越南准则工作；工厂的中方负责人通常不精通越南语；母公司财务部门用中文、按中国准则工作。一个会计术语译错一个词，三方就会对同一个数字产生不同理解。</span><span class="t-en">The Vietnamese accountant works in Vietnamese under Vietnamese standards; the Chinese plant director often does not speak Vietnamese; the parent’s finance team works in Chinese under Chinese standards. One mistranslated accounting term and all three read the same number differently.</span></p></article>
+      <article class="card rv"><span class="badge b-warn">05</span><h3 style="margin-top:12px"><span class="t-vi">Chi phí cho chuyên gia người nước ngoài dễ bị loại</span><span class="t-zh">外籍人员相关费用容易被剔除</span><span class="t-en">Costs for expatriate staff are easily disallowed</span></h3><p style="margin-top:10px"><span class="t-vi">Nhà máy vốn Trung Quốc thường đưa nhiều quản lý và chuyên gia sang làm việc. Tiền lương, bảo hiểm và các khoản phúc lợi như nhà ở, xe đưa đón, vé máy bay chỉ được tính là chi phí được trừ khi <b>hồ sơ đầy đủ</b>: hợp đồng lao động, giấy phép lao động còn hiệu lực, chứng từ nộp bảo hiểm, bảng lương, và được ghi đúng kỳ. Thiếu một loại giấy tờ là khoản chi bị loại khi quyết toán thuế, truy thu cả năm.</span><span class="t-zh">中资工厂通常派驻较多管理人员和专家。工资、社保及住房、班车、机票等福利，只有在<b>资料齐全</b>时才可作为可扣除费用：劳动合同、有效的工作许可证、社保缴纳凭证、工资表，并且入账期间正确。缺少任何一项，该费用在企业所得税汇算时即被剔除并追缴全年税款。</span><span class="t-en">Chinese-invested plants typically post many managers and specialists to Vietnam. Salaries, insurance and benefits such as housing, transport and flights are only deductible when the <b>file is complete</b>: employment contract, valid work permit, insurance payment evidence, payroll, and correct period recognition. One missing document and the cost is disallowed at the tax finalisation, with a full-year assessment.</span></p></article>
+    </div>
+  </div>
+</section>
+
+
+<section id="cach-lam" class="alt">
+  <div class="wrap">
+    <div class="sec-head rv"><div class="eyebrow"><span class="t-vi">Cách ASCO triển khai</span><span class="t-zh">ASCO 工作方式</span><span class="t-en">How ASCO works</span></div><h2><span class="t-vi">Bốn giai đoạn — bắt đầu từ trước khi kết thúc năm tài chính</span><span class="t-zh">四个阶段 — 从会计年度结束之前就开始</span><span class="t-en">Four stages — starting before the financial year ends</span></h2><p class="lede" style="margin-top:14px"><span class="t-vi">Kiểm toán bắt đầu sau khi khoá sổ là muộn. Những khoản dễ vướng nhất — kiểm kê, giao dịch với công ty mẹ, chênh lệch chuẩn mực — phải xử lý khi còn kịp sửa.</span><span class="t-zh">结账之后才开始审计已经太晚。最容易出问题的环节 — 存货盘点、母公司往来交易、会计准则差异 — 必须在还来得及调整的时候处理。</span><span class="t-en">Starting the audit after the books close is too late. The items that cause the most trouble — stock counts, parent-company transactions, standards differences — must be handled while there is still time to fix them.</span></p></div>
+    <div class="grid g2">
+      <article class="card rv"><span class="badge b-navy"><span class="t-vi">Giai đoạn 1</span><span class="t-zh">第一阶段</span><span class="t-en">Stage 1</span></span><h3 style="margin-top:12px"><span class="t-vi">Rà soát sớm và chốt lịch hai đầu</span><span class="t-zh">前期检查与双向排期</span><span class="t-en">Early review and dual scheduling</span></h3><p style="margin-top:10px"><span class="t-vi">Trước khi kết thúc năm tài chính: rà soát nhanh sổ sách, nhận diện khoản mục có rủi ro, và <b>chốt lịch theo mốc sớm hơn giữa hạn Việt Nam và hạn công bố của công ty mẹ</b>.</span><span class="t-zh">在会计年度结束前快速检查账簿、识别风险科目，并<b>按越南申报期限与母公司披露期限中较早的一个确定进度表</b>。</span><span class="t-en">Before year end we review the books quickly, identify risk areas, and <b>set the timetable to whichever deadline comes first — Vietnam’s or the parent company’s</b>.</span></p></article>
+      <article class="card rv"><span class="badge b-navy"><span class="t-vi">Giai đoạn 2</span><span class="t-zh">第二阶段</span><span class="t-en">Stage 2</span></span><h3 style="margin-top:12px"><span class="t-vi">Chứng kiến kiểm kê cuối năm</span><span class="t-zh">年末盘点监盘</span><span class="t-en">Attending the year-end count</span></h3><p style="margin-top:10px"><span class="t-vi">Kiểm toán viên có mặt tại nhà máy, kho khi Quý công ty kiểm kê hàng tồn kho và tài sản cố định. Đây là bằng chứng <b>không thể thu thập lại</b> sau khi năm tài chính đã kết thúc.</span><span class="t-zh">审计师亲赴工厂和仓库监盘存货及固定资产。这是会计年度结束后<b>无法补取</b>的审计证据。</span><span class="t-en">Our auditors attend your factory and warehouse during the inventory and fixed asset count. This evidence <b>cannot be recreated</b> once the year has closed.</span></p></article>
+      <article class="card rv"><span class="badge b-navy"><span class="t-vi">Giai đoạn 3</span><span class="t-zh">第三阶段</span><span class="t-en">Stage 3</span></span><h3 style="margin-top:12px"><span class="t-vi">Kiểm toán tại đơn vị</span><span class="t-zh">现场审计</span><span class="t-en">Fieldwork</span></h3><p style="margin-top:10px"><span class="t-vi">Nhóm kiểm toán làm việc tại trụ sở Quý công ty theo chuẩn mực kiểm toán Việt Nam. Mọi vấn đề phát hiện được <b>trao đổi ngay trong quá trình làm</b>, không để dồn tới lúc gửi bản thảo.</span><span class="t-zh">审计团队按越南审计准则在贵公司现场作业。发现的问题<b>在过程中即时沟通</b>，不留到出具草稿时才提出。</span><span class="t-en">The team works on site under Vietnamese Auditing Standards. Issues are <b>raised as we find them</b>, not saved up until the draft report.</span></p></article>
+      <article class="card rv"><span class="badge b-navy"><span class="t-vi">Giai đoạn 4</span><span class="t-zh">第四阶段</span><span class="t-en">Stage 4</span></span><h3 style="margin-top:12px"><span class="t-vi">Phát hành ba thứ tiếng và đồng hành sau đó</span><span class="t-zh">三语出具报告及后续支持</span><span class="t-en">Trilingual issuance and follow-up support</span></h3><p style="margin-top:10px"><span class="t-vi">Ba bản phát hành cùng lúc, kèm thư quản lý và bảng đối chiếu chênh lệch cho công ty mẹ. Sau phát hành, ASCO <b>đồng hành giải trình với cơ quan thuế không tính thêm phí</b>.</span><span class="t-zh">三个语言版本同时出具，并附管理建议书和供母公司使用的差异调节表。报告出具后，ASCO <b>免费协助应对税务机关问询</b>。</span><span class="t-en">All three versions are issued together with a management letter and a reconciliation for the parent. Afterwards, ASCO <b>supports tax authority queries at no extra charge</b>.</span></p></article>
+    </div>
+  </div>
+</section>
+
+
+<section id="nang-luc">
+  <div class="wrap">
+    <div class="sec-head rv"><div class="eyebrow"><span class="t-vi">Năng lực ASCO</span><span class="t-zh">ASCO 实力</span><span class="t-en">About ASCO</span></div><h2><span class="t-vi">Vì sao doanh nghiệp Trung Quốc chọn ASCO</span><span class="t-zh">中资企业为何选择 ASCO</span><span class="t-en">Why Chinese-invested companies choose ASCO</span></h2></div>
+    <div class="grid g2">
+      <article class="card rv"><h3><span class="t-vi">Hành nghề từ ngày 25/09/2007</span><span class="t-zh">自 2007 年 9 月 25 日起执业</span><span class="t-en">Practising since 25 September 2007</span></h3><p style="margin-top:10px"><span class="t-vi">Mười chín năm kiểm toán độc lập tại Việt Nam, đi qua nhiều lần thay đổi chuẩn mực và quy định.</span><span class="t-zh">在越南从事独立审计十九年，历经多轮会计准则和法规变更。</span><span class="t-en">Nineteen years of independent audit in Vietnam, through many changes of standards and rules.</span></p></article>
+      <article class="card rv"><h3><span class="t-vi">21 kiểm toán viên được Uỷ ban Chứng khoán Nhà nước chấp thuận</span><span class="t-zh">21 名经国家证券委员会核准的注册会计师</span><span class="t-en">21 auditors approved by the State Securities Commission</span></h3><p style="margin-top:10px"><span class="t-vi">Đủ điều kiện kiểm toán cả đơn vị có lợi ích công chúng, không chỉ doanh nghiệp thông thường.</span><span class="t-zh">具备审计公众利益实体的资格，而不限于一般企业。</span><span class="t-en">Qualified to audit public interest entities, not only ordinary companies.</span></p></article>
+      <article class="card rv"><h3><span class="t-vi">Trụ sở Hà Nội, 7 chi nhánh và 7 văn phòng đại diện</span><span class="t-zh">河内总部，7 家分公司和 7 个代表处</span><span class="t-en">Hanoi head office, 7 branches and 7 representative offices</span></h3><p style="margin-top:10px"><span class="t-vi">Nhóm kiểm toán xuất phát từ cơ sở gần nhà máy nhất, không phải điều đoàn từ Hà Nội xuống.</span><span class="t-zh">从距离工厂最近的据点派出审计团队，无需从河内长途调派人员。</span><span class="t-en">Teams travel from the nearest office rather than being sent from Hanoi.</span></p></article>
+      <article class="card rv"><h3><span class="t-vi">Ba mảng dịch vụ trong cùng một hãng</span><span class="t-zh">一家事务所涵盖三大业务</span><span class="t-en">Three service lines under one roof</span></h3><p style="margin-top:10px"><span class="t-vi">Kiểm toán báo cáo tài chính · Kiểm toán báo cáo quyết toán dự án hoàn thành · Thẩm định giá — khi doanh nghiệp mở rộng nhà máy thì không phải đi tìm đơn vị khác.</span><span class="t-zh">财务报表审计 · 竣工决算审计 · 资产评估 — 企业扩建厂房时无需另找其他机构。</span><span class="t-en">Financial statement audit · completed project settlement audit · valuation — no need to find another firm when you expand the plant.</span></p></article>
+    </div>
+  </div>
+</section>
+
+
+<section id="ho-so" class="alt">
+  <div class="wrap">
+    <div class="sec-head rv"><div class="eyebrow"><span class="t-vi">Chuẩn bị trước</span><span class="t-zh">提前准备</span><span class="t-en">Prepare in advance</span></div><h2><span class="t-vi">Hồ sơ cần chuẩn bị — chuẩn bị trước thì kiểm toán nhanh hơn và phí thấp hơn</span><span class="t-zh">所需资料 — 提前准备可缩短审计时间、降低费用</span><span class="t-en">Documents to prepare — earlier preparation means a faster, cheaper audit</span></h2></div>
+    <div class="grid g3">
+      <article class="card rv"><h3><span class="t-vi">Hồ sơ pháp lý</span><span class="t-zh">法人资料</span><span class="t-en">Corporate documents</span></h3><p style="margin-top:10px"><span class="t-vi">Giấy chứng nhận đăng ký đầu tư, giấy chứng nhận đăng ký doanh nghiệp, điều lệ công ty, biên bản họp trong năm.</span><span class="t-zh">投资登记证、企业登记证、公司章程、本年度会议纪要。</span><span class="t-en">Investment registration certificate, enterprise registration certificate, charter, minutes of meetings held during the year.</span></p></article>
+      <article class="card rv"><h3><span class="t-vi">Sổ sách kế toán</span><span class="t-zh">会计账簿</span><span class="t-en">Accounting records</span></h3><p style="margin-top:10px"><span class="t-vi">Bảng cân đối phát sinh, sổ cái, sổ chi tiết các tài khoản, báo cáo tài chính do đơn vị lập.</span><span class="t-zh">科目余额表、总账、明细账、公司自行编制的财务报表。</span><span class="t-en">Trial balance, general ledger, sub-ledgers, and the financial statements you prepared.</span></p></article>
+      <article class="card rv"><h3><span class="t-vi">Hồ sơ giao dịch liên kết</span><span class="t-zh">关联交易资料</span><span class="t-en">Related-party documentation</span></h3><p style="margin-top:10px"><span class="t-vi">Hợp đồng với công ty mẹ và các bên liên kết, chứng từ thanh toán, cơ sở xác định giá — <b>đây là nhóm hồ sơ hay thiếu nhất và cũng bị hỏi nhiều nhất</b>.</span><span class="t-zh">与母公司及关联方的合同、付款凭证、定价依据 — <b>这是最常缺失、也最常被追问的一类资料</b>。</span><span class="t-en">Contracts with the parent and affiliates, payment evidence, pricing basis — <b>the most frequently missing and most frequently requested set</b>.</span></p></article>
+      <article class="card rv"><h3><span class="t-vi">Kiểm kê và tài sản</span><span class="t-zh">盘点及资产资料</span><span class="t-en">Inventory and assets</span></h3><p style="margin-top:10px"><span class="t-vi">Biên bản kiểm kê hàng tồn kho và tài sản cố định tại thời điểm khoá sổ, bảng tính khấu hao.</span><span class="t-zh">结账日的存货及固定资产盘点表、折旧计算表。</span><span class="t-en">Inventory and fixed asset count sheets at the closing date, depreciation schedules.</span></p></article>
+      <article class="card rv"><h3><span class="t-vi">Thuế</span><span class="t-zh">税务资料</span><span class="t-en">Tax filings</span></h3><p style="margin-top:10px"><span class="t-vi">Tờ khai thuế giá trị gia tăng, thuế thu nhập doanh nghiệp, thuế thu nhập cá nhân, thuế nhà thầu nước ngoài đã nộp trong năm.</span><span class="t-zh">本年度增值税、企业所得税、个人所得税、外国承包商税的申报表及完税凭证。</span><span class="t-en">VAT, corporate income tax, personal income tax and foreign contractor tax returns and payment evidence for the year.</span></p></article>
+      <article class="card rv"><h3><span class="t-vi">Xuất nhập khẩu và xuất xứ</span><span class="t-zh">进出口及原产地资料</span><span class="t-en">Trade and origin records</span></h3><p style="margin-top:10px"><span class="t-vi">Tờ khai hải quan, hợp đồng mua bán quốc tế, hồ sơ chứng minh xuất xứ hàng hoá — nhóm hồ sơ đang được kiểm tra chặt hơn trước.</span><span class="t-zh">海关报关单、国际购销合同、货物原产地证明资料 — 这类资料目前的审查比以往更严格。</span><span class="t-en">Customs declarations, international sales contracts and origin documentation — an area now under closer scrutiny than before.</span></p></article>
+    </div>
+  </div>
+</section>
+
+
+<section id="hoi-dap">
+  <div class="wrap">
+    <div class="sec-head rv"><div class="eyebrow"><span class="t-vi">Hỏi &amp; đáp</span><span class="t-zh">常见问题</span><span class="t-en">FAQ</span></div><h2><span class="t-vi">Những câu giám đốc và kế toán trưởng doanh nghiệp Trung Quốc hay hỏi nhất</span><span class="t-zh">中资企业负责人和财务主管最常提出的问题</span><span class="t-en">What Chinese-invested company directors and finance managers ask most</span></h2></div>
+    <details class="faq rv"><summary><span class="t-vi">Bản tiếng Trung có phải bản dịch máy không?</span><span class="t-zh">中文版本是机器翻译的吗？</span><span class="t-en">Is the Chinese version machine-translated?</span></summary><div class="ans"><span class="t-vi">Không. Bản tiếng Trung do người có chuyên môn kế toán — kiểm toán soạn. Thuật ngữ kế toán dịch sai một chữ là ban giám đốc và công ty mẹ hiểu sai tình hình tài chính, nên đây là chỗ ASCO không cắt giảm.</span><span class="t-zh">不是。中文版本由具备会计审计专业背景的人员撰写。会计术语只要错一个词，管理层和母公司就会对财务状况产生误解，因此这是 ASCO 绝不省略的环节。</span><span class="t-en">No. The Chinese version is written by people with accounting and audit expertise. A single mistranslated accounting term can mislead management and the parent company about the financial position, so this is not something we cut corners on.</span></div></details>
+    <details class="faq rv"><summary><span class="t-vi">Phí kiểm toán được tính trên cơ sở nào?</span><span class="t-zh">审计费用如何计算？</span><span class="t-en">How is the audit fee determined?</span></summary><div class="ans"><span class="t-vi">Phí phụ thuộc khối lượng công việc thực tế: quy mô doanh thu và tài sản, số lượng nghiệp vụ, số địa điểm phải đến kiểm kê, mức độ phức tạp của giao dịch với công ty mẹ, và tình trạng sổ sách hiện có. ASCO khảo sát trước rồi báo giá cụ thể, <b>không báo giá trước khi xem hồ sơ</b>.</span><span class="t-zh">费用取决于实际工作量：收入与资产规模、业务笔数、需实地监盘的地点数量、母公司往来交易的复杂程度，以及现有账簿的整理状况。ASCO 先进行初步了解再出具具体报价，<b>不会在未查看资料前报价</b>。</span><span class="t-en">The fee reflects the actual work: revenue and asset size, transaction volume, number of sites to attend for counts, the complexity of parent-company dealings, and the state of your records. ASCO reviews first and then quotes — <b>we do not quote before seeing the documents</b>.</span></div></details>
+    <details class="faq rv"><summary><span class="t-vi">ASCO có trao đổi trực tiếp với công ty mẹ tại Trung Quốc không?</span><span class="t-zh">ASCO 能否与中国母公司直接沟通？</span><span class="t-en">Can ASCO deal directly with the parent company in China?</span></summary><div class="ans"><span class="t-vi">Có, khi Quý công ty đồng ý. ASCO trao đổi trực tiếp với bộ phận tài chính công ty mẹ về các khoản chênh lệch chuẩn mực và lịch hợp nhất, để giám đốc tại Việt Nam không phải làm người truyền tin giữa hai bên.</span><span class="t-zh">在贵公司同意的前提下可以。ASCO 会就会计准则差异和合并时间表与母公司财务部门直接沟通，使越南公司负责人不必在两边之间充当传话人。</span><span class="t-en">Yes, with your consent. ASCO speaks directly with the parent’s finance team about standards differences and the consolidation timetable, so your Vietnam director does not have to relay messages between the two sides.</span></div></details>
+    <details class="faq rv"><summary><span class="t-vi">Nhà máy của chúng tôi ở tỉnh xa Hà Nội, ASCO có xuống không?</span><span class="t-zh">我们的工厂距离河内较远，ASCO 会派人到现场吗？</span><span class="t-en">Our factory is far from Hanoi — will ASCO come on site?</span></summary><div class="ans"><span class="t-vi">Có. ASCO có trụ sở chính tại Hà Nội cùng 7 chi nhánh và 7 văn phòng đại diện trên toàn quốc, nên bố trí được nhóm từ cơ sở gần nhà máy nhất. Chi phí đi lại và thời gian tại hiện trường vì thế đều giảm.</span><span class="t-zh">会。ASCO 除河内总部外，在全国设有 7 家分公司和 7 个代表处，可安排距离工厂最近的据点派出团队，从而降低差旅成本和现场时间。</span><span class="t-en">Yes. Besides the Hanoi head office, ASCO has 7 branches and 7 representative offices across the country, so we assign a team from the location nearest your factory — reducing both travel cost and time on site.</span></div></details>
+    <details class="faq rv"><summary><span class="t-vi">Sau khi phát hành báo cáo, nếu cơ quan thuế kiểm tra thì sao?</span><span class="t-zh">报告出具后如果遇到税务检查怎么办？</span><span class="t-en">What if the tax authority audits us after the report is issued?</span></summary><div class="ans"><span class="t-vi">ASCO đồng hành giải trình cùng Quý công ty với cơ quan thuế và cơ quan quản lý về những nội dung thuộc phạm vi đã kiểm toán, <b>không tính thêm phí</b>. Hồ sơ kiểm toán được lưu theo năm nên truy lại được căn cứ của từng khoản mục.</span><span class="t-zh">ASCO 会就审计范围内的事项协助贵公司向税务机关和监管部门作出说明，<b>不另行收费</b>。审计工作底稿按年度归档保存，可随时追溯每个科目的依据。</span><span class="t-en">ASCO helps you respond to the tax and regulatory authorities on matters within the audit scope, <b>at no extra charge</b>. Working papers are archived by year, so the basis for each balance can be traced.</span></div></details>
+    <details class="faq rv"><summary><span class="t-vi">Thông tin của chúng tôi được bảo mật thế nào?</span><span class="t-zh">我们的信息如何保密？</span><span class="t-en">How is our information kept confidential?</span></summary><div class="ans"><span class="t-vi">ASCO ký thoả thuận bảo mật <b>trước khi nhận bất kỳ hồ sơ nào</b>. Nghĩa vụ bảo mật của kiểm toán viên còn là nghĩa vụ pháp lý theo quy định về kiểm toán độc lập và chuẩn mực đạo đức nghề nghiệp, không chỉ là cam kết trong hợp đồng.</span><span class="t-zh">ASCO <b>在接收任何资料之前</b>先签署保密协议。审计师的保密义务不仅是合同约定，同时也是独立审计法规和职业道德准则规定的法定义务。</span><span class="t-en">ASCO signs a non-disclosure agreement <b>before receiving any documents</b>. An auditor’s duty of confidentiality is not merely contractual — it is a legal obligation under the independent audit rules and the professional ethics standards.</span></div></details>
+  </div>
+</section>
+
+
+<section class="cta" id="lien-he">
+  <div class="wrap">
+    <div class="cta-grid">
+      <div>
+        <div class="eyebrow" style="color:var(--gold-hi)"><span class="t-vi">Bước tiếp theo</span><span class="t-zh">下一步</span><span class="t-en">Next step</span></div>
+        <h2><span class="t-vi">Gửi thông tin, nhận báo giá và lịch triển khai trong 2 giờ làm việc</span><span class="t-zh">提交信息，2 个工作小时内获得报价和实施计划</span><span class="t-en">Send your details and receive a quote and timetable within 2 working hours</span></h2>
+        <p class="lede" style="margin-top:16px"><span class="t-vi">ASCO trao đổi sơ bộ miễn phí: xem tình trạng sổ sách hiện có, xác định khối lượng công việc, và chốt lịch phù hợp với cả hạn nộp tại Việt Nam lẫn lịch hợp nhất của công ty mẹ.</span><span class="t-zh">ASCO 提供免费初步沟通：了解现有账簿状况、评估工作量，并确定同时符合越南申报期限和母公司合并时间表的进度安排。</span><span class="t-en">ASCO offers a free initial consultation: we look at the state of your records, size the work, and agree a timetable that meets both the Vietnamese filing deadline and the parent company’s consolidation schedule.</span></p>
+        <div class="cta-contacts">
+          <a class="cc" href="tel:0825092007"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.4 2.1L8 9.8a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg><div><b>08 2509 2007</b><span><span class="t-vi">Hotline · tư vấn kiểm toán báo cáo tài chính</span><span class="t-zh">热线 · 财务报表审计咨询</span><span class="t-en">Hotline · financial statement audit</span></span></div></a>
+          <a class="cc" href="https://zalo.me/0825092007" target="_blank" rel="noopener noreferrer"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9.6 9.6 0 0 1-2.8-.4L4 21l1.4-4.1A8.2 8.2 0 0 1 3 11.5 8.4 8.4 0 0 1 12 3a8.4 8.4 0 0 1 9 8.5Z"/></svg><div><b>Zalo 08 2509 2007</b><span><span class="t-vi">Gửi ảnh chụp hồ sơ, trao đổi nhanh trong ngày</span><span class="t-zh">发送资料照片，当天快速沟通</span><span class="t-en">Send photos of documents, same-day response</span></span></div></a>
+          <a class="cc" href="mailto:asco@asco.vn"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="m3 6 9 6.5L21 6"/></svg><div><b>asco@asco.vn</b><span><span class="t-vi">Gửi thông tin và nhận báo giá qua thư điện tử</span><span class="t-zh">通过电子邮件提交信息并获取报价</span><span class="t-en">Send details and receive a quote by email</span></span></div></a>
+          <a class="cc" href="tel:02437930960"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 8h4M7 12h10M7 16h7"/></svg><div><b>024 3793 0960</b><span><span class="t-vi">Tổng đài văn phòng — Hà Nội</span><span class="t-zh">河内办公室总机</span><span class="t-en">Office switchboard — Hanoi</span></span></div></a>
+        </div>
+      </div>
+      <div class="form-card rv">
+        <h3><span class="t-vi">Đăng ký nhận báo giá</span><span class="t-zh">申请报价</span><span class="t-en">Request a quote</span></h3>
+        <p class="small"><span class="t-vi">Thông tin được bảo mật và chỉ dùng để phục vụ việc báo giá.</span><span class="t-zh">您提交的信息将予以保密，仅用于报价用途。</span><span class="t-en">Your information is kept confidential and used only to prepare a quote.</span></p>
+        <form id="leadForm" novalidate>
+          <div class="form-grid">
+            <div><label for="f_ct"><span class="t-vi">Tên công ty</span><span class="t-zh">公司名称</span><span class="t-en">Company name</span> <span class="req">*</span></label><input class="inp" id="f_ct" required placeholder="Ví dụ: Công ty TNHH ... Việt Nam" data-ph-vi="Ví dụ: Công ty TNHH ... Việt Nam" data-ph-zh="例如：... 越南有限公司" data-ph-en="e.g. ... Vietnam Co., Ltd."></div>
+            <div><label for="f_ten"><span class="t-vi">Người liên hệ</span><span class="t-zh">联系人</span><span class="t-en">Contact person</span> <span class="req">*</span></label><input class="inp" id="f_ten" required placeholder="Họ và tên" data-ph-vi="Họ và tên" data-ph-zh="姓名" data-ph-en="Full name"></div>
+            <div><label for="f_cv"><span class="t-vi">Chức vụ</span><span class="t-zh">职务</span><span class="t-en">Position</span> </label><input class="inp" id="f_cv" placeholder="Giám đốc / Kế toán trưởng…" data-ph-vi="Giám đốc / Kế toán trưởng…" data-ph-zh="总经理 / 财务经理 等" data-ph-en="Director / Finance manager…"></div>
+            <div><label for="f_sdt"><span class="t-vi">Số điện thoại</span><span class="t-zh">联系电话</span><span class="t-en">Phone</span> <span class="req">*</span></label><input class="inp" id="f_sdt" required placeholder="09xx xxx xxx" data-ph-vi="09xx xxx xxx" data-ph-zh="09xx xxx xxx" data-ph-en="09xx xxx xxx"></div>
+            <div><label for="f_email"><span class="t-vi">Thư điện tử</span><span class="t-zh">电子邮箱</span><span class="t-en">Email</span> <span class="req">*</span></label><input class="inp" id="f_email" required placeholder="name@company.com" data-ph-vi="name@company.com" data-ph-zh="name@company.com" data-ph-en="name@company.com"></div>
+            <div><label for="f_tinh"><span class="t-vi">Tỉnh / thành phố đặt nhà máy</span><span class="t-zh">工厂所在省市</span><span class="t-en">Province of the plant</span> </label><input class="inp" id="f_tinh" placeholder="Ví dụ: Bắc Ninh" data-ph-vi="Ví dụ: Bắc Ninh" data-ph-zh="例如：北宁省" data-ph-en="e.g. Bac Ninh"></div>
+            <div class="full"><label for="f_nd"><span class="t-vi">Tình trạng hồ sơ / nội dung cần trao đổi</span><span class="t-zh">账簿现状 / 咨询内容</span><span class="t-en">State of your records / what you would like to discuss</span></label><textarea class="inp" id="f_nd" placeholder="Ví dụ: Công ty có năm tài chính kết thúc 31/12, công ty mẹ cần số hợp nhất trước cuối tháng 2. Có giao dịch mua nguyên vật liệu và trả phí bản quyền cho công ty mẹ." data-ph-vi="Ví dụ: Công ty có năm tài chính kết thúc 31/12, công ty mẹ cần số hợp nhất trước cuối tháng 2. Có giao dịch mua nguyên vật liệu và trả phí bản quyền cho công ty mẹ." data-ph-zh="例如：会计年度于 12 月 31 日结束，母公司需在 2 月底前取得合并数据。存在向母公司采购原材料及支付特许权使用费的交易。" data-ph-en="e.g. Our financial year ends 31 December and the parent needs consolidation figures before end of February. We buy raw materials from and pay royalties to the parent."></textarea></div>
+          </div>
+          <div style="margin-top:18px"><button class="btn btn-gold" type="submit"><span class="t-vi">Gửi yêu cầu</span><span class="t-zh">提交咨询</span><span class="t-en">Send enquiry</span></button></div>
+          <div class="form-msg" id="formMsg"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <img class="flogo" src="data:image/png;base64,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" alt="ASCO">
+        <p class="small"><span class="t-vi">Hãng Kiểm toán và Định giá ASCO — thành lập ngày 25/09/2007</span><span class="t-zh">ASCO 会计师事务所 — 成立于 2007 年 9 月 25 日</span><span class="t-en">ASCO Audit &amp; Valuation Firm — established 25 September 2007</span></p>
+        <div style="margin-top:14px"><div class="nut-ngon-ngu" role="group" aria-label="Ngôn ngữ / 语言 / Language"><button type="button" data-ma="vi" aria-pressed="true" lang="vi"><span class="dai">Tiếng Việt</span><span class="ngan">VI</span></button><button type="button" data-ma="zh" aria-pressed="false" lang="zh-Hans"><span class="dai">中文</span><span class="ngan">中</span></button><button type="button" data-ma="en" aria-pressed="false" lang="en"><span class="dai">English</span><span class="ngan">EN</span></button></div></div>
+      </div>
+      <div>
+        <h4><span class="t-vi">Liên hệ</span><span class="t-zh">联系方式</span><span class="t-en">Contact</span></h4>
+        <ul class="f-list">
+          <li>Số 2, ngõ 308 phố Lê Trọng Tấn, phường Phương Liệt, thành phố Hà Nội</li>
+          <li><a href="tel:0825092007">08 2509 2007</a> · <a href="tel:02437930960">024 3793 0960</a></li>
+          <li><a href="mailto:asco@asco.vn">asco@asco.vn</a></li>
+          <li><a href="https://asco.vn" target="_blank" rel="noopener noreferrer">asco.vn</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4><span class="t-vi">Dịch vụ</span><span class="t-zh">服务项目</span><span class="t-en">Services</span></h4>
+        <ul class="f-list">
+          <li><span class="t-vi">Kiểm toán báo cáo tài chính</span><span class="t-zh">财务报表审计</span><span class="t-en">Financial statement audit</span></li>
+          <li><span class="t-vi">Kiểm toán báo cáo quyết toán dự án hoàn thành</span><span class="t-zh">竣工决算审计</span><span class="t-en">Completed project settlement audit</span></li>
+          <li><span class="t-vi">Thẩm định giá · Tư vấn · Đào tạo</span><span class="t-zh">资产评估 · 咨询 · 培训</span><span class="t-en">Valuation · Advisory · Training</span></li>
+        </ul>
+      </div>
+    </div>
+    <p class="small" style="margin-top:30px;opacity:.75"><span class="t-vi">Nội dung trên trang mang tính giới thiệu dịch vụ. Phạm vi công việc, phí và tiến độ cụ thể được xác định trong hợp đồng kiểm toán giữa hai bên theo quy định pháp luật hiện hành.</span><span class="t-zh">本页内容仅为服务介绍。具体的业务范围、费用和时间安排，以双方依据现行法律签署的审计业务约定书为准。</span><span class="t-en">This page is for information only. The scope, fee and timetable are set out in the audit engagement contract between the parties under applicable law.</span></p>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a class="btn btn-outline" href="tel:0825092007"><span class="t-vi">Gọi ngay</span><span class="t-zh">立即致电</span><span class="t-en">Call now</span></a>
+  <a class="btn btn-outline" href="https://zalo.me/0825092007" target="_blank" rel="noopener noreferrer">Zalo</a>
+  <a class="btn btn-gold" href="#lien-he"><span class="t-vi">Nhận báo giá</span><span class="t-zh">获取报价</span><span class="t-en">Get a quote</span></a>
+</div>
+
+<script>
+/* Hiệu ứng hiện dần khi cuộn tới */
+(function(){
+  var ds = document.querySelectorAll('.rv');
+  if (!('IntersectionObserver' in window)) {
+    for (var i=0;i<ds.length;i++) ds[i].classList.add('in');
+    return;
+  }
+  var qs = new IntersectionObserver(function(mp){
+    mp.forEach(function(m){ if(m.isIntersecting){ m.target.classList.add('in'); qs.unobserve(m.target);} });
+  }, {rootMargin:'0px 0px -8% 0px', threshold:.05});
+  for (var i=0;i<ds.length;i++) qs.observe(ds[i]);
+})();
+
+/* Nút đổi giao diện sáng / tối */
+(function(){
+  var b = document.getElementById('themeBtn'); if(!b) return;
+  var g = document.documentElement, K='asco_giao_dien';
+  try{ var l=localStorage.getItem(K); if(l) g.setAttribute('data-theme',l); }catch(e){}
+  b.addEventListener('click', function(){
+    var toi = g.getAttribute('data-theme')==='dark'
+      || (!g.getAttribute('data-theme') && matchMedia('(prefers-color-scheme:dark)').matches);
+    var moi = toi ? 'light':'dark';
+    g.setAttribute('data-theme', moi);
+    try{ localStorage.setItem(K,moi); }catch(e){}
+  });
+})();
+
+/* Đổi luôn chữ gợi ý trong ô nhập khi chuyển ngôn ngữ.
+   Nếu quên phần này thì chuyển sang tiếng Hàn xong ô nhập vẫn còn chữ Việt —
+   đúng kiểu lỗi "song ngữ nửa vời" mà khảo sát đối thủ đã chỉ ra. */
+(function(){
+  function doi(ma){
+    var o = document.querySelectorAll('[data-ph-vi][data-ph-ko]');
+    for (var i=0;i<o.length;i++){
+      o[i].setAttribute('placeholder', o[i].getAttribute(ma==='ko'?'data-ph-ko':'data-ph-vi'));
+    }
+  }
+  doi(document.documentElement.getAttribute('data-lang')||'vi');
+  document.addEventListener('click', function(e){
+    var b = e.target.closest && e.target.closest('.nut-ngon-ngu button[data-ma]');
+    if (b) doi(b.getAttribute('data-ma'));
+  });
+})();
+
+/* Biểu mẫu — gửi về asco@asco.vn */
+(function(){
+  var f = document.getElementById('leadForm'); if(!f) return;
+  var msg = document.getElementById('formMsg');
+  function la_ko(){ return document.documentElement.getAttribute('data-lang')==='ko'; }
+  f.addEventListener('submit', function(e){
+    e.preventDefault();
+    var thieu = [];
+    ['f_ct','f_ten','f_sdt','f_email'].forEach(function(id){
+      var o=document.getElementById(id); if(o && !o.value.trim()) thieu.push(id);
+    });
+    if (thieu.length){
+      msg.className='form-msg err show';
+      msg.textContent = la_ko() ? '필수 항목을 모두 입력해 주세요.'
+                                : 'Anh/chị vui lòng điền đủ các mục bắt buộc.';
+      return;
+    }
+    var d={}; ['f_ct','f_ten','f_cv','f_sdt','f_email','f_tinh','f_nd'].forEach(function(id){
+      var o=document.getElementById(id); if(o) d[id]=o.value.trim();
+    });
+    var than = 'Cong ty: '+d.f_ct
+      +'\nNguoi lien he: '+d.f_ten+' ('+(d.f_cv||'-')+')'
+      +'\nDien thoai: '+d.f_sdt
+      +'\nEmail: '+d.f_email
+      +'\nDia ban: '+(d.f_tinh||'-')
+      +'\nNoi dung: '+(d.f_nd||'-');
+    msg.className='form-msg ok show';
+    msg.textContent = la_ko()
+      ? '감사합니다. 2 근무시간 내에 회신드리겠습니다.'
+      : 'Cảm ơn anh/chị. ASCO sẽ phản hồi trong vòng 2 giờ làm việc.';
+    fetch('https://formsubmit.co/ajax/asco@asco.vn', {
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({_subject:'[Landing FDI Han Quoc] '+d.f_ct, message: than})
+    }).catch(function(){
+      location.href='mailto:asco@asco.vn?subject='+encodeURIComponent('[FDI Han Quoc] '+d.f_ct)
+        +'&body='+encodeURIComponent(than);
+    });
+    f.reset();
+  });
+})();
+</script>
+
+</body>
+</html>
