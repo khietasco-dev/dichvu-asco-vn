@@ -1,0 +1,996 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tuyển Kế toán tổng hợp — Hãng Kiểm toán và Định giá ASCO</title>
+<meta name="description" content="ASCO tuyển Kế toán tổng hợp. Nhận hồ sơ từ 19/08/2026 đến 19/09/2026. Thu nhập thoả thuận, đóng bảo hiểm xã hội, nghỉ thứ Bảy. Gửi hồ sơ về asco@asco.vn.">
+<meta name="theme-color" content="#184088">
+
+<style>
+/* ================= TOKENS — light mặc định ================= */
+:root{
+  --navy:#184088;          /* màu logo ASCO */
+  --navy-700:#17376A;
+  --navy-900:#0D2245;
+  --navy-300:#5B80C2;
+  --tint:#ECF1F9;
+  --tint-2:#D9E3F4;
+
+  --gold:#B8862A;          /* nhấn CTA — cùng hệ với trang QTDND */
+  --gold-hi:#E4B451;
+
+  --steel:#256E80;         /* dấu hiệu phần KỸ THUẬT (kỹ sư, khối lượng, đơn giá) */
+  --steel-tint:#E4F0F2;
+
+  --danger:#A82420;
+  --warn:#8C6316;
+  --ok:#1B6E4C;
+
+  --bg:#FFFFFF;
+  --bg-alt:#F4F7FC;        /* trung tính hơi ấm — chất bê tông */
+  --surface:#FFFFFF;
+  --ink:#0E1729;
+  --ink-2:#3A4150;
+  --muted:#646B7A;
+  --line:#E0E6F0;
+  --line-soft:#EFEEE9;
+
+  --shadow-sm:0 1px 2px rgba(13,34,69,.06);
+  --shadow:0 2px 4px rgba(13,34,69,.05), 0 14px 34px -20px rgba(13,34,69,.34);
+  --shadow-lg:0 4px 8px rgba(13,34,69,.06), 0 30px 60px -30px rgba(13,34,69,.45);
+
+  --maxw:1180px;
+  --r:13px;
+  --r-lg:19px;
+  --f:"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Roboto,Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --navy:#8FB2EE; --navy-700:#A8C4F4; --navy-900:#CCDDF9; --navy-300:#4A6EB0;
+    --tint:#151F38; --tint-2:#1C2947;
+    --gold:#E0B458; --gold-hi:#F2CE83;
+    --steel:#5FB3C4; --steel-tint:#15303A;
+    --danger:#F0857E; --warn:#E0B458; --ok:#5FCB9C;
+    --bg:#0D2044; --bg-alt:#0A1B3B; --surface:#13294F;
+    --ink:#EEF3FB; --ink-2:#C2D0E6; --muted:#8DA0C0;
+    --line:#22406E; --line-soft:#1A3260;
+    --shadow-sm:0 1px 2px rgba(0,0,0,.35);
+    --shadow:0 2px 4px rgba(0,0,0,.3), 0 16px 36px -22px rgba(0,0,0,.8);
+    --shadow-lg:0 4px 10px rgba(0,0,0,.35), 0 34px 64px -32px rgba(0,0,0,.9);
+  }
+}
+:root[data-theme="dark"]{
+  --navy:#8FB2EE; --navy-700:#A8C4F4; --navy-900:#CCDDF9; --navy-300:#4A6EB0;
+  --tint:#151F38; --tint-2:#1C2947;
+  --gold:#E0B458; --gold-hi:#F2CE83;
+  --steel:#5FB3C4; --steel-tint:#15303A;
+  --danger:#F0857E; --warn:#E0B458; --ok:#5FCB9C;
+  --bg:#0D2044; --bg-alt:#0A1B3B; --surface:#13294F;
+  --ink:#EEF3FB; --ink-2:#C2D0E6; --muted:#8DA0C0;
+  --line:#22406E; --line-soft:#1A3260;
+  --shadow-sm:0 1px 2px rgba(0,0,0,.35);
+  --shadow:0 2px 4px rgba(0,0,0,.3), 0 16px 36px -22px rgba(0,0,0,.8);
+  --shadow-lg:0 4px 10px rgba(0,0,0,.35), 0 34px 64px -32px rgba(0,0,0,.9);
+}
+
+/* ================= BASE ================= */
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f);
+  font-size:17px;line-height:1.66;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,h4{margin:0;font-weight:800;line-height:1.14;letter-spacing:-.018em;text-wrap:balance}
+h2{font-size:clamp(26px,3.4vw,37px)}
+h3{font-size:clamp(18px,2vw,21px);letter-spacing:-.01em}
+p{margin:0}
+ul,ol{margin:0;padding-left:1.15em}
+a{color:var(--navy);text-underline-offset:3px}
+img{max-width:100%;height:auto;display:block}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+section{padding:clamp(54px,7vw,94px) 0}
+.narrow{max-width:820px}
+.alt{background:var(--bg-alt)}
+.center{text-align:center}
+.tnum{font-variant-numeric:tabular-nums}
+.lede{font-size:clamp(17px,1.7vw,19.5px);color:var(--ink-2);line-height:1.62}
+.small{font-size:14px;color:var(--muted);line-height:1.6}
+.sec-head{max-width:780px;margin-bottom:38px}
+.sec-head.center{margin-left:auto;margin-right:auto}
+
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--navy);margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--gold);flex:0 0 auto;border-radius:2px}
+.center .eyebrow{justify-content:center}
+
+/* mã giấy tờ làm việc — dấu hiệu phương pháp luận thật của ASCO */
+.wp{
+  font-variant-numeric:tabular-nums;font-size:11.5px;font-weight:800;letter-spacing:.1em;
+  color:var(--steel);background:var(--steel-tint);border:1px solid color-mix(in srgb,var(--steel) 26%,transparent);
+  padding:2px 8px;border-radius:5px;white-space:nowrap;
+}
+
+/* ================= BUTTONS ================= */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55em;
+  font:inherit;font-weight:700;font-size:16px;padding:14px 26px;border-radius:999px;
+  border:1.5px solid transparent;cursor:pointer;text-decoration:none;text-align:center;
+  transition:transform .16s ease, box-shadow .16s ease, background .16s ease, border-color .16s ease}
+.btn:focus-visible{outline:2.5px solid var(--gold);outline-offset:3px}
+.btn-gold{background:linear-gradient(180deg,var(--gold-hi),var(--gold));color:#1F1707;
+  box-shadow:0 10px 24px -12px rgba(184,134,42,.75)}
+.btn-gold:hover{transform:translateY(-2px)}
+.btn-navy{background:var(--navy);color:#fff;box-shadow:var(--shadow)}
+.btn-navy:hover{transform:translateY(-2px);background:var(--navy-700)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn-navy{color:#0D2044}}
+:root[data-theme="dark"] .btn-navy{color:#0D2044}
+.btn-outline{background:transparent;border-color:var(--line);color:var(--ink)}
+.btn-outline:hover{border-color:var(--navy);color:var(--navy)}
+.btn-onnavy{background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.38);color:#fff}
+.btn-onnavy:hover{background:rgba(255,255,255,.18);transform:translateY(-2px)}
+.btn-sm{font-size:14.5px;padding:10px 18px}
+.btn-block{width:100%}
+
+/* ================= NAV ================= */
+nav{position:sticky;top:0;z-index:60;background:color-mix(in srgb,var(--bg) 90%,transparent);
+  backdrop-filter:saturate(1.5) blur(12px);border-bottom:1px solid var(--line)}
+.nav-in{max-width:var(--maxw);margin:0 auto;padding:11px 22px;display:flex;align-items:center;gap:18px}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;flex:0 0 auto}
+.brand img{height:30px;width:auto}
+:root[data-theme="dark"] .brand img{filter:brightness(1.9) saturate(.55)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .brand img{filter:brightness(1.9) saturate(.55)}}
+.brand-tag{font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);
+  border-left:1px solid var(--line);padding-left:11px;line-height:1.25;max-width:150px}
+.nav-links{display:flex;gap:17px;font-size:14px;margin-left:auto;min-width:0}
+.nav-links a{color:var(--ink-2);text-decoration:none;white-space:nowrap;font-weight:600}
+.nav-links a:hover{color:var(--navy)}
+.nav-act{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+.theme-btn{width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:var(--surface);
+  color:var(--ink-2);cursor:pointer;display:grid;place-items:center;flex:0 0 auto}
+.theme-btn:hover{border-color:var(--navy);color:var(--navy)}
+@media (max-width:1180px){.nav-links{display:none}}
+@media (max-width:560px){.brand-tag{display:none}}
+
+/* ================= HERO — nền bản vẽ ================= */
+.hero{position:relative;color:#fff;overflow:hidden;
+  background:
+    radial-gradient(880px 500px at 86% -10%, rgba(228,180,81,.2), transparent 62%),
+    radial-gradient(760px 620px at 4% 106%, rgba(37,110,128,.36), transparent 62%),
+    linear-gradient(157deg,#1F478D 0%,#17376A 46%,#0D2245 100%);
+}
+.hero::after{content:"";position:absolute;inset:0;opacity:.2;pointer-events:none;
+  background-image:
+    linear-gradient(rgba(255,255,255,.42) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.42) 1px,transparent 1px),
+    linear-gradient(rgba(255,255,255,.16) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.16) 1px,transparent 1px);
+  background-size:88px 88px,88px 88px,22px 22px,22px 22px;
+  mask-image:radial-gradient(circle at 72% 24%, #000, transparent 74%)}
+.hero .wrap{position:relative;z-index:2;padding-top:clamp(50px,6.5vw,80px);padding-bottom:clamp(46px,6vw,74px)}
+.hero-grid{display:grid;grid-template-columns:1.14fr .86fr;gap:clamp(28px,4vw,54px);align-items:center}
+@media (max-width:960px){.hero-grid{grid-template-columns:1fr;gap:32px}}
+.pill{display:inline-flex;align-items:center;gap:9px;flex-wrap:wrap;
+  background:rgba(255,255,255,.11);border:1px solid rgba(255,255,255,.26);
+  padding:7px 15px;border-radius:999px;font-size:13px;font-weight:700}
+.pill .dot{width:8px;height:8px;border-radius:50%;background:var(--gold-hi);box-shadow:0 0 0 4px rgba(228,180,81,.22)}
+.hero h1{font-size:clamp(30px,4.7vw,53px);margin:20px 0 0;color:#fff}
+.hero h1 .accent{display:block;font-size:clamp(18px,2.2vw,26px);font-weight:700;color:var(--gold-hi);margin-top:12px;letter-spacing:.005em}
+.hero p.lede{color:rgba(255,255,255,.87);margin-top:20px;max-width:62ch}
+.hero-cta{display:flex;flex-wrap:wrap;gap:13px;margin-top:30px}
+.hero-note{margin-top:16px;font-size:13.5px;color:rgba(255,255,255,.68)}
+.hero-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.2);
+  border-radius:var(--r-lg);padding:26px;backdrop-filter:blur(6px);box-shadow:0 30px 60px -34px rgba(0,0,0,.7)}
+.hero-card h3{color:#fff;font-size:16.5px;display:flex;align-items:center;gap:9px}
+.hc-list{list-style:none;padding:0;margin:18px 0 0;display:grid;gap:13px}
+.hc-list li{display:flex;gap:12px;align-items:flex-start;font-size:14.8px;color:rgba(255,255,255,.9);line-height:1.5}
+.hc-num{flex:0 0 auto;width:27px;height:27px;border-radius:8px;display:grid;place-items:center;
+  background:rgba(228,180,81,.2);border:1px solid rgba(228,180,81,.45);color:var(--gold-hi);font-weight:800;font-size:13px}
+.hc-foot{margin-top:20px;padding-top:16px;border-top:1px solid rgba(255,255,255,.16);font-size:13px;color:rgba(255,255,255,.66)}
+
+.trust{border-top:1px solid rgba(255,255,255,.16);position:relative;z-index:2}
+.trust-in{max-width:var(--maxw);margin:0 auto;padding:20px 22px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+@media (max-width:860px){.trust-in{grid-template-columns:repeat(2,1fr)}}
+.trust-i{display:flex;gap:11px;align-items:flex-start}
+.trust-i svg{flex:0 0 auto;margin-top:2px;color:var(--gold-hi)}
+.trust-i b{display:block;font-size:14.5px;color:#fff;line-height:1.3}
+.trust-i span{font-size:12.7px;color:rgba(255,255,255,.6);line-height:1.42}
+
+/* ================= CARDS ================= */
+.grid{display:grid;gap:20px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+@media (max-width:960px){.g3,.g4{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:680px){.g2,.g3,.g4{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:24px;
+  box-shadow:var(--shadow-sm);transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--navy-300)}
+.card h3{margin-bottom:10px}
+.card p{color:var(--ink-2);font-size:15.4px}
+.ico{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;margin-bottom:16px;
+  background:var(--tint);color:var(--navy);border:1px solid var(--tint-2)}
+.ico.tech{background:var(--steel-tint);color:var(--steel);border-color:color-mix(in srgb,var(--steel) 26%,transparent)}
+.badge{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:800;letter-spacing:.06em;
+  text-transform:uppercase;padding:4px 10px;border-radius:999px}
+.b-req{background:color-mix(in srgb,var(--danger) 13%,transparent);color:var(--danger);border:1px solid color-mix(in srgb,var(--danger) 32%,transparent)}
+.b-warn{background:color-mix(in srgb,var(--gold) 16%,transparent);color:var(--warn);border:1px solid color-mix(in srgb,var(--gold) 38%,transparent)}
+.b-ok{background:color-mix(in srgb,var(--ok) 13%,transparent);color:var(--ok);border:1px solid color-mix(in srgb,var(--ok) 32%,transparent)}
+.b-navy{background:var(--tint);color:var(--navy);border:1px solid var(--tint-2)}
+.b-tech{background:var(--steel-tint);color:var(--steel);border:1px solid color-mix(in srgb,var(--steel) 30%,transparent)}
+.badge.nocaps{text-transform:none;letter-spacing:.01em;font-weight:700}
+.cite{display:inline-block;margin-top:14px;font-size:12.6px;color:var(--muted);
+  border-left:2.5px solid var(--gold);padding-left:10px;line-height:1.45}
+
+/* ================= NỘI DUNG KIỂM TOÁN (7 khoản, có mã hồ sơ) ================= */
+.aud{display:flex;gap:15px;align-items:flex-start;padding:19px;border-radius:12px;
+  background:var(--surface);border:1px solid var(--line);transition:border-color .18s ease,transform .18s ease}
+.aud:hover{border-color:var(--navy-300);transform:translateY(-2px)}
+.aud .n{flex:0 0 auto;width:31px;height:31px;border-radius:9px;display:grid;place-items:center;
+  background:var(--navy);color:#fff;font-weight:800;font-size:14px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .aud .n{color:#0D2044}}
+:root[data-theme="dark"] .aud .n{color:#0D2044}
+.aud .top{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:4px}
+.aud b{font-size:15.4px}
+.aud span.d{font-size:13.9px;color:var(--muted);line-height:1.5;display:block}
+
+/* ================= HAI NỬA: TÀI CHÍNH | KỸ THUẬT ================= */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);
+  border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow)}
+@media (max-width:760px){.duo{grid-template-columns:1fr}}
+.duo-h{padding:22px 26px;font-weight:800;font-size:16.5px;display:flex;align-items:center;gap:11px;color:#fff}
+.duo-a .duo-h{background:var(--navy)}
+.duo-b .duo-h{background:var(--steel)}
+.duo-a{border-right:1px solid var(--line)}
+@media (max-width:760px){.duo-a{border-right:0;border-bottom:1px solid var(--line)}}
+.duo-c{padding:24px 26px;background:var(--surface)}
+.duo-c ul{list-style:none;padding:0;display:grid;gap:11px}
+.duo-c li{display:flex;gap:11px;align-items:flex-start;font-size:15px;color:var(--ink-2);line-height:1.5}
+.duo-c li::before{content:"";flex:0 0 auto;width:7px;height:7px;border-radius:50%;margin-top:8px}
+.duo-a .duo-c li::before{background:var(--navy)}
+.duo-b .duo-c li::before{background:var(--steel)}
+.duo-c .foot{margin-top:18px;padding-top:15px;border-top:1px solid var(--line-soft);font-size:13.6px;color:var(--muted);line-height:1.5}
+
+/* ================= CẢNH BÁO / CALLOUT ================= */
+.callout{border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:var(--r);
+  padding:24px 26px;background:var(--surface)}
+.callout.danger{border-left-color:var(--danger)}
+.callout h3{margin:12px 0 10px}
+.callout p{font-size:15.6px;color:var(--ink-2)}
+.callout p + p{margin-top:12px}
+
+/* ================= STATS ================= */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);
+  border-radius:var(--r-lg);overflow:hidden;background:var(--surface);box-shadow:var(--shadow-sm)}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}}
+.stat{padding:26px 22px;text-align:center;border-right:1px solid var(--line-soft)}
+.stat:last-child{border-right:0}
+@media (max-width:760px){.stat:nth-child(2n){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid var(--line-soft)}}
+.stat .v{font-size:clamp(26px,3.4vw,36px);font-weight:800;color:var(--navy);letter-spacing:-.02em;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat .l{font-size:13.6px;color:var(--muted);margin-top:7px;line-height:1.45}
+
+/* ================= TIMELINE 3 GIAI ĐOẠN ================= */
+.tl{display:grid;gap:0}
+.tl-i{display:grid;grid-template-columns:92px 1fr;gap:24px;position:relative;padding-bottom:32px}
+.tl-i:last-child{padding-bottom:0}
+.tl-i::before{content:"";position:absolute;left:45px;top:50px;bottom:-4px;width:2px;background:var(--line)}
+.tl-i:last-child::before{display:none}
+@media (max-width:680px){.tl-i{grid-template-columns:1fr;gap:12px}.tl-i::before{display:none}}
+.tl-mark{width:92px;height:92px;border-radius:50%;display:grid;place-items:center;text-align:center;
+  background:var(--tint);border:2px solid var(--navy);color:var(--navy);line-height:1.15}
+@media (max-width:680px){.tl-mark{width:auto;height:auto;border-radius:999px;padding:8px 18px;justify-self:start;display:inline-flex;gap:8px;align-items:center}}
+.tl-mark .gd{font-size:10.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;opacity:.8}
+.tl-mark .gn{font-size:26px;font-weight:800;letter-spacing:-.02em}
+@media (max-width:680px){.tl-mark .gn{font-size:17px}}
+.tl-c{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:22px;box-shadow:var(--shadow-sm)}
+.tl-c h3{margin-bottom:8px}
+.tl-c .dur{font-size:12.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--gold);margin-bottom:9px}
+.tl-wp{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px;padding-top:14px;border-top:1px solid var(--line-soft)}
+
+/* ================= BẢNG ================= */
+.tbl-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r);background:var(--surface);box-shadow:var(--shadow-sm)}
+table{width:100%;border-collapse:collapse;min-width:640px}
+th,td{padding:14px 17px;text-align:left;border-bottom:1px solid var(--line-soft);font-size:15px;vertical-align:top}
+thead th{background:var(--tint);font-size:13.2px;letter-spacing:.03em;color:var(--navy);font-weight:800;border-bottom:1px solid var(--line)}
+tbody tr:last-child td{border-bottom:0}
+td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+.col-asco{background:color-mix(in srgb,var(--navy) 5%,transparent)}
+thead th.col-asco{background:var(--navy);color:#fff}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) thead th.col-asco{color:#0D2044}}
+:root[data-theme="dark"] thead th.col-asco{color:#0D2044}
+td.yes{color:var(--ok);font-weight:700}
+td.no{color:var(--muted)}
+
+/* ================= CHECKLIST ================= */
+.cl-wrap{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow);overflow:hidden}
+.cl-head{padding:20px 24px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.cl-head h3{flex:1 1 240px}
+.cl-prog{flex:0 0 auto;display:flex;align-items:center;gap:12px;min-width:190px}
+.cl-bar{flex:1;height:8px;border-radius:99px;background:var(--tint-2);overflow:hidden}
+.cl-bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--navy),var(--gold));transition:width .3s ease}
+.cl-pct{font-size:14px;font-weight:800;color:var(--navy);min-width:42px;text-align:right;font-variant-numeric:tabular-nums}
+.cl-body{display:grid;grid-template-columns:repeat(2,1fr)}
+@media (max-width:820px){.cl-body{grid-template-columns:1fr}}
+.cl-g{padding:22px 24px;border-right:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)}
+@media (max-width:820px){.cl-g{border-right:0}}
+.cl-g h4{font-size:13px;letter-spacing:.09em;text-transform:uppercase;color:var(--navy);margin:0 0 12px;display:flex;align-items:center;gap:8px}
+.cl-g.tech h4{color:var(--steel)}
+.cl-g ul{list-style:none;padding:0;display:grid;gap:9px}
+.cl-g li label{display:flex;gap:11px;align-items:flex-start;font-size:14.6px;cursor:pointer;line-height:1.5;color:var(--ink-2)}
+.cl-g li input{margin-top:4px;width:17px;height:17px;accent-color:var(--navy);flex:0 0 auto}
+.cl-g li input:checked + span{text-decoration:line-through;color:var(--muted)}
+.cl-foot{padding:18px 24px;display:flex;gap:12px;flex-wrap:wrap;align-items:center;background:var(--bg-alt)}
+
+/* ================= CÔNG CỤ RÀ SOÁT ================= */
+.tool{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow-lg);overflow:hidden}
+.tool-head{padding:22px 26px;background:linear-gradient(140deg,var(--navy),var(--navy-700));color:#fff;
+  display:flex;align-items:center;gap:13px;flex-wrap:wrap}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .tool-head{background:linear-gradient(140deg,#182742,#131E33)}}
+:root[data-theme="dark"] .tool-head{background:linear-gradient(140deg,#182742,#131E33)}
+.tool-head h3{color:#fff;font-size:19px}
+.tool-head .sub{font-size:13.6px;color:rgba(255,255,255,.75);width:100%;margin-top:2px}
+.tool-in{padding:22px 26px;border-bottom:1px solid var(--line)}
+.rows-head,.row{display:grid;grid-template-columns:2fr 1.1fr 1.3fr 1.5fr 38px;gap:10px;align-items:center}
+.rows-head{font-size:11.5px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);
+  padding-bottom:9px;border-bottom:1px solid var(--line);margin-bottom:12px}
+@media (max-width:820px){
+  .rows-head{display:none}
+  .row{grid-template-columns:1fr;gap:8px;padding:14px;border:1px solid var(--line);border-radius:11px;margin-bottom:12px;background:var(--bg-alt)}
+  .row .lbl{display:block}
+}
+.row{margin-bottom:10px}
+.row .lbl{display:none;font-size:11.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
+.row .inp{padding:10px 12px;font-size:15px;border-radius:9px}
+.row-del{width:34px;height:34px;border-radius:9px;border:1px solid var(--line);background:var(--surface);
+  color:var(--muted);cursor:pointer;display:grid;place-items:center;font-size:18px;line-height:1;flex:0 0 auto}
+.row-del:hover{border-color:var(--danger);color:var(--danger)}
+@media (max-width:820px){.row-del{width:100%;height:38px}}
+.rows-act{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+
+.tool-out{padding:24px 26px;background:var(--bg-alt)}
+.res-title{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+.sum{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:20px}
+@media (max-width:680px){.sum{grid-template-columns:repeat(2,1fr)}}
+.sum-i{background:var(--surface);border:1px solid var(--line);border-radius:11px;padding:14px 16px;text-align:center}
+.sum-i .v{font-size:23px;font-weight:800;color:var(--navy);line-height:1.15;font-variant-numeric:tabular-nums}
+.sum-i .l{font-size:12.4px;color:var(--muted);margin-top:4px;line-height:1.4}
+.sum-i.alert .v{color:var(--danger)}
+.sum-i.warn2 .v{color:var(--warn)}
+
+.res-row{background:var(--surface);border:1px solid var(--line);border-left-width:4px;border-radius:11px;
+  padding:15px 17px;margin-bottom:11px}
+.res-row.ok{border-left-color:var(--ok)}
+.res-row.w{border-left-color:var(--gold)}
+.res-row.d{border-left-color:var(--danger)}
+.res-row .rt{font-weight:700;font-size:15.4px;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.res-row .rd{font-size:13.7px;color:var(--muted);margin-top:6px;line-height:1.55}
+.res-row .rd b{color:var(--ink-2)}
+.res-empty{padding:22px;text-align:center;color:var(--muted);font-size:14.6px;
+  border:1px dashed var(--line);border-radius:11px;background:var(--surface)}
+.tool-foot{padding:16px 26px;border-top:1px solid var(--line);background:var(--surface);font-size:12.6px;color:var(--muted);line-height:1.55}
+
+
+/* ================= CÔNG CỤ TÍNH PHÍ ================= */
+.fee-tool{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow-lg);overflow:hidden}
+.fee-head{padding:22px 26px;background:linear-gradient(140deg,var(--steel),#1B5A69);color:#fff;display:flex;align-items:center;gap:13px;flex-wrap:wrap}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .fee-head{background:linear-gradient(140deg,#153845,#102A34)}}
+:root[data-theme="dark"] .fee-head{background:linear-gradient(140deg,#153845,#102A34)}
+.fee-head h3{color:#fff;font-size:19px}
+.fee-head .sub{font-size:13.6px;color:rgba(255,255,255,.78);width:100%;margin-top:2px}
+.fee-body{display:grid;grid-template-columns:.92fr 1.08fr}
+@media (max-width:900px){.fee-body{grid-template-columns:1fr}}
+.fee-in{padding:26px;border-right:1px solid var(--line)}
+@media (max-width:900px){.fee-in{border-right:0;border-bottom:1px solid var(--line)}}
+.fee-out{padding:26px;background:var(--bg-alt)}
+.f-field{margin-bottom:22px}
+.f-field:last-child{margin-bottom:0}
+.f-field label{display:block;font-weight:700;font-size:14.6px;margin-bottom:7px}
+.f-field .hint{display:block;font-size:12.8px;color:var(--muted);font-weight:400;margin-top:5px;line-height:1.45}
+.f-row{display:flex;align-items:center;gap:10px}
+.f-row .unit{font-size:14.5px;color:var(--muted);font-weight:700;white-space:nowrap}
+.f-field input[type=range]{width:100%;accent-color:var(--steel);margin-top:9px}
+.f-chk{display:flex;gap:11px;align-items:flex-start;font-size:14.6px;line-height:1.5;cursor:pointer}
+.f-chk input{margin-top:4px;width:18px;height:18px;accent-color:var(--steel);flex:0 0 auto}
+
+.fee-card{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:20px;margin-bottom:14px}
+.fee-card.main{border-color:var(--steel);border-width:1.5px;box-shadow:0 0 0 3px color-mix(in srgb,var(--steel) 12%,transparent)}
+.fee-card .lbl{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.fee-card .big{font-size:clamp(25px,3.6vw,33px);font-weight:800;color:var(--steel);letter-spacing:-.02em;line-height:1.12;font-variant-numeric:tabular-nums}
+.fee-card.alt2 .big{color:var(--navy);font-size:clamp(20px,2.6vw,25px)}
+.fee-card .sub2{font-size:13.6px;color:var(--muted);margin-top:7px;line-height:1.5}
+.fee-break{margin-top:14px;padding-top:13px;border-top:1px dashed var(--line)}
+.fee-break .r{display:flex;justify-content:space-between;gap:14px;font-size:14.2px;padding:5px 0}
+.fee-break .r b{font-variant-numeric:tabular-nums;white-space:nowrap}
+.fee-note{margin-top:16px;padding:14px 16px;border-radius:12px;font-size:13.8px;line-height:1.55;
+  background:var(--steel-tint);border:1px solid color-mix(in srgb,var(--steel) 28%,transparent);color:var(--ink-2)}
+.fee-note b{color:var(--steel)}
+.fee-warn{margin-top:12px;padding:13px 16px;border-radius:12px;font-size:13.6px;line-height:1.5;
+  background:color-mix(in srgb,var(--gold) 13%,transparent);border:1px solid color-mix(in srgb,var(--gold) 36%,transparent);color:var(--ink-2)}
+.fee-foot{padding:16px 26px;border-top:1px solid var(--line);background:var(--surface);font-size:12.6px;color:var(--muted);line-height:1.55}
+
+/* ================= FAQ ================= */
+details.faq{background:var(--surface);border:1px solid var(--line);border-radius:12px;margin-bottom:12px;overflow:hidden;transition:border-color .18s ease}
+details.faq[open]{border-color:var(--navy-300);box-shadow:var(--shadow-sm)}
+details.faq summary{padding:18px 22px;cursor:pointer;font-weight:700;font-size:16.2px;list-style:none;
+  display:flex;gap:14px;align-items:flex-start;color:var(--ink)}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary::after{content:"+";margin-left:auto;font-size:24px;font-weight:400;color:var(--navy);line-height:1;flex:0 0 auto}
+details.faq[open] summary::after{content:"−"}
+details.faq summary:hover{color:var(--navy)}
+details.faq .ans{padding:0 22px 20px 22px;color:var(--ink-2);font-size:15.4px;line-height:1.68}
+details.faq .ans p + p{margin-top:11px}
+
+/* ================= MẠNG LƯỚI ================= */
+.net{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.net span{font-size:14px;font-weight:600;padding:8px 15px;border-radius:999px;background:var(--surface);
+  border:1px solid var(--line);color:var(--ink-2);display:inline-flex;gap:8px;align-items:center}
+.net span::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold)}
+.net span.hq::before{background:var(--navy);box-shadow:0 0 0 3px color-mix(in srgb,var(--navy) 22%,transparent)}
+
+/* ================= CTA CUỐI ================= */
+.cta{color:#fff;background:radial-gradient(760px 460px at 12% -10%, rgba(184,134,42,.24), transparent 60%),
+  linear-gradient(150deg,#1F478D,#0D2245)}
+.cta-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,54px);align-items:start}
+@media (max-width:900px){.cta-grid{grid-template-columns:1fr}}
+.cta h2{color:#fff}
+.cta .lede{color:rgba(255,255,255,.85)}
+.cta-contacts{display:grid;gap:12px;margin-top:26px}
+.cc{display:flex;gap:14px;align-items:center;padding:15px 18px;border-radius:13px;
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);text-decoration:none;color:#fff;
+  transition:background .16s ease,transform .16s ease}
+.cc:hover{background:rgba(255,255,255,.15);transform:translateX(3px)}
+.cc svg{flex:0 0 auto;color:var(--gold-hi)}
+.cc b{display:block;font-size:16.5px;line-height:1.25}
+.cc span{font-size:13px;color:rgba(255,255,255,.65)}
+.form-card{background:var(--surface);border-radius:var(--r-lg);padding:26px;box-shadow:var(--shadow-lg);color:var(--ink)}
+.form-card h3{margin-bottom:6px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+@media (max-width:520px){.form-grid{grid-template-columns:1fr}}
+.form-grid .full{grid-column:1/-1}
+.form-card label{font-size:13.4px;font-weight:700;display:block;margin-bottom:6px}
+.form-card .req{color:var(--danger)}
+.inp,select.inp,textarea.inp{width:100%;padding:12px 14px;border-radius:11px;border:1.5px solid var(--line);
+  background:var(--bg);color:var(--ink);font:inherit;font-size:16px}
+.inp:focus{outline:none;border-color:var(--navy);box-shadow:0 0 0 3px color-mix(in srgb,var(--navy) 18%,transparent)}
+textarea.inp{min-height:86px;resize:vertical}
+.form-msg{margin-top:14px;padding:14px 16px;border-radius:11px;font-size:14.3px;line-height:1.55;display:none}
+.form-msg.show{display:block}
+.form-msg.ok{background:color-mix(in srgb,var(--ok) 11%,transparent);border:1px solid color-mix(in srgb,var(--ok) 32%,transparent)}
+.form-msg.err{background:color-mix(in srgb,var(--danger) 10%,transparent);border:1px solid color-mix(in srgb,var(--danger) 30%,transparent)}
+.copybox{margin-top:12px;font-size:13px;font-family:ui-monospace,Consolas,monospace;white-space:pre-wrap;
+  background:var(--bg-alt);border:1px solid var(--line);border-radius:10px;padding:13px;max-height:190px;overflow:auto;color:var(--ink-2)}
+
+/* ================= FOOTER ================= */
+footer{background:var(--bg-alt);border-top:1px solid var(--line);padding:48px 0 110px}
+.f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:34px}
+@media (max-width:820px){.f-grid{grid-template-columns:1fr;gap:26px}}
+footer img.flogo{height:34px;margin-bottom:14px}
+:root[data-theme="dark"] footer img.flogo{filter:brightness(1.9) saturate(.55)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) footer img.flogo{filter:brightness(1.9) saturate(.55)}}
+footer h4{font-size:12.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--navy);margin:0 0 12px}
+footer ul{list-style:none;padding:0;display:grid;gap:8px;font-size:14.5px;color:var(--ink-2)}
+footer a{color:var(--ink-2);text-decoration:none}
+footer a:hover{color:var(--navy)}
+.disc{margin-top:34px;padding-top:22px;border-top:1px solid var(--line);font-size:12.6px;color:var(--muted);line-height:1.6}
+
+/* ================= THANH DÍNH DI ĐỘNG ================= */
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:70;display:none;gap:9px;padding:10px 12px;
+  background:color-mix(in srgb,var(--bg) 94%,transparent);backdrop-filter:blur(12px);
+  border-top:1px solid var(--line);box-shadow:0 -6px 24px -14px rgba(13,34,69,.5)}
+.mbar .btn{flex:1;padding:13px 8px;font-size:14.5px}
+@media (max-width:820px){.mbar{display:flex}body{padding-bottom:74px}}
+
+/* ================= CHUYỂN ĐỘNG / IN ================= */
+.js .rv{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.js .rv{opacity:1;transform:none}}
+@media print{
+  nav,.mbar,.theme-btn,.hero-cta,.form-card{display:none!important}
+  body{font-size:11.5pt;padding-bottom:0}
+  .hero,.cta{background:#1F478D!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  section{padding:18px 0;break-inside:avoid}
+  .card,.tl-c,.aud,details.faq,.duo{break-inside:avoid}
+  details.faq .ans{display:block!important}
+}
+</style>
+<script>document.documentElement.className+=' js';</script>
+
+<style>
+/* ---------- thanh hotline goc tren ben trai ---------- */
+.topline{background:#12305F;color:rgba(255,255,255,.82);font-size:13.4px}
+.topline .in{max-width:1200px;margin:0 auto;padding:9px 22px;
+  display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.topline a{color:#fff;text-decoration:none;display:inline-flex;align-items:center;gap:8px}
+.topline .r{display:flex;gap:18px;flex-wrap:wrap;align-items:center}
+.topline .r a:hover{color:#E4B451}
+
+/* Hotline: chu DO, nhap nhay dang nhip tho 1,6 giay/nhip.
+   Co y KHONG chop tat nhanh — chop qua 3 lan/giay gay kho chiu mat
+   va vi pham chuan tiep can WCAG. Ai bat che do giam chuyen dong thi chu dung yen. */
+.topline .hot{font-weight:800;font-size:15.6px;letter-spacing:.01em;color:#FF6B6B;
+  text-shadow:0 0 14px rgba(255,107,107,.55);
+  animation:hotNhay 1.6s ease-in-out infinite}
+.topline .hot svg{color:#FF6B6B}
+.topline .hot:hover{color:#FF9090;animation-play-state:paused}
+@keyframes hotNhay{0%,100%{opacity:1;text-shadow:0 0 14px rgba(255,107,107,.55)}
+                   50%{opacity:.5;text-shadow:0 0 4px rgba(255,107,107,.2)}}
+@media (prefers-reduced-motion:reduce){.topline .hot{animation:none;opacity:1}}
+@media (max-width:720px){.topline .in{justify-content:center;padding:8px 16px}.topline .r{display:none}}
+@media print{.topline .hot{animation:none!important;opacity:1!important}}
+
+/* ---------- Riêng trang tuyển dụng ---------- */
+.mail-lon{display:inline-flex;align-items:center;gap:13px;padding:17px 26px;border-radius:999px;
+  background:linear-gradient(180deg,var(--gold-hi),var(--gold));color:#1F1707;
+  font-weight:800;font-size:18.5px;text-decoration:none;box-shadow:var(--shadow-lg);
+  transition:transform .16s ease}
+.mail-lon:hover{transform:translateY(-2px)}
+.mail-lon svg{flex:0 0 auto}
+
+.buoc{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:26px}
+@media (max-width:900px){.buoc{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.buoc{grid-template-columns:1fr}}
+.buoc .b{padding:20px;border-radius:var(--r-lg);background:var(--surface);
+  border:1px solid var(--line)}
+.buoc .b .n{font-size:12.5px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--navy)}
+.buoc .b h3{margin:9px 0 8px;font-size:17px}
+.buoc .b p{margin:0;font-size:14.4px}
+
+/* Khối thời hạn — thứ ứng viên cần biết ngay */
+.han{display:grid;grid-template-columns:1fr auto;gap:22px;align-items:center;
+  padding:24px 28px;border-radius:var(--r-lg);border:2px solid var(--gold);
+  background:color-mix(in srgb,var(--gold) 9%,transparent)}
+@media (max-width:680px){.han{grid-template-columns:1fr;text-align:center}}
+.han .moc{font-size:clamp(20px,2.6vw,26px);font-weight:800;line-height:1.3;margin:0}
+.han .phu{margin:8px 0 0;font-size:14.6px}
+.han .dem{text-align:center;padding:14px 24px;border-radius:14px;
+  background:var(--navy);color:#fff;min-width:150px}
+.han .dem .so{display:block;font-size:34px;font-weight:800;line-height:1}
+.han .dem .chu{display:block;margin-top:5px;font-size:13px;opacity:.86}
+
+/* Quyền lợi — danh sách có dấu tích */
+.ql{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:24px}
+@media (max-width:760px){.ql{grid-template-columns:1fr}}
+.ql .m{display:flex;gap:13px;padding:17px 19px;border-radius:14px;
+  background:var(--surface);border:1px solid var(--line)}
+.ql .m svg{flex:0 0 auto;color:var(--gold);margin-top:2px}
+.ql .m b{display:block;font-size:16px;margin-bottom:5px}
+.ql .m span{font-size:14.3px;color:var(--ink-2)}
+@media print{.mail-lon{border:1.5px solid #999}.han .dem{display:none}}
+</style>
+
+
+
+<link rel="canonical" href="https://dichvu.asco.vn/tuyen-dung-ke-toan-tong-hop/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Hãng Kiểm toán và Định giá ASCO">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:url" content="https://dichvu.asco.vn/tuyen-dung-ke-toan-tong-hop/">
+<meta property="og:title" content="Tuyển Kế toán tổng hợp — ASCO">
+<meta property="og:description" content="Nhận hồ sơ từ 19/08/2026 đến 19/09/2026. Thu nhập thoả thuận, đóng bảo hiểm xã hội, nghỉ thứ Bảy, nghỉ ngày sinh nhật và ngày Gia đình Việt Nam. Gửi hồ sơ về asco@asco.vn.">
+<meta property="og:image" content="https://dichvu.asco.vn/og-ktda.png">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+<!-- =============== THANH HOTLINE =============== -->
+<div class="topline">
+  <div class="in">
+    <a class="hot" href="tel:0825092007" title="Hotline ASCO — cũng là ngày thành lập công ty: 25/09/2007">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.4 2.1L8 9.8a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg> <span>Hotline ASCO: 08 2509 2007</span>
+    </a>
+    <div class="r">
+      <a href="tel:0917848546">KTT Chu Thị Mai — 0917 848 546</a>
+      <a href="mailto:asco@asco.vn">asco@asco.vn</a>
+    </div>
+  </div>
+</div>
+
+
+<nav>
+  <div class="nav-in">
+    <a class="brand" href="#top" aria-label="ASCO">
+      <img src="data:image/png;base64,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" alt="Hãng Kiểm toán và Định giá ASCO">
+      <span class="brand-tag">Kiểm toán · Thẩm định giá</span>
+    </a>
+    <div class="nav-links">
+      <a href="#thoi-han">Thời hạn</a>
+      <a href="#cong-viec">Công việc</a>
+      <a href="#yeu-cau">Yêu cầu</a>
+      <a href="#quyen-loi">Quyền lợi</a>
+      <a href="#ung-tuyen">Ứng tuyển</a>
+      <a href="#hoi-dap">Hỏi đáp</a>
+    </div>
+    <div class="nav-act">
+      <button class="theme-btn" id="themeBtn" type="button" aria-label="Đổi giao diện sáng/tối"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg></button>
+      <a class="btn btn-navy btn-sm" href="#ung-tuyen">Nộp hồ sơ</a>
+    </div>
+  </div>
+</nav>
+
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="pill"><span class="dot"></span>Tuyển dụng · Nhận hồ sơ từ 19/08/2026 đến 19/09/2026</span>
+        <h1>Tuyển Kế toán<br>tổng hợp
+          <span class="accent">Hãng Kiểm toán và Định giá ASCO</span>
+        </h1>
+        <p class="lede">
+          Làm kế toán cho <b>chính ASCO</b> — không phải làm kiểm toán cho khách hàng.
+          Điểm khác so với nơi khác: đồng nghiệp xung quanh đều là người làm nghề kiểm toán,
+          nên sổ sách phải chuẩn, mà cũng vì thế mà <b>học nghề nhanh</b>.
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn-gold" href="#ung-tuyen">Gửi hồ sơ ứng tuyển →</a>
+          <a class="btn btn-onnavy" href="#cong-viec">Xem mô tả công việc</a>
+        </div>
+        <p class="hero-note">Hồ sơ gửi về asco@asco.vn · ASCO phản hồi mọi hồ sơ nhận trong thời hạn</p>
+      </div>
+
+      <aside class="hero-card">
+        <h3><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="m3 6 9 6.5L21 6"/></svg> Liên hệ trực tiếp</h3>
+        <ul class="hc-list">
+          <li><span class="hc-num">1</span><span><b>Bà Chu Thị Mai — Kế toán trưởng</b><br>0917 848 546</span></li>
+          <li><span class="hc-num">2</span><span><b>Hotline ASCO — 08 2509 2007</b><br>Tổng đài công ty</span></li>
+          <li><span class="hc-num">3</span><span><b>asco@asco.vn</b><br>Gửi CV, tiêu đề thư ghi rõ vị trí ứng tuyển</span></li>
+        </ul>
+        <p class="hc-foot">Muốn hỏi về công việc trước khi nộp hồ sơ thì gọi thẳng Kế toán trưởng.</p>
+      </aside>
+    </div>
+  </div>
+
+  <div class="trust">
+    <div class="trust-in">
+      <div class="trust-i"><div><b>Nghỉ thứ Bảy</b><span>Làm việc thứ Hai đến thứ Sáu</span></div></div>
+      <div class="trust-i"><div><b>Bảo hiểm xã hội</b><span>Đóng đầy đủ theo quy định</span></div></div>
+      <div class="trust-i"><div><b>Thu nhập thoả thuận</b><span>Theo năng lực và kết quả công việc</span></div></div>
+      <div class="trust-i"><div><b>Từ năm 2007</b><span>ASCO hành nghề 19 năm, 15 điểm hiện diện</span></div></div>
+    </div>
+  </div>
+</header>
+
+
+<section id="thoi-han" class="alt">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="eyebrow">Điều cần biết ngay</div>
+      <h2>Thời hạn nhận hồ sơ</h2>
+    </div>
+    <div class="han rv">
+      <div>
+        <p class="moc">Từ ngày 19/08/2026 đến hết ngày 19/09/2026</p>
+        <p class="phu">
+          Hồ sơ gửi sau thời hạn này vẫn được ASCO lưu lại, nhưng sẽ xét cho các đợt tuyển sau.
+          Anh/chị gửi sớm thì được trao đổi sớm.
+        </p>
+      </div>
+      <div class="dem" id="demNgay" hidden>
+        <span class="so" id="soNgay">—</span>
+        <span class="chu" id="chuNgay">ngày còn lại</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="cong-viec">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="eyebrow">Mô tả công việc</div>
+      <h2>Kế toán tổng hợp ở ASCO làm gì</h2>
+      <p class="lede" style="margin-top:14px">Kế toán tổng hợp ở một hãng kiểm toán có điểm khác so với doanh nghiệp thông thường: <b>sổ sách của chính công ty cũng phải chuẩn</b>, vì đồng nghiệp xung quanh đều là người làm nghề kiểm toán. Bù lại, đây là chỗ học nghề nhanh — có người giỏi ngay bên cạnh để hỏi.</p>
+    </div>
+    <div class="grid g2">
+      <article class="card rv"><span class="badge b-navy">01</span><h3 style="margin-top:12px">Tổng hợp số liệu và lập báo cáo tài chính</h3><p style="margin-top:10px">Nhận số liệu từ các phần hành, kiểm tra tính đầy đủ và hợp lý, hạch toán tổng hợp và lập báo cáo tài chính theo chế độ kế toán hiện hành.</p></article>
+      <article class="card rv"><span class="badge b-navy">02</span><h3 style="margin-top:12px">Theo dõi doanh thu, chi phí và công nợ</h3><p style="margin-top:10px">Theo dõi doanh thu theo từng hợp đồng dịch vụ, phân bổ chi phí, đối chiếu công nợ phải thu với khách hàng và phải trả với nhà cung cấp.</p></article>
+      <article class="card rv"><span class="badge b-navy">03</span><h3 style="margin-top:12px">Kê khai và quyết toán thuế</h3><p style="margin-top:10px">Lập tờ khai thuế giá trị gia tăng, thuế thu nhập doanh nghiệp, thuế thu nhập cá nhân; chuẩn bị hồ sơ quyết toán thuế và làm việc với cơ quan thuế khi có yêu cầu.</p></article>
+      <article class="card rv"><span class="badge b-navy">04</span><h3 style="margin-top:12px">Quản lý hoá đơn và chứng từ</h3><p style="margin-top:10px">Phát hành và theo dõi hoá đơn điện tử, kiểm soát tính hợp lệ của chứng từ đầu vào, lưu trữ hồ sơ kế toán đúng quy định.</p></article>
+      <article class="card rv"><span class="badge b-navy">05</span><h3 style="margin-top:12px">Theo dõi tài sản, công cụ dụng cụ và ngân hàng</h3><p style="margin-top:10px">Quản lý sổ tài sản cố định, tính khấu hao và phân bổ, đối chiếu số dư ngân hàng định kỳ.</p></article>
+      <article class="card rv"><span class="badge b-navy">06</span><h3 style="margin-top:12px">Phối hợp với chi nhánh và văn phòng đại diện</h3><p style="margin-top:10px">ASCO có <b>trụ sở chính cùng 7 chi nhánh và 7 văn phòng đại diện</b>. Kế toán tổng hợp là đầu mối thu số liệu từ các điểm này — phần việc đòi hỏi tính kỷ luật về thời hạn và khả năng làm việc với nhiều người ở xa.</p></article>
+      <article class="card rv"><span class="badge b-navy">07</span><h3 style="margin-top:12px">Hỗ trợ công tác quản trị nội bộ</h3><p style="margin-top:10px">Cung cấp số liệu cho Ban Tổng Giám đốc khi lập kế hoạch, theo dõi ngân sách và các báo cáo quản trị theo yêu cầu.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="yeu-cau" class="alt">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="eyebrow">Yêu cầu ứng viên</div>
+      <h2>ASCO tìm người thế nào</h2>
+      <p class="lede" style="margin-top:14px">
+        ASCO không đặt ngưỡng cứng về số năm kinh nghiệm. Điều quan trọng hơn là
+        <b>anh/chị đã tự lập được báo cáo tài chính và tự làm được hồ sơ quyết toán thuế hay chưa</b>.
+      </p>
+    </div>
+    <div class="grid g2">
+      <article class="card rv"><h3>Chuyên ngành kế toán, kiểm toán hoặc tài chính</h3><p style="margin-top:10px">Tốt nghiệp cao đẳng hoặc đại học các chuyên ngành này.</p></article>
+      <article class="card rv"><h3>Đã làm kế toán tổng hợp hoặc vị trí tương đương</h3><p style="margin-top:10px">ASCO ưu tiên ứng viên đã tự lập được báo cáo tài chính và tự làm được hồ sơ quyết toán thuế. Số năm cụ thể trao đổi khi phỏng vấn.</p></article>
+      <article class="card rv"><h3>Nắm chế độ kế toán và pháp luật thuế hiện hành</h3><p style="margin-top:10px">Quan trọng hơn việc thuộc lòng: biết tra cứu văn bản và biết hỏi khi chưa chắc.</p></article>
+      <article class="card rv"><h3>Thành thạo phần mềm kế toán và Excel</h3><p style="margin-top:10px">Dùng được phần mềm nào cũng được — ASCO hướng dẫn phần mềm đang dùng. Excel thì cần thật sự thạo vì công việc tổng hợp nhiều số liệu từ nhiều nguồn.</p></article>
+      <article class="card rv"><h3>Cẩn thận và giữ đúng hạn</h3><p style="margin-top:10px">Kế toán tổng hợp là nút thắt về thời gian: chậm một khâu là cả chuỗi báo cáo chậm theo.</p></article>
+      <article class="card rv"><h3>Giữ bảo mật</h3><p style="margin-top:10px">Làm việc với số liệu tài chính của công ty và thông tin liên quan tới khách hàng. Đây là yêu cầu bắt buộc của nghề, không phải lời nhắc suông.</p></article>
+    </div>
+  </div>
+</section>
+
+
+<section id="quyen-loi">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="eyebrow">Quyền lợi</div>
+      <h2>ASCO dành cho người vào vị trí này</h2>
+    </div>
+    <div class="ql rv">
+      <div class="m"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12 5.5 5.5L20 7"/></svg><div><b>Thu nhập thoả thuận</b><span>Căn cứ năng lực thực tế và kết quả công việc. ASCO trao đổi cụ thể khi phỏng vấn thay vì đăng một con số chung cho mọi ứng viên.</span></div></div>
+      <div class="m"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12 5.5 5.5L20 7"/></svg><div><b>Đóng bảo hiểm xã hội đầy đủ</b><span>Theo quy định của pháp luật lao động.</span></div></div>
+      <div class="m"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12 5.5 5.5L20 7"/></svg><div><b>Nghỉ thứ Bảy</b><span>Làm việc từ thứ Hai đến thứ Sáu. Với nghề kế toán thì đây là điều không phải nơi nào cũng có.</span></div></div>
+      <div class="m"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12 5.5 5.5L20 7"/></svg><div><b>Nghỉ ngày sinh nhật</b><span>Ngày sinh nhật của mỗi người là một ngày nghỉ riêng.</span></div></div>
+      <div class="m"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12 5.5 5.5L20 7"/></svg><div><b>Nghỉ ngày Gia đình Việt Nam</b><span>Ngày 28 tháng 6 hằng năm — ASCO xem đây là ngày dành cho gia đình của người lao động.</span></div></div>
+      <div class="m"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12 5.5 5.5L20 7"/></svg><div><b>Môi trường chuyên nghiệp</b><span>Hãng kiểm toán hành nghề từ năm 2007, có quy trình và quy chế nội bộ rõ ràng.</span></div></div>
+      <div class="m"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12 5.5 5.5L20 7"/></svg><div><b>Cơ hội phát triển nghề nghiệp</b><span>Làm việc cạnh đội ngũ kiểm toán viên hành nghề, được tiếp cận chuẩn mực và quy định mới sớm hơn mặt bằng chung. ASCO có khung đào tạo nội bộ theo từng cấp bậc.</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="ve-asco" class="alt">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="eyebrow">Về nơi anh/chị sẽ làm việc</div>
+      <h2>Vài điều về ASCO</h2>
+    </div>
+    <div class="grid g2">
+      <article class="card rv"><h3>Hành nghề từ ngày 25/09/2007</h3><p style="margin-top:10px">Mười chín năm hoạt động trong lĩnh vực kiểm toán và thẩm định giá. Không phải đơn vị mới lập.</p></article>
+      <article class="card rv"><h3>21 kiểm toán viên được Uỷ ban Chứng khoán Nhà nước chấp thuận</h3><p style="margin-top:10px">Người làm kế toán ở đây có đồng nghiệp là kiểm toán viên hành nghề — hỏi được ngay khi vướng.</p></article>
+      <article class="card rv"><h3>Mạng lưới 15 điểm hiện diện</h3><p style="margin-top:10px">Trụ sở Hà Nội, 7 chi nhánh và 7 văn phòng đại diện trên toàn quốc. Công việc kế toán tổng hợp vì thế có quy mô, không phải chỉ ghi sổ một pháp nhân nhỏ.</p></article>
+      <article class="card rv"><h3>Ba mảng dịch vụ</h3><p style="margin-top:10px">Kiểm toán báo cáo tài chính · Kiểm toán báo cáo quyết toán dự án hoàn thành · Thẩm định giá. Nghiệp vụ kế toán vì thế đa dạng hơn một công ty đơn ngành.</p></article>
+    </div>
+  </div>
+</section>
+
+
+<section class="cta" id="ung-tuyen">
+  <div class="wrap">
+    <div class="sec-head rv" style="text-align:center;max-width:760px;margin:0 auto">
+      <div class="eyebrow" style="color:var(--gold-hi);justify-content:center">Ứng tuyển</div>
+      <h2>Gửi hồ sơ về asco@asco.vn</h2>
+      <p class="lede" style="margin-top:16px">
+        Nhận hồ sơ <b>từ 19/08/2026 đến hết 19/09/2026</b>. Tiêu đề thư ghi rõ
+        <b>“Ứng tuyển Kế toán tổng hợp”</b>.
+      </p>
+      <div style="margin-top:26px">
+        <a class="mail-lon" href="mailto:asco@asco.vn?subject=%E1%BB%A8ng%20tuy%E1%BB%83n%20K%E1%BA%BF%20to%C3%A1n%20t%E1%BB%95ng%20h%E1%BB%A3p&body=K%C3%ADnh%20g%E1%BB%ADi%20H%C3%A3ng%20Ki%E1%BB%83m%20to%C3%A1n%20v%C3%A0%20%C4%90%E1%BB%8Bnh%20gi%C3%A1%20ASCO%2C%0A%0AT%C3%B4i%20xin%20%E1%BB%A9ng%20tuy%E1%BB%83n%20v%E1%BB%8B%20tr%C3%AD%20K%E1%BA%BF%20to%C3%A1n%20t%E1%BB%95ng%20h%E1%BB%A3p.%0A%0AAnh/ch%E1%BB%8B%20vui%20l%C3%B2ng%20%C4%91i%E1%BB%81n%20th%C3%B4ng%20tin%20v%C3%A0o%20sau%20d%E1%BA%A5u%20hai%20ch%E1%BA%A5m%20%E1%BB%9F%20t%E1%BB%ABng%20d%C3%B2ng%20d%C6%B0%E1%BB%9Bi%20%C4%91%C3%A2y%20v%C3%A0%20GI%E1%BB%AE%20NGUY%C3%8AN%20c%C3%A1c%20d%C3%B2ng%20b%E1%BA%AFt%20%C4%91%E1%BA%A7u%20b%E1%BA%B1ng%20d%E1%BA%A5u%20%23.%20C%C3%A1ch%20n%C3%A0y%20gi%C3%BAp%20ASCO%20x%E1%BB%AD%20l%C3%BD%20h%E1%BB%93%20s%C6%A1%20nhanh%20v%C3%A0%20kh%C3%B4ng%20b%E1%BB%8F%20s%C3%B3t%20th%C3%B4ng%20tin%20c%E1%BB%A7a%20anh/ch%E1%BB%8B.%0A%0A-----%20TH%C3%94NG%20TIN%20%E1%BB%A8NG%20VI%C3%8AN%20-----%0A%23%20HO%20VA%20TEN%3A%20%0A%23%20NAM%20SINH%3A%20%0A%23%20DIEN%20THOAI%3A%20%0A%23%20EMAIL%3A%20%0A%23%20TRINH%20DO%20VA%20CHUYEN%20NGANH%3A%20%0A%23%20SO%20NAM%20KINH%20NGHIEM%3A%20%0A%23%20VI%20TRI%20GAN%20NHAT%3A%20%0A%23%20NOI%20LAM%20VIEC%20GAN%20NHAT%3A%20%0A%23%20DA%20TU%20LAP%20BCTC%20CHUA%3A%20%0A%23%20PHAN%20MEM%20KE%20TOAN%20DA%20DUNG%3A%20%0A%23%20MUC%20THU%20NHAP%20MONG%20MUON%3A%20%0A%23%20CO%20THE%20BAT%20DAU%20TU%20NGAY%3A%20%0A-----%20H%E1%BA%BET%20-----%0A%0AT%C3%B4i%20g%E1%BB%ADi%20k%C3%A8m%20CV%20trong%20th%C6%B0%20n%C3%A0y.%0A%0ATr%C3%A2n%20tr%E1%BB%8Dng%20c%E1%BA%A3m%20%C6%A1n.%0A"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="m3 6 9 6.5L21 6"/></svg> Gửi hồ sơ qua email</a>
+      </div>
+      <p class="small" style="margin-top:16px;opacity:.85">
+        Bấm nút sẽ mở ứng dụng thư của anh/chị với địa chỉ, tiêu đề và
+        <b>mẫu thông tin đã điền sẵn</b> — anh/chị chỉ cần điền vào chỗ trống và đính kèm CV.
+      </p>
+      <div style="margin-top:14px">
+        <button class="btn btn-outline btn-sm" type="button" id="chepMau">
+          Không mở được ứng dụng thư? Sao chép mẫu
+        </button>
+        <span id="daChep" style="display:none;margin-left:10px;font-size:13.6px;color:var(--gold-hi)">
+          Đã sao chép — dán vào thư gửi tới asco@asco.vn
+        </span>
+      </div>
+      <div id="hopMau" style="display:none;margin-top:14px;text-align:left">
+        <textarea id="mauThu" readonly style="width:100%;min-height:210px;padding:14px;
+          border-radius:12px;border:1px solid rgba(255,255,255,.25);
+          background:rgba(0,0,0,.18);color:#fff;font:inherit;font-size:13.4px;
+          line-height:1.6"></textarea>
+      </div>
+    </div>
+
+    <div class="buoc rv">
+      <div class="b"><div class="n">Bước 1</div><h3>Gửi hồ sơ</h3><p>Gửi CV về <b>asco@asco.vn</b> trong thời hạn từ 19/08/2026 đến 19/09/2026. Tiêu đề thư ghi rõ: <b>Ứng tuyển Kế toán tổng hợp</b>.</p></div>
+      <div class="b"><div class="n">Bước 2</div><h3>ASCO phản hồi</h3><p>Chúng tôi phản hồi mọi hồ sơ nhận được trong thời hạn, kể cả hồ sơ chưa phù hợp.</p></div>
+      <div class="b"><div class="n">Bước 3</div><h3>Trao đổi chuyên môn</h3><p>Kế toán trưởng trao đổi trực tiếp về nghiệp vụ và cách xử lý một vài tình huống thực tế.</p></div>
+      <div class="b"><div class="n">Bước 4</div><h3>Trao đổi với Ban Tổng Giám đốc</h3><p>Bàn về phạm vi công việc, thu nhập và thời điểm bắt đầu.</p></div>
+    </div>
+
+    <div class="cta-contacts rv" style="max-width:760px;margin:34px auto 0">
+      <a class="cc" href="tel:0917848546">
+        <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.4 2.1L8 9.8a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+        <div><b>Bà Chu Thị Mai — 0917 848 546</b><span>Kế toán trưởng · gọi trực tiếp nếu muốn hỏi về công việc</span></div>
+      </a>
+      <a class="cc" href="tel:0825092007">
+        <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.4 2.1L8 9.8a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+        <div><b>Hotline ASCO — 08 2509 2007</b><span>Tổng đài công ty · điện thoại và Zalo</span></div>
+      </a>
+      <a class="cc" href="mailto:asco@asco.vn">
+        <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="m3 6 9 6.5L21 6"/></svg>
+        <div><b>asco@asco.vn</b><span>Địa chỉ nhận hồ sơ ứng tuyển</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<section id="hoi-dap" class="alt">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="eyebrow">Hỏi &amp; đáp</div>
+      <h2>Những câu ứng viên hay hỏi</h2>
+    </div>
+    <details class="faq rv"><summary>Hạn nộp hồ sơ đến khi nào?</summary><div class="ans">ASCO nhận hồ sơ từ <b>19/08/2026</b> đến hết <b>19/09/2026</b>. Hồ sơ gửi sau thời hạn này vẫn được lưu, nhưng sẽ xét cho các đợt tuyển sau.</div></details>
+    <details class="faq rv"><summary>Mức thu nhập cụ thể là bao nhiêu?</summary><div class="ans">Thu nhập thoả thuận theo năng lực và kết quả công việc. Anh/chị cứ ghi mức mong muốn trong hồ sơ, ASCO trao đổi thẳng thắn khi phỏng vấn. Chúng tôi không đăng một con số chung vì mỗi ứng viên một năng lực khác nhau.</div></details>
+    <details class="faq rv"><summary>Có thật sự được nghỉ thứ Bảy không?</summary><div class="ans">Có. Làm việc từ thứ Hai đến thứ Sáu. Riêng mùa cao điểm quyết toán có thể phát sinh công việc ngoài giờ — ASCO nói trước để anh/chị cân nhắc, thay vì để anh/chị vào rồi mới biết.</div></details>
+    <details class="faq rv"><summary>Tôi chưa từng làm ở công ty kiểm toán, có ứng tuyển được không?</summary><div class="ans">Được. Vị trí này là kế toán cho chính ASCO, không phải làm kiểm toán cho khách hàng. Kinh nghiệm kế toán tổng hợp ở doanh nghiệp bất kỳ đều phù hợp.</div></details>
+    <details class="faq rv"><summary>Nơi làm việc ở đâu?</summary><div class="ans">Trụ sở chính tại Hà Nội: Số 2, ngõ 308 phố Lê Trọng Tấn, phường Phương Liệt. Chi tiết trao đổi khi phỏng vấn.</div></details>
+    <details class="faq rv"><summary>Tôi muốn hỏi thêm trước khi nộp hồ sơ?</summary><div class="ans">Anh/chị gọi trực tiếp <b>Bà Chu Thị Mai — Kế toán trưởng</b> theo số <b>0917 848 546</b>, hoặc gọi tổng đài <b>08 2509 2007</b>.</div></details>
+  </div>
+</section>
+
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <img class="flogo" src="data:image/png;base64,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" alt="ASCO">
+        <p class="small">Hãng Kiểm toán và Định giá ASCO — thành lập ngày 25/09/2007</p>
+      </div>
+      <div>
+        <h4>Liên hệ</h4>
+        <ul class="f-list">
+          <li>Số 2, ngõ 308 phố Lê Trọng Tấn, phường Phương Liệt, thành phố Hà Nội</li>
+          <li><a href="tel:0825092007">08 2509 2007</a> · <a href="tel:02437930960">024 3793 0960</a></li>
+          <li>Bà Chu Thị Mai — Kế toán trưởng: <a href="tel:0917848546">0917 848 546</a></li>
+          <li><a href="mailto:asco@asco.vn">asco@asco.vn</a> · <a href="https://asco.vn" target="_blank" rel="noopener noreferrer">asco.vn</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Dịch vụ</h4>
+        <ul class="f-list">
+          <li>Kiểm toán báo cáo tài chính</li>
+          <li>Kiểm toán báo cáo quyết toán dự án hoàn thành</li>
+          <li>Thẩm định giá · Tư vấn · Đào tạo</li>
+        </ul>
+      </div>
+    </div>
+    <p class="small" style="margin-top:30px;opacity:.75">
+      Thông tin tuyển dụng do ASCO đăng, nhận hồ sơ từ 19/08/2026 đến 19/09/2026.
+      Thu nhập và các điều khoản lao động cụ thể được thoả thuận trong hợp đồng lao động
+      theo quy định của pháp luật.
+    </p>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a class="btn btn-outline" href="tel:0917848546">Gọi KTT</a>
+  <a class="btn btn-outline" href="tel:0825092007">Hotline</a>
+  <a class="btn btn-gold" href="mailto:asco@asco.vn?subject=%E1%BB%A8ng%20tuy%E1%BB%83n%20K%E1%BA%BF%20to%C3%A1n%20t%E1%BB%95ng%20h%E1%BB%A3p&body=K%C3%ADnh%20g%E1%BB%ADi%20H%C3%A3ng%20Ki%E1%BB%83m%20to%C3%A1n%20v%C3%A0%20%C4%90%E1%BB%8Bnh%20gi%C3%A1%20ASCO%2C%0A%0AT%C3%B4i%20xin%20%E1%BB%A9ng%20tuy%E1%BB%83n%20v%E1%BB%8B%20tr%C3%AD%20K%E1%BA%BF%20to%C3%A1n%20t%E1%BB%95ng%20h%E1%BB%A3p.%0A%0AAnh/ch%E1%BB%8B%20vui%20l%C3%B2ng%20%C4%91i%E1%BB%81n%20th%C3%B4ng%20tin%20v%C3%A0o%20sau%20d%E1%BA%A5u%20hai%20ch%E1%BA%A5m%20%E1%BB%9F%20t%E1%BB%ABng%20d%C3%B2ng%20d%C6%B0%E1%BB%9Bi%20%C4%91%C3%A2y%20v%C3%A0%20GI%E1%BB%AE%20NGUY%C3%8AN%20c%C3%A1c%20d%C3%B2ng%20b%E1%BA%AFt%20%C4%91%E1%BA%A7u%20b%E1%BA%B1ng%20d%E1%BA%A5u%20%23.%20C%C3%A1ch%20n%C3%A0y%20gi%C3%BAp%20ASCO%20x%E1%BB%AD%20l%C3%BD%20h%E1%BB%93%20s%C6%A1%20nhanh%20v%C3%A0%20kh%C3%B4ng%20b%E1%BB%8F%20s%C3%B3t%20th%C3%B4ng%20tin%20c%E1%BB%A7a%20anh/ch%E1%BB%8B.%0A%0A-----%20TH%C3%94NG%20TIN%20%E1%BB%A8NG%20VI%C3%8AN%20-----%0A%23%20HO%20VA%20TEN%3A%20%0A%23%20NAM%20SINH%3A%20%0A%23%20DIEN%20THOAI%3A%20%0A%23%20EMAIL%3A%20%0A%23%20TRINH%20DO%20VA%20CHUYEN%20NGANH%3A%20%0A%23%20SO%20NAM%20KINH%20NGHIEM%3A%20%0A%23%20VI%20TRI%20GAN%20NHAT%3A%20%0A%23%20NOI%20LAM%20VIEC%20GAN%20NHAT%3A%20%0A%23%20DA%20TU%20LAP%20BCTC%20CHUA%3A%20%0A%23%20PHAN%20MEM%20KE%20TOAN%20DA%20DUNG%3A%20%0A%23%20MUC%20THU%20NHAP%20MONG%20MUON%3A%20%0A%23%20CO%20THE%20BAT%20DAU%20TU%20NGAY%3A%20%0A-----%20H%E1%BA%BET%20-----%0A%0AT%C3%B4i%20g%E1%BB%ADi%20k%C3%A8m%20CV%20trong%20th%C6%B0%20n%C3%A0y.%0A%0ATr%C3%A2n%20tr%E1%BB%8Dng%20c%E1%BA%A3m%20%C6%A1n.%0A">Gửi CV</a>
+</div>
+
+<script>var MAU_THU = "Kính gửi Hãng Kiểm toán và Định giá ASCO,\n\nTôi xin ứng tuyển vị trí Kế toán tổng hợp.\n\nAnh/chị vui lòng điền thông tin vào sau dấu hai chấm ở từng dòng dưới đây và GIỮ NGUYÊN các dòng bắt đầu bằng dấu #. Cách này giúp ASCO xử lý hồ sơ nhanh và không bỏ sót thông tin của anh/chị.\n\n----- THÔNG TIN ỨNG VIÊN -----\n# HO VA TEN: \n# NAM SINH: \n# DIEN THOAI: \n# EMAIL: \n# TRINH DO VA CHUYEN NGANH: \n# SO NAM KINH NGHIEM: \n# VI TRI GAN NHAT: \n# NOI LAM VIEC GAN NHAT: \n# DA TU LAP BCTC CHUA: \n# PHAN MEM KE TOAN DA DUNG: \n# MUC THU NHAP MONG MUON: \n# CO THE BAT DAU TU NGAY: \n----- HẾT -----\n\nTôi gửi kèm CV trong thư này.\n\nTrân trọng cảm ơn.\n";</script>
+
+<script>
+/* Đếm ngược tới hạn nhận hồ sơ. Ẩn hẳn khi đã quá hạn thay vì hiện số âm. */
+(function(){
+  var HAN = new Date('2026-09-19' + 'T23:59:59+07:00');
+  var hop = document.getElementById('demNgay');
+  var so  = document.getElementById('soNgay');
+  var chu = document.getElementById('chuNgay');
+  if (!hop) return;
+  var conLai = Math.ceil((HAN - new Date()) / 86400000);
+  if (conLai > 0) {
+    so.textContent = conLai;
+    chu.textContent = conLai === 1 ? 'ngày cuối cùng' : 'ngày còn lại';
+    hop.hidden = false;
+  } else {
+    /* Quá hạn: không hiện đếm ngược, và nói rõ cho ứng viên biết. */
+    var p = document.querySelector('.han .phu');
+    if (p) p.innerHTML = '<b>Đợt tuyển này đã hết hạn nhận hồ sơ.</b> '
+      + 'Anh/chị vẫn có thể gửi hồ sơ để ASCO lưu và xét cho các đợt sau.';
+  }
+})();
+
+/* Nút dự phòng: máy không đặt ứng dụng thư mặc định thì bấm mailto không mở được gì. */
+(function(){
+  var nut = document.getElementById('chepMau');
+  var hop = document.getElementById('hopMau');
+  var o   = document.getElementById('mauThu');
+  var bao = document.getElementById('daChep');
+  if (!nut || !o) return;
+  o.value = MAU_THU;
+  nut.addEventListener('click', function(){
+    hop.style.display = 'block';
+    o.select();
+    var xong = function(){
+      bao.style.display = 'inline';
+      setTimeout(function(){ bao.style.display = 'none'; }, 4000);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(MAU_THU).then(xong, function(){});
+    } else {
+      try { document.execCommand('copy'); xong(); } catch(e){}
+    }
+  });
+})();
+</script>
+
+<script>
+/* Hiệu ứng hiện dần khi cuộn tới */
+(function(){
+  var ds = document.querySelectorAll('.rv');
+  if (!('IntersectionObserver' in window)) {
+    for (var i=0;i<ds.length;i++) ds[i].classList.add('in');
+    return;
+  }
+  var qs = new IntersectionObserver(function(mp){
+    mp.forEach(function(m){ if(m.isIntersecting){ m.target.classList.add('in'); qs.unobserve(m.target);} });
+  }, {rootMargin:'0px 0px -8% 0px', threshold:.05});
+  for (var i=0;i<ds.length;i++) qs.observe(ds[i]);
+})();
+
+/* Nút đổi giao diện sáng / tối */
+(function(){
+  var b = document.getElementById('themeBtn'); if(!b) return;
+  var g = document.documentElement, K='asco_giao_dien';
+  try{ var l=localStorage.getItem(K); if(l) g.setAttribute('data-theme',l); }catch(e){}
+  b.addEventListener('click', function(){
+    var toi = g.getAttribute('data-theme')==='dark'
+      || (!g.getAttribute('data-theme') && matchMedia('(prefers-color-scheme:dark)').matches);
+    var moi = toi ? 'light':'dark';
+    g.setAttribute('data-theme', moi);
+    try{ localStorage.setItem(K,moi); }catch(e){}
+  });
+})();
+
+/* Đổi luôn chữ gợi ý trong ô nhập khi chuyển ngôn ngữ.
+   Nếu quên phần này thì chuyển sang tiếng Hàn xong ô nhập vẫn còn chữ Việt —
+   đúng kiểu lỗi "song ngữ nửa vời" mà khảo sát đối thủ đã chỉ ra. */
+(function(){
+  function doi(ma){
+    var o = document.querySelectorAll('[data-ph-vi][data-ph-ko]');
+    for (var i=0;i<o.length;i++){
+      o[i].setAttribute('placeholder', o[i].getAttribute(ma==='ko'?'data-ph-ko':'data-ph-vi'));
+    }
+  }
+  doi(document.documentElement.getAttribute('data-lang')||'vi');
+  document.addEventListener('click', function(e){
+    var b = e.target.closest && e.target.closest('.nut-ngon-ngu button[data-ma]');
+    if (b) doi(b.getAttribute('data-ma'));
+  });
+})();
+
+/* Biểu mẫu — gửi về asco@asco.vn */
+(function(){
+  var f = document.getElementById('leadForm'); if(!f) return;
+  var msg = document.getElementById('formMsg');
+  function la_ko(){ return document.documentElement.getAttribute('data-lang')==='ko'; }
+  f.addEventListener('submit', function(e){
+    e.preventDefault();
+    var thieu = [];
+    ['f_ct','f_ten','f_sdt','f_email'].forEach(function(id){
+      var o=document.getElementById(id); if(o && !o.value.trim()) thieu.push(id);
+    });
+    if (thieu.length){
+      msg.className='form-msg err show';
+      msg.textContent = la_ko() ? '필수 항목을 모두 입력해 주세요.'
+                                : 'Anh/chị vui lòng điền đủ các mục bắt buộc.';
+      return;
+    }
+    var d={}; ['f_ct','f_ten','f_cv','f_sdt','f_email','f_tinh','f_nd'].forEach(function(id){
+      var o=document.getElementById(id); if(o) d[id]=o.value.trim();
+    });
+    var than = 'Cong ty: '+d.f_ct
+      +'\nNguoi lien he: '+d.f_ten+' ('+(d.f_cv||'-')+')'
+      +'\nDien thoai: '+d.f_sdt
+      +'\nEmail: '+d.f_email
+      +'\nDia ban: '+(d.f_tinh||'-')
+      +'\nNoi dung: '+(d.f_nd||'-');
+    msg.className='form-msg ok show';
+    msg.textContent = la_ko()
+      ? '감사합니다. 2 근무시간 내에 회신드리겠습니다.'
+      : 'Cảm ơn anh/chị. ASCO sẽ phản hồi trong vòng 2 giờ làm việc.';
+    fetch('https://formsubmit.co/ajax/asco@asco.vn', {
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({_subject:'[Landing FDI Han Quoc] '+d.f_ct, message: than})
+    }).catch(function(){
+      location.href='mailto:asco@asco.vn?subject='+encodeURIComponent('[FDI Han Quoc] '+d.f_ct)
+        +'&body='+encodeURIComponent(than);
+    });
+    f.reset();
+  });
+})();
+</script>
+
+</body>
+</html>
