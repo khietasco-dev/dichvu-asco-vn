@@ -1,0 +1,1382 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://dichvu.asco.vn/kiem-toan-bctc-linh-vuc-chung-khoan/">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Hãng Kiểm toán và Định giá ASCO">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:url" content="https://dichvu.asco.vn/kiem-toan-bctc-linh-vuc-chung-khoan/">
+<meta property="og:title" content="Kiểm toán báo cáo tài chính công ty niêm yết — ASCO">
+<meta property="og:description" content="ASCO — 1 trong 28 tổ chức kiểm toán được UBCKNN chấp thuận năm 2026, 21 kiểm toán viên được chấp thuận. Kiểm toán BCTC công ty niêm yết, đại chúng, CTCK.">
+<meta property="og:image" content="https://dichvu.asco.vn/og-home.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Kiểm toán báo cáo tài chính công ty niêm yết — ASCO">
+<meta name="twitter:description" content="ASCO — 1 trong 28 tổ chức kiểm toán được UBCKNN chấp thuận năm 2026, 21 kiểm toán viên được chấp thuận. Kiểm toán BCTC công ty niêm yết, đại chúng, CTCK.">
+<meta name="twitter:image" content="https://dichvu.asco.vn/og-home.png">
+
+<title>Kiểm toán báo cáo tài chính công ty niêm yết — ASCO</title>
+<meta name="description" content="ASCO — 1 trong 28 tổ chức kiểm toán được UBCKNN chấp thuận năm 2026, 21 kiểm toán viên được chấp thuận. Kiểm toán BCTC công ty niêm yết, đại chúng, CTCK.">
+<meta name="theme-color" content="#1F478D">
+
+<style>
+/* ============ TOKENS (light là mặc định) ============ */
+:root{
+  --navy:#1F478D;         /* màu logo ASCO */
+  --navy-700:#173868;
+  --navy-900:#0E2547;
+  --navy-300:#5C82C4;
+  --tint:#EDF2FA;
+  --tint-2:#DCE6F6;
+  --gold:#C6912B;
+  --gold-hi:#E4B451;
+  --danger:#B22A26;
+  --ok:#1D7A54;
+
+  --bg:#FFFFFF;
+  --bg-alt:#F6F8FC;
+  --surface:#FFFFFF;
+  --ink:#12192A;
+  --ink-2:#37415A;
+  --muted:#5D6883;
+  --line:#DFE5EF;
+  --line-soft:#EDF1F7;
+
+  --shadow-sm:0 1px 2px rgba(14,37,71,.06);
+  --shadow:0 2px 4px rgba(14,37,71,.05), 0 14px 34px -20px rgba(14,37,71,.35);
+  --shadow-lg:0 4px 8px rgba(14,37,71,.06), 0 30px 60px -30px rgba(14,37,71,.45);
+
+  --maxw:1180px;
+  --r:14px;
+  --r-lg:20px;
+  --f:"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Roboto,Arial,sans-serif;
+  --f-num:"Segoe UI",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --navy:#7CA3E4;
+    --navy-700:#9DBCEF;
+    --navy-900:#C7D8F5;
+    --navy-300:#4E6FA8;
+    --tint:#16203A;
+    --tint-2:#1D2A49;
+    --gold:#E0B458;
+    --gold-hi:#F2CE83;
+    --danger:#F08A83;
+    --ok:#5FCB9C;
+
+    --bg:#0D2044;
+    --bg-alt:#0A1B3B;
+    --surface:#13294F;
+    --ink:#EAEFF8;
+    --ink-2:#C0CADD;
+    --muted:#94A1BC;
+    --line:#22406E;
+    --line-soft:#1A3260;
+
+    --shadow-sm:0 1px 2px rgba(0,0,0,.35);
+    --shadow:0 2px 4px rgba(0,0,0,.3), 0 16px 36px -22px rgba(0,0,0,.8);
+    --shadow-lg:0 4px 10px rgba(0,0,0,.35), 0 34px 64px -32px rgba(0,0,0,.9);
+  }
+}
+:root[data-theme="dark"]{
+  --navy:#7CA3E4; --navy-700:#9DBCEF; --navy-900:#C7D8F5; --navy-300:#4E6FA8;
+  --tint:#16203A; --tint-2:#1D2A49; --gold:#E0B458; --gold-hi:#F2CE83;
+  --danger:#F08A83; --ok:#5FCB9C;
+  --bg:#0D2044; --bg-alt:#0A1B3B; --surface:#13294F;
+  --ink:#EEF3FB; --ink-2:#C2D0E6; --muted:#8DA0C0;
+  --line:#22406E; --line-soft:#1A3260;
+  --shadow-sm:0 1px 2px rgba(0,0,0,.35);
+  --shadow:0 2px 4px rgba(0,0,0,.3), 0 16px 36px -22px rgba(0,0,0,.8);
+  --shadow-lg:0 4px 10px rgba(0,0,0,.35), 0 34px 64px -32px rgba(0,0,0,.9);
+}
+
+/* ============ BASE ============ */
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:78px}
+body{
+  margin:0;background:var(--bg);color:var(--ink);font-family:var(--f);
+  font-size:17px;line-height:1.68;-webkit-font-smoothing:antialiased;overflow-x:hidden;
+  padding-bottom:0;
+}
+h1,h2,h3,h4{margin:0;font-weight:800;line-height:1.15;letter-spacing:-.018em;text-wrap:balance}
+h2{font-size:clamp(26px,3.4vw,38px)}
+h3{font-size:clamp(18px,2vw,21px);letter-spacing:-.01em}
+p{margin:0}
+ul,ol{margin:0;padding-left:1.15em}
+a{color:var(--navy);text-underline-offset:3px}
+img{max-width:100%;height:auto;display:block}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+section{padding:clamp(56px,7vw,96px) 0}
+.narrow{max-width:820px}
+.eyebrow{
+  font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--navy);margin-bottom:14px;display:flex;align-items:center;gap:10px;
+}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--gold);flex:0 0 auto;border-radius:2px}
+.lede{font-size:clamp(17px,1.7vw,19.5px);color:var(--ink-2);line-height:1.62}
+.small{font-size:14px;color:var(--muted);line-height:1.6}
+.tnum{font-variant-numeric:tabular-nums}
+.center{text-align:center}
+.center .eyebrow{justify-content:center}
+
+/* ============ BUTTONS ============ */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.55em;
+  font:inherit;font-weight:700;font-size:16px;padding:14px 26px;border-radius:999px;
+  border:1.5px solid transparent;cursor:pointer;text-decoration:none;text-align:center;
+  transition:transform .16s ease, box-shadow .16s ease, background .16s ease, border-color .16s ease;
+}
+.btn:focus-visible{outline:2.5px solid var(--gold);outline-offset:3px}
+.btn-gold{background:linear-gradient(180deg,var(--gold-hi),var(--gold));color:#20180A;box-shadow:0 10px 24px -12px rgba(198,145,43,.75)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 16px 30px -12px rgba(198,145,43,.85)}
+.btn-navy{background:var(--navy);color:#fff;box-shadow:var(--shadow)}
+.btn-navy:hover{transform:translateY(-2px);background:var(--navy-700)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn-navy{color:#0D2044}}
+:root[data-theme="dark"] .btn-navy{color:#0D2044}
+.btn-outline{background:transparent;border-color:var(--line);color:var(--ink)}
+.btn-outline:hover{border-color:var(--navy);color:var(--navy)}
+.btn-onnavy{background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.38);color:#fff}
+.btn-onnavy:hover{background:rgba(255,255,255,.18);transform:translateY(-2px)}
+.btn-sm{font-size:14.5px;padding:10px 18px}
+.btn-block{width:100%}
+
+/* ============ NAV ============ */
+nav{
+  position:sticky;top:0;z-index:60;background:color-mix(in srgb,var(--bg) 90%,transparent);
+  backdrop-filter:saturate(1.5) blur(12px);border-bottom:1px solid var(--line);
+}
+.nav-in{max-width:var(--maxw);margin:0 auto;padding:11px 22px;display:flex;align-items:center;gap:18px}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;flex:0 0 auto}
+.brand img{height:30px;width:auto}
+:root[data-theme="dark"] .brand img{filter:brightness(1.9) saturate(.55)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .brand img{filter:brightness(1.9) saturate(.55)}}
+.brand-tag{font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);
+  border-left:1px solid var(--line);padding-left:11px;line-height:1.25;max-width:130px}
+.nav-links{display:flex;gap:22px;font-size:14.5px;margin-left:auto}
+.nav-links a{color:var(--ink-2);text-decoration:none;white-space:nowrap;font-weight:600}
+.nav-links a:hover{color:var(--navy)}
+.nav-act{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+.theme-btn{
+  width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:var(--surface);
+  color:var(--ink-2);cursor:pointer;display:grid;place-items:center;flex:0 0 auto;
+}
+.theme-btn:hover{border-color:var(--navy);color:var(--navy)}
+@media (max-width:1080px){.nav-links{display:none}}
+@media (max-width:560px){.brand-tag{display:none}}
+
+/* ============ HERO ============ */
+.hero{
+  position:relative;color:#fff;overflow:hidden;
+  background:
+    radial-gradient(900px 520px at 84% -8%, rgba(198,145,43,.22), transparent 62%),
+    radial-gradient(760px 620px at 6% 108%, rgba(92,130,196,.32), transparent 60%),
+    linear-gradient(158deg,#1F478D 0%,#173868 46%,#0E2547 100%);
+}
+.hero::after{
+  content:"";position:absolute;inset:0;opacity:.16;pointer-events:none;
+  background-image:linear-gradient(rgba(255,255,255,.5) 1px,transparent 1px),
+                   linear-gradient(90deg,rgba(255,255,255,.5) 1px,transparent 1px);
+  background-size:64px 64px;
+  mask-image:radial-gradient(circle at 70% 20%, #000, transparent 72%);
+}
+.hero .wrap{position:relative;z-index:2;padding-top:clamp(52px,7vw,84px);padding-bottom:clamp(48px,6vw,76px)}
+.hero-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:clamp(28px,4vw,56px);align-items:center}
+@media (max-width:940px){.hero-grid{grid-template-columns:1fr;gap:34px}}
+.pill{
+  display:inline-flex;align-items:center;gap:9px;flex-wrap:wrap;
+  background:rgba(255,255,255,.11);border:1px solid rgba(255,255,255,.26);
+  padding:7px 15px;border-radius:999px;font-size:13px;font-weight:700;letter-spacing:.01em;
+}
+.pill .dot{width:8px;height:8px;border-radius:50%;background:var(--gold-hi);box-shadow:0 0 0 4px rgba(228,180,81,.22)}
+.hero h1{font-size:clamp(31px,4.9vw,55px);margin:20px 0 0;color:#fff}
+.hero h1 .accent{
+  display:block;font-size:clamp(19px,2.3vw,27px);font-weight:700;letter-spacing:.01em;
+  color:var(--gold-hi);margin-top:12px;
+}
+.hero p.lede{color:rgba(255,255,255,.87);margin-top:20px;max-width:62ch}
+.hero-cta{display:flex;flex-wrap:wrap;gap:13px;margin-top:30px}
+.hero-note{margin-top:16px;font-size:13.5px;color:rgba(255,255,255,.68)}
+
+/* hero card */
+.hero-card{
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.2);
+  border-radius:var(--r-lg);padding:26px;backdrop-filter:blur(6px);box-shadow:0 30px 60px -34px rgba(0,0,0,.7);
+}
+.hero-card h3{color:#fff;font-size:16.5px;display:flex;align-items:center;gap:9px}
+.hc-list{list-style:none;padding:0;margin:18px 0 0;display:grid;gap:13px}
+.hc-list li{display:flex;gap:12px;align-items:flex-start;font-size:14.8px;color:rgba(255,255,255,.9);line-height:1.5}
+.hc-num{
+  flex:0 0 auto;width:27px;height:27px;border-radius:8px;display:grid;place-items:center;
+  background:rgba(228,180,81,.2);border:1px solid rgba(228,180,81,.45);color:var(--gold-hi);
+  font-weight:800;font-size:13px;
+}
+.hc-foot{margin-top:20px;padding-top:16px;border-top:1px solid rgba(255,255,255,.16);font-size:13px;color:rgba(255,255,255,.66)}
+
+/* trust strip */
+.trust{border-top:1px solid rgba(255,255,255,.16);position:relative;z-index:2}
+.trust-in{
+  max-width:var(--maxw);margin:0 auto;padding:20px 22px;
+  display:grid;grid-template-columns:repeat(4,1fr);gap:14px;
+}
+@media (max-width:860px){.trust-in{grid-template-columns:repeat(2,1fr)}}
+.trust-i{display:flex;gap:11px;align-items:flex-start}
+.trust-i svg{flex:0 0 auto;margin-top:2px;color:var(--gold-hi)}
+.trust-i b{display:block;font-size:14.5px;color:#fff;line-height:1.3}
+.trust-i span{font-size:12.7px;color:rgba(255,255,255,.6);line-height:1.42}
+
+/* ============ CARDS / GRID ============ */
+.grid{display:grid;gap:20px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+@media (max-width:960px){.g3,.g4{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:680px){.g2,.g3,.g4{grid-template-columns:1fr}}
+
+.card{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
+  padding:24px;box-shadow:var(--shadow-sm);position:relative;
+  transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--navy-300)}
+.card h3{margin-bottom:10px}
+.card p{color:var(--ink-2);font-size:15.4px}
+.ico{
+  width:44px;height:44px;border-radius:12px;display:grid;place-items:center;margin-bottom:16px;
+  background:var(--tint);color:var(--navy);border:1px solid var(--tint-2);
+}
+.badge{
+  display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:800;letter-spacing:.06em;
+  text-transform:uppercase;padding:4px 10px;border-radius:999px;
+}
+.badge-req{background:color-mix(in srgb,var(--danger) 13%,transparent);color:var(--danger);border:1px solid color-mix(in srgb,var(--danger) 32%,transparent)}
+.badge-cond{background:color-mix(in srgb,var(--gold) 16%,transparent);color:var(--gold);border:1px solid color-mix(in srgb,var(--gold) 38%,transparent)}
+.badge-ok{background:color-mix(in srgb,var(--ok) 13%,transparent);color:var(--ok);border:1px solid color-mix(in srgb,var(--ok) 32%,transparent)}
+.badge-navy{background:var(--tint);color:var(--navy);border:1px solid var(--tint-2)}
+
+.alt{background:var(--bg-alt)}
+.sec-head{max-width:760px;margin-bottom:38px}
+.sec-head.center{margin-left:auto;margin-right:auto}
+
+/* legal cite */
+.cite{
+  display:inline-block;margin-top:14px;font-size:12.6px;color:var(--muted);
+  border-left:2.5px solid var(--gold);padding-left:10px;line-height:1.45;
+}
+
+/* ============ DEADLINE BAR ============ */
+.deadlines{
+  margin-top:28px;background:var(--surface);border:1px solid var(--line);
+  border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow)
+}
+.dl-head{
+  padding:16px 24px;background:var(--tint);border-bottom:1px solid var(--line);
+  display:flex;align-items:center;gap:11px;font-weight:800;color:var(--navy);font-size:15.5px;flex-wrap:wrap
+}
+.dl-body{display:grid;grid-template-columns:repeat(3,1fr)}
+@media (max-width:760px){.dl-body{grid-template-columns:1fr}}
+.dl-i{padding:22px 24px;border-right:1px solid var(--line-soft)}
+.dl-i:last-child{border-right:0}
+@media (max-width:760px){.dl-i{border-right:0;border-bottom:1px solid var(--line-soft)}.dl-i:last-child{border-bottom:0}}
+.dl-i .k{font-size:clamp(26px,3.4vw,34px);font-weight:800;color:var(--navy);letter-spacing:-.02em;line-height:1.1}
+.dl-i .k small{font-size:15px;font-weight:700;color:var(--muted);letter-spacing:0}
+.dl-i .t{font-weight:700;margin-top:6px;font-size:15px}
+.dl-i .d{font-size:13.8px;color:var(--muted);margin-top:5px;line-height:1.5}
+
+/* ============ TOOL ============ */
+.tool{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);
+  box-shadow:var(--shadow-lg);overflow:hidden
+}
+.tool-head{
+  padding:22px 26px;background:linear-gradient(140deg,var(--navy),var(--navy-700));color:#fff;
+  display:flex;align-items:center;gap:13px;flex-wrap:wrap
+}
+:root[data-theme="dark"] .tool-head{background:linear-gradient(140deg,#1A2947,#152039)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .tool-head{background:linear-gradient(140deg,#1A2947,#152039)}}
+.tool-head h3{color:#fff;font-size:19px}
+.tool-head .sub{font-size:13.6px;color:rgba(255,255,255,.75);width:100%;margin-top:2px}
+.tool-body{display:grid;grid-template-columns:.95fr 1.05fr}
+@media (max-width:900px){.tool-body{grid-template-columns:1fr}}
+.tool-in{padding:26px;border-right:1px solid var(--line)}
+@media (max-width:900px){.tool-in{border-right:0;border-bottom:1px solid var(--line)}}
+.field{margin-bottom:22px}
+.field:last-child{margin-bottom:0}
+.field label{display:block;font-weight:700;font-size:14.6px;margin-bottom:7px}
+.field .hint{display:block;font-size:12.8px;color:var(--muted);font-weight:400;margin-top:4px;line-height:1.45}
+.inp,select.inp{
+  width:100%;padding:12px 14px;border-radius:11px;border:1.5px solid var(--line);
+  background:var(--bg);color:var(--ink);font:inherit;font-size:16px;
+}
+.inp:focus{outline:none;border-color:var(--navy);box-shadow:0 0 0 3px color-mix(in srgb,var(--navy) 18%,transparent)}
+.inp-row{display:flex;align-items:center;gap:10px}
+.inp-row .unit{font-size:14.5px;color:var(--muted);font-weight:700;white-space:nowrap}
+input[type=range]{width:100%;accent-color:var(--navy);margin-top:8px}
+.chk{display:flex;gap:11px;align-items:flex-start;font-size:14.6px;line-height:1.5;cursor:pointer}
+.chk input{margin-top:4px;width:18px;height:18px;accent-color:var(--navy);flex:0 0 auto}
+
+.tool-out{padding:26px;background:var(--bg-alt)}
+.res-title{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+.res-row{
+  display:flex;gap:14px;align-items:flex-start;padding:15px 0;border-bottom:1px dashed var(--line);
+}
+.res-row:last-of-type{border-bottom:0}
+.res-row .rt{font-weight:700;font-size:15.4px}
+.res-row .rd{font-size:13.7px;color:var(--muted);margin-top:4px;line-height:1.5}
+.res-row .rside{margin-left:auto;flex:0 0 auto}
+.res-dates{
+  margin-top:18px;padding:16px;border-radius:12px;background:var(--surface);border:1px solid var(--line);
+}
+.res-dates .rd-i{display:flex;justify-content:space-between;gap:14px;padding:7px 0;font-size:14.5px;border-bottom:1px solid var(--line-soft)}
+.res-dates .rd-i:last-child{border-bottom:0}
+.res-dates .rd-i b{color:var(--navy);white-space:nowrap;font-variant-numeric:tabular-nums}
+.warn{
+  margin-top:16px;padding:14px 16px;border-radius:12px;font-size:14.2px;line-height:1.55;
+  background:color-mix(in srgb,var(--danger) 9%,transparent);
+  border:1px solid color-mix(in srgb,var(--danger) 30%,transparent);color:var(--ink);
+}
+.warn b{color:var(--danger)}
+.tool-foot{padding:16px 26px;border-top:1px solid var(--line);background:var(--surface);font-size:12.6px;color:var(--muted);line-height:1.55}
+
+/* ============ FILL-IN PLACEHOLDER (ASCO tự điền số liệu thật) ============ */
+.fill{
+  display:inline-block;padding:1px 8px;border-radius:6px;font-weight:800;
+  background:color-mix(in srgb,var(--gold) 18%,transparent);
+  color:var(--gold);border:1px dashed color-mix(in srgb,var(--gold) 55%,transparent);
+  font-size:.95em;letter-spacing:.01em;
+}
+
+/* ============ STAT BAR ============ */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;background:var(--surface);box-shadow:var(--shadow-sm)}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}}
+.stat{padding:24px 22px;border-right:1px solid var(--line-soft);text-align:center}
+.stat:last-child{border-right:0}
+@media (max-width:760px){.stat:nth-child(2n){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid var(--line-soft)}}
+.stat .v{font-size:clamp(24px,3vw,32px);font-weight:800;color:var(--navy);letter-spacing:-.02em;line-height:1.15}
+.stat .l{font-size:13.4px;color:var(--muted);margin-top:6px;line-height:1.45}
+
+/* ============ PERSON CARD ============ */
+.person{display:grid;grid-template-columns:132px 1fr;gap:24px;align-items:center}
+@media (max-width:620px){.person{grid-template-columns:1fr;gap:16px;text-align:center}}
+.person .ph{
+  width:132px;height:132px;border-radius:50%;display:grid;place-items:center;overflow:hidden;
+  background:var(--tint);border:2px dashed var(--navy-300);color:var(--navy);font-size:12.5px;
+  text-align:center;padding:12px;line-height:1.4;font-weight:700
+}
+@media (max-width:620px){.person .ph{margin:0 auto}}
+
+/* ============ NEWSLETTER BAND ============ */
+.news{
+  border-radius:var(--r-lg);padding:clamp(26px,3.6vw,40px);color:#fff;
+  background:linear-gradient(140deg,var(--navy-900),var(--navy-700));
+  display:grid;grid-template-columns:1.25fr .75fr;gap:28px;align-items:center
+}
+@media (max-width:820px){.news{grid-template-columns:1fr}}
+.news h3{color:#fff;font-size:clamp(20px,2.4vw,26px)}
+.news p{color:rgba(255,255,255,.82);margin-top:10px;font-size:15.4px}
+
+/* ============ FEE FACTORS ============ */
+.fee{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media (max-width:820px){.fee{grid-template-columns:1fr}}
+.fee-i{padding:20px;border-radius:12px;background:var(--surface);border:1px solid var(--line)}
+.fee-i b{display:block;font-size:15.3px;margin-bottom:6px;color:var(--navy)}
+.fee-i span{font-size:14.2px;color:var(--ink-2);line-height:1.55}
+
+/* ============ RISK GRID ============ */
+.risk{
+  display:flex;gap:14px;align-items:flex-start;padding:18px;border-radius:12px;
+  background:var(--surface);border:1px solid var(--line);transition:border-color .18s ease,transform .18s ease
+}
+.risk:hover{border-color:var(--navy-300);transform:translateY(-2px)}
+.risk .n{
+  flex:0 0 auto;width:30px;height:30px;border-radius:9px;display:grid;place-items:center;
+  background:var(--navy);color:#fff;font-weight:800;font-size:13.5px
+}
+:root[data-theme="dark"] .risk .n{color:#0D2044}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .risk .n{color:#0D2044}}
+.risk b{display:block;font-size:15.3px;margin-bottom:3px}
+.risk span{font-size:13.8px;color:var(--muted);line-height:1.5}
+
+/* ============ TIMELINE ============ */
+.tl{position:relative;display:grid;gap:0}
+.tl-i{display:grid;grid-template-columns:96px 1fr;gap:24px;position:relative;padding-bottom:34px}
+.tl-i:last-child{padding-bottom:0}
+.tl-i::before{
+  content:"";position:absolute;left:47px;top:52px;bottom:-4px;width:2px;background:var(--line);
+}
+.tl-i:last-child::before{display:none}
+@media (max-width:680px){
+  .tl-i{grid-template-columns:1fr;gap:12px}
+  .tl-i::before{display:none}
+}
+.tl-mark{
+  width:96px;height:96px;border-radius:50%;display:grid;place-items:center;text-align:center;
+  background:var(--tint);border:2px solid var(--navy);color:var(--navy);line-height:1.15;
+}
+@media (max-width:680px){.tl-mark{width:auto;height:auto;border-radius:999px;padding:8px 18px;justify-self:start;display:inline-flex;gap:8px;align-items:center}}
+.tl-mark .gd{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;opacity:.8}
+.tl-mark .gn{font-size:27px;font-weight:800;letter-spacing:-.02em}
+@media (max-width:680px){.tl-mark .gn{font-size:17px}}
+.tl-c{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:22px;box-shadow:var(--shadow-sm)}
+.tl-c h3{margin-bottom:8px}
+.tl-c .dur{font-size:12.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--gold);margin-bottom:9px}
+.tl-split{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:16px;padding-top:16px;border-top:1px solid var(--line-soft)}
+@media (max-width:620px){.tl-split{grid-template-columns:1fr;gap:14px}}
+.tl-split h4{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.tl-split ul{padding-left:1.05em;font-size:14.2px;color:var(--ink-2);display:grid;gap:5px}
+
+/* ============ TABLE ============ */
+.tbl-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r);background:var(--surface);box-shadow:var(--shadow-sm)}
+table{width:100%;border-collapse:collapse;min-width:660px}
+th,td{padding:15px 18px;text-align:left;border-bottom:1px solid var(--line-soft);font-size:15px;vertical-align:top}
+thead th{background:var(--tint);font-size:13.4px;letter-spacing:.03em;color:var(--navy);font-weight:800;border-bottom:1px solid var(--line)}
+thead th:first-child{width:34%}
+tbody tr:last-child td{border-bottom:0}
+td.yes{color:var(--ok);font-weight:700}
+td.no{color:var(--muted)}
+.col-asco{background:color-mix(in srgb,var(--navy) 5%,transparent)}
+thead th.col-asco{background:var(--navy);color:#fff}
+:root[data-theme="dark"] thead th.col-asco{color:#0D2044}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) thead th.col-asco{color:#0D2044}}
+
+/* ============ CHECKLIST ============ */
+.cl-wrap{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow);overflow:hidden}
+.cl-head{padding:20px 24px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.cl-head h3{flex:1 1 240px}
+.cl-prog{flex:0 0 auto;display:flex;align-items:center;gap:12px;min-width:190px}
+.cl-bar{flex:1;height:8px;border-radius:99px;background:var(--tint-2);overflow:hidden}
+.cl-bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--navy),var(--gold));transition:width .3s ease}
+.cl-pct{font-size:14px;font-weight:800;color:var(--navy);min-width:42px;text-align:right;font-variant-numeric:tabular-nums}
+.cl-body{display:grid;grid-template-columns:repeat(2,1fr)}
+@media (max-width:820px){.cl-body{grid-template-columns:1fr}}
+.cl-g{padding:22px 24px;border-right:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)}
+@media (max-width:820px){.cl-g{border-right:0}}
+.cl-g h4{font-size:13px;letter-spacing:.09em;text-transform:uppercase;color:var(--navy);margin:0 0 12px}
+.cl-g ul{list-style:none;padding:0;display:grid;gap:9px}
+.cl-g li label{display:flex;gap:11px;align-items:flex-start;font-size:14.6px;cursor:pointer;line-height:1.5;color:var(--ink-2)}
+.cl-g li input{margin-top:4px;width:17px;height:17px;accent-color:var(--navy);flex:0 0 auto}
+.cl-g li input:checked + span{text-decoration:line-through;color:var(--muted)}
+.cl-foot{padding:18px 24px;display:flex;gap:12px;flex-wrap:wrap;align-items:center;background:var(--bg-alt)}
+
+/* ============ FAQ ============ */
+details.faq{
+  background:var(--surface);border:1px solid var(--line);border-radius:12px;margin-bottom:12px;
+  overflow:hidden;transition:border-color .18s ease
+}
+details.faq[open]{border-color:var(--navy-300);box-shadow:var(--shadow-sm)}
+details.faq summary{
+  padding:18px 22px;cursor:pointer;font-weight:700;font-size:16.2px;list-style:none;
+  display:flex;gap:14px;align-items:flex-start;color:var(--ink)
+}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary::after{
+  content:"+";margin-left:auto;font-size:24px;font-weight:400;color:var(--navy);line-height:1;flex:0 0 auto;
+  transition:transform .2s ease
+}
+details.faq[open] summary::after{content:"−"}
+details.faq summary:hover{color:var(--navy)}
+details.faq .ans{padding:0 22px 20px 22px;color:var(--ink-2);font-size:15.4px;line-height:1.68}
+details.faq .ans p + p{margin-top:11px}
+
+/* ============ NETWORK ============ */
+.net{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.net span{
+  font-size:14px;font-weight:600;padding:8px 15px;border-radius:999px;
+  background:var(--surface);border:1px solid var(--line);color:var(--ink-2);display:inline-flex;gap:8px;align-items:center
+}
+.net span::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold)}
+.net span.hq::before{background:var(--navy);box-shadow:0 0 0 3px color-mix(in srgb,var(--navy) 22%,transparent)}
+
+/* ============ FINAL CTA ============ */
+.cta{
+  color:#fff;
+  background:radial-gradient(760px 460px at 12% -10%, rgba(198,145,43,.24), transparent 60%),
+             linear-gradient(150deg,#1F478D,#0E2547);
+}
+.cta-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,54px);align-items:start}
+@media (max-width:900px){.cta-grid{grid-template-columns:1fr}}
+.cta h2{color:#fff}
+.cta .lede{color:rgba(255,255,255,.85)}
+.cta-contacts{display:grid;gap:12px;margin-top:26px}
+.cc{
+  display:flex;gap:14px;align-items:center;padding:15px 18px;border-radius:13px;
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);text-decoration:none;color:#fff;
+  transition:background .16s ease,transform .16s ease
+}
+.cc:hover{background:rgba(255,255,255,.15);transform:translateX(3px)}
+.cc svg{flex:0 0 auto;color:var(--gold-hi)}
+.cc b{display:block;font-size:16.5px;line-height:1.25}
+.cc span{font-size:13px;color:rgba(255,255,255,.65)}
+.form-card{background:var(--surface);border-radius:var(--r-lg);padding:26px;box-shadow:var(--shadow-lg);color:var(--ink)}
+.form-card h3{margin-bottom:6px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+@media (max-width:520px){.form-grid{grid-template-columns:1fr}}
+.form-grid .full{grid-column:1/-1}
+.form-card label{font-size:13.4px;font-weight:700;display:block;margin-bottom:6px}
+.form-card .req{color:var(--danger)}
+textarea.inp{min-height:86px;resize:vertical}
+.form-msg{margin-top:14px;padding:14px 16px;border-radius:11px;font-size:14.3px;line-height:1.55;display:none}
+.form-msg.show{display:block}
+.form-msg.ok{background:color-mix(in srgb,var(--ok) 11%,transparent);border:1px solid color-mix(in srgb,var(--ok) 32%,transparent)}
+.form-msg.err{background:color-mix(in srgb,var(--danger) 10%,transparent);border:1px solid color-mix(in srgb,var(--danger) 30%,transparent)}
+.copybox{
+  margin-top:12px;font-size:13px;font-family:ui-monospace,Consolas,monospace;white-space:pre-wrap;
+  background:var(--bg-alt);border:1px solid var(--line);border-radius:10px;padding:13px;max-height:190px;overflow:auto;color:var(--ink-2)
+}
+
+/* ============ FOOTER ============ */
+footer{background:var(--bg-alt);border-top:1px solid var(--line);padding:48px 0 110px}
+.f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:34px}
+@media (max-width:820px){.f-grid{grid-template-columns:1fr;gap:26px}}
+footer img.flogo{height:34px;margin-bottom:14px}
+:root[data-theme="dark"] footer img.flogo{filter:brightness(1.9) saturate(.55)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) footer img.flogo{filter:brightness(1.9) saturate(.55)}}
+footer h4{font-size:12.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--navy);margin:0 0 12px}
+footer ul{list-style:none;padding:0;display:grid;gap:8px;font-size:14.5px;color:var(--ink-2)}
+footer a{color:var(--ink-2);text-decoration:none}
+footer a:hover{color:var(--navy)}
+.disc{margin-top:34px;padding-top:22px;border-top:1px solid var(--line);font-size:12.6px;color:var(--muted);line-height:1.6}
+
+/* ============ MOBILE STICKY BAR ============ */
+.mbar{
+  position:fixed;left:0;right:0;bottom:0;z-index:70;display:none;gap:9px;padding:10px 12px;
+  background:color-mix(in srgb,var(--bg) 94%,transparent);backdrop-filter:blur(12px);
+  border-top:1px solid var(--line);box-shadow:0 -6px 24px -14px rgba(14,37,71,.5)
+}
+.mbar .btn{flex:1;padding:13px 10px;font-size:15px}
+@media (max-width:820px){.mbar{display:flex}body{padding-bottom:74px}}
+
+/* ============ MOTION / PRINT ============ */
+.js .rv{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .js .rv{opacity:1;transform:none}
+}
+@media print{
+  nav,.mbar,.theme-btn,.hero-cta,.cta-contacts,.form-card{display:none!important}
+  body{font-size:11.5pt;padding-bottom:0}
+  .hero,.cta{background:#1F478D!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  section{padding:18px 0;break-inside:avoid}
+  .card,.tl-c,.risk,details.faq{break-inside:avoid}
+  details.faq{border:1px solid #ccc}
+  details.faq .ans{display:block!important}
+}
+</style>
+<style>
+/* ---------- thanh hotline goc tren ben trai ---------- */
+.topline{background:#12305F;color:rgba(255,255,255,.82);font-size:13.4px}
+.topline .in{max-width:1200px;margin:0 auto;padding:9px 22px;
+  display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.topline a{color:#fff;text-decoration:none;display:inline-flex;align-items:center;gap:8px}
+.topline .r{display:flex;gap:18px;flex-wrap:wrap;align-items:center}
+.topline .r a:hover{color:#E4B451}
+
+/* Hotline: chu DO, nhap nhay dang nhip tho 1,6 giay/nhip.
+   Co y KHONG chop tat nhanh — chop qua 3 lan/giay gay kho chiu mat
+   va vi pham chuan tiep can WCAG. Ai bat che do giam chuyen dong thi chu dung yen. */
+.topline .hot{font-weight:800;font-size:15.6px;letter-spacing:.01em;color:#FF6B6B;
+  text-shadow:0 0 14px rgba(255,107,107,.55);
+  animation:hotNhay 1.6s ease-in-out infinite}
+.topline .hot svg{color:#FF6B6B}
+.topline .hot:hover{color:#FF9090;animation-play-state:paused}
+@keyframes hotNhay{0%,100%{opacity:1;text-shadow:0 0 14px rgba(255,107,107,.55)}
+                   50%{opacity:.5;text-shadow:0 0 4px rgba(255,107,107,.2)}}
+@media (prefers-reduced-motion:reduce){.topline .hot{animation:none;opacity:1}}
+@media (max-width:720px){.topline .in{justify-content:center;padding:8px 16px}.topline .r{display:none}}
+@media print{.topline .hot{animation:none!important;opacity:1!important}}
+</style>
+<style>
+/* ---------- chong tran thanh menu (them boi buoc cuoi) ---------- */
+.nav-links{gap:14px!important}
+.nav-links a{font-size:14.2px!important;white-space:nowrap}
+.nav-in{gap:14px!important}
+@media (max-width:1280px){.nav-links a{font-size:13.4px!important}.nav-links{gap:11px!important}}
+@media (max-width:1140px){.nav-links{display:none!important}}
+</style>
+<style>
+/* ---------- Khối liên kết nội bộ (thêm khi tối ưu SEO) ---------- */
+.lien-ket-noi-bo{background:var(--bg-alt);border-top:1px solid var(--line);
+  padding:clamp(40px,5vw,64px) 0}
+.lk-grid{display:grid;grid-template-columns:2fr 1fr;gap:34px}
+@media (max-width:820px){.lk-grid{grid-template-columns:1fr;gap:24px}}
+.lk-grid h3{font-size:15px;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--navy);margin:0 0 14px}
+.lk-ds{list-style:none;padding:0;margin:0;display:grid;gap:11px}
+.lk-ds li{padding-bottom:11px;border-bottom:1px solid var(--line-soft)}
+.lk-ds li:last-child{border-bottom:0}
+.lk-ds a{display:block;font-weight:700;font-size:15.6px;text-decoration:none;color:var(--ink)}
+.lk-ds a:hover{color:var(--navy)}
+.lk-ds span{display:block;margin-top:3px;font-size:13.6px;color:var(--muted)}
+/* Khoi lien ket la de dieu huong tren web. In ra PDF thi bo di, khong thi
+   ban PDF gui khach lai co mot trang toan duong dan bam khong duoc. */
+@media print{.lien-ket-noi-bo{display:none!important}}
+</style>
+<style>
+/* ---------- Trang dich vu chung khoan (lop 1) ---------- */
+.hero-ck{position:relative;color:#fff;overflow:hidden;
+  background:
+    radial-gradient(900px 520px at 84% -8%, rgba(198,145,43,.22), transparent 62%),
+    radial-gradient(760px 620px at 6% 108%, rgba(92,130,196,.32), transparent 60%),
+    linear-gradient(158deg,#1F478D 0%,#173868 46%,#0E2547 100%)}
+.hero-ck::after{content:"";position:absolute;inset:0;opacity:.15;pointer-events:none;
+  background-image:linear-gradient(rgba(255,255,255,.5) 1px,transparent 1px),
+                   linear-gradient(90deg,rgba(255,255,255,.5) 1px,transparent 1px);
+  background-size:64px 64px;mask-image:radial-gradient(circle at 74% 18%, #000, transparent 70%)}
+.hero-ck .wrap{position:relative;z-index:2;padding:clamp(46px,6.5vw,84px) 22px}
+.hero-ck h1{font-size:clamp(29px,4.6vw,50px);margin-bottom:18px;max-width:19ch}
+.hero-ck .lede{color:rgba(255,255,255,.87);max-width:64ch}
+.hero-nut{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.hero-so{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:14px;margin-top:34px}
+.hero-so div{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);
+  border-radius:14px;padding:16px 18px}
+.hero-so b{display:block;font-size:clamp(22px,2.8vw,30px);line-height:1.1;color:#F2CE83}
+.hero-so span{display:block;font-size:13.2px;color:rgba(255,255,255,.78);margin-top:6px;line-height:1.45}
+
+.sec-head{max-width:760px;margin-bottom:clamp(26px,3vw,40px)}
+.the{display:grid;grid-template-columns:repeat(auto-fit,minmax(268px,1fr));gap:18px}
+.the>div{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);
+  padding:22px 24px;box-shadow:var(--shadow-sm)}
+.the h3{margin-bottom:8px}
+.the p{font-size:14.8px;color:var(--ink-2);line-height:1.6}
+.the .nhan{display:inline-block;font-size:11.6px;font-weight:800;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--navy);background:var(--tint);border-radius:999px;
+  padding:4px 11px;margin-bottom:11px}
+
+/* cong cu tra moc han
+   Ten lop phai KHAC .cc — bo khung cu da dung .cc cho the lien he
+   voi display:flex, trung ten thi khoi nay bi keo thanh hang ngang. */
+.ctra{background:var(--tint);border:1.5px solid var(--tint-2);border-radius:var(--r-lg);
+  padding:clamp(20px,2.8vw,32px)}
+.ctra-o{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-bottom:22px}
+.ctra-o label{display:block;font-size:13.4px;font-weight:700;color:var(--ink-2);margin-bottom:6px}
+.ctra-o select,.ctra-o input{width:100%;font:inherit;font-size:15.2px;color:var(--ink);background:var(--bg);
+  border:1.4px solid var(--line);border-radius:11px;padding:10px 13px}
+.ctra-o select:focus,.ctra-o input:focus{outline:none;border-color:var(--navy);box-shadow:0 0 0 3.5px rgba(31,71,141,.14)}
+.moc{display:grid;gap:12px}
+.moc>div{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;
+  background:var(--bg);border:1px solid var(--line);border-radius:13px;padding:14px 17px}
+@media (max-width:620px){.moc>div{grid-template-columns:1fr;gap:6px}}
+.moc .cham{width:11px;height:11px;border-radius:50%;background:var(--navy);flex:0 0 auto}
+.moc .ten{font-weight:700;font-size:15.2px}
+.moc .ten i{display:block;font-style:normal;font-weight:500;font-size:13px;color:var(--muted);margin-top:3px}
+.moc .ngay{font-weight:800;font-size:16.4px;color:var(--navy);white-space:nowrap;font-variant-numeric:tabular-nums}
+.moc .ngay small{display:block;font-weight:600;font-size:12.4px;color:var(--muted)}
+.nhac{border-left:4px solid var(--gold);background:var(--bg-alt);border-radius:0 12px 12px 0;
+  padding:14px 18px;margin-top:18px;font-size:14.4px;color:var(--ink-2);line-height:1.6}
+.nhac b{color:var(--ink)}
+
+/* bang */
+.bang{width:100%;border-collapse:collapse;font-size:14.8px}
+.bang th,.bang td{text-align:left;padding:13px 15px;border-bottom:1px solid var(--line);vertical-align:top}
+.bang th{font-size:12.6px;letter-spacing:.07em;text-transform:uppercase;color:var(--navy);
+  background:var(--bg-alt);font-weight:800}
+.bang tr:last-child td{border-bottom:0}
+.bang td b{color:var(--ink)}
+.bang-cuon{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r);background:var(--surface)}
+
+/* quy trinh */
+.gd{display:grid;gap:0;position:relative;padding-left:34px}
+.gd::before{content:"";position:absolute;left:12px;top:10px;bottom:14px;width:2px;background:var(--line)}
+.gd>div{position:relative;padding:0 0 26px 0}
+.gd>div::before{content:"";position:absolute;left:-27px;top:6px;width:13px;height:13px;border-radius:50%;
+  background:var(--bg);border:3px solid var(--navy)}
+.gd h3{font-size:17.4px;margin-bottom:5px}
+.gd .khi{font-size:12.6px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:5px}
+.gd p{font-size:14.8px;color:var(--ink-2);line-height:1.62}
+
+/* hoi dap */
+.hd{border:1px solid var(--line);border-radius:var(--r);background:var(--surface);overflow:hidden}
+.hd details{border-bottom:1px solid var(--line-soft)}
+.hd details:last-child{border-bottom:0}
+.hd summary{cursor:pointer;padding:17px 21px;font-weight:700;font-size:15.8px;list-style:none;
+  display:flex;justify-content:space-between;gap:16px;align-items:flex-start}
+.hd summary::-webkit-details-marker{display:none}
+.hd summary::after{content:"+";font-size:22px;font-weight:400;color:var(--navy);line-height:1;flex:0 0 auto}
+.hd details[open] summary::after{content:"–"}
+.hd summary:hover{color:var(--navy);background:var(--bg-alt)}
+.hd .tl{padding:0 21px 19px;font-size:14.9px;color:var(--ink-2);line-height:1.68}
+.hd .tl p+p{margin-top:11px}
+
+/* khoi keu goi */
+.kg{background:linear-gradient(158deg,#1F478D 0%,#173868 48%,#0E2547 100%);color:#fff}
+.kg h2{max-width:20ch}
+.kg .lede{color:rgba(255,255,255,.87);max-width:60ch}
+.kg-nut{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.kg-lh{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin-top:30px}
+.kg-lh a{display:flex;gap:12px;align-items:center;background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.2);border-radius:13px;padding:14px 16px;
+  text-decoration:none;color:#fff;transition:background .15s,transform .15s}
+.kg-lh a:hover{background:rgba(255,255,255,.16);transform:translateY(-2px)}
+.kg-lh b{display:block;font-size:15.4px}
+.kg-lh span{display:block;font-size:12.8px;color:rgba(255,255,255,.72);margin-top:2px}
+
+.canc{font-size:13.6px;color:var(--muted);line-height:1.7}
+.canc b{color:var(--ink-2)}
+section>.wrap>*{min-width:0}
+.the>div,.bang-cuon,.ctra{max-width:100%}
+@media print{.hero-nut,.kg-nut,.ctra-o{display:none!important}.hd details{open:true}}
+</style>
+<script>document.documentElement.className+=' js';</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Dịch vụ ASCO",
+   "item": "https://dichvu.asco.vn/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Kiểm toán báo cáo tài chính đơn vị có lợi ích công chúng thuộc lĩnh vực chứng khoán",
+   "item": "https://dichvu.asco.vn/kiem-toan-bctc-linh-vuc-chung-khoan/"
+  }
+ ]
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Service",
+ "name": "Kiểm toán báo cáo tài chính đơn vị có lợi ích công chúng thuộc lĩnh vực chứng khoán",
+ "serviceType": "Kiểm toán báo cáo tài chính",
+ "url": "https://dichvu.asco.vn/kiem-toan-bctc-linh-vuc-chung-khoan/",
+ "description": "ASCO — 1 trong 28 tổ chức kiểm toán được UBCKNN chấp thuận năm 2026, 21 kiểm toán viên được chấp thuận. Kiểm toán BCTC công ty niêm yết, đại chúng, CTCK.",
+ "areaServed": {
+  "@type": "Country",
+  "name": "Việt Nam"
+ },
+ "audience": {
+  "@type": "BusinessAudience",
+  "name": "Công ty đại chúng, công ty niêm yết, công ty chứng khoán, công ty quản lý quỹ"
+ },
+ "provider": {
+  "@type": "AccountingService",
+  "name": "Công ty TNHH Hãng Kiểm toán và Định giá ASCO",
+  "alternateName": "ASCO",
+  "url": "https://asco.vn",
+  "email": "asco@asco.vn",
+  "telephone": "+84825092007",
+  "foundingDate": "2007-09-25",
+  "address": {
+   "@type": "PostalAddress",
+   "streetAddress": "Số 2, ngõ 308 phố Lê Trọng Tấn, phường Phương Liệt",
+   "addressLocality": "Hà Nội",
+   "addressCountry": "VN"
+  }
+ },
+ "hasOfferCatalog": {
+  "@type": "OfferCatalog",
+  "name": "Dịch vụ cho đơn vị lĩnh vực chứng khoán",
+  "itemListElement": [
+   {
+    "@type": "Offer",
+    "itemOffered": {
+     "@type": "Service",
+     "name": "Kiểm toán báo cáo tài chính năm"
+    }
+   },
+   {
+    "@type": "Offer",
+    "itemOffered": {
+     "@type": "Service",
+     "name": "Soát xét báo cáo tài chính bán niên"
+    }
+   },
+   {
+    "@type": "Offer",
+    "itemOffered": {
+     "@type": "Service",
+     "name": "Soát xét báo cáo tài chính quý"
+    }
+   },
+   {
+    "@type": "Offer",
+    "itemOffered": {
+     "@type": "Service",
+     "name": "Kiểm toán báo cáo tỷ lệ an toàn tài chính"
+    }
+   },
+   {
+    "@type": "Offer",
+    "itemOffered": {
+     "@type": "Service",
+     "name": "Kiểm toán phục vụ chào bán, niêm yết"
+    }
+   },
+   {
+    "@type": "Offer",
+    "itemOffered": {
+     "@type": "Service",
+     "name": "Báo cáo song ngữ Việt – Anh"
+    }
+   }
+  ]
+ }
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Công ty tôi là công ty đại chúng nhưng chưa niêm yết, có bắt buộc thuê hãng kiểm toán được chấp thuận không?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Có. Công ty đại chúng nằm ngay ở đầu danh sách tại khoản 2 Điều 21 Luật Chứng khoán số 54/2019/QH14, cùng với tổ chức niêm yết, tổ chức đăng ký giao dịch, tổ chức chào bán ra công chúng, công ty chứng khoán, công ty quản lý quỹ, công ty đầu tư chứng khoán và quỹ đầu tư chứng khoán.Báo cáo tài chính năm phải do tổ chức kiểm toán có tên trong danh sách được Uỷ ban Chứng khoán Nhà nước chấp thuận thực hiện (Điều 54 Luật Kiểm toán độc lập số 67/2011/QH12). Việc cổ phiếu đã lên sàn hay chưa không làm thay đổi nghĩa vụ này."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "ASCO có được Uỷ ban Chứng khoán Nhà nước chấp thuận không, và bao nhiêu kiểm toán viên?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Có. ASCO là một trong 28 tổ chức kiểm toán được chấp thuận kiểm toán cho đơn vị có lợi ích công chúng thuộc lĩnh vực chứng khoán kỳ 2026, theo Quyết định số 902/QĐ-UBCK ngày 19/11/2025 của Chủ tịch Uỷ ban Chứng khoán Nhà nước, với 21 kiểm toán viên hành nghề được chấp thuận.Chỉ những kiểm toán viên có tên trong danh sách kèm quyết định mới được ký báo cáo cho đơn vị của anh/chị. ASCO khuyến khích anh/chị đối chiếu trực tiếp danh sách trên trang của Uỷ ban Chứng khoán Nhà nước — đây là bước thẩm định bình thường, không có gì phải ngại."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Danh sách chấp thuận có giá trị bao lâu? Ký hợp đồng nhiều năm có được không?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Kỳ chấp thuận là năm dương lịch, từ 01/01 đến 31/12 (khoản 4 Điều 3 Nghị định 84/2016/NĐ-CP). Hồ sơ đăng ký nộp trong khoảng 01/10 – 20/10 hằng năm; Uỷ ban Chứng khoán Nhà nước công khai danh sách của năm sau trước ngày 20/11 (Điều 10 Nghị định 84/2016/NĐ-CP).Hợp đồng nhiều năm vẫn ký được, nhưng hãng kiểm toán phải được chấp thuận cho từng kỳ. ASCO khuyên anh/chị đưa vào hợp đồng một điều khoản xử lý trường hợp hãng không còn trong danh sách của kỳ tiếp theo — để không bị động."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Hạn cuối công bố báo cáo tài chính năm đã kiểm toán là ngày nào?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Trong 10 ngày kể từ ngày tổ chức kiểm toán ký báo cáo kiểm toán, nhưng không vượt quá 90 ngày kể từ ngày kết thúc năm tài chính (điểm c khoản 1 Điều 10 Thông tư 96/2020/TT-BTC). Năm tài chính kết thúc 31/12 thì hạn chót là 31/3.Báo cáo thường niên: trong 20 ngày kể từ ngày công bố báo cáo tài chính năm đã kiểm toán và không quá 110 ngày kể từ ngày kết thúc năm tài chính (khoản 2 Điều 10). Anh/chị dùng công cụ tra mốc hạn ở trên để ra ngày cụ thể cho kỳ của mình."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Chúng tôi có công ty con, hợp nhất chậm — xin gia hạn công bố được không?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Không có cơ chế gia hạn. Thông tư 96/2020/TT-BTC không quy định việc gia hạn thời hạn công bố báo cáo tài chính. Chỉ có Điều 8 về tạm hoãn công bố thông tin vì lý do bất khả kháng — thiên tai, hoả hoạn, chiến tranh, dịch bệnh — và phải báo cáo Uỷ ban Chứng khoán Nhà nước cùng Sở giao dịch chứng khoán ngay khi xảy ra sự kiện. Hợp nhất chậm không thuộc trường hợp này.Cách xử lý đúng là rút ngắn lịch bằng thủ tục giữa kỳ: ASCO làm phần lớn thử nghiệm kiểm soát và kiểm tra chi tiết từ tháng 11 – 12, để tháng 1 – 2 chỉ còn thủ tục cuối kỳ và phần hợp nhất. Đây là lý do ASCO khuyên ký hợp đồng trước khi kết thúc năm tài chính, không phải sau."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Hạn công bố báo cáo bán niên soát xét và báo cáo quý khác nhau thế nào?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Bán niên đã soát xét: trong 5 ngày kể từ ngày ký báo cáo soát xét, không quá 45 ngày kể từ ngày kết thúc 6 tháng đầu năm tài chính; 60 ngày nếu là công ty mẹ hoặc đơn vị kế toán cấp trên (điểm c khoản 2 Điều 14 Thông tư 96/2020/TT-BTC).Báo cáo quý: 20 ngày kể từ ngày kết thúc quý; 30 ngày nếu là công ty mẹ hoặc đơn vị kế toán cấp trên. Nếu báo cáo quý được soát xét thì 5 ngày kể từ ngày ký, không quá 45 ngày (điểm c khoản 3 Điều 14).Hai nghĩa vụ này áp dụng cho tổ chức niêm yết cổ phiếu và công ty đại chúng quy mô lớn — tức công ty đại chúng có vốn góp của chủ sở hữu từ 120 tỷ đồng trở lên trên báo cáo tài chính năm gần nhất đã được kiểm toán (khoản 1 Điều 3)."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Kiểm toán viên đã ký cho công ty tôi 5 năm rồi, có phải đổi hãng kiểm toán không?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Phải đổi người ký, không nhất thiết đổi hãng. Từ 01/01/2025, Luật số 56/2024/QH15 sửa Luật Kiểm toán độc lập: không được bố trí kiểm toán viên hành nghề ký báo cáo kiểm toán cho một đơn vị quá 05 năm liên tục. Nghị định 90/2025/NĐ-CP ngày 14/4/2025 đã sửa Nghị định 17/2012/NĐ-CP theo đúng mức này (trước đây là 3 năm).Xin lưu ý một nhầm lẫn khá phổ biến: nhiều bài viết ghi quy định 5 năm có hiệu lực từ 01/01/2026. Không đúng. Điều 10 Luật 56/2024 chỉ lùi hiệu lực tới 2026 với hai nội dung khác, không bao gồm quy định luân chuyển. Kiểm toán viên đã ký trước 01/01/2025 thì được tiếp tục ký theo mốc 5 năm mới (Điều 4 Nghị định 90/2025/NĐ-CP).Đơn vị được kiểm toán cũng có nghĩa vụ chủ động: ký hợp đồng với một hãng quá 5 năm liên tục thì phải yêu cầu đổi kiểm toán viên ký (khoản 8 Điều 39 Luật Kiểm toán độc lập)."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Công ty chứng khoán, công ty quản lý quỹ phải nộp thêm báo cáo gì?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Ngoài báo cáo tài chính năm và bán niên, phải công bố báo cáo tỷ lệ an toàn tài chính: bản tại 30/6 đã được soát xét và bản tại 31/12 đã được kiểm toán, do tổ chức kiểm toán được chấp thuận thực hiện, công bố cùng thời điểm với báo cáo tài chính bán niên soát xét và báo cáo tài chính năm đã kiểm toán (khoản 2 Điều 22 Thông tư 96/2020/TT-BTC).Chỉ tiêu an toàn tài chính theo Thông tư 91/2020/TT-BTC, đã được sửa đổi bởi Thông tư 102/2025/TT-BTC có hiệu lực từ 15/12/2025 — nếu kỳ này là kỳ đầu áp dụng quy định sửa đổi thì nên trao đổi với kiểm toán từ sớm."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Công ty đang chuẩn bị chào bán cổ phiếu ra công chúng, có ràng buộc gì về ý kiến kiểm toán?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Có, và đây là điểm hay bị vướng. Khoản 3 Điều 20 Luật Chứng khoán yêu cầu báo cáo tài chính năm trong hồ sơ phải được tổ chức kiểm toán được chấp thuận kiểm toán, và ý kiến kiểm toán phải là ý kiến chấp nhận toàn phần. Nếu là ý kiến ngoại trừ thì khoản ngoại trừ không được ảnh hưởng tới điều kiện chào bán, đồng thời tổ chức phát hành phải có tài liệu giải thích hợp lý và xác nhận của tổ chức kiểm toán về ảnh hưởng của việc ngoại trừ.Thêm một mốc dễ quên: hồ sơ nộp sau 90 ngày kể từ ngày kết thúc kỳ kế toán của báo cáo tài chính gần nhất thì phải lập báo cáo tài chính bổ sung đến tháng hoặc quý gần nhất (khoản 5 Điều 20). Vì vậy lịch kiểm toán và lịch nộp hồ sơ phải khớp nhau ngay từ đầu."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Sau khi phát hành báo cáo mà phát hiện sai sót thì hãng kiểm toán làm gì?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Theo điểm c khoản 3 Điều 21 Luật Chứng khoán, khi phát hiện đơn vị được kiểm toán có sai phạm trọng yếu do không tuân thủ pháp luật và các quy định liên quan đến báo cáo tài chính đã được kiểm toán, tổ chức kiểm toán được chấp thuận phải thông báo bằng văn bản cho Uỷ ban Chứng khoán Nhà nước. Đây là nghĩa vụ luật định, không phải lựa chọn của hãng.ASCO nói rõ điều này ngay từ đầu để anh/chị hiểu đúng vai trò của kiểm toán độc lập. Về mặt kỹ thuật, ASCO xử lý theo chuẩn mực kiểm toán Việt Nam về sự kiện phát sinh sau ngày kết thúc kỳ kế toán và về ý kiến kiểm toán, đồng thời phối hợp để đơn vị công bố thông tin bất thường đúng hạn."
+   }
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<!-- =============== THANH HOTLINE =============== -->
+<div class="topline">
+  <div class="in">
+    <a class="hot" href="tel:0825092007" title="Hotline ASCO — cũng là ngày thành lập công ty: 25/09/2007">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.4 2.1L8 9.8a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+      Hotline ASCO: 08 2509 2007
+    </a>
+    <div class="r">
+      <a href="mailto:asco@asco.vn">asco@asco.vn</a>
+      <a href="#lien-he">Nhận báo giá</a>
+    </div>
+  </div>
+</div>
+
+<nav>
+  <div class="nav-in">
+    <a class="brand" href="#top" aria-label="ASCO — đầu trang">
+      <img src="data:image/png;base64,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" alt="Hãng Kiểm toán và Định giá ASCO">
+      <span class="brand-tag">Kiểm toán · Thẩm định giá</span>
+    </a>
+    <div class="nav-links">
+      <a href="#ai-thuoc-dien">Ai thuộc diện</a>
+      <a href="#moc-han">Mốc hạn công bố</a>
+      <a href="#dieu-kien">Điều kiện hãng</a>
+      <a href="#dich-vu">Dịch vụ</a>
+      <a href="#trong-tam">Trọng tâm</a>
+      <a href="#quy-trinh">Quy trình</a>
+      <a href="#luan-chuyen">Luân chuyển</a>
+      <a href="#hoi-dap">Hỏi đáp</a>
+    </div>
+    <div class="nav-act">
+      <button class="theme-btn" id="themeBtn" type="button" aria-label="Đổi giao diện sáng/tối" title="Đổi giao diện sáng/tối">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+      </button>
+      <a class="btn btn-navy btn-sm" href="yeu-cau-bao-gia/">Xin báo giá</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero-ck" id="top">
+  <div class="wrap">
+    <div class="eyebrow" style="color:var(--gold-hi)">Đơn vị có lợi ích công chúng · Lĩnh vực chứng khoán</div>
+    <h1>Kiểm toán báo cáo tài chính đơn vị có lợi ích công chúng thuộc lĩnh vực chứng khoán</h1>
+    <p class="lede">Báo cáo tài chính của công ty đại chúng, tổ chức niêm yết, công ty chứng khoán và công ty quản lý quỹ không được ký bởi bất kỳ hãng kiểm toán nào — <b>chỉ tổ chức kiểm toán được Uỷ ban Chứng khoán Nhà nước chấp thuận</b> mới đủ điều kiện (Điều 54 Luật Kiểm toán độc lập, Điều 21 Luật Chứng khoán). ASCO là <b>một trong 28 tổ chức được chấp thuận cho kỳ 2026</b> theo Quyết định số 902/QĐ-UBCK ngày 19/11/2025, với <b>21 kiểm toán viên hành nghề được chấp thuận</b> đứng tên ký báo cáo.</p>
+    <div class="hero-nut">
+      <a class="btn btn-gold" href="yeu-cau-bao-gia/">Gửi yêu cầu báo giá →</a>
+      <a class="btn btn-onnavy" href="tel:0825092007">Gọi 08 2509 2007</a>
+      <a class="btn btn-onnavy" href="#moc-han">Tra mốc hạn công bố</a>
+    </div>
+    <div class="hero-so">
+      <div><b>1/28</b><span>ASCO là một trong 28 tổ chức kiểm toán được UBCKNN chấp thuận cho kỳ 2026</span></div>
+      <div><b>21</b><span>kiểm toán viên hành nghề của ASCO được chấp thuận ký báo cáo cho nhóm này</span></div>
+      <div><b>902/QĐ-UBCK</b><span>Quyết định ngày 19/11/2025 — anh/chị đối chiếu được trực tiếp</span></div>
+      <div><b>24 giờ</b><span>thời gian ASCO phản hồi yêu cầu báo phí, trong ngày làm việc</span></div>
+    </div>
+  </div>
+</header>
+
+<!-- ================= AI THUỘC DIỆN ================= -->
+<section id="ai-thuoc-dien">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="eyebrow">Trước hết phải xác định đúng</div>
+      <h2>Đơn vị nào bắt buộc dùng tổ chức kiểm toán được chấp thuận</h2>
+      <p class="lede" style="margin-top:14px">Đây là danh sách đóng, ghi thẳng trong <b>khoản 2 Điều 21 Luật Chứng khoán số 54/2019/QH14</b>, không phải cách hiểu của riêng ai. Đơn vị rơi vào một trong tám nhóm dưới đây thì kèm theo ba nghĩa vụ: phải chọn tổ chức kiểm toán được chấp thuận, phải công bố thông tin đúng hạn, và phải đổi kiểm toán viên ký báo cáo khi tới hạn luân chuyển.</p>
+    </div>
+    <div class="the rv">
+      <div><span class="nhan">Nhóm 1 – 2</span><h3>Công ty đại chúng · Tổ chức niêm yết</h3><p>Công ty đại chúng thuộc diện <b>kể cả khi cổ phiếu chưa lên sàn</b>. Tổ chức niêm yết là nhóm chịu nghĩa vụ công bố dày nhất: báo cáo năm, báo cáo thường niên, bán niên soát xét và báo cáo quý.</p></div>
+      <div><span class="nhan">Nhóm 3</span><h3>Tổ chức đăng ký giao dịch</h3><p>Cổ phiếu đăng ký giao dịch trên hệ thống UPCoM. Nghĩa vụ công bố nhẹ hơn tổ chức niêm yết nhưng vẫn phải dùng tổ chức kiểm toán được chấp thuận.</p></div>
+      <div><span class="nhan">Nhóm 4</span><h3>Tổ chức chào bán chứng khoán ra công chúng</h3><p>Hồ sơ chào bán phải kèm báo cáo tài chính năm được tổ chức kiểm toán được chấp thuận kiểm toán, và <b>ý kiến kiểm toán phải là ý kiến chấp nhận toàn phần</b> (khoản 3 Điều 20 Luật Chứng khoán).</p></div>
+      <div><span class="nhan">Nhóm 5</span><h3>Công ty chứng khoán</h3><p>Ngoài báo cáo tài chính còn phải công bố <b>báo cáo tỷ lệ an toàn tài chính</b>: bản tại 30/6 đã soát xét và bản tại 31/12 đã kiểm toán, cùng do tổ chức kiểm toán được chấp thuận thực hiện.</p></div>
+      <div><span class="nhan">Nhóm 6 – 7</span><h3>Công ty quản lý quỹ · Công ty đầu tư chứng khoán</h3><p>Kiểm toán phải tách bạch ba khối tài sản: của chính công ty, của quỹ, và của nhà đầu tư uỷ thác. Công ty quản lý quỹ cũng thuộc diện phải có báo cáo tỷ lệ an toàn tài chính.</p></div>
+      <div><span class="nhan">Nhóm 8</span><h3>Quỹ đầu tư chứng khoán</h3><p>Trọng tâm là định giá tài sản theo đúng nguyên tắc ghi trong điều lệ quỹ, tính giá trị tài sản ròng trên một đơn vị quỹ, và việc tuân thủ hạn mức đầu tư.</p></div>
+    </div>
+    <div class="nhac rv"><b>Chỗ hay nhầm nhất.</b> Nhiều đơn vị nghĩ "chưa niêm yết thì chưa phải lo". Không đúng — công ty đại chúng đứng ở ngay đầu danh sách khoản 2 Điều 21, không phụ thuộc cổ phiếu đã lên sàn hay chưa. Hậu quả của việc nhầm không nhỏ: ký hợp đồng với hãng không đủ điều kiện thì tới lúc phát hành mới phát hiện, khi đó gần như chắc chắn trễ hạn công bố. <a href="yeu-cau-bao-gia/">Gửi thông tin để ASCO rà giúp</a> nếu anh/chị chưa chắc.</div>
+  </div>
+</section>
+
+<!-- ================= MỐC HẠN ================= -->
+<section id="moc-han" style="background:var(--bg-alt);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="eyebrow">Công cụ tra cứu</div>
+      <h2>Mốc hạn công bố thông tin của đơn vị anh/chị</h2>
+      <p class="lede" style="margin-top:14px">Chọn kỳ kế toán của đơn vị, công cụ dựng ngược toàn bộ lịch: từ hạn công bố theo Thông tư 96/2020/TT-BTC, lùi về ngày phải phát hành báo cáo kiểm toán, ngày bắt đầu làm việc, và ngày muộn nhất nên ký hợp đồng. Đây là ước lượng nhanh để anh/chị biết mình đang đứng ở đâu — mốc chính thức vẫn phải đối chiếu văn bản áp dụng cho riêng đơn vị.</p>
+    </div>
+    <div class="ctra rv">
+      <div class="ctra-o">
+        <div>
+          <label for="cNam">Năm tài chính</label>
+          <select id="cNam">
+            <option value="2026" selected>Năm tài chính 2026</option>
+            <option value="2027">Năm tài chính 2027</option>
+            <option value="2025">Năm tài chính 2025</option>
+          </select>
+        </div>
+        <div>
+          <label for="cKt">Ngày kết thúc năm tài chính</label>
+          <select id="cKt">
+            <option value="12" selected>31/12 — theo năm dương lịch</option>
+            <option value="3">31/3</option>
+            <option value="6">30/6</option>
+            <option value="9">30/9</option>
+          </select>
+        </div>
+        <div>
+          <label for="cCon">Có công ty con phải hợp nhất?</label>
+          <select id="cCon">
+            <option value="0" selected>Không có</option>
+            <option value="1">Có — phải lập báo cáo hợp nhất</option>
+          </select>
+        </div>
+        <div>
+          <label for="cKy">Đã ký hợp đồng kiểm toán chưa?</label>
+          <select id="cKy">
+            <option value="0" selected>Chưa ký</option>
+            <option value="1">Đã ký</option>
+          </select>
+        </div>
+      </div>
+      <div class="moc" id="cKq"></div>
+      <div class="nhac" id="cNhac"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ĐIỀU KIỆN HÃNG ================= -->
+<section id="dieu-kien">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="eyebrow">Thẩm định nhà cung cấp</div>
+      <h2>Điều kiện của tổ chức kiểm toán được chấp thuận — và ASCO đáp ứng thế nào</h2>
+      <p class="lede" style="margin-top:14px">Anh/chị đang thẩm định nhà cung cấp, nên phần này viết theo đúng thứ tự anh/chị sẽ kiểm tra. Điều kiện nằm ở <b>khoản 2 Điều 5 Nghị định 84/2016/NĐ-CP</b> — đây là điều kiện riêng cho lĩnh vực chứng khoán, ngặt hơn điều kiện chung. Không ít bản chào giá dẫn nhầm sang Nghị định 155/2020; nghị định đó hướng dẫn Luật Chứng khoán, không quy định điều kiện chấp thuận.</p>
+    </div>
+    <div class="bang-cuon rv">
+      <table class="bang">
+        <thead><tr><th style="width:38%">Nhóm điều kiện</th><th>Nội dung</th><th style="width:26%">ASCO</th></tr></thead>
+        <tbody>
+          <tr><td><b>Có tên trong danh sách chấp thuận của kỳ tương ứng</b></td><td>Uỷ ban Chứng khoán Nhà nước xem xét, chấp thuận và công khai danh sách trước ngày 20/11 hằng năm; kỳ chấp thuận là năm dương lịch 01/01–31/12 (Điều 10 và khoản 4 Điều 3 Nghị định 84/2016/NĐ-CP).</td><td><b>Có.</b> ASCO là 1 trong 28 tổ chức được chấp thuận kỳ 2026 theo <b>Quyết định số 902/QĐ-UBCK ngày 19/11/2025</b>. Anh/chị nên đối chiếu trực tiếp danh sách của năm tương ứng trước khi ký — với cả ASCO lẫn các đơn vị khác đang chào giá.</td></tr>
+          <tr><td><b>Từ 15 kiểm toán viên hành nghề trở lên</b></td><td>Trong đó có Giám đốc hoặc Tổng Giám đốc. Đây là điều kiện riêng của lĩnh vực chứng khoán — điều kiện chung cho đơn vị có lợi ích công chúng chỉ yêu cầu 10 người (điểm a khoản 2 Điều 5 Nghị định 84/2016/NĐ-CP).</td><td><b>21 kiểm toán viên</b> của ASCO được chấp thuận cho kỳ 2026. Đủ để bố trí người ký cho nhiều khách hàng trong cùng một mùa mà không dồn hết vào một người.</td></tr>
+          <tr><td><b>Thời gian hoạt động kiểm toán tại Việt Nam tối thiểu 36 tháng</b></td><td>Điểm b khoản 2 Điều 5 Nghị định 84/2016/NĐ-CP. Điều kiện chung chỉ yêu cầu 24 tháng.</td><td>ASCO hoạt động từ năm 2007 — gần hai mươi năm hành nghề kiểm toán độc lập.</td></tr>
+          <tr><td><b>Đã phát hành báo cáo kiểm toán cho tối thiểu 250 đơn vị</b></td><td>Tính cho kỳ từ 01/10 năm trước đến 30/9 năm nộp hồ sơ. Nếu đã được chấp thuận trong năm nộp hồ sơ thì thêm điều kiện đã phát hành báo cáo cho tối thiểu 20 đơn vị có lợi ích công chúng thuộc lĩnh vực chứng khoán (điểm c khoản 2 Điều 5 Nghị định 84/2016/NĐ-CP).</td><td>ASCO đáp ứng điều kiện này tại kỳ xét duyệt 2026 — thể hiện qua việc có tên trong Quyết định 902/QĐ-UBCK.</td></tr>
+          <tr><td><b>Vốn và hệ thống kiểm soát chất lượng</b></td><td>Vốn điều lệ từ 6 tỷ đồng trở lên và duy trì vốn chủ sở hữu không thấp hơn mức này; có hệ thống kiểm soát chất lượng theo chuẩn mực kiểm toán Việt Nam (điểm b, e khoản 1 Điều 5).</td><td>ASCO đáp ứng. Mỗi hồ sơ đi qua các cổng soát xét theo quy chế nội bộ, trong đó có soát xét chất lượng do người không tham gia cuộc kiểm toán thực hiện.</td></tr>
+          <tr><td><b>Bảo hiểm trách nhiệm nghề nghiệp</b></td><td>Đã mua bảo hiểm trách nhiệm nghề nghiệp hoặc trích lập quỹ dự phòng rủi ro nghề nghiệp (điểm g khoản 1 Điều 5 Nghị định 84/2016/NĐ-CP).</td><td>ASCO thực hiện đầy đủ. Hồ sơ chứng minh được cung cấp khi anh/chị yêu cầu trong quá trình thẩm định nhà cung cấp.</td></tr>
+          <tr><td><b>Kiểm toán viên ký báo cáo phải đủ điều kiện riêng</b></td><td>Có tên trong danh sách kiểm toán viên đủ điều kiện hành nghề do Bộ Tài chính công khai, và có <b>ít nhất 24 tháng</b> thực tế hành nghề kiểm toán tại Việt Nam (Điều 6 Nghị định 84/2016/NĐ-CP).</td><td>Cả 21 kiểm toán viên được chấp thuận của ASCO đều có tên trong danh sách kèm Quyết định 902/QĐ-UBCK, kèm số Giấy chứng nhận đăng ký hành nghề để anh/chị tra lại.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="small rv" style="margin-top:16px"><b>Cách anh/chị tự kiểm tra.</b> Danh sách chấp thuận thay đổi theo từng năm và có trường hợp bị đình chỉ giữa kỳ. Trước khi trình phương án lựa chọn đơn vị kiểm toán, anh/chị mở danh sách của <i>năm tương ứng</i> trên trang của Uỷ ban Chứng khoán Nhà nước, tìm tên hãng, rồi tìm tiếp tên kiểm toán viên dự kiến ký. Hãng có tên nhưng người ký không có tên thì báo cáo vẫn không hợp lệ.</p>
+  </div>
+</section>
+
+<!-- ================= DỊCH VỤ ================= -->
+<section id="dich-vu" style="background:var(--bg-alt);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="eyebrow">Phạm vi công việc</div>
+      <h2>Các dịch vụ ASCO thực hiện cho đơn vị lĩnh vực chứng khoán</h2>
+    </div>
+    <div class="the rv">
+      <div><span class="nhan">Chính</span><h3>Kiểm toán báo cáo tài chính năm</h3><p>Báo cáo tài chính riêng và báo cáo tài chính hợp nhất. Phát hành báo cáo kiểm toán và thư quản lý nêu các điểm cần khắc phục, đủ sớm để anh/chị kịp mốc 90 ngày.</p></div>
+      <div><span class="nhan">Chính</span><h3>Soát xét báo cáo tài chính bán niên</h3><p>Theo chuẩn mực về soát xét thông tin tài chính giữa niên độ. Bắt buộc với tổ chức niêm yết cổ phiếu và công ty đại chúng quy mô lớn — tức có vốn góp của chủ sở hữu từ 120 tỷ đồng trở lên.</p></div>
+      <div><span class="nhan">Theo yêu cầu</span><h3>Soát xét báo cáo tài chính quý</h3><p>Khi cơ quan quản lý, cổ đông lớn hoặc bên cho vay cần mức bảo đảm cao hơn số liệu tự lập. Báo cáo quý được soát xét thì hạn công bố nới từ 20 lên 45 ngày kể từ ngày kết thúc quý.</p></div>
+      <div><span class="nhan">Chứng khoán</span><h3>Kiểm toán báo cáo tỷ lệ an toàn tài chính</h3><p>Dành cho công ty chứng khoán và công ty quản lý quỹ: bản tại 30/6 soát xét, bản tại 31/12 kiểm toán, công bố cùng thời điểm với báo cáo tài chính tương ứng (khoản 2 Điều 22 Thông tư 96/2020/TT-BTC).</p></div>
+      <div><span class="nhan">Hồ sơ</span><h3>Kiểm toán phục vụ chào bán, niêm yết</h3><p>Kiểm toán báo cáo tài chính các năm trong hồ sơ nộp Uỷ ban Chứng khoán Nhà nước, và kiểm toán báo cáo sử dụng vốn thu được từ đợt chào bán.</p></div>
+      <div><span class="nhan">Song ngữ</span><h3>Báo cáo song ngữ Việt – Anh</h3><p>Thông tư 68/2024/TT-BTC bổ sung nghĩa vụ công bố thông tin đồng thời bằng tiếng Việt và tiếng Anh theo lộ trình từ 2025 đến 2028 tuỳ quy mô đơn vị. ASCO phát hành báo cáo song ngữ ngay từ bản gốc, không phải dịch lại sau.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TRỌNG TÂM ================= -->
+<section id="trong-tam">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="eyebrow">Nội dung kiểm toán</div>
+      <h2>Trọng tâm kiểm toán theo từng loại hình đơn vị</h2>
+      <p class="lede" style="margin-top:14px">Kiểm toán một công ty chứng khoán khác hẳn kiểm toán một doanh nghiệp sản xuất đã niêm yết. Dưới đây là nơi ASCO dồn thời gian nhiều nhất theo từng loại hình — cũng là nơi hay phát sinh chênh lệch trước và sau kiểm toán. Chênh lệch lợi nhuận từ <b>5% trở lên</b> là phải giải trình (khoản 4 Điều 14 Thông tư 96/2020/TT-BTC), nên phát hiện sớm luôn tốt hơn phát hiện muộn.</p>
+    </div>
+    <div class="bang-cuon rv">
+      <table class="bang">
+        <thead><tr><th style="width:26%">Loại hình</th><th>Khoản mục và vấn đề ASCO tập trung</th></tr></thead>
+        <tbody>
+          <tr><td><b>Công ty đại chúng, tổ chức niêm yết</b></td><td>Ghi nhận doanh thu đúng kỳ và đúng thời điểm chuyển giao; dự phòng phải thu khó đòi và hàng tồn kho; <b>giao dịch với bên liên quan</b> — khoản mục bị soi kỹ nhất ở nhóm này; vốn hoá chi phí đi vay; trình bày công cụ tài chính; sự kiện phát sinh sau ngày kết thúc kỳ kế toán.</td></tr>
+          <tr><td><b>Đơn vị phải lập báo cáo hợp nhất</b></td><td>Xác định phạm vi hợp nhất và quyền kiểm soát thực tế; loại trừ giao dịch nội bộ và lãi lỗ chưa thực hiện; lợi thế thương mại và đánh giá tổn thất; lợi ích cổ đông không kiểm soát; thống nhất chính sách kế toán giữa công ty mẹ và các công ty con.</td></tr>
+          <tr><td><b>Công ty chứng khoán</b></td><td>Phân loại và đánh giá lại tài sản tài chính; tách bạch tài sản của công ty với tiền gửi giao dịch của nhà đầu tư; dư nợ cho vay ký quỹ và chất lượng tài sản bảo đảm; doanh thu môi giới, tự doanh, bảo lãnh phát hành; các chỉ tiêu cấu thành tỷ lệ an toàn tài chính theo Thông tư 91/2020/TT-BTC (đã sửa đổi bởi Thông tư 102/2025/TT-BTC).</td></tr>
+          <tr><td><b>Công ty quản lý quỹ</b></td><td>Tách bạch tài sản công ty, tài sản quỹ và tài sản uỷ thác; ghi nhận phí quản lý và phí thưởng hoạt động; định giá tài sản của danh mục uỷ thác; tuân thủ hạn mức đầu tư theo điều lệ quỹ và hợp đồng uỷ thác.</td></tr>
+          <tr><td><b>Quỹ đầu tư chứng khoán</b></td><td>Định giá tài sản theo nguyên tắc ghi trong điều lệ quỹ; tính giá trị tài sản ròng và giá trị tài sản ròng trên một đơn vị quỹ; nghiệp vụ phát hành thêm và mua lại chứng chỉ quỹ; phí trả ngân hàng giám sát và công ty quản lý quỹ.</td></tr>
+          <tr><td><b>Đơn vị chuẩn bị chào bán, niêm yết</b></td><td>Tính đầy đủ và nhất quán của số liệu các năm trong hồ sơ; xử lý bút toán điều chỉnh hồi tố; công bố giao dịch với bên liên quan giai đoạn trước chào bán; theo dõi và báo cáo sử dụng vốn đúng phương án đã công bố. Lưu ý hồ sơ nộp sau 90 ngày kể từ ngày kết thúc kỳ kế toán của báo cáo gần nhất thì phải lập báo cáo bổ sung (khoản 5 Điều 20 Luật Chứng khoán).</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ================= QUY TRÌNH ================= -->
+<section id="quy-trinh" style="background:var(--bg-alt);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="eyebrow">Cách ASCO làm việc</div>
+      <h2>Quy trình dựng ngược từ mốc hạn công bố</h2>
+      <p class="lede" style="margin-top:14px">ASCO không dựng lịch từ ngày ký hợp đồng đi tới, mà dựng ngược từ mốc hạn công bố của anh/chị đi lùi lại. Cách này cho biết ngay từ đầu là có kịp hay không — nếu không kịp, ASCO nói thẳng thay vì nhận việc rồi để anh/chị trễ hạn. Cần nói rõ: <b>Thông tư 96/2020/TT-BTC không có cơ chế gia hạn công bố báo cáo tài chính.</b></p>
+    </div>
+    <div class="gd rv">
+      <div><div class="khi">Giai đoạn 1</div><h3>Đánh giá và chấp nhận khách hàng</h3><p>Rà tính độc lập, xung đột lợi ích và năng lực đáp ứng tiến độ. Kiểm tra kiểm toán viên nào của ASCO đủ điều kiện đứng tên ký cho đơn vị, và người đó đã ký cho đơn vị bao nhiêu năm liên tiếp. Bước này ASCO làm <b>trước khi báo phí</b>, không phải sau.</p></div>
+      <div><div class="khi">Giai đoạn 2</div><h3>Lập kế hoạch và đánh giá rủi ro</h3><p>Tìm hiểu hoạt động kinh doanh và môi trường kiểm soát, xác định mức trọng yếu, nhận diện khoản mục có rủi ro sai sót trọng yếu. Kết quả là chương trình kiểm toán riêng cho đơn vị, không phải mẫu chung.</p></div>
+      <div><div class="khi">Giai đoạn 3</div><h3>Kiểm toán sơ bộ — trước ngày kết thúc năm tài chính</h3><p>Kiểm kê, đối chiếu công nợ, thử nghiệm kiểm soát, kiểm tra chi tiết phần lớn giao dịch mười một tháng đầu. Đây chính là cái rút ngắn kỳ chính. Bỏ qua giai đoạn này thì mọi việc dồn vào tháng cuối, và đó là lúc dễ sai nhất.</p></div>
+      <div><div class="khi">Giai đoạn 4</div><h3>Kiểm toán chính và trao đổi số liệu</h3><p>Thực hiện thủ tục trên số liệu cả năm, trao đổi bút toán điều chỉnh với phòng kế toán theo tiến độ. ASCO đưa vấn đề ra sớm để anh/chị có thời gian xử lý và chuẩn bị nội dung giải trình nếu chênh lệch trước – sau kiểm toán chạm ngưỡng 5%.</p></div>
+      <div><div class="khi">Giai đoạn 5</div><h3>Soát xét chất lượng và phát hành</h3><p>Hồ sơ qua soát xét chất lượng độc lập; kiểm tra lại điều kiện người ký và điều kiện luân chuyển; xem xét sự kiện phát sinh sau ngày kết thúc kỳ kế toán; rồi mới phát hành báo cáo kiểm toán và thư quản lý.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LUÂN CHUYỂN ================= -->
+<section id="luan-chuyen">
+  <div class="wrap narrow">
+    <div class="sec-head rv" style="max-width:none">
+      <div class="eyebrow">Chỗ hay bị bỏ sót</div>
+      <h2>Luân chuyển kiểm toán viên ký báo cáo</h2>
+    </div>
+    <p class="lede rv">Đây là chỗ ASCO thấy khách hàng bị động nhiều nhất, và cũng là chỗ vừa có thay đổi lớn. <b>Luật số 56/2024/QH15</b> sửa Luật Kiểm toán độc lập: không được bố trí kiểm toán viên hành nghề ký báo cáo kiểm toán cho một đơn vị được kiểm toán <b>quá 05 năm liên tục</b>. <b>Nghị định 90/2025/NĐ-CP ngày 14/4/2025</b> sửa Nghị định 17/2012/NĐ-CP theo đúng mức 5 năm này — trước đó quy định là 3 năm.</p>
+    <div class="nhac rv" style="margin-top:22px"><b>Ba điều nên nắm.</b> Một: quy định 5 năm <b>có hiệu lực từ 01/01/2025</b>, không phải từ 2026 — một số bài viết ghi nhầm sang 2026 vì lẫn với hai nội dung khác của cùng Luật 56/2024 được lùi hiệu lực. Hai: quy định gắn với <b>người ký</b>, không gắn với hãng — đơn vị hoàn toàn có thể tiếp tục làm việc với cùng một hãng, chỉ cần đổi kiểm toán viên đứng tên ký; nhiều đơn vị không biết nên đổi hẳn hãng và mất luôn phần hiểu biết đã tích luỹ về mình. Ba: chính đơn vị được kiểm toán cũng có nghĩa vụ chủ động yêu cầu đổi người ký khi đã ký hợp đồng với một hãng quá 5 năm liên tục (khoản 8 Điều 39 Luật Kiểm toán độc lập). ASCO theo dõi số năm ký của từng kiểm toán viên trên từng khách hàng và báo trước khi tới hạn.</div>
+  </div>
+</section>
+
+<!-- ================= VÌ SAO ASCO ================= -->
+<section id="vi-sao" style="background:var(--bg-alt);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="eyebrow">Vì sao chọn ASCO</div>
+      <h2>Bốn điều anh/chị nhận được mà bản chào giá không nói hết</h2>
+    </div>
+    <div class="the rv">
+      <div><span class="nhan">01</span><h3>Đủ điều kiện pháp lý để ký, và đủ người để ký</h3><p>21 kiểm toán viên được chấp thuận cho kỳ 2026, trong khi điều kiện tối thiểu của lĩnh vực chứng khoán là 15. Điều này quan trọng vào mùa cao điểm: mọi đơn vị đều phải phát hành trong cùng một khoảng thời gian, hãng ít người được chấp thuận sẽ phải xếp hàng — hoặc phải từ chối.</p></div>
+      <div><span class="nhan">02</span><h3>Nói trước khi nhận việc, không nói sau khi trễ</h3><p>ASCO dựng lịch ngược từ mốc hạn công bố của anh/chị. Nếu quỹ thời gian không đủ để làm đúng chuẩn mực, ASCO nói ngay từ buổi trao đổi đầu tiên. Nhận việc rồi mới báo không kịp là cách làm ASCO không chọn — nhất là khi Thông tư 96/2020 không có cơ chế gia hạn để cứu.</p></div>
+      <div><span class="nhan">03</span><h3>Người làm nghề trao đổi với anh/chị, không phải nhân viên bán hàng</h3><p>Yêu cầu anh/chị gửi được một chủ nhiệm kiểm toán đọc và phản hồi. Anh/chị nhận được câu trả lời cho tình huống cụ thể của mình, kèm dẫn chiếu văn bản để tự kiểm tra lại — không phải một bản giới thiệu năng lực chung.</p></div>
+      <div><span class="nhan">04</span><h3>Mạng lưới đủ rộng để tới tận nơi</h3><p>Trụ sở Hà Nội cùng các chi nhánh và văn phòng đại diện tại Thành phố Hồ Chí Minh, Hải Phòng, Cần Thơ, Ninh Bình, Nghệ An, Quảng Trị, Huế, Đà Nẵng, Quảng Ngãi. Đơn vị có nhiều công ty con ở nhiều tỉnh thì đây là khác biệt thấy được ngay ở khâu kiểm kê cuối năm.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= HỎI ĐÁP ================= -->
+<section id="hoi-dap">
+  <div class="wrap narrow">
+    <div class="sec-head rv" style="max-width:none">
+      <div class="eyebrow">Hỏi &amp; đáp</div>
+      <h2>Những câu khách hỏi ASCO nhiều nhất</h2>
+    </div>
+    <div class="hd rv">
+    <details open><summary>Công ty tôi là công ty đại chúng nhưng chưa niêm yết, có bắt buộc thuê hãng kiểm toán được chấp thuận không?</summary><div class="tl"><p>Có. Công ty đại chúng nằm ngay ở đầu danh sách tại <b>khoản 2 Điều 21 Luật Chứng khoán số 54/2019/QH14</b>, cùng với tổ chức niêm yết, tổ chức đăng ký giao dịch, tổ chức chào bán ra công chúng, công ty chứng khoán, công ty quản lý quỹ, công ty đầu tư chứng khoán và quỹ đầu tư chứng khoán.</p><p>Báo cáo tài chính năm phải do tổ chức kiểm toán có tên trong danh sách được Uỷ ban Chứng khoán Nhà nước chấp thuận thực hiện (<b>Điều 54 Luật Kiểm toán độc lập số 67/2011/QH12</b>). Việc cổ phiếu đã lên sàn hay chưa không làm thay đổi nghĩa vụ này.</p></div></details>
+    <details><summary>ASCO có được Uỷ ban Chứng khoán Nhà nước chấp thuận không, và bao nhiêu kiểm toán viên?</summary><div class="tl"><p>Có. ASCO là <b>một trong 28 tổ chức kiểm toán được chấp thuận kiểm toán cho đơn vị có lợi ích công chúng thuộc lĩnh vực chứng khoán kỳ 2026</b>, theo <b>Quyết định số 902/QĐ-UBCK ngày 19/11/2025</b> của Chủ tịch Uỷ ban Chứng khoán Nhà nước, với <b>21 kiểm toán viên hành nghề được chấp thuận</b>.</p><p>Chỉ những kiểm toán viên có tên trong danh sách kèm quyết định mới được ký báo cáo cho đơn vị của anh/chị. ASCO khuyến khích anh/chị đối chiếu trực tiếp danh sách trên trang của Uỷ ban Chứng khoán Nhà nước — đây là bước thẩm định bình thường, không có gì phải ngại.</p></div></details>
+    <details><summary>Danh sách chấp thuận có giá trị bao lâu? Ký hợp đồng nhiều năm có được không?</summary><div class="tl"><p>Kỳ chấp thuận là <b>năm dương lịch, từ 01/01 đến 31/12</b> (khoản 4 Điều 3 Nghị định 84/2016/NĐ-CP). Hồ sơ đăng ký nộp trong khoảng 01/10 – 20/10 hằng năm; Uỷ ban Chứng khoán Nhà nước công khai danh sách của năm sau <b>trước ngày 20/11</b> (Điều 10 Nghị định 84/2016/NĐ-CP).</p><p>Hợp đồng nhiều năm vẫn ký được, nhưng hãng kiểm toán phải được chấp thuận cho từng kỳ. ASCO khuyên anh/chị đưa vào hợp đồng một điều khoản xử lý trường hợp hãng không còn trong danh sách của kỳ tiếp theo — để không bị động.</p></div></details>
+    <details><summary>Hạn cuối công bố báo cáo tài chính năm đã kiểm toán là ngày nào?</summary><div class="tl"><p><b>Trong 10 ngày kể từ ngày tổ chức kiểm toán ký báo cáo kiểm toán, nhưng không vượt quá 90 ngày kể từ ngày kết thúc năm tài chính</b> (điểm c khoản 1 Điều 10 Thông tư 96/2020/TT-BTC). Năm tài chính kết thúc 31/12 thì hạn chót là <b>31/3</b>.</p><p>Báo cáo thường niên: trong 20 ngày kể từ ngày công bố báo cáo tài chính năm đã kiểm toán và không quá <b>110 ngày</b> kể từ ngày kết thúc năm tài chính (khoản 2 Điều 10). Anh/chị dùng <a href="#moc-han">công cụ tra mốc hạn</a> ở trên để ra ngày cụ thể cho kỳ của mình.</p></div></details>
+    <details><summary>Chúng tôi có công ty con, hợp nhất chậm — xin gia hạn công bố được không?</summary><div class="tl"><p><b>Không có cơ chế gia hạn.</b> Thông tư 96/2020/TT-BTC không quy định việc gia hạn thời hạn công bố báo cáo tài chính. Chỉ có <b>Điều 8 về tạm hoãn công bố thông tin</b> vì lý do bất khả kháng — thiên tai, hoả hoạn, chiến tranh, dịch bệnh — và phải báo cáo Uỷ ban Chứng khoán Nhà nước cùng Sở giao dịch chứng khoán ngay khi xảy ra sự kiện. Hợp nhất chậm không thuộc trường hợp này.</p><p>Cách xử lý đúng là <b>rút ngắn lịch bằng thủ tục giữa kỳ</b>: ASCO làm phần lớn thử nghiệm kiểm soát và kiểm tra chi tiết từ tháng 11 – 12, để tháng 1 – 2 chỉ còn thủ tục cuối kỳ và phần hợp nhất. Đây là lý do ASCO khuyên ký hợp đồng trước khi kết thúc năm tài chính, không phải sau.</p></div></details>
+    <details><summary>Hạn công bố báo cáo bán niên soát xét và báo cáo quý khác nhau thế nào?</summary><div class="tl"><p><b>Bán niên đã soát xét:</b> trong 5 ngày kể từ ngày ký báo cáo soát xét, không quá <b>45 ngày</b> kể từ ngày kết thúc 6 tháng đầu năm tài chính; <b>60 ngày</b> nếu là công ty mẹ hoặc đơn vị kế toán cấp trên (điểm c khoản 2 Điều 14 Thông tư 96/2020/TT-BTC).</p><p><b>Báo cáo quý:</b> <b>20 ngày</b> kể từ ngày kết thúc quý; <b>30 ngày</b> nếu là công ty mẹ hoặc đơn vị kế toán cấp trên. Nếu báo cáo quý được soát xét thì 5 ngày kể từ ngày ký, không quá 45 ngày (điểm c khoản 3 Điều 14).</p><p>Hai nghĩa vụ này áp dụng cho <b>tổ chức niêm yết cổ phiếu và công ty đại chúng quy mô lớn</b> — tức công ty đại chúng có vốn góp của chủ sở hữu <b>từ 120 tỷ đồng trở lên</b> trên báo cáo tài chính năm gần nhất đã được kiểm toán (khoản 1 Điều 3).</p></div></details>
+    <details><summary>Kiểm toán viên đã ký cho công ty tôi 5 năm rồi, có phải đổi hãng kiểm toán không?</summary><div class="tl"><p>Phải đổi <b>người ký</b>, không nhất thiết đổi hãng. Từ <b>01/01/2025</b>, Luật số 56/2024/QH15 sửa Luật Kiểm toán độc lập: không được bố trí kiểm toán viên hành nghề ký báo cáo kiểm toán cho một đơn vị <b>quá 05 năm liên tục</b>. <b>Nghị định 90/2025/NĐ-CP ngày 14/4/2025</b> đã sửa Nghị định 17/2012/NĐ-CP theo đúng mức này (trước đây là 3 năm).</p><p>Xin lưu ý một nhầm lẫn khá phổ biến: nhiều bài viết ghi quy định 5 năm có hiệu lực từ 01/01/2026. Không đúng. Điều 10 Luật 56/2024 chỉ lùi hiệu lực tới 2026 với hai nội dung khác, không bao gồm quy định luân chuyển. Kiểm toán viên đã ký trước 01/01/2025 thì được tiếp tục ký theo mốc 5 năm mới (Điều 4 Nghị định 90/2025/NĐ-CP).</p><p>Đơn vị được kiểm toán cũng có nghĩa vụ chủ động: ký hợp đồng với một hãng quá 5 năm liên tục thì phải yêu cầu đổi kiểm toán viên ký (khoản 8 Điều 39 Luật Kiểm toán độc lập).</p></div></details>
+    <details><summary>Công ty chứng khoán, công ty quản lý quỹ phải nộp thêm báo cáo gì?</summary><div class="tl"><p>Ngoài báo cáo tài chính năm và bán niên, phải công bố <b>báo cáo tỷ lệ an toàn tài chính</b>: bản tại <b>30/6 đã được soát xét</b> và bản tại <b>31/12 đã được kiểm toán</b>, do tổ chức kiểm toán được chấp thuận thực hiện, công bố <b>cùng thời điểm</b> với báo cáo tài chính bán niên soát xét và báo cáo tài chính năm đã kiểm toán (khoản 2 Điều 22 Thông tư 96/2020/TT-BTC).</p><p>Chỉ tiêu an toàn tài chính theo <b>Thông tư 91/2020/TT-BTC</b>, đã được sửa đổi bởi <b>Thông tư 102/2025/TT-BTC</b> có hiệu lực từ 15/12/2025 — nếu kỳ này là kỳ đầu áp dụng quy định sửa đổi thì nên trao đổi với kiểm toán từ sớm.</p></div></details>
+    <details><summary>Công ty đang chuẩn bị chào bán cổ phiếu ra công chúng, có ràng buộc gì về ý kiến kiểm toán?</summary><div class="tl"><p>Có, và đây là điểm hay bị vướng. <b>Khoản 3 Điều 20 Luật Chứng khoán</b> yêu cầu báo cáo tài chính năm trong hồ sơ phải được tổ chức kiểm toán được chấp thuận kiểm toán, và <b>ý kiến kiểm toán phải là ý kiến chấp nhận toàn phần</b>. Nếu là ý kiến ngoại trừ thì khoản ngoại trừ không được ảnh hưởng tới điều kiện chào bán, đồng thời tổ chức phát hành phải có tài liệu giải thích hợp lý và <b>xác nhận của tổ chức kiểm toán về ảnh hưởng của việc ngoại trừ</b>.</p><p>Thêm một mốc dễ quên: hồ sơ nộp sau <b>90 ngày</b> kể từ ngày kết thúc kỳ kế toán của báo cáo tài chính gần nhất thì phải lập báo cáo tài chính bổ sung đến tháng hoặc quý gần nhất (khoản 5 Điều 20). Vì vậy lịch kiểm toán và lịch nộp hồ sơ phải khớp nhau ngay từ đầu.</p></div></details>
+    <details><summary>Sau khi phát hành báo cáo mà phát hiện sai sót thì hãng kiểm toán làm gì?</summary><div class="tl"><p>Theo <b>điểm c khoản 3 Điều 21 Luật Chứng khoán</b>, khi phát hiện đơn vị được kiểm toán có sai phạm trọng yếu do không tuân thủ pháp luật và các quy định liên quan đến báo cáo tài chính đã được kiểm toán, tổ chức kiểm toán được chấp thuận <b>phải thông báo bằng văn bản cho Uỷ ban Chứng khoán Nhà nước</b>. Đây là nghĩa vụ luật định, không phải lựa chọn của hãng.</p><p>ASCO nói rõ điều này ngay từ đầu để anh/chị hiểu đúng vai trò của kiểm toán độc lập. Về mặt kỹ thuật, ASCO xử lý theo chuẩn mực kiểm toán Việt Nam về sự kiện phát sinh sau ngày kết thúc kỳ kế toán và về ý kiến kiểm toán, đồng thời phối hợp để đơn vị công bố thông tin bất thường đúng hạn.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= KÊU GỌI ================= -->
+<section id="lien-he" class="kg">
+  <div class="wrap">
+    <div class="eyebrow" style="color:var(--gold-hi)">Bước tiếp theo</div>
+    <h2>Gửi thông tin đơn vị, nhận báo giá và lộ trình trong 24 giờ làm việc</h2>
+    <p class="lede">
+      Trang khai báo được tách riêng để anh/chị điền một lần là đủ: loại hình đơn vị, kỳ kế toán,
+      dịch vụ cần, và — phần ASCO đọc kỹ nhất — <b>vướng mắc thật anh/chị đang gặp</b>.
+      Không phải điền xong mới biết giá; ASCO gọi lại trao đổi trước khi báo phí.
+    </p>
+    <div class="kg-nut">
+      <a class="btn btn-gold" href="yeu-cau-bao-gia/">Mở trang khai báo &amp; xin báo giá →</a>
+      <a class="btn btn-onnavy" href="tel:0825092007">Gọi 08 2509 2007</a>
+    </div>
+    <div class="kg-lh">
+      <a href="tel:0825092007"><div><b>08 2509 2007</b><span>Hotline · Zalo — tư vấn dịch vụ kiểm toán</span></div></a>
+      <a href="tel:02437930960"><div><b>024 3793 0960</b><span>Tổng đài văn phòng Hà Nội</span></div></a>
+      <a href="mailto:asco@asco.vn"><div><b>asco@asco.vn</b><span>Gửi hồ sơ và yêu cầu báo giá qua thư</span></div></a>
+      <a href="https://asco.vn" target="_blank" rel="noopener noreferrer"><div><b>asco.vn</b><span>Trang chủ Hãng Kiểm toán và Định giá ASCO</span></div></a>
+    </div>
+  </div>
+</section>
+
+<section class="lien-ket-noi-bo">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="eyebrow">Các trang khác của ASCO</div>
+      <h2>Dịch vụ và tin tuyển dụng khác</h2>
+    </div>
+    <div class="lk-grid rv">
+      <h3>Dịch vụ kiểm toán</h3>
+      <ul class="lk-ds">
+        <li><a href="yeu-cau-bao-gia/">Gửi câu hỏi và xin báo giá</a><span>Trang khai báo thông tin đơn vị, nêu vướng mắc và nhận báo giá.</span></li>
+        <li><a href="../kiem-toan-quyet-toan-du-an-cap-xa/">Kiểm toán quyết toán dự án cấp xã, phường</a><span>Kiểm toán báo cáo quyết toán dự án hoàn thành cho UBND xã, phường.</span></li>
+        <li><a href="../kiem-toan-quyet-toan-nha-o-xa-hoi/">Kiểm toán quyết toán dự án nhà ở xã hội</a><span>Kiểm toán báo cáo quyết toán dự án nhà ở xã hội hoàn thành.</span></li>
+        <li><a href="../kiem-toan-du-an-ban-qlda-cap-tinh/">Kiểm toán dự án — Ban QLDA cấp tỉnh</a><span>Kiểm toán quyết toán dự án cho Ban Quản lý dự án thuộc tỉnh, thành phố.</span></li>
+        <li><a href="../kiem-toan-du-an-ban-qlda-bo-xay-dung/">Kiểm toán dự án — Ban QLDA thuộc Bộ Xây dựng</a><span>Kiểm toán quyết toán dự án cho Ban QLDA thuộc Bộ Xây dựng.</span></li>
+        <li><a href="../kiem-toan-quyet-toan-du-an-cap-xa-phuong-quang-ninh/">Kiểm toán dự án cấp xã — tỉnh Quảng Ninh</a><span>Kiểm toán quyết toán dự án cho xã, phường, đặc khu tỉnh Quảng Ninh.</span></li>
+        <li><a href="../kiem-toan-bao-cao-tai-chinh-fdi-han-quoc/">Kiểm toán BCTC doanh nghiệp FDI Hàn Quốc</a><span>Kiểm toán báo cáo tài chính cho doanh nghiệp vốn Hàn Quốc, báo cáo song ngữ Việt – Hàn.</span></li>
+        <li><a href="../kiem-toan-bao-cao-tai-chinh-fdi-trung-quoc/">Kiểm toán BCTC doanh nghiệp FDI Trung Quốc</a><span>Kiểm toán báo cáo tài chính cho doanh nghiệp vốn Trung Quốc, báo cáo Việt – Trung – Anh.</span></li>
+      </ul>
+      <h3>Tin tuyển dụng</h3>
+      <ul class="lk-ds">
+        <li><a href="../tuyen-dung-truong-phong-tham-dinh-gia/">Tuyển Trưởng phòng Thẩm định giá</a><span>Yêu cầu có Thẻ thẩm định viên về giá và tối thiểu 5 năm kinh nghiệm.</span></li>
+        <li><a href="../tuyen-dung-ke-toan-tong-hop/">Tuyển Kế toán tổng hợp</a><span>Nhận hồ sơ từ 19/08/2026 đến 19/09/2026. Nghỉ thứ Bảy, đóng bảo hiểm xã hội.</span></li>
+      </ul>
+    </div>
+    <p class="small rv" style="margin-top:18px">
+      <a href="../">Xem tất cả dịch vụ của ASCO</a> ·
+      <a href="https://asco.vn" target="_blank" rel="noopener noreferrer">Trang chủ asco.vn</a>
+    </p>
+  </div>
+</section>
+<!-- /ASCO-LIENKET -->
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <img class="flogo" src="data:image/png;base64,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" alt="Hãng Kiểm toán và Định giá ASCO">
+        <p class="small" style="max-width:44ch">
+          <b>Công ty TNHH Hãng Kiểm toán và Định giá ASCO</b><br>
+          Đào tạo · Tư vấn · Kiểm toán · Thẩm định giá · Công nghệ<br><br>
+          <i>Phụng sự xã hội bằng sự minh bạch và Quản lý đúng.</i>
+        </p>
+      </div>
+      <div>
+        <h4>Liên hệ</h4>
+        <ul>
+          <li>Số 2, ngõ 308 phố Lê Trọng Tấn, phường Phương Liệt, thành phố Hà Nội</li>
+          <li><a href="tel:0825092007">08 2509 2007</a> · <a href="tel:02437930960">024 3793 0960</a></li>
+          <li><a href="mailto:asco@asco.vn">asco@asco.vn</a></li>
+          <li><a href="https://asco.vn" target="_blank" rel="noopener noreferrer">asco.vn</a></li>
+          <li><a href="https://www.facebook.com/ascofirm" target="_blank" rel="noopener noreferrer">facebook.com/ascofirm</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Nội dung trang</h4>
+        <ul>
+          <li><a href="#ai-thuoc-dien">Ai thuộc diện</a></li>
+          <li><a href="#moc-han">Mốc hạn công bố thông tin</a></li>
+          <li><a href="#dieu-kien">Điều kiện tổ chức kiểm toán</a></li>
+          <li><a href="#dich-vu">Dịch vụ</a></li>
+          <li><a href="#trong-tam">Trọng tâm kiểm toán</a></li>
+          <li><a href="#quy-trinh">Quy trình</a></li>
+          <li><a href="#hoi-dap">Hỏi &amp; đáp</a></li>
+          <li><a href="yeu-cau-bao-gia/">Gửi câu hỏi &amp; xin báo giá</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="disc">
+      <b>Căn cứ pháp lý tham chiếu trên trang:</b> Luật Kiểm toán độc lập số 67/2011/QH12 (Điều 5, Điều 53, Điều 54); Luật Chứng khoán số 54/2019/QH14 (Điều 20, Điều 21); Luật số 56/2024/QH15 sửa đổi, bổ sung một số điều của chín luật (Điều 3 — sửa Luật Kiểm toán độc lập); Nghị định 84/2016/NĐ-CP về tiêu chuẩn, điều kiện đối với kiểm toán viên hành nghề, tổ chức kiểm toán được chấp thuận kiểm toán cho đơn vị có lợi ích công chúng (sửa đổi bởi Nghị định 134/2020/NĐ-CP); Nghị định 17/2012/NĐ-CP (sửa đổi bởi Nghị định 90/2025/NĐ-CP); Thông tư 96/2020/TT-BTC hướng dẫn công bố thông tin trên thị trường chứng khoán (sửa đổi, bổ sung bởi Thông tư 68/2024/TT-BTC, Thông tư 18/2025/TT-BTC và Thông tư 08/2026/TT-BTC); Thông tư 91/2020/TT-BTC (sửa đổi bởi Thông tư 102/2025/TT-BTC); hệ thống chuẩn mực kiểm toán Việt Nam ban hành theo Thông tư 214/2012/TT-BTC; Quyết định số 902/QĐ-UBCK ngày 19/11/2025 của Chủ tịch Uỷ ban Chứng khoán Nhà nước.<br><br>
+      Nội dung trang mang tính giới thiệu dịch vụ và tham khảo chuyên môn, không thay thế cho ý kiến tư vấn pháp lý chính thức
+      hoặc văn bản hướng dẫn của cơ quan quản lý nhà nước có thẩm quyền. Công cụ tra mốc hạn trên trang chỉ để ước lượng nhanh;
+      mốc chính thức áp dụng cho từng đơn vị phải đối chiếu văn bản hiện hành và các trường hợp được gia hạn.
+      Phạm vi, điều kiện và kết quả cụ thể của từng cuộc kiểm toán được xác định theo hợp đồng dịch vụ và quy định pháp luật hiện hành.
+    </p>
+  </div>
+</footer>
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- giao dien sang/toi ---------- */
+  var root=document.documentElement, tb=document.getElementById('themeBtn');
+  try{var sv=localStorage.getItem('asco-ck-theme'); if(sv) root.setAttribute('data-theme',sv);}catch(e){}
+  tb.addEventListener('click',function(){
+    var cur=root.getAttribute('data-theme');
+    var toi=window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var kt=cur?(cur==='dark'?'light':'dark'):(toi?'light':'dark');
+    root.setAttribute('data-theme',kt);
+    try{localStorage.setItem('asco-ck-theme',kt);}catch(e){}
+  });
+
+  /* ---------- hien dan khi cuon toi ---------- */
+  var rv=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(en){
+      en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+    },{rootMargin:'0px 0px -7% 0px',threshold:.06});
+    rv.forEach(function(el,i){el.style.transitionDelay=(Math.min(i,4)*45)+'ms';io.observe(el);});
+  } else { rv.forEach(function(el){el.classList.add('in');}); }
+
+  /* ================= CONG CU TRA MOC HAN =================
+     So ngay lay tu Thong tu 96/2020/TT-BTC (Dieu 10, Dieu 14), da doi chieu
+     ban Cong bao. Da kiem ca ba thong tu sua doi 68/2024, 18/2025 va 08/2026:
+     khong thong tu nao sua hai dieu nay, nen cac moc duoi day van con nguyen.
+     Cong cu chi de uoc luong nhanh — moc chinh thuc van phai doi chieu van ban. */
+  var QT = {"nam": 90, "tn": 110, "bn": 45, "bn_me": 60, "quy": 20, "quy_me": 30, "lui_phat_hanh": 10, "lui_bat_dau": 40, "lui_so_bo": 21, "lui_ky_hd": 45};
+
+  var eNam=document.getElementById('cNam'), eKt=document.getElementById('cKt'),
+      eCon=document.getElementById('cCon'), eKy=document.getElementById('cKy'),
+      eKq=document.getElementById('cKq'), eNhac=document.getElementById('cNhac');
+
+  function hai(n){ return (n<10?'0':'')+n; }
+  function nut(d){ return hai(d.getDate())+'/'+hai(d.getMonth()+1)+'/'+d.getFullYear(); }
+  function themNgay(d,n){ var x=new Date(d.getTime()); x.setDate(x.getDate()+n); return x; }
+  function cuoiThang(nam,thang){ return new Date(nam, thang, 0); }  /* thang tinh tu 1 */
+  function conLai(d){ var hn=new Date(); hn.setHours(0,0,0,0); return Math.round((d-hn)/86400000); }
+
+  function ve(){
+    var nam=parseInt(eNam.value,10), thang=parseInt(eKt.value,10);
+    var laMe = eCon.value==='1', daKy = eKy.value==='1';
+
+    /* ngay ket thuc nam tai chinh */
+    var ketThuc = cuoiThang(nam, thang);
+    /* ngay ket thuc 6 thang dau nam tai chinh: lui 6 thang tu ngay ket thuc */
+    var t6 = thang - 6, n6 = nam;
+    if (t6 <= 0) { t6 += 12; n6 -= 1; }
+    var banNien = cuoiThang(n6, t6);
+
+    var hanNam = themNgay(ketThuc, QT.nam);
+    var hanTN  = themNgay(ketThuc, QT.tn);
+    var hanBN  = themNgay(banNien, laMe ? QT.bn_me : QT.bn);
+
+    /* dung nguoc tu han cong bo bao cao tai chinh nam */
+    var phatHanh = themNgay(hanNam, -QT.lui_phat_hanh);
+    var batDau   = themNgay(phatHanh, -QT.lui_bat_dau);
+    var soBo     = themNgay(ketThuc, -QT.lui_so_bo);
+    var kyHd     = themNgay(ketThuc, -QT.lui_ky_hd);
+
+    var ds = [
+      ['Nên ký hợp đồng kiểm toán', 'Trước khi kết thúc năm tài chính — để kịp bố trí kiểm toán sơ bộ', kyHd, daKy, false],
+      ['Kiểm toán sơ bộ tại đơn vị', 'Kiểm kê, đối chiếu công nợ, thử nghiệm kiểm soát', soBo, false, false],
+      ['Hạn công bố BCTC bán niên đã soát xét',
+       laMe ? 'Không quá 60 ngày kể từ ngày kết thúc 6 tháng đầu năm (công ty mẹ)'
+            : 'Không quá 45 ngày kể từ ngày kết thúc 6 tháng đầu năm', hanBN, false, true],
+      ['Bắt đầu kiểm toán chính', 'Thủ tục trên số liệu cả năm, trao đổi bút toán điều chỉnh', batDau, false, false],
+      ['Phát hành báo cáo kiểm toán', 'Sau soát xét chất lượng độc lập — không phải ngày cuối cùng', phatHanh, false, false],
+      ['Hạn công bố BCTC năm đã kiểm toán',
+       'Không quá 90 ngày kể từ ngày kết thúc năm tài chính', hanNam, false, true],
+      ['Hạn công bố báo cáo thường niên',
+       'Không quá 110 ngày kể từ ngày kết thúc năm tài chính', hanTN, false, true]
+    ];
+    ds.sort(function(a,b){ return a[2]-b[2]; });
+
+    eKq.innerHTML = ds.map(function(x){
+      var cl = conLai(x[2]);
+      var mo = x[3] ? 'đã xong' : (cl<0 ? 'đã qua' : (cl===0 ? 'hôm nay' : 'còn '+cl+' ngày'));
+      var mau = x[3] ? 'var(--ok)' : (cl<0 ? 'var(--danger)' : (cl<45 ? 'var(--gold)' : 'var(--navy)'));
+      var luat = x[4] ? ' <b style="color:var(--danger)">· hạn luật định</b>' : '';
+      return '<div><span class="cham" style="background:'+mau+'"></span>'+
+             '<span class="ten">'+x[0]+luat+'<i>'+x[1]+'</i></span>'+
+             '<span class="ngay" style="color:'+mau+'">'+nut(x[2])+'<small>'+mo+'</small></span></div>';
+    }).join('');
+
+    var gap = conLai(kyHd);
+    var quy = laMe ? QT.quy_me : QT.quy;
+    var them = ' Ngoài ra, tổ chức niêm yết và công ty đại chúng quy mô lớn còn phải công bố '+
+               '<b>báo cáo tài chính quý trong '+quy+' ngày</b> kể từ ngày kết thúc quý'+
+               (laMe ? ' (mức của công ty mẹ)' : '')+'. '+
+               '<b>Thông tư 96/2020/TT-BTC không có cơ chế gia hạn</b> — chỉ có tạm hoãn vì lý do bất khả kháng.';
+
+    eNhac.innerHTML = (daKy
+      ? '<b>Đã ký hợp đồng.</b> Việc còn lại là giữ đúng lịch cung cấp hồ sơ — chậm hồ sơ một tuần thường đẩy ngày phát hành chậm tương ứng.'
+      : (gap < 0
+         ? '<b>Mốc nên ký hợp đồng đã qua.</b> Vẫn còn cách xử lý nhưng phải rút ngắn ở khâu khác. Anh/chị nên gọi sớm để ASCO nói thẳng có kịp hay không.'
+         : '<b>Còn '+gap+' ngày</b> tới mốc nên ký hợp đồng. Khoảng đệm này để chọn đơn vị kiểm toán, trình phương án và chốt kiểm toán viên đứng tên ký — chưa phải để bắt đầu làm việc.')) + them;
+  }
+  [eNam,eKt,eCon,eKy].forEach(function(e){ e.addEventListener('change', ve); });
+  ve();
+})();
+</script>
+</body>
+</html>
