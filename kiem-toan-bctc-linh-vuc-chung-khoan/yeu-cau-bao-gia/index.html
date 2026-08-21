@@ -679,20 +679,92 @@ footer a:hover{color:var(--navy)}
 }
 </style>
 <script>document.documentElement.className+=' js';</script>
+<!-- ASCO-SEO -->
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
-{"@type":"ListItem","position":1,"name":"Dịch vụ ASCO","item":"https://dichvu.asco.vn/"},
-{"@type":"ListItem","position":2,"name":"Kiểm toán báo cáo tài chính lĩnh vực chứng khoán","item":"https://dichvu.asco.vn/kiem-toan-bctc-linh-vuc-chung-khoan/"},
-{"@type":"ListItem","position":3,"name":"Yêu cầu báo giá và gửi câu hỏi","item":"https://dichvu.asco.vn/kiem-toan-bctc-linh-vuc-chung-khoan/yeu-cau-bao-gia/"}]}
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Trang chủ",
+      "item": "https://dichvu.asco.vn/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Kiểm toán BCTC lĩnh vực chứng khoán",
+      "item": "https://dichvu.asco.vn/kiem-toan-bctc-linh-vuc-chung-khoan/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Yêu cầu báo giá kiểm toán công ty niêm yết",
+      "item": "https://dichvu.asco.vn/kiem-toan-bctc-linh-vuc-chung-khoan/yeu-cau-bao-gia/"
+    }
+  ]
+}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"ContactPage","name":"Yêu cầu báo giá kiểm toán báo cáo tài chính lĩnh vực chứng khoán",
-"url":"https://dichvu.asco.vn/kiem-toan-bctc-linh-vuc-chung-khoan/yeu-cau-bao-gia/","inLanguage":"vi-VN","isPartOf":{"@type":"WebSite","name":"Dịch vụ ASCO","url":"https://dichvu.asco.vn/"},
-"about":{"@type":"Service","name":"Kiểm toán báo cáo tài chính đơn vị có lợi ích công chúng thuộc lĩnh vực chứng khoán"},
-"provider":{"@type":"AccountingService","name":"Công ty TNHH Hãng Kiểm toán và Định giá ASCO",
-"telephone":"+84825092007","email":"asco@asco.vn","url":"https://asco.vn",
-"address":{"@type":"PostalAddress","streetAddress":"Số 2, ngõ 308 phố Lê Trọng Tấn, phường Phương Liệt","addressLocality":"Hà Nội","addressCountry":"VN"}}}
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Yêu cầu báo giá kiểm toán công ty niêm yết",
+  "description": "Khai báo thông tin đơn vị, nêu vướng mắc và nhận báo giá kiểm toán báo cáo tài chính công ty đại chúng, công ty chứng khoán. ASCO phản hồi trong 24 giờ.",
+  "url": "https://dichvu.asco.vn/kiem-toan-bctc-linh-vuc-chung-khoan/yeu-cau-bao-gia/",
+  "inLanguage": "vi-VN",
+  "isPartOf": {
+    "@type": "WebPage",
+    "url": "https://dichvu.asco.vn/kiem-toan-bctc-linh-vuc-chung-khoan/",
+    "name": "Kiểm toán BCTC lĩnh vực chứng khoán"
+  },
+  "publisher": {
+    "@type": "ProfessionalService",
+    "@id": "https://dichvu.asco.vn/#asco",
+    "name": "Hãng Kiểm toán và Định giá ASCO",
+    "alternateName": "ASCO",
+    "url": "https://asco.vn",
+    "email": "asco@asco.vn",
+    "telephone": "+84825092007",
+    "foundingDate": "2007-09-25",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Số 2, ngõ 308 phố Lê Trọng Tấn, phường Phương Liệt",
+      "addressLocality": "Hà Nội",
+      "addressCountry": "VN"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Việt Nam"
+    },
+    "knowsAbout": [
+      "Kiểm toán báo cáo tài chính",
+      "Kiểm toán báo cáo quyết toán dự án hoàn thành",
+      "Thẩm định giá"
+    ]
+  }
+}
 </script>
+<!-- /ASCO-SEO -->
+<style>
+/* ---------- Khối liên kết nội bộ (thêm khi tối ưu SEO) ---------- */
+.lien-ket-noi-bo{background:var(--bg-alt);border-top:1px solid var(--line);
+  padding:clamp(40px,5vw,64px) 0}
+.lk-grid{display:grid;grid-template-columns:2fr 1fr;gap:34px}
+@media (max-width:820px){.lk-grid{grid-template-columns:1fr;gap:24px}}
+.lk-grid h3{font-size:15px;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--navy);margin:0 0 14px}
+.lk-ds{list-style:none;padding:0;margin:0;display:grid;gap:11px}
+.lk-ds li{padding-bottom:11px;border-bottom:1px solid var(--line-soft)}
+.lk-ds li:last-child{border-bottom:0}
+.lk-ds a{display:block;font-weight:700;font-size:15.6px;text-decoration:none;color:var(--ink)}
+.lk-ds a:hover{color:var(--navy)}
+.lk-ds span{display:block;margin-top:3px;font-size:13.6px;color:var(--muted)}
+/* Khoi lien ket la de dieu huong tren web. In ra PDF thi bo di, khong thi
+   ban PDF gui khach lai co mot trang toan duong dan bam khong duoc. */
+@media print{.lien-ket-noi-bo{display:none!important}}
+</style>
 </head>
 <body>
 <!-- =============== THANH HOTLINE =============== -->
@@ -984,6 +1056,46 @@ footer a:hover{color:var(--navy)}
     </p>
   </div>
 </section>
+
+
+<!-- ASCO-LIENKET -->
+<section class="lien-ket-noi-bo">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="eyebrow">Các trang khác của ASCO</div>
+      <h2>Dịch vụ và tin tuyển dụng khác</h2>
+    </div>
+    <div class="lk-grid rv">
+      <h3>Quay lại</h3>
+      <ul class="lk-ds">
+        <li><a href="../../kiem-toan-bctc-linh-vuc-chung-khoan/">Kiểm toán BCTC lĩnh vực chứng khoán</a><span>Kiểm toán báo cáo tài chính đơn vị có lợi ích công chúng lĩnh vực chứng khoán.</span></li>
+      </ul>
+      <h3>Dịch vụ kiểm toán</h3>
+      <ul class="lk-ds">
+        <li><a href="../../kiem-toan-quy-tin-dung-nhan-dan/">Kiểm toán BCTC Quỹ tín dụng nhân dân</a><span>Kiểm toán báo cáo tài chính cho Quỹ tín dụng nhân dân.</span></li>
+        <li><a href="../../kiem-toan-quyet-toan-du-an-cap-xa/">Kiểm toán quyết toán dự án cấp xã, phường</a><span>Kiểm toán báo cáo quyết toán dự án hoàn thành cho UBND xã, phường.</span></li>
+        <li><a href="../../kiem-toan-quyet-toan-nha-o-xa-hoi/">Kiểm toán quyết toán dự án nhà ở xã hội</a><span>Kiểm toán báo cáo quyết toán dự án nhà ở xã hội hoàn thành.</span></li>
+        <li><a href="../../kiem-toan-du-an-ban-qlda-cap-tinh/">Kiểm toán dự án — Ban QLDA cấp tỉnh</a><span>Kiểm toán quyết toán dự án cho Ban Quản lý dự án thuộc tỉnh, thành phố.</span></li>
+        <li><a href="../../kiem-toan-du-an-ban-qlda-bo-xay-dung/">Kiểm toán dự án — Ban QLDA thuộc Bộ Xây dựng</a><span>Kiểm toán quyết toán dự án cho Ban QLDA thuộc Bộ Xây dựng.</span></li>
+        <li><a href="../../kiem-toan-quyet-toan-du-an-cap-xa-phuong-quang-ninh/">Kiểm toán dự án cấp xã — tỉnh Quảng Ninh</a><span>Kiểm toán quyết toán dự án cho xã, phường, đặc khu tỉnh Quảng Ninh.</span></li>
+        <li><a href="../../kiem-toan-bao-cao-tai-chinh-fdi-han-quoc/">Kiểm toán BCTC doanh nghiệp FDI Hàn Quốc</a><span>Kiểm toán báo cáo tài chính cho doanh nghiệp vốn Hàn Quốc, báo cáo song ngữ Việt – Hàn.</span></li>
+        <li><a href="../../kiem-toan-bao-cao-tai-chinh-fdi-trung-quoc/">Kiểm toán BCTC doanh nghiệp FDI Trung Quốc</a><span>Kiểm toán báo cáo tài chính cho doanh nghiệp vốn Trung Quốc, báo cáo Việt – Trung – Anh.</span></li>
+        <li><a href="../../kiem-toan-bctc-doanh-nghiep-xay-dung/">Kiểm toán BCTC doanh nghiệp xây dựng</a><span>Kiểm toán báo cáo tài chính cho nhà thầu thi công và doanh nghiệp xây lắp.</span></li>
+        <li><a href="../../kiem-toan-bctc-linh-vuc-chung-khoan/">Kiểm toán BCTC lĩnh vực chứng khoán</a><span>Kiểm toán báo cáo tài chính đơn vị có lợi ích công chúng lĩnh vực chứng khoán.</span></li>
+      </ul>
+      <h3>Tin tuyển dụng</h3>
+      <ul class="lk-ds">
+        <li><a href="../../tuyen-dung-truong-phong-tham-dinh-gia/">Tuyển Trưởng phòng Thẩm định giá</a><span>Yêu cầu có Thẻ thẩm định viên về giá và tối thiểu 5 năm kinh nghiệm.</span></li>
+        <li><a href="../../tuyen-dung-ke-toan-tong-hop/">Tuyển Kế toán tổng hợp</a><span>Nhận hồ sơ từ 19/08/2026 đến 19/09/2026. Nghỉ thứ Bảy, đóng bảo hiểm xã hội.</span></li>
+      </ul>
+    </div>
+    <p class="small rv" style="margin-top:18px">
+      <a href="../../">Xem tất cả dịch vụ của ASCO</a> ·
+      <a href="https://asco.vn" target="_blank" rel="noopener noreferrer">Trang chủ asco.vn</a>
+    </p>
+  </div>
+</section>
+<!-- /ASCO-LIENKET -->
 
 <footer>
   <div class="wrap">
