@@ -539,6 +539,9 @@ a.card:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg)}
 
 /* ---------- the tang 2 tren trang dich ---------- */
 .t2-nhan{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.grid.g4{grid-template-columns:repeat(4,1fr)}
+@media (max-width:980px){.grid.g4{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.grid.g4{grid-template-columns:1fr}}
 .t2-nhan span{font-size:11.6px;font-weight:700;padding:4px 10px;border-radius:999px;
   background:var(--tint);color:var(--ink-2)}
 /* khoi hai moc thoi han trong the hero — nhan va ngay phai tach dong */
@@ -767,6 +770,7 @@ a.card:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg)}
       <a href="#cong-viec">Công việc thật</a>
       <a href="#lo-trinh">Lộ trình</a>
       <a href="#quyen-loi">Quyền lợi</a>
+      <a href="#ve-asco">Về ASCO</a>
       <a href="#ho-so">Hồ sơ</a>
       <a href="#hoi-dap">Hỏi đáp</a>
     </div>
@@ -1107,7 +1111,87 @@ a.card:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg)}
   </div>
 </section>
 
-<!-- =============== 6. TU CHAM =============== -->
+<!-- =============== 6. VE ASCO =============== -->
+<section id="ve-asco">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="eyebrow">Về ASCO</div>
+      <h2>Nơi bạn sẽ thực tập là công ty thế nào</h2>
+      <p class="lede" style="margin-top:14px">
+        <b>Công ty TNHH Hãng Kiểm toán và Định giá ASCO</b> — thành lập <b>25/09/2007</b>, hoạt động trên năm mảng:
+        Đào tạo · Tư vấn · Kiểm toán · Thẩm định giá · Công nghệ. Mạnh nhất ở <b>kiểm toán báo cáo quyết toán
+        dự án đầu tư</b>, mảng mà các hãng quốc tế gần như không làm tại Việt Nam.
+      </p>
+    </div>
+
+    <div class="grid g2 rv">
+      <div class="card">
+        <span class="tag">Sứ mệnh</span>
+        <h3 style="margin-top:12px">Phụng sự xã hội bằng sự minh bạch và Quản lý đúng</h3>
+        <p style="margin-top:10px"><b>Minh bạch là sản phẩm ASCO bán ra.</b> Không có minh bạch thì báo cáo và
+        chứng thư của ASCO không còn giá trị với ai.</p>
+        <p style="margin-top:12px" class="small">Câu này giải thích vì sao kỳ thực tập ở đây có nhóm tiêu chí
+        <b>Chính trực</b> mang điểm liệt: sửa một con số cho khớp không phải là giúp việc, đó là làm hỏng đúng
+        thứ mà công ty bán.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Tầm nhìn</span>
+        <h3 style="margin-top:12px">Trở thành hãng kiểm toán và định giá vận hành bằng hệ thống, không phụ thuộc cá nhân đơn lẻ</h3>
+        <p style="margin-top:10px">Dẫn đầu trong nước ở mảng <b>Kiểm toán dự án</b> và vững ở mảng
+        <b>Thẩm định giá</b>.</p>
+        <p style="margin-top:12px" class="small">Vế đầu là vế đáng chú ý với người mới: <b>vận hành bằng hệ thống</b>
+        nghĩa là có quy trình, có biểu mẫu, có cổng kiểm soát — nên bạn học được nghề từ hệ thống, không phải chờ
+        may mắn gặp đúng người chịu chỉ.</p>
+      </div>
+    </div>
+
+    <div class="card rv" style="margin-top:20px">
+      <span class="tag">Giá trị cốt lõi</span>
+      <p style="margin-top:10px"><b>Sáu giá trị — được đo bằng hành vi hằng ngày, không treo trên tường.</b></p>
+      <div class="grid g3" style="margin-top:14px">
+        <div><h3 style="font-size:18px">Hiệu quả</h3><p class="small" style="margin-top:6px">Làm ra kết quả, không làm cho có việc.</p></div>
+        <div><h3 style="font-size:18px">Chuyên nghiệp</h3><p class="small" style="margin-top:6px">Đúng chuẩn mực, đúng quy trình, đúng người ký.</p></div>
+        <div><h3 style="font-size:18px">Trách nhiệm</h3><p class="small" style="margin-top:6px">Ghi gì vào hồ sơ là chịu trách nhiệm điều đó.</p></div>
+        <div><h3 style="font-size:18px">Tiên phong</h3><p class="small" style="margin-top:6px">Đi trước ở cách làm và ở công cụ.</p></div>
+        <div><h3 style="font-size:18px">Hợp tác</h3><p class="small" style="margin-top:6px">Một cuộc kiểm toán không ai làm một mình được.</p></div>
+        <div><h3 style="font-size:18px">Kỷ luật</h3><p class="small" style="margin-top:6px">Hạn là hạn, cổng kiểm soát là cổng kiểm soát.</p></div>
+      </div>
+    </div>
+
+    <div class="hc2 rv" style="margin-top:20px">
+      <div class="b">
+        <span class="tag">Triết lý kinh doanh</span>
+        <h3>Quản lý hiệu quả theo Mô hình Quản lý tích hợp là gốc rễ của tất cả</h3>
+        <p>Đây là lý do ASCO có quy chế, quy trình và biểu mẫu cho gần như mọi việc — kể cả cho kỳ thực tập
+        của bạn. Bạn sẽ thấy điều đó ngay tuần đầu: nhận việc bằng <b>phiếu giao việc</b>, ghi
+        <b>nhật ký thực tập</b>, được đánh giá bằng <b>bảng tiêu chí công khai</b> chứ không bằng cảm tính.</p>
+      </div>
+      <div class="b">
+        <span class="tag">Triết lý nhân sự — phần đáng đọc nhất với bạn</span>
+        <h3>Chấp nhận con người — tìm ra điểm mạnh — phân công nhiệm vụ dựa trên điểm mạnh</h3>
+        <p>ASCO không kỳ vọng một sinh viên năm 3 giỏi đều mọi mặt. Việc của kỳ thực tập là <b>tìm ra bạn mạnh ở
+        đâu</b> rồi giao việc theo hướng đó: có người hợp với phần hành nhiều chứng từ cần tỉ mỉ, có người hợp
+        với phân tích và đặt câu hỏi, có người hợp làm việc tại hiện trường với khách hàng. Hai lần rà đánh giá
+        giữa kỳ tồn tại để làm đúng việc này.</p>
+      </div>
+    </div>
+
+    <div class="grid g4 rv" style="margin-top:20px">
+      <div class="card"><span class="ico">2007</span><h3 style="margin-top:10px">Năm thành lập</h3><p class="small" style="margin-top:6px">Số hotline <b>08 2509 2007</b> chính là ngày thành lập: 25/09/2007.</p></div>
+      <div class="card"><span class="ico">27</span><h3 style="margin-top:10px">Kiểm toán viên hành nghề</h3><p class="small" style="margin-top:6px">Theo danh sách đăng ký hành nghề của Bộ Tài chính.</p></div>
+      <div class="card"><span class="ico">15</span><h3 style="margin-top:10px">Điểm hiện diện</h3><p class="small" style="margin-top:6px">Trụ sở Hà Nội cùng hệ thống chi nhánh và văn phòng đại diện ba miền.</p></div>
+      <div class="card"><span class="ico">5</span><h3 style="margin-top:10px">Mảng hoạt động</h3><p class="small" style="margin-top:6px">Đào tạo · Tư vấn · Kiểm toán · Thẩm định giá · Công nghệ.</p></div>
+    </div>
+
+    <p class="small rv" style="margin-top:18px;opacity:.8">
+      Muốn tìm hiểu kỹ hơn về ASCO trước khi nộp hồ sơ:
+      <a href="https://asco.vn" target="_blank" rel="noopener noreferrer">asco.vn</a> ·
+      <a href="https://www.facebook.com/ascofirm" target="_blank" rel="noopener noreferrer">facebook.com/ascofirm</a>
+    </p>
+  </div>
+</section>
+
+<!-- =============== 7. TU CHAM =============== -->
 <section id="tu-cham">
   <div class="wrap narrow">
     <div class="sec-head center rv">
