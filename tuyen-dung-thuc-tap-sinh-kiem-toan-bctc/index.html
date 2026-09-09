@@ -583,6 +583,35 @@ a.card:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg)}
 @media (max-width:760px){.bo-trang-lon{margin-top:24px;padding-top:20px}
   .bo-trang-lon a{font-size:13.6px;padding:8px 13px}}
 @media print{.duong-dan,.bo-trang{display:none}}
+/* the ben canh dung <h2> de khong nhay bac tieu de (h1 -> h3),
+   nhung co chu giu nguyen nhu h3 cu — dung dan y, dung co chu. */
+.hero-card h2.h-nho{font-size:clamp(18px,2vw,21px);letter-spacing:-.01em;
+  display:flex;align-items:center;gap:10px;margin:0 0 14px}
+
+/* khoi 4 buoc dung <h3> de khong nhay bac tieu de (h2 -> h4),
+   co chu giu nguyen nhu h4 cu. */
+.buoc .b h3{font-size:16.5px;margin:8px 0 6px;letter-spacing:-.005em}
+.cl-g h3{font-size:14.6px;margin:0 0 8px;color:var(--navy);letter-spacing:.01em}
+footer h3{font-size:15px;margin:0 0 12px;letter-spacing:.01em}
+
+/* ---------- KHA NANG TIEP CAN ---------- */
+/* Vien tieu diem cho MOI thu bam duoc, khong chi nut.
+   Nguoi di bang phim Tab phai biet minh dang o dau (WCAG 2.4.7). */
+a:focus-visible, summary:focus-visible, [tabindex]:focus-visible,
+input:focus-visible, select:focus-visible, textarea:focus-visible{
+  outline:3px solid var(--gold);outline-offset:2px;border-radius:6px}
+/* tren nen navy dung vang sang cho noi bat */
+.hero a:focus-visible, .cta a:focus-visible, .topline a:focus-visible,
+footer a:focus-visible, .bo-trang a:focus-visible, .duong-dan a:focus-visible{
+  outline-color:#F2CE83}
+
+/* Lien ket bo qua menu — chi hien khi bam Tab lan dau */
+.bo-qua{position:absolute;left:-9999px;top:0;z-index:9999;
+  background:var(--gold);color:#1F1707;font-weight:800;
+  padding:12px 20px;border-radius:0 0 12px 0;text-decoration:none}
+.bo-qua:focus{left:0}
+@media print{.bo-qua{display:none}}
+
 /* ---------- MAU VANG cho moi lien ket DAN VAO trang tang 2 ----------
    CEO chot 09/9/2026: chu dan sang trang hoc nghe phai mau vang cho de nhan.
    Lien ket QUAY VE tang 1 thi GIU nguyen mau — nhin la biet di toi hay di lui.
@@ -772,8 +801,8 @@ a[data-t2]:not(.card):not(.btn):not(.bo-trang a){color:var(--vang-lk);font-weigh
     },
     {
       "@type": "Question",
-      "name": "Thực tập ở ASCO khác gì thực tập ở Big4?",
-      "acceptedAnswer": { "@type": "Answer", "text": "ASCO không so mình với Big4 về quy mô — đó là sự thật. Khác biệt thật nằm ở chỗ khác: ở một hãng quy mô vừa, một thực tập sinh được nhìn thấy trọn một cuộc kiểm toán từ lập kế hoạch tới phát hành, thay vì chỉ làm sâu một khoản mục trong một guồng lớn. Bạn cũng ngồi gần người ký báo cáo hơn. Điểm mạnh riêng của ASCO là kiểm toán báo cáo quyết toán dự án đầu tư — mảng mà Big4 gần như không làm ở Việt Nam. Thực tập sinh Line Kiểm toán báo cáo tài chính vẫn có cơ hội tiếp xúc mảng này, và đó là vốn nghề khá hiếm khi bạn đi xin việc sau này. Điều nên cân nhắc thật lòng: nếu mục tiêu của bạn là thương hiệu Big4 trên CV thì ASCO không thay thế được. Còn nếu mục tiêu là làm được việc sau 6 tháng, ASCO là chỗ tốt để bắt đầu." }
+      "name": "Thực tập ở một hãng quy mô vừa thì được gì?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Ở quy mô vừa, thực tập sinh quan sát được trọn trình tự một cuộc kiểm toán — từ lập kế hoạch tới phát hành — dù chỉ trực tiếp làm ở một vài phần hành. Khoảng cách tới người ký báo cáo cũng ngắn hơn, nên hỏi được nhiều hơn. ASCO làm kiểm toán báo cáo quyết toán dự án hoàn thành liên tục từ khi thành lập, có quy trình và bộ hồ sơ riêng cho mảng này. Thực tập sinh khối Kiểm toán báo cáo tài chính vẫn có cơ hội tiếp xúc, và đó là dạng hồ sơ ít gặp ở nơi khác. Nói thẳng để bạn tự cân: nếu tiêu chí chọn nơi thực tập của bạn là tên thương hiệu trên hồ sơ xin việc thì ASCO không phải lựa chọn đó. Nếu tiêu chí là làm được việc sau sáu tháng thì đây là chỗ để bắt đầu." }
     },
     {
       "@type": "Question",
@@ -788,7 +817,7 @@ a[data-t2]:not(.card):not(.btn):not(.bo-trang a){color:var(--vang-lk);font-weigh
     {
       "@type": "Question",
       "name": "Em nên chuẩn bị gì trong hai tuần trước khi nộp hồ sơ?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Ba việc, theo thứ tự đáng làm nhất: Một — đọc bốn trang học nghề ở phần trên của trang này. Nắm được chỉ mục A–H và cách một tờ giấy làm việc được cấu trúc thì buổi phỏng vấn của bạn khác hẳn. Hai — mở lại một bộ báo cáo tài chính bất kỳ đã kiểm toán (nhiều công ty niêm yết công bố công khai), đọc phần thuyết minh, tự hỏi mỗi con số này lấy từ đâu ra. Ba — luyện lại Excel ở mức lọc, sắp xếp, SUMIF, VLOOKUP. Đừng học sâu hơn vội, chưa cần tới. Còn phần trả lời nửa trang trong hồ sơ thì viết bằng lời của chính bạn. ASCO đọc được ngay bài chép mạng, và bài chép mạng bị loại — không phải vì sai, mà vì nó không cho biết gì về bạn." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Ba việc, theo thứ tự đáng làm nhất: Một — đọc bốn trang học nghề ở phần trên của trang này. Nắm được chỉ mục A–H và cách một tờ giấy làm việc được cấu trúc thì buổi phỏng vấn của bạn khác hẳn. Hai — mở lại một bộ báo cáo tài chính bất kỳ đã kiểm toán (nhiều công ty niêm yết công bố công khai), đọc phần thuyết minh, tự hỏi mỗi con số này lấy từ đâu ra. Ba — luyện lại Excel ở mức lọc, sắp xếp, SUMIF, VLOOKUP. Đừng học sâu hơn vội, chưa cần tới. Còn phần trả lời nửa trang trong hồ sơ thì viết bằng lời của chính bạn. Bài trả lời sao chép từ nguồn khác sẽ không được xét — không phải vì sai, mà vì nó không cho biết gì về bạn." }
     }
   ]
 }
@@ -796,6 +825,8 @@ a[data-t2]:not(.card):not(.btn):not(.bo-trang a){color:var(--vang-lk);font-weigh
 <!-- /ASCO-SEO -->
 </head>
 <body>
+<a class="bo-qua" href="#noi-dung">Bỏ qua menu, tới nội dung chính</a>
+
 <!-- =============== THANH HOTLINE =============== -->
 <div class="topline">
   <div class="in">
@@ -838,13 +869,13 @@ a[data-t2]:not(.card):not(.btn):not(.bo-trang a){color:var(--vang-lk);font-weigh
   <div class="wrap">
     <div class="hero-grid">
       <div>
-        <span class="pill"><span class="dot"></span>Kỳ tuyển 2026 · Line Kiểm toán Báo cáo tài chính</span>
+        <span class="pill"><span class="dot"></span>Kỳ tuyển 2026 · Khối Kiểm toán Báo cáo tài chính</span>
         <h1>
           Thực tập sinh<br>Kiểm toán Báo cáo tài chính
           <span class="accent">Hồ sơ thật, khách hàng thật, có người ký chịu trách nhiệm phía sau bạn</span>
         </h1>
         <p class="lede">
-          Kỳ thực tập ở ASCO không phải là ba tháng ngồi photo tài liệu. Bạn được giao <b>phần hành thật</b>
+          Ở ASCO, thực tập sinh được giao <b>phần hành thật</b>
           trong một cuộc kiểm toán thật, làm trên bộ giấy làm việc theo Chương trình kiểm toán mẫu VACPA,
           và mỗi việc bạn làm đều có người soát lại. Đổi lại, ASCO nói rõ ngay từ đầu <b>ba việc bạn sẽ không
           được làm</b> — vì đó là ranh giới nghề nghiệp, không phải vì không tin bạn.
@@ -858,17 +889,13 @@ a[data-t2]:not(.card):not(.btn):not(.bo-trang a){color:var(--vang-lk);font-weigh
       </div>
 
       <aside class="hero-card">
-        <h3>
+        <h2 class="h-nho">
           <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16" rx="2"/><path d="M8 2.5v4M16 2.5v4M3 10h18"/></svg>
           Kỳ tuyển Thực tập sinh 2026
-        </h3>
+        </h2>
         <div class="han">
           <div class="moc"><span class="lbl">Mở nhận hồ sơ</span><b>11/09/2026</b></div>
           <div class="moc"><span class="lbl">Hạn cuối nhận hồ sơ</span><b>11/10/2026</b></div>
-        </div>
-        <div class="dem" id="demNgay" hidden aria-hidden="true">
-          <span class="so" id="soNgay">—</span>
-          <span class="chu" id="chuNgay">ngày</span>
         </div>
         <p class="hc-foot" id="demGhiChu">
           Hồ sơ gửi qua email <b>asco@asco.vn</b>. Tiêu đề thư ghi rõ:
@@ -897,7 +924,7 @@ a[data-t2]:not(.card):not(.btn):not(.bo-trang a){color:var(--vang-lk);font-weigh
       </div>
       <div class="trust-i">
         <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="10" r="3"/><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"/></svg>
-        <div><b>15 điểm trên toàn quốc</b><span>Trụ sở Hà Nội cùng hệ thống chi nhánh và văn phòng đại diện ba miền</span></div>
+        <div><b>15 điểm hiện diện</b><span>Tính đến tháng 9/2026: trụ sở Hà Nội, 7 chi nhánh và 7 văn phòng đại diện</span></div>
       </div>
       <div class="trust-i">
         <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8V2M12 8a6 6 0 0 1 6 6v6H6v-6a6 6 0 0 1 6-6Z"/><path d="M4 20h16"/></svg>
@@ -905,11 +932,13 @@ a[data-t2]:not(.card):not(.btn):not(.bo-trang a){color:var(--vang-lk);font-weigh
       </div>
       <div class="trust-i">
         <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6M9 15h6M9 11h3"/></svg>
-        <div><b>Chương trình có văn bản</b><span>QT-NS-01: 30 bước, 6 cổng đánh giá — không phải giao việc tuỳ hứng</span></div>
+        <div><b>Chương trình có văn bản</b><span>30 bước và 6 cổng đánh giá, ban hành thành quy trình nội bộ — không giao việc tuỳ hứng</span></div>
       </div>
     </div>
   </div>
 </header>
+
+<div id="noi-dung" tabindex="-1"></div>
 
 <!-- =============== 1. GOC SINH VIEN (TANG 2) =============== -->
 <section id="goc-sinh-vien" class="alt">
@@ -937,21 +966,20 @@ a[data-t2]:not(.card):not(.btn):not(.bo-trang a){color:var(--vang-lk);font-weigh
         <h3 style="margin-top:12px">Một cuộc kiểm toán đi như thế nào</h3>
         <p style="margin-top:10px">Từ lúc nhận lời mời tới lúc phát hành báo cáo: ba cổng chất lượng,
         trình tự bắt buộc <b>A → C·D·E·F·G·H → B</b>, ai soát ai, và vì sao không ai được tự soát bài của
-        chính mình. Đây là thứ đề thi không hỏi nhưng đi làm ngày đầu đã cần.</p>
+        chính mình. Đây là phần ít gặp trong giáo trình nhưng cần ngay khi đi làm.</p>
         <div class="go">Mở trang →</div>
       </a>
       <a data-t2="1" class="card" href="./mau-bieu-giay-lam-viec/">
         <span class="badge b-navy">Trang 3</span>
         <h3 style="margin-top:12px">Giấy làm việc — đọc và viết thế nào cho đúng</h3>
         <p style="margin-top:10px">Khuôn bốn tầng <b>mục tiêu theo cơ sở dẫn liệu → rủi ro → thử nghiệm →
-        kết luận</b>, kèm một tờ giấy làm việc mẫu có chú giải từng ô. Cộng bộ bốn bài tập thực hành
-        BT-INT-01 đến 04 mà thực tập sinh ASCO làm trong tháng đầu.</p>
+        kết luận</b>, kèm một tờ giấy làm việc mẫu có chú giải từng ô. Cộng bốn bài tập thực hành mà thực tập sinh ASCO làm trong tháng đầu.</p>
         <div class="go">Mở trang →</div>
       </a>
       <a data-t2="1" class="card" href="./cong-cu-ai-kiem-toan/">
         <span class="badge b-navy">Trang 4</span>
         <h3 style="margin-top:12px">ASCO làm nghề bằng công cụ gì</h3>
-        <p style="margin-top:10px">Giới thiệu <b>29 trợ lý số theo chỉ mục A–H</b> và bộ công cụ tính toán
+        <p style="margin-top:10px">Giới thiệu <b>bốn trợ lý số bạn dùng sớm nhất</b>, trong bộ trợ lý theo chỉ mục A–H, cùng công cụ tính toán
         nghiệp vụ mà ASCO tự xây: cỡ mẫu, mức trọng yếu, tuổi nợ, theo dõi thư xác nhận. Bạn sẽ dùng chúng
         từ tuần đầu — và sẽ hiểu vì sao máy soạn nháp còn người vẫn phải ký.</p>
         <div class="go">Mở trang →</div>
@@ -967,8 +995,8 @@ a[data-t2]:not(.card):not(.btn):not(.bo-trang a){color:var(--vang-lk);font-weigh
       <div class="eyebrow">Nói thật về công việc</div>
       <h2>Thực tập sinh ở ASCO làm gì — và không làm gì</h2>
       <p class="lede" style="margin-top:14px">
-        Trong bảng phân nhiệm nội bộ của ASCO, vị trí Thực tập sinh (cấp L1) <b>trực tiếp thực hiện 10 nhiệm vụ</b>
-        và <b>không giữ một ô Quyết định hay Kiểm soát nào</b>. Nghe thì nhỏ, nhưng đó chính là cách một người
+        Trong bảng phân nhiệm nội bộ của ASCO, vị trí Thực tập sinh (cấp L1) <b>chỉ trực tiếp thực hiện</b>,
+        <b>không giữ ô Quyết định hay Kiểm soát nào</b>. Nghe thì nhỏ, nhưng đó chính là cách một người
         mới vào nghề được bảo vệ: bạn làm, người khác chịu trách nhiệm soát và ký.
       </p>
     </div>
@@ -1034,7 +1062,7 @@ a[data-t2]:not(.card):not(.btn):not(.bo-trang a){color:var(--vang-lk);font-weigh
       <div class="eyebrow">Lộ trình</div>
       <h2>Kỳ thực tập 3 – 6 tháng, sáu cổng đánh giá, không ai bị bỏ quên giữa chừng</h2>
       <p class="lede" style="margin-top:14px">
-        ASCO có một quy trình riêng cho kỳ thực tập — <b>QT-NS-01</b>, 30 bước, gộp trọn năm chặng từ tuyển,
+        ASCO có một quy trình riêng cho kỳ thực tập: <b>30 bước</b>, gộp trọn năm chặng từ tuyển,
         đào tạo, sử dụng, đánh giá tới tuyển chính thức. Sáu cổng đánh giá nghĩa là sáu lần bạn biết chính xác
         mình đang đứng ở đâu, thay vì tới cuối kỳ mới nghe nhận xét một lần.
       </p>
@@ -1056,8 +1084,7 @@ a[data-t2]:not(.card):not(.btn):not(.bo-trang a){color:var(--vang-lk);font-weigh
           <h3>Vào phần hành thật</h3>
           <p style="font-size:15.2px;color:var(--ink-2)">Được giao phần hành đầu tiên trong một hợp đồng thật —
           thường bắt đầu từ nhóm D (tiền, phải thu) hoặc E (phải trả) vì đây là nơi thủ tục rõ ràng nhất.
-          Mỗi tờ giấy làm việc bạn nộp đều được Senior soát và trả lại kèm ghi chú. Bốn bài tập
-          <b>BT-INT-01 đến 04</b> chạy song song.</p>
+          Mỗi tờ giấy làm việc bạn nộp đều được <b>Trưởng nhóm (L4)</b> soát và trả lại kèm ghi chú. <b>Bốn bài tập thực hành</b> chạy song song.</p>
         </div>
       </div>
       <div class="tl-i">
@@ -1075,8 +1102,8 @@ a[data-t2]:not(.card):not(.btn):not(.bo-trang a){color:var(--vang-lk);font-weigh
         <div class="tl-c">
           <h3>Mở rộng phần hành và đi hiện trường</h3>
           <p style="font-size:15.2px;color:var(--ink-2)">Làm thêm phần hành thứ hai, thứ ba; tham gia chứng kiến
-          kiểm kê; đi cùng nhóm tới trụ sở khách hàng. Với kỳ từ 5 tháng, ASCO <b>bắt buộc bố trí ít nhất hai loại
-          hợp đồng</b> khác nhau — để bạn không chỉ biết một kiểu khách hàng.</p>
+          kiểm kê; đi cùng nhóm tới trụ sở khách hàng. Với người đã xác định dự tuyển chính thức, ASCO <b>bố trí ít nhất hai loại hợp đồng</b>
+          khác nhau trong kỳ — để bạn không chỉ biết một kiểu khách hàng.</p>
         </div>
       </div>
       <div class="tl-i">
@@ -1094,8 +1121,8 @@ a[data-t2]:not(.card):not(.btn):not(.bo-trang a){color:var(--vang-lk);font-weigh
           <h3>Đánh giá cuối kỳ, giấy xác nhận và đường ra</h3>
           <p style="font-size:15.2px;color:var(--ink-2)">Đánh giá cuối kỳ, <b>bài kiểm tra cuối khoá</b>, và
           giấy xác nhận thực tập có nêu rõ bạn đã làm những phần hành nào — thứ này có giá trị hơn nhiều
-          so với một tờ xác nhận chung chung khi bạn đi phỏng vấn chỗ khác. Đạt điều kiện thì chuyển thẳng
-          sang trao đổi vị trí chính thức cấp L2.</p>
+          so với một tờ xác nhận chung chung khi bạn đi phỏng vấn chỗ khác. Đạt đủ điều kiện thì được đưa vào vòng trao đổi vị trí chính thức cấp L2 — đây là
+          <b>điều kiện cần</b>, việc tuyển chính thức còn phụ thuộc nhu cầu nhân sự tại thời điểm kết thúc kỳ.</p>
         </div>
       </div>
     </div>
@@ -1116,12 +1143,12 @@ a[data-t2]:not(.card):not(.btn):not(.bo-trang a){color:var(--vang-lk);font-weigh
     <div class="grid g3 rv">
       <div class="card"><span class="ico">80</span><h3>Đạt từ 80 điểm</h3><p>Trên thang 100 điểm của bảng đánh giá 10 tiêu chí, và <b>không rơi vào điểm liệt</b> ở hai nhóm Chính trực và Chất lượng.</p></div>
       <div class="card"><span class="ico">4+</span><h3>Đủ từ 4 tháng thực tập</h3><p>Đây là lý do ASCO khuyến khích bạn chọn kỳ 6 tháng nếu đã xác định muốn theo nghề — kỳ 3 tháng chưa đủ điều kiện cần.</p></div>
-      <div class="card"><span class="ico">2</span><h3>Qua ít nhất 2 loại hợp đồng</h3><p>Một người chỉ làm một kiểu khách hàng thì chưa đủ căn cứ để đánh giá. ASCO chịu trách nhiệm bố trí đủ, không phải bạn tự xoay.</p></div>
+      <div class="card"><span class="ico">2</span><h3>Qua ít nhất 2 loại hợp đồng</h3><p>Một người chỉ làm một kiểu khách hàng thì chưa đủ căn cứ để đánh giá. <b>ASCO chịu trách nhiệm bố trí đủ</b> cho người dự tuyển chính thức — bạn không phải tự xoay.</p></div>
     </div>
     <div class="card rv" style="margin-top:22px">
       <h3 style="margin-bottom:8px">Đường nghề sau đó đi tới đâu</h3>
       <p>ASCO xếp nghề thành tám cấp, từ <b>L1 Thực tập sinh</b> → L2 Trợ lý 1 → L3 Trợ lý 2 → L4 Trưởng nhóm →
-      L5, L6 Quản lý → L7 Giám đốc → <b>L8 Partner</b>. Mỗi cấp có bộ tiêu chí và cổng đánh giá riêng, không thăng
+      L5 Trợ lý Chủ nhiệm → L6 Chủ nhiệm kiểm toán → L7 Giám đốc → <b>L8 Partner</b>. Mỗi cấp có bộ tiêu chí và cổng đánh giá riêng, không thăng
       cấp theo thâm niên. Hiện ASCO có <b>27 kiểm toán viên hành nghề</b> — người ký báo cáo kiểm toán phải có
       chứng chỉ và đăng ký hành nghề, đó là đích xa mà kỳ thực tập này là bước đầu tiên.</p>
     </div>
@@ -1171,8 +1198,8 @@ a[data-t2]:not(.card):not(.btn):not(.bo-trang a){color:var(--vang-lk);font-weigh
       <h2>Nơi bạn sẽ thực tập là công ty thế nào</h2>
       <p class="lede" style="margin-top:14px">
         <b>Công ty TNHH Hãng Kiểm toán và Định giá ASCO</b> — thành lập <b>25/09/2007</b>, hoạt động trên năm mảng:
-        Đào tạo · Tư vấn · Kiểm toán · Thẩm định giá · Công nghệ. Mạnh nhất ở <b>kiểm toán báo cáo quyết toán
-        dự án đầu tư</b>, mảng mà các hãng quốc tế gần như không làm tại Việt Nam.
+        Đào tạo · Tư vấn · Kiểm toán · Thẩm định giá · Công nghệ. Mảng làm liên tục từ khi thành lập là <b>kiểm toán báo cáo quyết toán
+        dự án hoàn thành</b>, có quy trình và bộ hồ sơ riêng.
       </p>
     </div>
 
@@ -1199,7 +1226,7 @@ a[data-t2]:not(.card):not(.btn):not(.bo-trang a){color:var(--vang-lk);font-weigh
 
     <div class="card rv" style="margin-top:20px">
       <span class="tag">Giá trị cốt lõi</span>
-      <p style="margin-top:10px"><b>Sáu giá trị — được đo bằng hành vi hằng ngày, không treo trên tường.</b></p>
+      <p style="margin-top:10px"><b>Sáu giá trị, được đo bằng hành vi hằng ngày.</b></p>
       <div class="grid g3" style="margin-top:14px">
         <div><h3 style="font-size:18px">Hiệu quả</h3><p class="small" style="margin-top:6px">Làm ra kết quả, không làm cho có việc.</p></div>
         <div><h3 style="font-size:18px">Chuyên nghiệp</h3><p class="small" style="margin-top:6px">Đúng chuẩn mực, đúng quy trình, đúng người ký.</p></div>
@@ -1219,12 +1246,11 @@ a[data-t2]:not(.card):not(.btn):not(.bo-trang a){color:var(--vang-lk);font-weigh
         <b>nhật ký thực tập</b>, được đánh giá bằng <b>bảng tiêu chí công khai</b> chứ không bằng cảm tính.</p>
       </div>
       <div class="b">
-        <span class="tag">Triết lý nhân sự — phần đáng đọc nhất với bạn</span>
+        <span class="tag">Triết lý nhân sự</span>
         <h3>Chấp nhận con người — tìm ra điểm mạnh — phân công nhiệm vụ dựa trên điểm mạnh</h3>
         <p>ASCO không kỳ vọng một sinh viên năm 3 giỏi đều mọi mặt. Việc của kỳ thực tập là <b>tìm ra bạn mạnh ở
         đâu</b> rồi giao việc theo hướng đó: có người hợp với phần hành nhiều chứng từ cần tỉ mỉ, có người hợp
-        với phân tích và đặt câu hỏi, có người hợp làm việc tại hiện trường với khách hàng. Hai lần rà đánh giá
-        giữa kỳ tồn tại để làm đúng việc này.</p>
+        với phân tích và đặt câu hỏi, có người hợp làm việc tại hiện trường với khách hàng. Hai lần đánh giá giữa kỳ đặt ra chính là để làm việc này.</p>
       </div>
     </div>
 
@@ -1263,7 +1289,7 @@ a[data-t2]:not(.card):not(.btn):not(.bo-trang a){color:var(--vang-lk);font-weigh
       </div>
       <div class="cl-body" id="tcBody">
         <div class="cl-g">
-          <h4>Nền tảng bắt buộc</h4>
+          <h3>Nền tảng bắt buộc</h3>
           <ul>
             <li><label><input type="checkbox" data-w="2"><span>Tôi là sinh viên <b>năm 3 hoặc năm 4</b> ngành Kiểm toán, Kế toán hoặc Tài chính</span></label></li>
             <li><label><input type="checkbox" data-w="2"><span>Tôi đã học qua học phần <b>Nguyên lý kế toán</b> và <b>Kế toán tài chính</b></span></label></li>
@@ -1271,21 +1297,21 @@ a[data-t2]:not(.card):not(.btn):not(.bo-trang a){color:var(--vang-lk);font-weigh
           </ul>
         </div>
         <div class="cl-g">
-          <h4>Kỹ năng làm việc</h4>
+          <h3>Kỹ năng làm việc</h3>
           <ul>
             <li><label><input type="checkbox" data-w="1"><span>Tôi dùng được Excel ở mức <b>lọc, sắp xếp, hàm SUMIF và VLOOKUP</b></span></label></li>
             <li><label><input type="checkbox" data-w="1"><span>Tôi <b>ghi chép có hệ thống</b>: làm gì cũng ghi lại nguồn và ngày</span></label></li>
           </ul>
         </div>
         <div class="cl-g">
-          <h4>Điều kiện thực tế</h4>
+          <h3>Điều kiện thực tế</h3>
           <ul>
             <li><label><input type="checkbox" data-w="1"><span>Lịch học của tôi cho phép làm <b>ít nhất 3 buổi/tuần</b>, liên tục từ 3 tháng</span></label></li>
             <li><label><input type="checkbox" data-w="1"><span>Tôi <b>đi công tác tỉnh được</b> vài ngày liền khi vào mùa bận</span></label></li>
           </ul>
         </div>
         <div class="cl-g">
-          <h4>Thái độ nghề</h4>
+          <h3>Thái độ nghề</h3>
           <ul>
             <li><label><input type="checkbox" data-w="2"><span>Tôi hiểu rằng <b>nói "em chưa biết" là an toàn</b>, còn đoán bừa một con số trong hồ sơ kiểm toán thì không</span></label></li>
           </ul>
@@ -1310,14 +1336,16 @@ a[data-t2]:not(.card):not(.btn):not(.bo-trang a){color:var(--vang-lk);font-weigh
       <h2>Bốn thứ cần gửi, và một thứ ASCO đọc kỹ nhất</h2>
     </div>
     <div class="buoc rv">
-      <div class="b"><span class="n">01</span><h4>Đơn ứng tuyển ngắn</h4><p>Không cần mẫu cầu kỳ. Viết rõ: bạn là ai, học trường nào, năm mấy, muốn thực tập từ tháng nào tới tháng nào, mỗi tuần làm được mấy buổi.</p></div>
-      <div class="b"><span class="n">02</span><h4>CV một trang</h4><p>Một trang là đủ. Ghi các học phần kế toán, kiểm toán đã học và điểm; hoạt động, công việc làm thêm nếu có. Không có kinh nghiệm cũng không sao — ASCO tuyển thực tập sinh, không tuyển người đã biết việc.</p></div>
-      <div class="b"><span class="n">03</span><h4>Bảng điểm gần nhất</h4><p>Bản chụp hoặc bản in từ cổng sinh viên đều được. ASCO xem để biết bạn đã học tới đâu, không dùng để xếp hạng bạn với người khác.</p></div>
-      <div class="b"><span class="n">04</span><h4>Nửa trang trả lời một câu</h4><p><b>Đây là phần ASCO đọc kỹ nhất.</b> Câu hỏi ở ngay dưới. Không có đáp án đúng — ASCO đọc cách bạn suy nghĩ, không đọc kiến thức bạn thuộc.</p></div>
+      <div class="b"><span class="n">01</span><h3>Đơn ứng tuyển ngắn</h3><p>Không cần mẫu cầu kỳ. Viết rõ: bạn là ai, học trường nào, năm mấy, muốn thực tập từ tháng nào tới tháng nào, mỗi tuần làm được mấy buổi.</p></div>
+      <div class="b"><span class="n">02</span><h3>CV một trang</h3><p>Một trang là đủ. Ghi các học phần kế toán, kiểm toán đã học và điểm; hoạt động, công việc làm thêm nếu có. Không có kinh nghiệm cũng không sao — ASCO tuyển thực tập sinh, không tuyển người đã biết việc.</p></div>
+      <div class="b"><span class="n">03</span><h3>Bảng điểm gần nhất</h3><p>Bản chụp hoặc bản in từ cổng sinh viên đều được. ASCO xem để biết bạn đã học tới đâu, không dùng để xếp hạng bạn với người khác.</p></div>
+      <div class="b"><span class="n">04</span><h3>Nửa trang trả lời một câu</h3><p><b>Đây là phần ASCO đọc kỹ nhất.</b> Câu hỏi ở ngay dưới. Không có đáp án đúng — ASCO đọc cách bạn suy nghĩ, không đọc kiến thức bạn thuộc.</p></div>
     </div>
 
     <div class="callout rv" style="margin-top:24px">
-      <b>Câu hỏi nửa trang:</b> <i>“Bạn đi kiểm tra tiền mặt tại quỹ của một doanh nghiệp. Sổ quỹ ghi số dư
+      <b>Câu hỏi nửa trang.</b> Không có đáp án đúng, và <b>bạn không cần biết nghiệp vụ để trả lời</b> —
+      ASCO đọc <b>cách bạn suy nghĩ</b>, không đọc kiến thức bạn thuộc.<br><br>
+      <i>“Bạn đi kiểm tra tiền mặt tại quỹ của một doanh nghiệp. Sổ quỹ ghi số dư
       120 triệu đồng. Bạn đếm thực tế được 118 triệu. Thủ quỹ nói phần chênh là do vừa chi tạm ứng cho một
       nhân viên nhưng chưa kịp ghi sổ. Bạn sẽ làm gì tiếp theo, và vì sao?”</i>
       <br><br>Viết bằng lời của bạn, khoảng nửa trang. ASCO không chấm đúng sai — ASCO xem bạn có
@@ -1366,8 +1394,8 @@ a[data-t2]:not(.card):not(.btn):not(.bo-trang a){color:var(--vang-lk);font-weigh
     <details class="faq rv"><summary>Có phải đi tỉnh không? Em còn lịch học trên trường.</summary>
       <div class="ans"><p>Có, và ASCO nói trước để bạn cân nhắc. Kiểm toán là nghề làm tại trụ sở khách hàng; vào mùa cao điểm nhóm có thể đi tỉnh nhiều ngày liền. Với sinh viên còn lịch học, ASCO thường bố trí phần việc làm tại văn phòng và cho đi hiện trường vào đợt bạn trống lịch.</p><p>Cách xử lý đúng: nói thẳng lịch học của bạn ở vòng phỏng vấn. ASCO có hai hình thức tiếp nhận khác nhau cho người toàn thời gian và người theo chương trình của trường — chọn đúng ngay từ đầu tốt hơn nhiều so với vỡ lịch giữa kỳ rồi phải dừng.</p></div>
     </details>
-    <details class="faq rv"><summary>Thực tập ở ASCO khác gì thực tập ở Big4?</summary>
-      <div class="ans"><p>ASCO không so mình với Big4 về quy mô — đó là sự thật. Khác biệt thật nằm ở chỗ khác: ở một hãng quy mô vừa, <b>một thực tập sinh được nhìn thấy trọn một cuộc kiểm toán</b> từ lập kế hoạch tới phát hành, thay vì chỉ làm sâu một khoản mục trong một guồng lớn. Bạn cũng ngồi gần người ký báo cáo hơn.</p><p>Điểm mạnh riêng của ASCO là <b>kiểm toán báo cáo quyết toán dự án đầu tư</b> — mảng mà Big4 gần như không làm ở Việt Nam. Thực tập sinh Line Kiểm toán báo cáo tài chính vẫn có cơ hội tiếp xúc mảng này, và đó là vốn nghề khá hiếm khi bạn đi xin việc sau này.</p><p>Điều nên cân nhắc thật lòng: nếu mục tiêu của bạn là thương hiệu Big4 trên CV thì ASCO không thay thế được. Còn nếu mục tiêu là <b>làm được việc sau 6 tháng</b>, ASCO là chỗ tốt để bắt đầu.</p></div>
+    <details class="faq rv"><summary>Thực tập ở một hãng quy mô vừa thì được gì?</summary>
+      <div class="ans"><p>Ở quy mô vừa, thực tập sinh <b>quan sát được trọn trình tự một cuộc kiểm toán</b> — từ lập kế hoạch tới phát hành — dù chỉ trực tiếp làm ở một vài phần hành. Khoảng cách tới người ký báo cáo cũng ngắn hơn, nên hỏi được nhiều hơn.</p><p>ASCO làm <b>kiểm toán báo cáo quyết toán dự án hoàn thành</b> liên tục từ khi thành lập, có quy trình và bộ hồ sơ riêng cho mảng này. Thực tập sinh khối Kiểm toán báo cáo tài chính vẫn có cơ hội tiếp xúc, và đó là dạng hồ sơ ít gặp ở nơi khác.</p><p>Nói thẳng để bạn tự cân: nếu tiêu chí chọn nơi thực tập của bạn là <b>tên thương hiệu trên hồ sơ xin việc</b> thì ASCO không phải lựa chọn đó. Nếu tiêu chí là <b>làm được việc sau sáu tháng</b> thì đây là chỗ để bắt đầu.</p></div>
     </details>
     <details class="faq rv"><summary>Hết kỳ có được ký giấy xác nhận thực tập không?</summary>
       <div class="ans"><p>Có, và ASCO cấp giấy xác nhận <b>nêu rõ bạn đã làm những phần hành nào</b>, thời gian bao lâu, kèm kết quả đánh giá cuối kỳ. Một tờ xác nhận ghi cụ thể "đã thực hiện phần hành D — Tiền và các khoản tương đương tiền, E — Phải trả người bán" có sức nặng hơn nhiều so với tờ xác nhận chung chung khi bạn đi phỏng vấn nơi khác.</p><p>Nếu trường bạn có mẫu xác nhận riêng, gửi mẫu đó cho người hướng dẫn ngay đầu kỳ — ASCO ký cả hai.</p></div>
@@ -1376,7 +1404,7 @@ a[data-t2]:not(.card):not(.btn):not(.bo-trang a){color:var(--vang-lk);font-weigh
       <div class="ans"><p>ASCO không đưa ra một tỷ lệ phần trăm, vì kỳ tuyển 2026 là kỳ đầu tiên chạy theo quy trình mới nên chưa có số liệu thật — và ASCO không muốn nêu một con số không kiểm chứng được.</p><p>Thay vào đó, ASCO công khai <b>điều kiện</b>: đạt từ 80 điểm trên thang 100 và không rơi vào điểm liệt ở hai nhóm Chính trực và Chất lượng; đủ từ 4 tháng thực tập; đã qua ít nhất 2 loại hợp đồng. Ba điều kiện này in trong quy chế, áp dụng như nhau cho mọi người. Bạn biết đích ngay từ ngày đầu, và biết mình đang ở đâu sau mỗi lần rà mốc.</p></div>
     </details>
     <details class="faq rv"><summary>Em nên chuẩn bị gì trong hai tuần trước khi nộp hồ sơ?</summary>
-      <div class="ans"><p>Ba việc, theo thứ tự đáng làm nhất:</p><p><b>Một</b> — đọc bốn trang học nghề ở <a href="#goc-sinh-vien">phần trên</a> của trang này. Nắm được chỉ mục A–H và cách một tờ giấy làm việc được cấu trúc thì buổi phỏng vấn của bạn khác hẳn.</p><p><b>Hai</b> — mở lại một bộ báo cáo tài chính bất kỳ đã kiểm toán (nhiều công ty niêm yết công bố công khai), đọc phần thuyết minh, tự hỏi mỗi con số này lấy từ đâu ra.</p><p><b>Ba</b> — luyện lại Excel ở mức lọc, sắp xếp, SUMIF, VLOOKUP. Đừng học sâu hơn vội, chưa cần tới.</p><p>Còn phần trả lời nửa trang trong hồ sơ thì viết bằng lời của chính bạn. ASCO đọc được ngay bài chép mạng, và bài chép mạng bị loại — không phải vì sai, mà vì nó không cho biết gì về bạn.</p></div>
+      <div class="ans"><p>Ba việc, theo thứ tự đáng làm nhất:</p><p><b>Một</b> — đọc bốn trang học nghề ở <a href="#goc-sinh-vien">phần trên</a> của trang này. Nắm được chỉ mục A–H và cách một tờ giấy làm việc được cấu trúc thì buổi phỏng vấn của bạn khác hẳn.</p><p><b>Hai</b> — mở lại một bộ báo cáo tài chính bất kỳ đã kiểm toán (nhiều công ty niêm yết công bố công khai), đọc phần thuyết minh, tự hỏi mỗi con số này lấy từ đâu ra.</p><p><b>Ba</b> — luyện lại Excel ở mức lọc, sắp xếp, SUMIF, VLOOKUP. Đừng học sâu hơn vội, chưa cần tới.</p><p>Còn phần trả lời nửa trang trong hồ sơ thì viết bằng lời của chính bạn. Bài trả lời sao chép từ nguồn khác sẽ không được xét — không phải vì sai, mà vì nó không cho biết gì về bạn.</p></div>
     </details>
   </div>
 </section>
@@ -1440,30 +1468,26 @@ a[data-t2]:not(.card):not(.btn):not(.bo-trang a){color:var(--vang-lk);font-weigh
 </section>
 
 <script>
-/* ===== Dem nguoc BA TRANG THAI: chua mo / dang nhan / da het han ===== */
+/* ===== Trang thai dot tuyen — bang CHU, khong dem so =====
+   CEO chot 09/9/2026: bo bo dem nguoc (thu phap ban le, lech giong hang kiem toan).
+   Van giu thong bao trang thai, neu khong sau 11/10 trang van moi nop du dot da dong. */
 (function(){
   var MO  = new Date('2026-09-11T00:00:00+07:00');
   var HAN = new Date('2026-10-11T23:59:59+07:00');
-  var hop = document.getElementById('demNgay');
-  var so  = document.getElementById('soNgay');
-  var chu = document.getElementById('chuNgay');
   var gc  = document.getElementById('demGhiChu');
-  if(!hop) return;
+  if(!gc) return;
   var now = new Date();
-  var ngay = function(a,b){ return Math.ceil((a-b)/86400000); };
   if(now < MO){
-    hop.hidden = false;
-    so.textContent = ngay(MO, now);
-    chu.textContent = 'ngày nữa mở nhận hồ sơ';
-    gc.innerHTML = 'Đợt tuyển <b>chưa mở</b>. Bạn có thể chuẩn bị trước hồ sơ và đọc <a href="#goc-sinh-vien">bốn trang học nghề</a> từ bây giờ. Từ <b>11/09/2026</b>, gửi hồ sơ về <b>asco@asco.vn</b>.';
+    gc.innerHTML = 'Đợt tuyển <b>chưa mở</b>. Bạn có thể chuẩn bị hồ sơ và đọc trước bốn trang học nghề. '
+      + 'Từ <b>11/09/2026</b>, gửi hồ sơ về <b>asco@asco.vn</b>, tiêu đề thư ghi '
+      + '<b>[TTS 2026] Họ tên — Trường — Năm học</b>.';
   } else if(now <= HAN){
-    hop.hidden = false;
-    so.textContent = ngay(HAN, now);
-    chu.textContent = 'ngày còn lại để nộp';
-    gc.innerHTML = '<b>Đang nhận hồ sơ.</b> Gửi về <b>asco@asco.vn</b>, tiêu đề thư ghi <b>[TTS 2026] Họ tên — Trường — Năm học</b>. ASCO phản hồi mọi hồ sơ.';
+    gc.innerHTML = '<b>Đang nhận hồ sơ.</b> Gửi về <b>asco@asco.vn</b>, tiêu đề thư ghi '
+      + '<b>[TTS 2026] Họ tên — Trường — Năm học</b>. ASCO phản hồi mọi hồ sơ, kể cả hồ sơ chưa phù hợp.';
   } else {
-    hop.hidden = true;
-    gc.innerHTML = 'Đợt tuyển 2026 <b>đã kết thúc</b>. Hồ sơ gửi sau thời hạn vẫn được ASCO lưu lại và xét cho đợt sau. Theo dõi <a href="https://www.facebook.com/ascofirm" target="_blank" rel="noopener noreferrer">fanpage ASCO</a> để biết đợt tuyển kế tiếp.';
+    gc.innerHTML = 'Đợt tuyển 2026 <b>đã kết thúc nhận hồ sơ</b>. Hồ sơ gửi sau thời hạn vẫn được lưu '
+      + 'và xét cho đợt sau. Theo dõi <a href="https://www.facebook.com/ascofirm" target="_blank" '
+      + 'rel="noopener noreferrer">fanpage ASCO</a> để biết đợt tuyển kế tiếp.';
   }
 })();
 
@@ -1529,27 +1553,13 @@ a[data-t2]:not(.card):not(.btn):not(.bo-trang a){color:var(--vang-lk);font-weigh
 
 <!-- ASCO-LIENKET -->
 <section class="lien-ket-noi-bo">
-  <div class="wrap">
-    <div class="sec-head rv"><div class="eyebrow">Các trang khác của ASCO</div><h2>Dịch vụ và tin tuyển dụng khác</h2></div>
-    <div class="lk-grid rv">
-      <h3>Dịch vụ</h3>
-      <ul class="lk-ds">
-        <li><a href="../kiem-toan-quy-tin-dung-nhan-dan/">Kiểm toán BCTC Quỹ tín dụng nhân dân</a><span>Kiểm toán báo cáo tài chính cho Quỹ tín dụng nhân dân.</span></li>
-        <li><a href="../kiem-toan-bctc-doanh-nghiep-xay-dung/">Kiểm toán BCTC doanh nghiệp xây dựng</a><span>Cho nhà thầu thi công và doanh nghiệp xây lắp.</span></li>
-        <li><a href="../kiem-toan-bctc-doanh-nghiep-du-an-ppp/">Kiểm toán BCTC doanh nghiệp dự án PPP</a><span>Doanh nghiệp dự án BOT, BTO, BOO, BTL, BLT, BT, O&amp;M.</span></li>
-        <li><a href="../kiem-toan-bctc-linh-vuc-chung-khoan/">Kiểm toán BCTC lĩnh vực chứng khoán</a><span>Đơn vị có lợi ích công chúng lĩnh vực chứng khoán.</span></li>
-        <li><a href="../tu-van-xay-dung-he-thong-ke-toan/">Tư vấn xây dựng hệ thống kế toán</a><span>Khảo sát, thiết kế và chuyển giao hệ thống kế toán theo Thông tư 99/2025.</span></li>
-        <li><a href="../kiem-toan-quyet-toan-du-an-cap-xa/">Kiểm toán quyết toán dự án cấp xã, phường</a><span>Cho UBND xã, phường.</span></li>
-        <li><a href="../kiem-toan-du-an-ban-qlda-cap-tinh/">Kiểm toán dự án — Ban QLDA cấp tỉnh</a><span>Cho Ban Quản lý dự án thuộc tỉnh, thành phố.</span></li>
-        <li><a href="../kiem-toan-bao-cao-tai-chinh-fdi-han-quoc/">Kiểm toán BCTC doanh nghiệp FDI Hàn Quốc</a><span>Báo cáo song ngữ Việt – Hàn.</span></li>
-      </ul>
-      <h3>Tin tuyển dụng</h3>
-      <ul class="lk-ds">
-        <li><a href="../tuyen-dung-truong-phong-tham-dinh-gia/">Tuyển Trưởng phòng Thẩm định giá</a><span>Yêu cầu có Thẻ thẩm định viên về giá và tối thiểu 5 năm kinh nghiệm.</span></li>
-        <li><a href="../tuyen-dung-ke-toan-tong-hop/">Tuyển Kế toán tổng hợp</a><span>Vị trí kế toán tổng hợp tại trụ sở Hà Nội.</span></li>
-      </ul>
-    </div>
-    <p class="small rv" style="margin-top:18px"><a href="../">Xem tất cả dịch vụ của ASCO</a> · <a href="https://asco.vn" target="_blank" rel="noopener noreferrer">Trang chủ asco.vn</a></p>
+  <div class="wrap narrow">
+    <p class="small rv" style="text-align:center;margin:0">
+      Bộ trang này thuộc <b>Hãng Kiểm toán và Định giá ASCO</b> ·
+      <a href="../">Xem các dịch vụ của ASCO</a> ·
+      <a href="https://asco.vn" target="_blank" rel="noopener noreferrer">asco.vn</a> ·
+      <a href="https://www.facebook.com/ascofirm" target="_blank" rel="noopener noreferrer">facebook.com/ascofirm</a>
+    </p>
   </div>
 </section>
 <!-- /ASCO-LIENKET -->
@@ -1562,7 +1572,7 @@ a[data-t2]:not(.card):not(.btn):not(.bo-trang a){color:var(--vang-lk);font-weigh
         <p class="small">Hãng Kiểm toán và Định giá ASCO — thành lập ngày 25/09/2007</p>
       </div>
       <div>
-        <h4>Liên hệ</h4>
+        <h3>Liên hệ</h3>
         <ul class="f-list">
           <li>Số 2, ngõ 308 phố Lê Trọng Tấn, phường Phương Liệt, thành phố Hà Nội</li>
           <li><a href="tel:0825092007">08 2509 2007</a> · <a href="tel:02437930960">024 3793 0960</a></li>
@@ -1571,7 +1581,7 @@ a[data-t2]:not(.card):not(.btn):not(.bo-trang a){color:var(--vang-lk);font-weigh
         </ul>
       </div>
       <div>
-        <h4>Dịch vụ</h4>
+        <h3>Dịch vụ</h3>
         <ul class="f-list">
           <li>Kiểm toán báo cáo tài chính</li>
           <li>Kiểm toán báo cáo quyết toán dự án hoàn thành</li>

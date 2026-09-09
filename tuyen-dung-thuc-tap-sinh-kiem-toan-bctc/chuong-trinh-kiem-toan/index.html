@@ -583,6 +583,35 @@ a.card:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg)}
 @media (max-width:760px){.bo-trang-lon{margin-top:24px;padding-top:20px}
   .bo-trang-lon a{font-size:13.6px;padding:8px 13px}}
 @media print{.duong-dan,.bo-trang{display:none}}
+/* the ben canh dung <h2> de khong nhay bac tieu de (h1 -> h3),
+   nhung co chu giu nguyen nhu h3 cu — dung dan y, dung co chu. */
+.hero-card h2.h-nho{font-size:clamp(18px,2vw,21px);letter-spacing:-.01em;
+  display:flex;align-items:center;gap:10px;margin:0 0 14px}
+
+/* khoi 4 buoc dung <h3> de khong nhay bac tieu de (h2 -> h4),
+   co chu giu nguyen nhu h4 cu. */
+.buoc .b h3{font-size:16.5px;margin:8px 0 6px;letter-spacing:-.005em}
+.cl-g h3{font-size:14.6px;margin:0 0 8px;color:var(--navy);letter-spacing:.01em}
+footer h3{font-size:15px;margin:0 0 12px;letter-spacing:.01em}
+
+/* ---------- KHA NANG TIEP CAN ---------- */
+/* Vien tieu diem cho MOI thu bam duoc, khong chi nut.
+   Nguoi di bang phim Tab phai biet minh dang o dau (WCAG 2.4.7). */
+a:focus-visible, summary:focus-visible, [tabindex]:focus-visible,
+input:focus-visible, select:focus-visible, textarea:focus-visible{
+  outline:3px solid var(--gold);outline-offset:2px;border-radius:6px}
+/* tren nen navy dung vang sang cho noi bat */
+.hero a:focus-visible, .cta a:focus-visible, .topline a:focus-visible,
+footer a:focus-visible, .bo-trang a:focus-visible, .duong-dan a:focus-visible{
+  outline-color:#F2CE83}
+
+/* Lien ket bo qua menu — chi hien khi bam Tab lan dau */
+.bo-qua{position:absolute;left:-9999px;top:0;z-index:9999;
+  background:var(--gold);color:#1F1707;font-weight:800;
+  padding:12px 20px;border-radius:0 0 12px 0;text-decoration:none}
+.bo-qua:focus{left:0}
+@media print{.bo-qua{display:none}}
+
 /* ---------- MAU VANG cho moi lien ket DAN VAO trang tang 2 ----------
    CEO chot 09/9/2026: chu dan sang trang hoc nghe phai mau vang cho de nhan.
    Lien ket QUAY VE tang 1 thi GIU nguyen mau — nhin la biet di toi hay di lui.
@@ -741,6 +770,8 @@ a[data-t2]:not(.card):not(.btn):not(.bo-trang a){color:var(--vang-lk);font-weigh
 <!-- /ASCO-SEO -->
 </head>
 <body>
+<a class="bo-qua" href="#noi-dung">Bỏ qua menu, tới nội dung chính</a>
+
 <!-- =============== THANH HOTLINE =============== -->
 <div class="topline">
   <div class="in">
@@ -811,10 +842,10 @@ a[data-t2]:not(.card):not(.btn):not(.bo-trang a){color:var(--vang-lk);font-weigh
         </div>
       </div>
       <aside class="hero-card">
-        <h3>
+        <h2 class="h-nho">
           <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.5V21M12 6.5a5 5 0 0 0-5-3H3v13h4a5 5 0 0 1 5 3 5 5 0 0 1 5-3h4v-13h-4a5 5 0 0 0-5 3Z"/></svg>
           Đọc trang này xong bạn sẽ
-        </h3>
+        </h2>
         <ul class="hc-list">
           <li><span class="hc-num">1</span><span>Nghe "làm phần E" là biết ngay đang nói tới nhóm khoản mục nào</span></li>
           <li><span class="hc-num">2</span><span>Hiểu vì sao trình tự bắt buộc là <b>A → C·D·E·F·G·H → B</b>, không phải A→B→C</span></li>
@@ -828,6 +859,8 @@ a[data-t2]:not(.card):not(.btn):not(.bo-trang a){color:var(--vang-lk);font-weigh
     </div>
   </div>
 </header>
+
+<div id="noi-dung" tabindex="-1"></div>
 
 <section id="vi-sao">
   <div class="wrap">
@@ -864,7 +897,7 @@ a[data-t2]:not(.card):not(.btn):not(.bo-trang a){color:var(--vang-lk);font-weigh
       <div class="eyebrow">Bảng tra</div>
       <h2>Tám nhóm chỉ mục — mỗi nhóm trả lời một câu hỏi khác nhau</h2>
       <p class="lede" style="margin-top:14px">
-        Cột cuối cùng là chỗ đáng đọc nhất: <b>thực tập sinh thường được giao phần nào</b>. Câu trả lời gần như
+        Cột cuối cho biết <b>thực tập sinh thường được giao phần nào</b>. Câu trả lời gần như
         luôn là D và E — vì đây là hai nhóm có thủ tục rõ ràng nhất, dễ kiểm chứng nhất, và sai thì phát hiện được ngay.
       </p>
     </div>
@@ -890,7 +923,7 @@ a[data-t2]:not(.card):not(.btn):not(.bo-trang a){color:var(--vang-lk);font-weigh
             <td><span class="ah">C</span></td>
             <td><b>Thử nghiệm kiểm soát</b><br><span class="small">Sáu chu trình: bán hàng · mua hàng · hàng tồn kho · tiền lương · tài sản cố định · sổ cái</span></td>
             <td class="no">Kiểm soát nội bộ của đơn vị có thật sự chạy không, hay chỉ có trên giấy?</td>
-            <td class="col-asco"><span class="badge b-warn">Hỗ trợ</span> Đi cùng làm walk-through, chọn mẫu chứng từ và đối chiếu.</td>
+            <td class="col-asco"><span class="badge b-warn">Hỗ trợ</span> Đi cùng khi kiểm tra xuyên suốt một nghiệp vụ (walk-through), chọn mẫu chứng từ và đối chiếu.</td>
           </tr>
           <tr>
             <td><span class="ah">D</span></td>
@@ -907,7 +940,7 @@ a[data-t2]:not(.card):not(.btn):not(.bo-trang a){color:var(--vang-lk);font-weigh
           <tr>
             <td><span class="ah">F</span></td>
             <td><b>Vốn chủ sở hữu và khoản mục ngoài bảng</b><br><span class="small">Vốn góp · lợi nhuận chưa phân phối · tài sản thuê ngoài · ngoại tệ</span></td>
-            <td class="no">Vốn thực góp là bao nhiêu, và có gì nằm ngoài bảng cân đối cần thuyết minh?</td>
+            <td class="no">Vốn thực góp là bao nhiêu, và có khoản mục nào ngoài <b>Báo cáo tình hình tài chính</b> cần thuyết minh?</td>
             <td class="col-asco"><span class="badge b-warn">Hỗ trợ</span> Đối chiếu chứng từ góp vốn, lập bảng biến động.</td>
           </tr>
           <tr>
@@ -967,7 +1000,7 @@ a[data-t2]:not(.card):not(.btn):not(.bo-trang a){color:var(--vang-lk);font-weigh
           <tr><td><b>Đầy đủ</b></td><td class="no">Còn gì chưa ghi vào sổ không?</td><td class="no">Tìm nợ chưa ghi sổ: soát chứng từ sau ngày khoá sổ</td><td class="col-asco">Rủi ro <b>giấu bớt</b> — nghiêng về <b>nợ phải trả</b> (nhóm E)</td></tr>
           <tr><td><b>Quyền và nghĩa vụ</b></td><td class="no">Cái này có phải của đơn vị không?</td><td class="no">Kiểm tra giấy tờ sở hữu, hợp đồng, tài sản đang thế chấp</td><td class="col-asco">Hay bị bỏ sót ở tài sản cố định</td></tr>
           <tr><td><b>Đánh giá và phân bổ</b></td><td class="no">Ghi số tiền này có đúng không?</td><td class="no">Kiểm tra khấu hao, dự phòng, đánh giá lại ngoại tệ</td><td class="col-asco">Nơi tập trung <b>ước tính kế toán</b> — khó nhất</td></tr>
-          <tr><td><b>Đúng kỳ</b></td><td class="no">Ghi vào đúng năm chưa?</td><td class="no">Kiểm tra cut-off: chứng từ quanh ngày 31/12</td><td class="col-asco">Trọng tâm của <b>doanh thu</b> (nhóm G)</td></tr>
+          <tr><td><b>Đúng kỳ</b></td><td class="no">Ghi vào đúng năm chưa?</td><td class="no">Kiểm tra tính đúng kỳ (cut-off): chứng từ quanh ngày 31/12</td><td class="col-asco">Trọng tâm của <b>doanh thu</b> (nhóm G)</td></tr>
           <tr><td><b>Trình bày và thuyết minh</b></td><td class="no">Trên báo cáo có nói đủ cho người đọc hiểu không?</td><td class="no">Đối chiếu thuyết minh với chuẩn mực và chế độ kế toán</td><td class="col-asco">Bị coi nhẹ nhất, nhưng là nơi hay bị nêu nhất khi soát xét</td></tr>
         </tbody>
       </table>
@@ -975,7 +1008,7 @@ a[data-t2]:not(.card):not(.btn):not(.bo-trang a){color:var(--vang-lk);font-weigh
     <div class="callout rv" style="margin-top:22px">
       <b>Mẹo nhớ có ích thật:</b> với <b>tài sản</b>, lo nhất là <i>khai khống</i> → thủ tục đi từ <b>sổ ra chứng từ</b>.
       Với <b>nợ phải trả</b>, lo nhất là <i>giấu bớt</i> → thủ tục đi ngược, từ <b>chứng từ vào sổ</b>.
-      Hai chiều ngược nhau này là thứ phân biệt người đã hiểu nghề với người mới học thuộc.
+      Nắm hai chiều ngược nhau này thì suy ra được thủ tục, không phải học thuộc.
     </div>
   </div>
 </section>
@@ -1034,27 +1067,13 @@ a[data-t2]:not(.card):not(.btn):not(.bo-trang a){color:var(--vang-lk);font-weigh
 
 <!-- ASCO-LIENKET -->
 <section class="lien-ket-noi-bo">
-  <div class="wrap">
-    <div class="sec-head rv"><div class="eyebrow">Các trang khác của ASCO</div><h2>Dịch vụ và tin tuyển dụng khác</h2></div>
-    <div class="lk-grid rv">
-      <h3>Dịch vụ</h3>
-      <ul class="lk-ds">
-        <li><a href="../../kiem-toan-quy-tin-dung-nhan-dan/">Kiểm toán BCTC Quỹ tín dụng nhân dân</a><span>Kiểm toán báo cáo tài chính cho Quỹ tín dụng nhân dân.</span></li>
-        <li><a href="../../kiem-toan-bctc-doanh-nghiep-xay-dung/">Kiểm toán BCTC doanh nghiệp xây dựng</a><span>Cho nhà thầu thi công và doanh nghiệp xây lắp.</span></li>
-        <li><a href="../../kiem-toan-bctc-doanh-nghiep-du-an-ppp/">Kiểm toán BCTC doanh nghiệp dự án PPP</a><span>Doanh nghiệp dự án BOT, BTO, BOO, BTL, BLT, BT, O&amp;M.</span></li>
-        <li><a href="../../kiem-toan-bctc-linh-vuc-chung-khoan/">Kiểm toán BCTC lĩnh vực chứng khoán</a><span>Đơn vị có lợi ích công chúng lĩnh vực chứng khoán.</span></li>
-        <li><a href="../../tu-van-xay-dung-he-thong-ke-toan/">Tư vấn xây dựng hệ thống kế toán</a><span>Khảo sát, thiết kế và chuyển giao hệ thống kế toán theo Thông tư 99/2025.</span></li>
-        <li><a href="../../kiem-toan-quyet-toan-du-an-cap-xa/">Kiểm toán quyết toán dự án cấp xã, phường</a><span>Cho UBND xã, phường.</span></li>
-        <li><a href="../../kiem-toan-du-an-ban-qlda-cap-tinh/">Kiểm toán dự án — Ban QLDA cấp tỉnh</a><span>Cho Ban Quản lý dự án thuộc tỉnh, thành phố.</span></li>
-        <li><a href="../../kiem-toan-bao-cao-tai-chinh-fdi-han-quoc/">Kiểm toán BCTC doanh nghiệp FDI Hàn Quốc</a><span>Báo cáo song ngữ Việt – Hàn.</span></li>
-      </ul>
-      <h3>Tin tuyển dụng</h3>
-      <ul class="lk-ds">
-        <li><a href="../../tuyen-dung-truong-phong-tham-dinh-gia/">Tuyển Trưởng phòng Thẩm định giá</a><span>Yêu cầu có Thẻ thẩm định viên về giá và tối thiểu 5 năm kinh nghiệm.</span></li>
-        <li><a href="../../tuyen-dung-ke-toan-tong-hop/">Tuyển Kế toán tổng hợp</a><span>Vị trí kế toán tổng hợp tại trụ sở Hà Nội.</span></li>
-      </ul>
-    </div>
-    <p class="small rv" style="margin-top:18px"><a href="../../">Xem tất cả dịch vụ của ASCO</a> · <a href="https://asco.vn" target="_blank" rel="noopener noreferrer">Trang chủ asco.vn</a></p>
+  <div class="wrap narrow">
+    <p class="small rv" style="text-align:center;margin:0">
+      Bộ trang này thuộc <b>Hãng Kiểm toán và Định giá ASCO</b> ·
+      <a href="../../">Xem các dịch vụ của ASCO</a> ·
+      <a href="https://asco.vn" target="_blank" rel="noopener noreferrer">asco.vn</a> ·
+      <a href="https://www.facebook.com/ascofirm" target="_blank" rel="noopener noreferrer">facebook.com/ascofirm</a>
+    </p>
   </div>
 </section>
 <!-- /ASCO-LIENKET -->
@@ -1067,7 +1086,7 @@ a[data-t2]:not(.card):not(.btn):not(.bo-trang a){color:var(--vang-lk);font-weigh
         <p class="small">Hãng Kiểm toán và Định giá ASCO — thành lập ngày 25/09/2007</p>
       </div>
       <div>
-        <h4>Liên hệ</h4>
+        <h3>Liên hệ</h3>
         <ul class="f-list">
           <li>Số 2, ngõ 308 phố Lê Trọng Tấn, phường Phương Liệt, thành phố Hà Nội</li>
           <li><a href="tel:0825092007">08 2509 2007</a> · <a href="tel:02437930960">024 3793 0960</a></li>
@@ -1076,7 +1095,7 @@ a[data-t2]:not(.card):not(.btn):not(.bo-trang a){color:var(--vang-lk);font-weigh
         </ul>
       </div>
       <div>
-        <h4>Dịch vụ</h4>
+        <h3>Dịch vụ</h3>
         <ul class="f-list">
           <li>Kiểm toán báo cáo tài chính</li>
           <li>Kiểm toán báo cáo quyết toán dự án hoàn thành</li>
