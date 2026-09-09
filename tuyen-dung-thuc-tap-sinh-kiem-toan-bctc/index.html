@@ -583,6 +583,25 @@ a.card:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg)}
 @media (max-width:760px){.bo-trang-lon{margin-top:24px;padding-top:20px}
   .bo-trang-lon a{font-size:13.6px;padding:8px 13px}}
 @media print{.duong-dan,.bo-trang{display:none}}
+/* ---------- MAU VANG cho moi lien ket DAN VAO trang tang 2 ----------
+   CEO chot 09/9/2026: chu dan sang trang hoc nghe phai mau vang cho de nhan.
+   Lien ket QUAY VE tang 1 thi GIU nguyen mau — nhin la biet di toi hay di lui.
+   ⚠️ Vang #E4B451 doc tot tren nen toi nhung MO tren nen trang (~1,9:1),
+   nen che do sang dung vang dam #8A6212 (~5,9:1) moi dat chuan tuong phan. */
+:root{--vang-lk:#8A6212}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--vang-lk:#E4B451}}
+:root[data-theme="dark"]{--vang-lk:#E4B451}
+
+a[data-t2] .go{color:var(--vang-lk)}
+a[data-t2] .go::after{content:""}
+a.card[data-t2]:hover{border-color:var(--gold)}
+/* lien ket chu chay trong doan van */
+a[data-t2]:not(.card):not(.btn):not(.bo-trang a){color:var(--vang-lk);font-weight:700;
+  text-decoration-color:color-mix(in srgb, var(--vang-lk) 45%, transparent)}
+/* dai bon trang: luon nam tren nen navy nen dung vang sang */
+.bo-trang a[data-t2]{color:#E4B451;border-color:rgba(228,180,81,.42)}
+.bo-trang a[data-t2]:hover{background:rgba(228,180,81,.16);color:#F2CE83}
+.bo-trang a.dang[data-t2]{color:#1F1707}   /* nut dang xem: nen vang, chu toi */
 @media print{.qz-gt{display:block!important}}
 </style>
 
@@ -864,10 +883,10 @@ a.card:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg)}
 
     <div class="bo-trang bo-trang-lon">
       <span class="nhan">Bốn trang học nghề · mở miễn phí, không cần nộp hồ sơ</span>
-      <a href="./chuong-trinh-kiem-toan/">1 · Chỉ mục A–H</a>
-      <a href="./quy-trinh-kiem-toan/">2 · Cuộc kiểm toán chạy thế nào</a>
-      <a href="./mau-bieu-giay-lam-viec/">3 · Giấy làm việc + 4 bài tập</a>
-      <a href="./cong-cu-ai-kiem-toan/">4 · Công cụ AI trong kiểm toán</a>
+      <a data-t2="1" href="./chuong-trinh-kiem-toan/">1 · Chỉ mục A–H</a>
+      <a data-t2="1" href="./quy-trinh-kiem-toan/">2 · Cuộc kiểm toán chạy thế nào</a>
+      <a data-t2="1" href="./mau-bieu-giay-lam-viec/">3 · Giấy làm việc + 4 bài tập</a>
+      <a data-t2="1" href="./cong-cu-ai-kiem-toan/">4 · Công cụ AI trong kiểm toán</a>
     </div>
   </div>
 
@@ -906,7 +925,7 @@ a.card:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg)}
       </p>
     </div>
     <div class="grid g2 rv">
-      <a class="card" href="./chuong-trinh-kiem-toan/">
+      <a data-t2="1" class="card" href="./chuong-trinh-kiem-toan/">
         <span class="badge b-navy">Trang 1</span>
         <h3 style="margin-top:12px">Chương trình kiểm toán mẫu — chỉ mục A đến H</h3>
         <p style="margin-top:10px">Một bộ hồ sơ kiểm toán được đánh chỉ mục thế nào, phần A làm gì, vì sao
@@ -914,7 +933,7 @@ a.card:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg)}
         kiểm toán mẫu của Hội Kiểm toán viên hành nghề Việt Nam.</p>
         <div class="go">Mở trang →</div>
       </a>
-      <a class="card" href="./quy-trinh-kiem-toan/">
+      <a data-t2="1" class="card" href="./quy-trinh-kiem-toan/">
         <span class="badge b-navy">Trang 2</span>
         <h3 style="margin-top:12px">Một cuộc kiểm toán đi như thế nào</h3>
         <p style="margin-top:10px">Từ lúc nhận lời mời tới lúc phát hành báo cáo: ba cổng chất lượng,
@@ -922,7 +941,7 @@ a.card:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg)}
         chính mình. Đây là thứ đề thi không hỏi nhưng đi làm ngày đầu đã cần.</p>
         <div class="go">Mở trang →</div>
       </a>
-      <a class="card" href="./mau-bieu-giay-lam-viec/">
+      <a data-t2="1" class="card" href="./mau-bieu-giay-lam-viec/">
         <span class="badge b-navy">Trang 3</span>
         <h3 style="margin-top:12px">Giấy làm việc — đọc và viết thế nào cho đúng</h3>
         <p style="margin-top:10px">Khuôn bốn tầng <b>mục tiêu theo cơ sở dẫn liệu → rủi ro → thử nghiệm →
@@ -930,7 +949,7 @@ a.card:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg)}
         BT-INT-01 đến 04 mà thực tập sinh ASCO làm trong tháng đầu.</p>
         <div class="go">Mở trang →</div>
       </a>
-      <a class="card" href="./cong-cu-ai-kiem-toan/">
+      <a data-t2="1" class="card" href="./cong-cu-ai-kiem-toan/">
         <span class="badge b-navy">Trang 4</span>
         <h3 style="margin-top:12px">ASCO làm nghề bằng công cụ gì</h3>
         <p style="margin-top:10px">Giới thiệu <b>29 trợ lý số theo chỉ mục A–H</b> và bộ công cụ tính toán
@@ -1340,7 +1359,7 @@ a.card:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg)}
       <div class="ans"><p>Có phụ cấp hằng tháng. Mức cụ thể được trao đổi rõ ở vòng phỏng vấn và ghi vào văn bản tiếp nhận, không nói miệng. ASCO cũng chi công tác phí khi bạn đi làm việc tại trụ sở khách hàng ngoài Hà Nội.</p><p>Điểm khác biệt đáng chú ý hơn con số: kỳ thực tập ở ASCO là <b>quan hệ có văn bản</b>. Tuỳ theo bạn làm toàn thời gian hay đi theo chương trình của trường, ASCO ký <i>Thoả thuận thực tập</i> hoặc <i>Hợp đồng lao động xác định thời hạn</i> cấp L1. Việc chọn hình thức nào được quyết ngay ở vòng phỏng vấn, không để mập mờ tới lúc vào làm.</p></div>
     </details>
     <details class="faq rv"><summary>Em năm 3, chưa học hết Kiểm toán tài chính. Nộp được không?</summary>
-      <div class="ans"><p>Được. ASCO tuyển thực tập sinh chứ không tuyển người đã biết việc. Điều kiện tối thiểu là bạn đã học qua <b>Nguyên lý kế toán</b> và <b>Kế toán tài chính</b>, và đọc hiểu được một bộ báo cáo tài chính ở mức cơ bản.</p><p>Phần Kiểm toán tài chính chưa học thì kỳ thực tập chính là chỗ học — và học trên hồ sơ thật thì nhanh hơn nhiều. Bạn có thể vào <a href="./chuong-trinh-kiem-toan/">bốn trang học nghề</a> đọc trước để nắm bản đồ nghề trước khi phỏng vấn.</p></div>
+      <div class="ans"><p>Được. ASCO tuyển thực tập sinh chứ không tuyển người đã biết việc. Điều kiện tối thiểu là bạn đã học qua <b>Nguyên lý kế toán</b> và <b>Kế toán tài chính</b>, và đọc hiểu được một bộ báo cáo tài chính ở mức cơ bản.</p><p>Phần Kiểm toán tài chính chưa học thì kỳ thực tập chính là chỗ học — và học trên hồ sơ thật thì nhanh hơn nhiều. Bạn có thể vào <a data-t2="1" href="./chuong-trinh-kiem-toan/">bốn trang học nghề</a> đọc trước để nắm bản đồ nghề trước khi phỏng vấn.</p></div>
     </details>
     <details class="faq rv"><summary>Em không giỏi Excel thì có bị loại không?</summary>
       <div class="ans"><p>Không. Mức ASCO cần là <b>lọc, sắp xếp, SUMIF, VLOOKUP</b> — không cần pivot nâng cao, không cần VBA. Nếu bạn chưa chắc phần này, hai tuần trước khi vào thực tập luyện lại là kịp.</p><p>Thứ ASCO khó bù cho bạn hơn nhiều là <b>thói quen ghi chép có nguồn</b>: làm gì cũng ghi lại lấy số ở đâu, ai đưa, ngày nào. Người có thói quen đó học nghề kiểm toán nhanh hơn hẳn người giỏi Excel mà ghi chép tuỳ tiện.</p></div>
@@ -1479,7 +1498,7 @@ a.card:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg)}
     if(p >= 80){
       loi = '<b>Bạn sẵn sàng rồi — nộp hồ sơ đi.</b><br>Nền tảng và điều kiện thực tế của bạn đều đủ. '
           + 'Việc nên làm ngay: viết phần trả lời nửa trang cho câu hỏi về tiền mặt tại quỹ, và đọc trước '
-          + '<a href="./chuong-trinh-kiem-toan/">trang chỉ mục A–H</a> trước buổi phỏng vấn.';
+          + '<a data-t2="1" href="./chuong-trinh-kiem-toan/">trang chỉ mục A–H</a> trước buổi phỏng vấn.';
     } else if(p >= 55){
       loi = '<b>Gần đủ — còn một, hai chỗ nên bù trước.</b><br>Xem lại những ô bạn chưa đánh dấu: nếu thiếu ở '
           + 'nhóm <i>Kỹ năng làm việc</i> thì hai tuần luyện là kịp; nếu thiếu ở nhóm <i>Điều kiện thực tế</i> '
