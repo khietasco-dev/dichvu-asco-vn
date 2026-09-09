@@ -551,6 +551,30 @@ a.card:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg)}
 .hero-card .han .moc .lbl{display:block;font-size:12.4px;letter-spacing:.09em;
   text-transform:uppercase;opacity:.72;margin-bottom:3px}
 .hero-card .han .moc b{display:block;font-size:20px;letter-spacing:-.01em}
+/* ---------- duong dan va dai bo trang (tang 2) ----------
+   ⚠️ PHAI dung <div role="navigation">, KHONG dung <nav>: khuon co luat chung
+   nav{background:var(--surface);position:sticky} — dat the <nav> vao than trang
+   se an nguyen nen trang va dinh cua so, chu xanh nhat tren nen sang khong doc duoc.
+   Da vap 09/9/2026, cung ho voi bay details/table trong memory.
+   BAT BUOC hien o MOI kho man hinh: thanh menu cua khuon bi an duoi 1180px,
+   nen neu khong co hai khoi nay thi trang tang 2 thanh ngo cut. Da vap 09/9/2026. */
+.duong-dan{display:flex;align-items:center;gap:9px;flex-wrap:wrap;
+  font-size:14.2px;margin-bottom:16px}
+.duong-dan a{color:#DCE6F6;text-decoration:none;font-weight:700;
+  display:inline-flex;align-items:center;gap:7px;padding:7px 13px;border-radius:999px;
+  background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.18)}
+.duong-dan a:hover{background:rgba(255,255,255,.17);color:#fff}
+.duong-dan .ngan{opacity:.5;color:#DCE6F6}
+.duong-dan b{color:#fff;opacity:.9;font-weight:700}
+.bo-trang{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.bo-trang .nhan{font-size:12.4px;letter-spacing:.09em;text-transform:uppercase;
+  color:#9DBCEF;font-weight:800;margin-right:2px}
+.bo-trang a{font-size:13.6px;font-weight:700;text-decoration:none;color:#DCE6F6;
+  padding:6px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.2)}
+.bo-trang a:hover{background:rgba(255,255,255,.14);color:#fff}
+.bo-trang a.dang{background:var(--gold);color:#1F1707;border-color:var(--gold)}
+@media (max-width:560px){.bo-trang .nhan{width:100%;margin-bottom:2px}}
+@media print{.duong-dan,.bo-trang{display:none}}
 @media print{.qz-gt{display:block!important}}
 </style>
 
