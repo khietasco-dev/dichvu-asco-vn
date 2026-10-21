@@ -1,0 +1,33 @@
+{
+  "name": "ASCO — Kiểm toán và Định giá",
+  "short_name": "ASCO",
+  "description": "Hãng Kiểm toán và Định giá ASCO — kiểm toán dự án, kiểm toán báo cáo tài chính, thẩm định giá.",
+  "lang": "vi",
+  "dir": "ltr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#ffffff",
+  "theme_color": "#184088",
+  "icons": [
+    {
+      "src": "./icon/asco-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icon/asco-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icon/asco-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

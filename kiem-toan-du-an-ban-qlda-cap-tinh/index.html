@@ -2,7 +2,7 @@
 <html lang="vi">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <style>
 /* ================= TOKENS — light mặc định ================= */
 :root{
@@ -696,6 +696,22 @@ footer a:hover{color:var(--navy)}
 <title>Kiểm toán quyết toán dự án Ban QLDA cấp tỉnh — ASCO</title>
 <meta name="description" content="ASCO kiểm toán báo cáo quyết toán dự án hoàn thành cho Ban Quản lý dự án tại 27 tỉnh, thành phố. Kiểm toán viên và kỹ sư làm song song, theo chuẩn mực VSA 1000.">
 <meta name="theme-color" content="#184088">
+
+<!-- Biểu tượng và «Thêm vào màn hình chính». Đặt ở gốc site nên 11 trang
+     dịch vụ còn lại chỉ cần chép đúng khối này là xong. -->
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../icon/asco-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../icon/asco-180.png">
+<link rel="manifest" href="../site.webmanifest">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<!-- «default» chứ không phải «black-translucent»: trang chưa có xử lý
+     vùng an toàn (env safe-area-inset) và thanh điều hướng lại dính
+     trên đầu, nên để trong suốt thì logo ASCO chui xuống dưới đồng hồ
+     iPhone. Đục thì hệ điều hành tự chừa chỗ. -->
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="ASCO Dự án tỉnh">
+<meta name="application-name" content="ASCO">
 
 <!-- =============== NAV =============== -->
 <nav>
